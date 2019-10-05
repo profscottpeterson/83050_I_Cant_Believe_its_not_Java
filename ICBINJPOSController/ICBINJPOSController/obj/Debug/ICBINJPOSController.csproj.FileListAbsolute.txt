@@ -1,0 +1,9 @@
+E:\NWTC Website Files\Asset Files\Team Dev\POS Controller\ICBINJPOSController\ICBINJPOSController\bin\Debug\ICBINJPOSController.exe.config
+E:\NWTC Website Files\Asset Files\Team Dev\POS Controller\ICBINJPOSController\ICBINJPOSController\bin\Debug\ICBINJPOSController.exe
+E:\NWTC Website Files\Asset Files\Team Dev\POS Controller\ICBINJPOSController\ICBINJPOSController\bin\Debug\ICBINJPOSController.pdb
+E:\NWTC Website Files\Asset Files\Team Dev\POS Controller\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.csprojAssemblyReference.cache
+E:\NWTC Website Files\Asset Files\Team Dev\POS Controller\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.Properties.Resources.resources
+E:\NWTC Website Files\Asset Files\Team Dev\POS Controller\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.LoginScreen.resources
+E:\NWTC Website Files\Asset Files\Team Dev\POS Controller\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.csproj.GenerateResource.cache
+E:\NWTC Website Files\Asset Files\Team Dev\POS Controller\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.exe
+E:\NWTC Website Files\Asset Files\Team Dev\POS Controller\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.pdb
