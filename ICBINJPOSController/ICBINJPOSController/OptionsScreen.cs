@@ -16,5 +16,10 @@ namespace ICBINJPOSController
         {
             InitializeComponent();
         }
+
+        private void OptionsScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

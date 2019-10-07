@@ -107,6 +107,7 @@
             this.clearButton.TabIndex = 4;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = false;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // LoginScreen
             // 
@@ -114,7 +115,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Coral;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(875, 579);
+            this.ClientSize = new System.Drawing.Size(1238, 737);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.loginLabel);
