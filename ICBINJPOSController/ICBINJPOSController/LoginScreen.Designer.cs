@@ -36,6 +36,7 @@
             this.loginLabel = new System.Windows.Forms.Label();
             this.loginButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
+            this.AuthSelect = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // userNameLabel
@@ -63,14 +64,14 @@
             this.userNameTextBox.Location = new System.Drawing.Point(283, 215);
             this.userNameTextBox.Name = "userNameTextBox";
             this.userNameTextBox.Size = new System.Drawing.Size(224, 22);
-            this.userNameTextBox.TabIndex = 1;
+            this.userNameTextBox.TabIndex = 2;
             // 
             // passWordTextBox
             // 
             this.passWordTextBox.Location = new System.Drawing.Point(283, 270);
             this.passWordTextBox.Name = "passWordTextBox";
             this.passWordTextBox.Size = new System.Drawing.Size(224, 22);
-            this.passWordTextBox.TabIndex = 2;
+            this.passWordTextBox.TabIndex = 3;
             // 
             // loginLabel
             // 
@@ -90,7 +91,7 @@
             this.loginButton.Location = new System.Drawing.Point(84, 386);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(173, 60);
-            this.loginButton.TabIndex = 3;
+            this.loginButton.TabIndex = 4;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
@@ -104,10 +105,26 @@
             this.clearButton.Location = new System.Drawing.Point(334, 386);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(173, 60);
-            this.clearButton.TabIndex = 4;
+            this.clearButton.TabIndex = 5;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = false;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            // 
+            // AuthSelect
+            // 
+            this.AuthSelect.BackColor = System.Drawing.Color.Coral;
+            this.AuthSelect.DisplayMember = "(none)";
+            this.AuthSelect.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AuthSelect.FormattingEnabled = true;
+            this.AuthSelect.Items.AddRange(new object[] {
+            "Cashier",
+            "Manager",
+            "Administrator"});
+            this.AuthSelect.Location = new System.Drawing.Point(101, 145);
+            this.AuthSelect.MaxDropDownItems = 3;
+            this.AuthSelect.Name = "AuthSelect";
+            this.AuthSelect.Size = new System.Drawing.Size(156, 26);
+            this.AuthSelect.TabIndex = 1;
             // 
             // LoginScreen
             // 
@@ -116,6 +133,7 @@
             this.BackColor = System.Drawing.Color.Coral;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1238, 737);
+            this.Controls.Add(this.AuthSelect);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.loginLabel);
@@ -140,6 +158,7 @@
         private System.Windows.Forms.Label loginLabel;
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.ComboBox AuthSelect;
     }
 }
 

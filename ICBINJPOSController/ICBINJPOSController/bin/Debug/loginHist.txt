@@ -1,4 +1,4 @@
 *Username, Password, message - Time*
 
-
-*William ,Bacon ,Successful Login! - 10/7/2019 12:35:04 AM
+*William ,Bacon ,User Name and Password Incorrect!  Please Check and try again! - 10/15/2019 5:34:22 PM
+*William ,Bacon ,Successful Login! - 10/15/2019 5:35:40 PM
