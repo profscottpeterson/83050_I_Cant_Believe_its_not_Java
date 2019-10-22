@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ICBINJPOSController
 {
-    public partial class ManagementScreen : Form
+    public partial class ReportingScreen : Form
     {
-        public ManagementScreen()
+        public ReportingScreen()
         {
             InitializeComponent();
         }

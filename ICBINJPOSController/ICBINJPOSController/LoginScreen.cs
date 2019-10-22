@@ -105,11 +105,11 @@ namespace ICBINJPOSController
                 //if employee username and password correct
                 if (AuthSelect.SelectedIndex == 0 && empUserName.Contains(userNameTextBox.Text) && empPassWord.Contains(passWordTextBox.Text) && Array.IndexOf(empUserName.ToArray(), userNameTextBox.Text) == Array.IndexOf(empPassWord.ToArray(), passWordTextBox.Text))
                 {
-                    OptionsScreen optionsScreen = new OptionsScreen();
+                    RegisterScreen registerScreen = new RegisterScreen();
                     MessageBox.Show("Successful Login!");
                     msgtxt = "Successful Login!";
                     this.Hide();
-                    optionsScreen.ShowDialog();
+                    registerScreen.ShowDialog();
 
 
                     //login login attempt to loginHist.txt file
@@ -123,11 +123,11 @@ namespace ICBINJPOSController
                 //if manager username and password correct
                 else if (AuthSelect.SelectedIndex == 1 && mgtUserName.Contains(userNameTextBox.Text) && mgtPassWord.Contains(passWordTextBox.Text) && Array.IndexOf(mgtUserName.ToArray(), userNameTextBox.Text) == Array.IndexOf(mgtPassWord.ToArray(), passWordTextBox.Text))
                 {
-                    OptionsScreen optionsScreen = new OptionsScreen();
+                    ReportingScreen reportingScreen = new ReportingScreen();
                     MessageBox.Show("Successful Login!");
                     msgtxt = "Successful Login!";
                     this.Hide();
-                    optionsScreen.ShowDialog();
+                    reportingScreen.ShowDialog();
 
 
                     //login login attempt to loginHist.txt file
@@ -155,6 +155,7 @@ namespace ICBINJPOSController
                     this.userNameTextBox.Clear();
                     this.passWordTextBox.Clear();
                     this.userNameTextBox.Focus();
+                    
                 }
                 //if employee username or password incorrect
                 else if (AuthSelect.SelectedIndex == 0 && (userNameTextBox.Text != "") || (passWordTextBox.Text != "") && Array.IndexOf(empUserName.ToArray(), userNameTextBox.Text) != Array.IndexOf(empPassWord.ToArray(), passWordTextBox.Text))

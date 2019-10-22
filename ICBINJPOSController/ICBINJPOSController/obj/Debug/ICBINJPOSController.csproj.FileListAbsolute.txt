@@ -17,3 +17,6 @@ C:\Users\Dange\Desktop\POS Project Git Repository\ICBINJPOSController\ICBINJPOSC
 C:\Users\Dange\Desktop\POS Project Git Repository\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.csproj.GenerateResource.cache
 C:\Users\Dange\Desktop\POS Project Git Repository\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.exe
 C:\Users\Dange\Desktop\POS Project Git Repository\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.pdb
+C:\Users\Dange\Desktop\POS Project Git Repository\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.AdminScreen.resources
+C:\Users\Dange\Desktop\POS Project Git Repository\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.RegisterScreen.resources
+C:\Users\Dange\Desktop\POS Project Git Repository\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.ReportingScreen.resources

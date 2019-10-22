@@ -43,7 +43,7 @@
             // 
             this.userNameLabel.AutoSize = true;
             this.userNameLabel.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userNameLabel.Location = new System.Drawing.Point(83, 218);
+            this.userNameLabel.Location = new System.Drawing.Point(269, 236);
             this.userNameLabel.Name = "userNameLabel";
             this.userNameLabel.Size = new System.Drawing.Size(174, 19);
             this.userNameLabel.TabIndex = 0;
@@ -53,7 +53,7 @@
             // 
             this.passWordLabel.AutoSize = true;
             this.passWordLabel.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passWordLabel.Location = new System.Drawing.Point(97, 273);
+            this.passWordLabel.Location = new System.Drawing.Point(283, 291);
             this.passWordLabel.Name = "passWordLabel";
             this.passWordLabel.Size = new System.Drawing.Size(160, 19);
             this.passWordLabel.TabIndex = 0;
@@ -61,14 +61,14 @@
             // 
             // userNameTextBox
             // 
-            this.userNameTextBox.Location = new System.Drawing.Point(283, 215);
+            this.userNameTextBox.Location = new System.Drawing.Point(469, 233);
             this.userNameTextBox.Name = "userNameTextBox";
             this.userNameTextBox.Size = new System.Drawing.Size(224, 22);
             this.userNameTextBox.TabIndex = 2;
             // 
             // passWordTextBox
             // 
-            this.passWordTextBox.Location = new System.Drawing.Point(283, 270);
+            this.passWordTextBox.Location = new System.Drawing.Point(469, 288);
             this.passWordTextBox.Name = "passWordTextBox";
             this.passWordTextBox.Size = new System.Drawing.Size(224, 22);
             this.passWordTextBox.TabIndex = 3;
@@ -77,7 +77,7 @@
             // 
             this.loginLabel.AutoSize = true;
             this.loginLabel.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginLabel.Location = new System.Drawing.Point(279, 148);
+            this.loginLabel.Location = new System.Drawing.Point(465, 166);
             this.loginLabel.Name = "loginLabel";
             this.loginLabel.Size = new System.Drawing.Size(222, 19);
             this.loginLabel.TabIndex = 0;
@@ -88,7 +88,7 @@
             this.loginButton.BackColor = System.Drawing.Color.Coral;
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.loginButton.Font = new System.Drawing.Font("Goudy Stout", 8.25F);
-            this.loginButton.Location = new System.Drawing.Point(84, 386);
+            this.loginButton.Location = new System.Drawing.Point(270, 404);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(173, 60);
             this.loginButton.TabIndex = 4;
@@ -102,7 +102,7 @@
             this.clearButton.BackColor = System.Drawing.Color.Coral;
             this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.clearButton.Font = new System.Drawing.Font("Goudy Stout", 8.25F);
-            this.clearButton.Location = new System.Drawing.Point(334, 386);
+            this.clearButton.Location = new System.Drawing.Point(520, 404);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(173, 60);
             this.clearButton.TabIndex = 5;
@@ -120,10 +120,10 @@
             "Cashier",
             "Manager",
             "Administrator"});
-            this.AuthSelect.Location = new System.Drawing.Point(101, 145);
+            this.AuthSelect.Location = new System.Drawing.Point(198, 163);
             this.AuthSelect.MaxDropDownItems = 3;
             this.AuthSelect.Name = "AuthSelect";
-            this.AuthSelect.Size = new System.Drawing.Size(156, 26);
+            this.AuthSelect.Size = new System.Drawing.Size(245, 26);
             this.AuthSelect.TabIndex = 1;
             // 
             // LoginScreen
@@ -132,7 +132,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Coral;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1238, 737);
+            this.ClientSize = new System.Drawing.Size(1443, 653);
             this.Controls.Add(this.AuthSelect);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.loginButton);
@@ -142,6 +142,7 @@
             this.Controls.Add(this.passWordLabel);
             this.Controls.Add(this.userNameLabel);
             this.Name = "LoginScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginScreen";
             this.Load += new System.EventHandler(this.LoginScreen_Load);
             this.ResumeLayout(false);

@@ -53,11 +53,11 @@
     <Compile Include="AdminScreen.Designer.cs">
       <DependentUpon>AdminScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManagementScreen.cs">
+    <Compile Include="ReportingScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManagementScreen.Designer.cs">
-      <DependentUpon>ManagementScreen.cs</DependentUpon>
+    <Compile Include="ReportingScreen.Designer.cs">
+      <DependentUpon>ReportingScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="OptionsScreen.cs">
       <SubType>Form</SubType>
@@ -79,6 +79,9 @@
     <Compile Include="RegisterScreen.Designer.cs">
       <DependentUpon>RegisterScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminScreen.resx">
+      <DependentUpon>AdminScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OptionsScreen.resx">
       <DependentUpon>OptionsScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +96,12 @@
     </Compile>
     <EmbeddedResource Include="LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterScreen.resx">
+      <DependentUpon>RegisterScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportingScreen.resx">
+      <DependentUpon>ReportingScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

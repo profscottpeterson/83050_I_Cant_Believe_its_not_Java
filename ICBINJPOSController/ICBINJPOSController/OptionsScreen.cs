@@ -19,7 +19,7 @@ namespace ICBINJPOSController
 
         private void OptionsScreen_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
