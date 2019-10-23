@@ -61,18 +61,18 @@
             // 
             // userNameTextBox
             // 
-            this.userNameTextBox.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userNameTextBox.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNameTextBox.Location = new System.Drawing.Point(444, 322);
             this.userNameTextBox.Name = "userNameTextBox";
-            this.userNameTextBox.Size = new System.Drawing.Size(308, 31);
+            this.userNameTextBox.Size = new System.Drawing.Size(385, 34);
             this.userNameTextBox.TabIndex = 2;
             // 
             // passWordTextBox
             // 
-            this.passWordTextBox.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passWordTextBox.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passWordTextBox.Location = new System.Drawing.Point(444, 392);
             this.passWordTextBox.Name = "passWordTextBox";
-            this.passWordTextBox.Size = new System.Drawing.Size(308, 31);
+            this.passWordTextBox.Size = new System.Drawing.Size(385, 34);
             this.passWordTextBox.TabIndex = 3;
             // 
             // loginLabel
@@ -134,7 +134,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Coral;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1460, 874);
+            this.ClientSize = new System.Drawing.Size(1460, 762);
             this.Controls.Add(this.AuthSelect);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.loginButton);
