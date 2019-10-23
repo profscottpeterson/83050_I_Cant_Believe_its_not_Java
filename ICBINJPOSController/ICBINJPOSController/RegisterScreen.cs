@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ICBINJPOSController
 {
-    public partial class OptionsScreen : Form
+    public partial class RegisterScreen : Form
     {
-        public OptionsScreen()
+        public RegisterScreen()
         {
             InitializeComponent();
-        }
-
-        private void OptionsScreen_Load(object sender, EventArgs e)
-        {
-            
         }
     }
 }
