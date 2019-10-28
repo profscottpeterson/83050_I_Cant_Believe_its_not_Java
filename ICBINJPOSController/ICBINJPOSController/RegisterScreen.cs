@@ -12,9 +12,22 @@ namespace ICBINJPOSController
 {
     public partial class RegisterScreen : Form
     {
+        // Fields go here
+        string currentDate = DateTime.Now.ToShortDateString();
+
         public RegisterScreen()
         {
             InitializeComponent();
+           
+            // Show current date.
+            lblTodaysDate.Text = currentDate;
         }
+
+        private void coffeeButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

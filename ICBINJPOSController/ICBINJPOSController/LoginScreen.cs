@@ -103,7 +103,7 @@ namespace ICBINJPOSController
             try
             {
                 //if employee username and password correct
-                if (AuthSelect.SelectedIndex == 0 && empUserName.Contains(userNameTextBox.Text) && empPassWord.Contains(passWordTextBox.Text) && Array.IndexOf(empUserName.ToArray(), userNameTextBox.Text) == Array.IndexOf(empPassWord.ToArray(), passWordTextBox.Text))
+                if (true) //(AuthSelect.SelectedIndex == 0 && empUserName.Contains(userNameTextBox.Text) && empPassWord.Contains(passWordTextBox.Text) && Array.IndexOf(empUserName.ToArray(), userNameTextBox.Text) == Array.IndexOf(empPassWord.ToArray(), passWordTextBox.Text))
                 {
                     RegisterScreen registerScreen = new RegisterScreen();
                     MessageBox.Show("Successful Login!");
