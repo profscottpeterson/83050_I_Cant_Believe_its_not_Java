@@ -1,2 +1,0 @@
-ID# - Name - Password
-000 Admin Admin
