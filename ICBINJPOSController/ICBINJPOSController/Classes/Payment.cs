@@ -39,6 +39,7 @@ namespace ICBINJPOSController
 
         public double CalcCashDue()
         {    
+            // Transaction.Total is static
             this.cashDue = Transaction.Total - this.cashRec;
 
             if (this.cashDue > 0)
