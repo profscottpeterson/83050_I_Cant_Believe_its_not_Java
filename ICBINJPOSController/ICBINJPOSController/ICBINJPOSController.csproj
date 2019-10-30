@@ -84,8 +84,8 @@
     <Compile Include="RegisterScreen.Designer.cs">
       <DependentUpon>RegisterScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\Transaction.cs" />
+    <Compile Include="Classes\User.cs" />
     <EmbeddedResource Include="AdminScreen.resx">
       <DependentUpon>AdminScreen.cs</DependentUpon>
     </EmbeddedResource>

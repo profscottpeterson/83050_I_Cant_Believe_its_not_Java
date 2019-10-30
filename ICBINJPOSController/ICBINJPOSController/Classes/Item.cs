@@ -41,7 +41,7 @@ namespace ICBINJPOSController
             set { price = value; }
         }
 
-        public Item (int quantity, string itemDesc, string size, double price)
+        public Item(int quantity, string itemDesc, string size, double price)
         {
             this.description = itemDesc;
             this.size = size;

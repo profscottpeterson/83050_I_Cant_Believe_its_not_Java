@@ -12,7 +12,7 @@ namespace ICBINJPOSController
         /// This field is the current user.
         /// </summary>
         private User currentUser;
-      
+
         public User CurrentUser
         {
             // ***Should this be read-only?***
@@ -81,6 +81,6 @@ namespace ICBINJPOSController
 
         }
 
-        
+
     }
 }

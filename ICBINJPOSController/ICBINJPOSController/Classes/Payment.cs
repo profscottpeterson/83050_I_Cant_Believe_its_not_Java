@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ICBINJPOSController
 {
     public class Payment
-    {   
+    {
         // Not sure if its secure to have cc num in an object
         private int creditCardNum;
 
@@ -38,14 +38,14 @@ namespace ICBINJPOSController
         }
 
         public double CalcCashDue()
-        {    
+        {
             this.cashDue = Transaction.Total - this.cashRec;
 
             if (this.cashDue > 0)
             {
                 this.OpenDrawer();
                 return this.cashDue;
-                
+
             }
             else if (this.cashDue < 0)
             {

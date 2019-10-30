@@ -19,7 +19,7 @@ namespace ICBINJPOSController
         {
             Transaction Trans2Display = null;
             return Trans2Display;
-            
+
         }
 
         // Should we select an item for refund off the trans, or just select a drink from
