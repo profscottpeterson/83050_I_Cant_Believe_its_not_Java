@@ -47,17 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Admin.cs" />
     <Compile Include="AdminScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminScreen.Designer.cs">
       <DependentUpon>AdminScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Item.cs" />
-    <Compile Include="Classes\Payment.cs" />
-    <Compile Include="Classes\Refund.cs" />
-    <Compile Include="Classes\Report.cs" />
     <Compile Include="ReportingScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,8 +79,7 @@
     <Compile Include="RegisterScreen.Designer.cs">
       <DependentUpon>RegisterScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\User.cs" />
-    <Compile Include="Classes\Transaction.cs" />
+    <Compile Include="Users.cs" />
     <EmbeddedResource Include="AdminScreen.resx">
       <DependentUpon>AdminScreen.cs</DependentUpon>
     </EmbeddedResource>
