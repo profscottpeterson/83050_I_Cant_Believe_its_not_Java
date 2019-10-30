@@ -64,7 +64,7 @@
             this.userNameTextBox.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNameTextBox.Location = new System.Drawing.Point(444, 322);
             this.userNameTextBox.Name = "userNameTextBox";
-            this.userNameTextBox.Size = new System.Drawing.Size(385, 27);
+            this.userNameTextBox.Size = new System.Drawing.Size(385, 34);
             this.userNameTextBox.TabIndex = 2;
             // 
             // passWordTextBox
@@ -72,7 +72,7 @@
             this.passWordTextBox.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passWordTextBox.Location = new System.Drawing.Point(444, 392);
             this.passWordTextBox.Name = "passWordTextBox";
-            this.passWordTextBox.Size = new System.Drawing.Size(385, 27);
+            this.passWordTextBox.Size = new System.Drawing.Size(385, 34);
             this.passWordTextBox.TabIndex = 3;
             // 
             // loginLabel
