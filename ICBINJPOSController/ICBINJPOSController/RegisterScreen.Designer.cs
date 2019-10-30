@@ -35,10 +35,10 @@
             this.taxPrice = new System.Windows.Forms.Label();
             this.subtotalPrice = new System.Windows.Forms.Label();
             this.subtotalLabel = new System.Windows.Forms.Label();
-            this.lbx = new System.Windows.Forms.ListBox();
-            this.largeSize = new System.Windows.Forms.RadioButton();
-            this.mediumSize = new System.Windows.Forms.RadioButton();
-            this.smallSize = new System.Windows.Forms.RadioButton();
+            this.lbxOrder = new System.Windows.Forms.ListBox();
+            this.rbLarge = new System.Windows.Forms.RadioButton();
+            this.rbMed = new System.Windows.Forms.RadioButton();
+            this.rbSmall = new System.Windows.Forms.RadioButton();
             this.voidButton = new System.Windows.Forms.Button();
             this.enterButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
@@ -77,7 +77,7 @@
             this.btn4 = new System.Windows.Forms.Button();
             this.Btn1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblCurrentUser = new System.Windows.Forms.Label();
             this.lblTodaysDate = new System.Windows.Forms.Label();
             this.hotDrinks.SuspendLayout();
             this.coldDrinks.SuspendLayout();
@@ -146,51 +146,51 @@
             this.subtotalLabel.TabIndex = 51;
             this.subtotalLabel.Text = "Sub:";
             // 
-            // lbx
+            // lbxOrder
             // 
-            this.lbx.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lbx.FormattingEnabled = true;
-            this.lbx.Location = new System.Drawing.Point(747, 108);
-            this.lbx.Name = "lbx";
-            this.lbx.ScrollAlwaysVisible = true;
-            this.lbx.Size = new System.Drawing.Size(295, 446);
-            this.lbx.TabIndex = 50;
+            this.lbxOrder.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lbxOrder.FormattingEnabled = true;
+            this.lbxOrder.Location = new System.Drawing.Point(747, 108);
+            this.lbxOrder.Name = "lbxOrder";
+            this.lbxOrder.ScrollAlwaysVisible = true;
+            this.lbxOrder.Size = new System.Drawing.Size(295, 446);
+            this.lbxOrder.TabIndex = 50;
             // 
-            // largeSize
+            // rbLarge
             // 
-            this.largeSize.AutoSize = true;
-            this.largeSize.Font = new System.Drawing.Font("Goudy Stout", 7.8F);
-            this.largeSize.Location = new System.Drawing.Point(25, 137);
-            this.largeSize.Name = "largeSize";
-            this.largeSize.Size = new System.Drawing.Size(76, 19);
-            this.largeSize.TabIndex = 48;
-            this.largeSize.TabStop = true;
-            this.largeSize.Text = "20oz.";
-            this.largeSize.UseVisualStyleBackColor = true;
+            this.rbLarge.AutoSize = true;
+            this.rbLarge.Font = new System.Drawing.Font("Goudy Stout", 7.8F);
+            this.rbLarge.Location = new System.Drawing.Point(25, 137);
+            this.rbLarge.Name = "rbLarge";
+            this.rbLarge.Size = new System.Drawing.Size(93, 19);
+            this.rbLarge.TabIndex = 48;
+            this.rbLarge.TabStop = true;
+            this.rbLarge.Text = "Large";
+            this.rbLarge.UseVisualStyleBackColor = true;
             // 
-            // mediumSize
+            // rbMed
             // 
-            this.mediumSize.AutoSize = true;
-            this.mediumSize.Font = new System.Drawing.Font("Goudy Stout", 7.8F);
-            this.mediumSize.Location = new System.Drawing.Point(25, 88);
-            this.mediumSize.Name = "mediumSize";
-            this.mediumSize.Size = new System.Drawing.Size(76, 19);
-            this.mediumSize.TabIndex = 47;
-            this.mediumSize.TabStop = true;
-            this.mediumSize.Text = "16oz.";
-            this.mediumSize.UseVisualStyleBackColor = true;
+            this.rbMed.AutoSize = true;
+            this.rbMed.Font = new System.Drawing.Font("Goudy Stout", 7.8F);
+            this.rbMed.Location = new System.Drawing.Point(25, 88);
+            this.rbMed.Name = "rbMed";
+            this.rbMed.Size = new System.Drawing.Size(114, 19);
+            this.rbMed.TabIndex = 47;
+            this.rbMed.TabStop = true;
+            this.rbMed.Text = "Medium";
+            this.rbMed.UseVisualStyleBackColor = true;
             // 
-            // smallSize
+            // rbSmall
             // 
-            this.smallSize.AutoSize = true;
-            this.smallSize.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.smallSize.Location = new System.Drawing.Point(25, 44);
-            this.smallSize.Name = "smallSize";
-            this.smallSize.Size = new System.Drawing.Size(76, 19);
-            this.smallSize.TabIndex = 46;
-            this.smallSize.TabStop = true;
-            this.smallSize.Text = "12oz.";
-            this.smallSize.UseVisualStyleBackColor = true;
+            this.rbSmall.AutoSize = true;
+            this.rbSmall.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSmall.Location = new System.Drawing.Point(25, 44);
+            this.rbSmall.Name = "rbSmall";
+            this.rbSmall.Size = new System.Drawing.Size(95, 19);
+            this.rbSmall.TabIndex = 46;
+            this.rbSmall.TabStop = true;
+            this.rbSmall.Text = "Small";
+            this.rbSmall.UseVisualStyleBackColor = true;
             // 
             // voidButton
             // 
@@ -287,7 +287,7 @@
             this.btnCoffee.TabIndex = 32;
             this.btnCoffee.Text = "Coffee";
             this.btnCoffee.UseVisualStyleBackColor = false;
-            this.btnCoffee.Click += new System.EventHandler(this.coffeeButton_Click);
+            this.btnCoffee.Click += new System.EventHandler(this.btnCoffee_Click);
             // 
             // btnCappuchino
             // 
@@ -581,9 +581,9 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.largeSize);
-            this.groupBox4.Controls.Add(this.mediumSize);
-            this.groupBox4.Controls.Add(this.smallSize);
+            this.groupBox4.Controls.Add(this.rbLarge);
+            this.groupBox4.Controls.Add(this.rbMed);
+            this.groupBox4.Controls.Add(this.rbSmall);
             this.groupBox4.Location = new System.Drawing.Point(508, 48);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(144, 183);
@@ -670,13 +670,13 @@
             this.label2.TabIndex = 71;
             this.label2.Text = "Current User:";
             // 
-            // label3
+            // lblCurrentUser
             // 
-            this.label3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(925, 48);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 15);
-            this.label3.TabIndex = 72;
+            this.lblCurrentUser.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCurrentUser.Location = new System.Drawing.Point(925, 48);
+            this.lblCurrentUser.Name = "lblCurrentUser";
+            this.lblCurrentUser.Size = new System.Drawing.Size(82, 15);
+            this.lblCurrentUser.TabIndex = 72;
             // 
             // lblTodaysDate
             // 
@@ -696,7 +696,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1136, 939);
             this.Controls.Add(this.lblTodaysDate);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblCurrentUser);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panelQuantity);
             this.Controls.Add(this.groupBox4);
@@ -710,7 +710,7 @@
             this.Controls.Add(this.taxPrice);
             this.Controls.Add(this.subtotalPrice);
             this.Controls.Add(this.subtotalLabel);
-            this.Controls.Add(this.lbx);
+            this.Controls.Add(this.lbxOrder);
             this.Controls.Add(this.voidButton);
             this.Controls.Add(this.enterButton);
             this.Controls.Add(this.backButton);
@@ -743,10 +743,10 @@
         private System.Windows.Forms.Label taxPrice;
         private System.Windows.Forms.Label subtotalPrice;
         private System.Windows.Forms.Label subtotalLabel;
-        private System.Windows.Forms.ListBox lbx;
-        private System.Windows.Forms.RadioButton largeSize;
-        private System.Windows.Forms.RadioButton mediumSize;
-        private System.Windows.Forms.RadioButton smallSize;
+        private System.Windows.Forms.ListBox lbxOrder;
+        private System.Windows.Forms.RadioButton rbLarge;
+        private System.Windows.Forms.RadioButton rbMed;
+        private System.Windows.Forms.RadioButton rbSmall;
         private System.Windows.Forms.Button voidButton;
         private System.Windows.Forms.Button enterButton;
         private System.Windows.Forms.Button backButton;
@@ -785,7 +785,7 @@
         private System.Windows.Forms.Button btn4;
         private System.Windows.Forms.Button Btn1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblCurrentUser;
         private System.Windows.Forms.Label lblTodaysDate;
     }
 }

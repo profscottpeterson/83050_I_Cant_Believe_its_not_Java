@@ -11,15 +11,15 @@ namespace ICBINJPOSController
         /// <summary>
         /// This field is a username
         /// </summary>
-        private string uName;
+        private static string uName;
 
         /// <summary>
         /// Gets or sets username.
         /// </summary>
-        public string UName
+        public static string UName
         {
-            get { return this.uName; }
-            set { this.uName = value; }
+            get { return uName; }
+            set { uName = value; }
         }
 
         private string password;

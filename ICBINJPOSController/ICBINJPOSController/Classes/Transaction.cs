@@ -15,10 +15,9 @@ namespace ICBINJPOSController
       
         public User CurrentUser
         {
-            get { return currentUser; }
-
             // ***Should this be read-only?***
-            //set { currentUser = value; }
+            get { return currentUser; }
+            set { currentUser = value; }
         }
 
         /// <summary>
