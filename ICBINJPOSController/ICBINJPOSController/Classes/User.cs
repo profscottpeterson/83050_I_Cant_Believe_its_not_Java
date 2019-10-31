@@ -12,13 +12,20 @@ namespace ICBINJPOSController
         //string to hold message box messages
         public string msgtxt;
 
+        //flag to show message box messages
+        public bool employeeLoggedIn;
+        public bool managerLoggedIn;
+        public bool administratorLoggedIn;
+        public bool loginIncorrect;
+        public bool loginBlank;
+
         //to users names and passwords to hold textbox text
-        public string EmployeeName;
-        public string EmployeePass;
-        public string ManagerName;
-        public string ManagerPass;
-        public string AdminName;
-        public string AdminPass;
+        public string employeeName;
+        public string employeePass;
+        public string managerName;
+        public string managerPass;
+        public string adminName;
+        public string adminPass;
 
         //lists to hold ID, Usernames and Passwords
         List<string> empID = new List<string>();
@@ -30,12 +37,6 @@ namespace ICBINJPOSController
         List<string> adminID = new List<string>();
         List<string> adminUserName = new List<string>();
         List<string> adminPassWord = new List<string>();
-
-        //Instance of new screens
-        LoginScreen loginScreen = new LoginScreen();
-        RegisterScreen registerScreen = new RegisterScreen();
-        OptionsScreen optionsScreen = new OptionsScreen();
-        ReportingScreen reportingScreen = new ReportingScreen();
 
 
         public void OpenEmpFile()
@@ -89,45 +90,42 @@ namespace ICBINJPOSController
 
         public void EmployeeLogin(string name, string password)
         {
-            this.EmployeeName = name;
-            this.EmployeePass = password;
+            this.employeeName = name;
+            this.employeePass = password;
 
             //if employee username and password correct
-            if (empUserName.Contains(EmployeeName) && empPassWord.Contains(EmployeePass) && Array.IndexOf(empUserName.ToArray(), EmployeeName) == Array.IndexOf(empPassWord.ToArray(), EmployeePass))
+            if (empUserName.Contains(employeeName) && empPassWord.Contains(employeePass) && Array.IndexOf(empUserName.ToArray(), employeeName) == Array.IndexOf(empPassWord.ToArray(), employeePass))
             {
-                //MessageBox.Show("Successful Login!");
+                employeeLoggedIn = true;
                 msgtxt = "Successful Login!";
-                loginScreen.Hide();
-                registerScreen.ShowDialog();
-
 
                 //login login attempt to loginHist.txt file
                 StreamWriter successHist = new StreamWriter("loginHist.txt", true);
-                successHist.WriteLine("*" + EmployeeName + " ," + EmployeePass + " ," + msgtxt + " - " + DateTime.Now);
+                successHist.WriteLine("*" + employeeName + " ," + employeePass + " ," + msgtxt + " - " + DateTime.Now);
                 successHist.Close();
             }
 
             //if employee username or password incorrect
-            else if ((EmployeeName != "") || (EmployeePass != "") && Array.IndexOf(empUserName.ToArray(), EmployeeName) != Array.IndexOf(empPassWord.ToArray(), EmployeePass))
+            else if ((employeeName != "") || (employeePass != "") && Array.IndexOf(empUserName.ToArray(), employeeName) != Array.IndexOf(empPassWord.ToArray(), employeePass))
             {
-                //MessageBox.Show("User Name and Password Incorrect!  Please Check and try again!");
+                loginIncorrect = true;
                 msgtxt = "User Name and Password Incorrect!  Please Check and try again!";
 
                 //login login attempt to loginHist.txt file
                 StreamWriter incorrectHist = new StreamWriter("loginHist.txt", true);
-                incorrectHist.WriteLine("*" + EmployeeName + " ," + EmployeePass + " ," + msgtxt + " - " + DateTime.Now);
+                incorrectHist.WriteLine("*" + employeeName + " ," + employeePass + " ," + msgtxt + " - " + DateTime.Now);
                 incorrectHist.Close();
             }
 
             //if username or password left blank
-            else if ((EmployeeName == "") || (EmployeePass == ""))
+            else if ((employeeName == "") || (employeePass == ""))
             {
-                //MessageBox.Show("Please Fill out both Username and Password Fields!");
+                loginBlank = true;
                 msgtxt = "Please Fill out both Username and Password Fields!";
 
                 //login login attempt to loginHist.txt file
                 StreamWriter blankFormHist = new StreamWriter("loginHist.txt", true);
-                blankFormHist.WriteLine("*" + EmployeeName + " ," + EmployeePass + " ," + msgtxt + " - " + DateTime.Now);
+                blankFormHist.WriteLine("*" + employeeName + " ," + employeePass + " ," + msgtxt + " - " + DateTime.Now);
                 blankFormHist.Close();
             }
 
@@ -135,45 +133,42 @@ namespace ICBINJPOSController
 
         public void ManagerLogin(string name, string password)
         {
-            this.ManagerName = name;
-            this.ManagerPass = password;
+            this.managerName = name;
+            this.managerPass = password;
 
             //if manager username and password correct
-            if (mgtUserName.Contains(ManagerName) && mgtPassWord.Contains(ManagerPass) && Array.IndexOf(mgtUserName.ToArray(), ManagerName) == Array.IndexOf(mgtPassWord.ToArray(), ManagerPass))
+            if (mgtUserName.Contains(managerName) && mgtPassWord.Contains(managerPass) && Array.IndexOf(mgtUserName.ToArray(), managerName) == Array.IndexOf(mgtPassWord.ToArray(), managerPass))
             {
-                //MessageBox.Show("Successful Login!");
+                managerLoggedIn = true;
                 msgtxt = "Successful Login!";
-                loginScreen.Hide();
-                reportingScreen.ShowDialog();
-
-
+ 
                 //login login attempt to loginHist.txt file
                 StreamWriter successHist = new StreamWriter("loginHist.txt", true);
-                successHist.WriteLine("*" + ManagerName + " ," + ManagerPass + " ," + msgtxt + " - " + DateTime.Now);
+                successHist.WriteLine("*" + managerName + " ," + managerPass + " ," + msgtxt + " - " + DateTime.Now);
                 successHist.Close();
             }
 
             //if manager username or password incorrect
-            else if ((ManagerName != "") || (ManagerPass != "") && Array.IndexOf(mgtUserName.ToArray(), ManagerName) != Array.IndexOf(mgtPassWord.ToArray(), ManagerPass))
+            else if ((managerName != "") || (managerPass != "") && Array.IndexOf(mgtUserName.ToArray(), managerName) != Array.IndexOf(mgtPassWord.ToArray(), managerPass))
             {
-                //MessageBox.Show("User Name and Password Incorrect!  Please Check and try again!");
+                loginIncorrect = true;
                 msgtxt = "User Name and Password Incorrect!  Please Check and try again!";
 
                 //login login attempt to loginHist.txt file
                 StreamWriter incorrectHist = new StreamWriter("loginHist.txt", true);
-                incorrectHist.WriteLine("*" + ManagerName + " ," + ManagerPass + " ," + msgtxt + " - " + DateTime.Now);
+                incorrectHist.WriteLine("*" + managerName + " ," + managerPass + " ," + msgtxt + " - " + DateTime.Now);
                 incorrectHist.Close();
             }
 
             //if username or password left blank
-            else if ((ManagerName == "") || (ManagerPass == ""))
+            else if ((managerName == "") || (managerPass == ""))
             {
-                //MessageBox.Show("Please Fill out both Username and Password Fields!");
+                loginBlank = true;
                 msgtxt = "Please Fill out both Username and Password Fields!";
 
                 //login login attempt to loginHist.txt file
                 StreamWriter blankFormHist = new StreamWriter("loginHist.txt", true);
-                blankFormHist.WriteLine("*" + ManagerName + " ," + ManagerPass + " ," + msgtxt + " - " + DateTime.Now);
+                blankFormHist.WriteLine("*" + managerName + " ," + managerPass + " ," + msgtxt + " - " + DateTime.Now);
                 blankFormHist.Close();
             }
 
@@ -181,45 +176,42 @@ namespace ICBINJPOSController
 
         public void AdminLogin(string name, string password)
         {
-            this.AdminName = name;
-            this.AdminPass = password;
+            this.adminName = name;
+            this.adminPass = password;
 
             //if administrator username and password correct
-            if (adminUserName.Contains(AdminName) && adminPassWord.Contains(AdminPass) && Array.IndexOf(adminUserName.ToArray(), AdminName) == Array.IndexOf(adminPassWord.ToArray(), AdminPass))
+            if (adminUserName.Contains(adminName) && adminPassWord.Contains(adminPass) && Array.IndexOf(adminUserName.ToArray(), adminName) == Array.IndexOf(adminPassWord.ToArray(), adminPass))
             {
-                //MessageBox.Show("Successful Login!");
+                administratorLoggedIn = true;
                 msgtxt = "Successful Login!";
-                loginScreen.Hide();
-                optionsScreen.ShowDialog();
-
 
                 //login login attempt to loginHist.txt file
                 StreamWriter successHist = new StreamWriter("loginHist.txt", true);
-                successHist.WriteLine("*" + AdminName + " ," + AdminPass + " ," + msgtxt + " - " + DateTime.Now);
+                successHist.WriteLine("*" + adminName + " ," + adminPass + " ," + msgtxt + " - " + DateTime.Now);
                 successHist.Close();
             }
 
             //if administrator username or password incorrect
-            else if ((AdminName != "") || (AdminPass != "") && Array.IndexOf(adminUserName.ToArray(), AdminName) != Array.IndexOf(adminPassWord.ToArray(), AdminPass))
+            else if ((adminName != "") || (adminPass != "") && Array.IndexOf(adminUserName.ToArray(), adminName) != Array.IndexOf(adminPassWord.ToArray(), adminPass))
             {
-                //MessageBox.Show("User Name and Password Incorrect!  Please Check and try again!");
+                loginIncorrect = true;
                 msgtxt = "User Name and Password Incorrect!  Please Check and try again!";
 
                 //login login attempt to loginHist.txt file
                 StreamWriter incorrectHist = new StreamWriter("loginHist.txt", true);
-                incorrectHist.WriteLine("*" + AdminName + " ," + AdminPass + " ," + msgtxt + " - " + DateTime.Now);
+                incorrectHist.WriteLine("*" + adminName + " ," + adminPass + " ," + msgtxt + " - " + DateTime.Now);
                 incorrectHist.Close();
             }
 
             //if username or password left blank
-            else if ((AdminName == "") || (AdminPass == ""))
+            else if ((adminName == "") || (adminPass == ""))
             {
-                //MessageBox.Show("Please Fill out both Username and Password Fields!");
+                loginBlank = true;
                 msgtxt = "Please Fill out both Username and Password Fields!";
 
                 //login login attempt to loginHist.txt file
                 StreamWriter blankFormHist = new StreamWriter("loginHist.txt", true);
-                blankFormHist.WriteLine("*" + AdminName + " ," + AdminPass + " ," + msgtxt + " - " + DateTime.Now);
+                blankFormHist.WriteLine("*" + adminName + " ," + adminPass + " ," + msgtxt + " - " + DateTime.Now);
                 blankFormHist.Close();
             }
         }

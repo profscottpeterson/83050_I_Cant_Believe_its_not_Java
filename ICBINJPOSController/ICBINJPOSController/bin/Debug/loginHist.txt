@@ -43,3 +43,10 @@
 *William ,Password1 ,User Name and Password Incorrect!  Please Check and try again! - 10/25/2019 12:10:33 AM
 *Admin ,Admin ,Successful Login! - 10/25/2019 12:10:47 AM
 *William ,Bacon ,Successful Login! - 10/25/2019 12:15:15 AM
+*William , ,User Name and Password Incorrect!  Please Check and try again! - 10/30/2019 9:42:59 PM
+*William ,Password1 ,User Name and Password Incorrect!  Please Check and try again! - 10/30/2019 9:43:13 PM
+*William ,Bacon ,User Name and Password Incorrect!  Please Check and try again! - 10/30/2019 9:43:25 PM
+* , ,Please Fill out both Username and Password Fields! - 10/30/2019 9:43:27 PM
+*William ,Admin ,User Name and Password Incorrect!  Please Check and try again! - 10/30/2019 9:43:39 PM
+*William ,Bacon ,Successful Login! - 10/30/2019 9:43:49 PM
+*William  , ,User Name and Password Incorrect!  Please Check and try again! - 10/30/2019 9:46:03 PM

@@ -48,48 +48,48 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Admin.cs" />
-    <Compile Include="AdminScreen.cs">
+    <Compile Include="Screens\AdminScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminScreen.Designer.cs">
+    <Compile Include="Screens\AdminScreen.Designer.cs">
       <DependentUpon>AdminScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Item.cs" />
     <Compile Include="Classes\Payment.cs" />
     <Compile Include="Classes\Refund.cs" />
     <Compile Include="Classes\Report.cs" />
-    <Compile Include="ReportingScreen.cs">
+    <Compile Include="Screens\ReportingScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReportingScreen.Designer.cs">
+    <Compile Include="Screens\ReportingScreen.Designer.cs">
       <DependentUpon>ReportingScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="OptionsScreen.cs">
+    <Compile Include="Screens\OptionsScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OptionsScreen.Designer.cs">
+    <Compile Include="Screens\OptionsScreen.Designer.cs">
       <DependentUpon>OptionsScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginScreen.cs">
+    <Compile Include="Screens\LoginScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginScreen.Designer.cs">
+    <Compile Include="Screens\LoginScreen.Designer.cs">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegisterScreen.cs">
+    <Compile Include="Screens\RegisterScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegisterScreen.Designer.cs">
+    <Compile Include="Screens\RegisterScreen.Designer.cs">
       <DependentUpon>RegisterScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Transaction.cs" />
     <Compile Include="Classes\User.cs" />
-    <EmbeddedResource Include="AdminScreen.resx">
+    <EmbeddedResource Include="Screens\AdminScreen.resx">
       <DependentUpon>AdminScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OptionsScreen.resx">
+    <EmbeddedResource Include="Screens\OptionsScreen.resx">
       <DependentUpon>OptionsScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -101,13 +101,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="LoginScreen.resx">
+    <EmbeddedResource Include="Screens\LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegisterScreen.resx">
+    <EmbeddedResource Include="Screens\RegisterScreen.resx">
       <DependentUpon>RegisterScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportingScreen.resx">
+    <EmbeddedResource Include="Screens\ReportingScreen.resx">
       <DependentUpon>ReportingScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
