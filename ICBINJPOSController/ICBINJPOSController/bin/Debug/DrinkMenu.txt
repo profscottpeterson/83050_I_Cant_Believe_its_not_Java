@@ -1,0 +1,86 @@
+Size - Type - Price
+Hot Drinks
+
+Coffee 
+12oz. Coffee - $1.95
+16oz. Coffee - $ 2.45
+20oz. Coffee - $2.95
+
+Cappuccino
+12oz. Coffee - $2.45
+16oz. Coffee - $ 2.95
+20oz. Coffee - $3.35
+
+Espresso
+12oz. Coffee - $2.15
+16oz. Coffee - $ 2.55
+20oz. Coffee - $3.05
+
+Tea
+12oz. Coffee - $.95
+16oz. Coffee - $ 1.25
+20oz. Coffee - $1.75
+
+Chai
+12oz. Coffee - $1.15
+16oz. Coffee - $ 1.60
+20oz. Coffee - $2.00
+
+Hot Cocoa
+12oz. Coffee - $1.00
+16oz. Coffee - $ 1.50
+20oz. Coffee - $2.00
+
+Cold Drinks
+Iced Coffee
+12oz. Coffee - $1.95
+16oz. Coffee - $ 2.45
+20oz. Coffee - $2.95
+
+Frappuccino
+12oz. Coffee - $2.05
+16oz. Coffee - $ 2.45
+20oz. Coffee - $2.75
+
+
+Iced Tea
+12oz. Coffee - $ .95
+16oz. Coffee - $1.25
+20oz. Coffee - $1.75
+
+Smoothie
+12oz. Coffee - $2.25
+16oz. Coffee - $ 3.00
+20oz. Coffee - $3.75
+
+Refresher
+12oz. Coffee - $2.00
+16oz. Coffee - $ 2.50
+20oz. Coffee - $3.00
+
+Milk
+12oz. Coffee - $1.00
+16oz. Coffee - $ 1.35
+20oz. Coffee - $1.85
+
+Cooler
+Water - $1.75
+Pepsi - $2.00
+Coke - $2.00
+7up - $2.00
+Dr. Pepper – $2.00
+Muscle Milk  -  $3.75
+
+Flavors
+Chocolate - $.75 
+Vanilla - $.75
+Caramel - $.75
+Hazelnut - $.75
+Strawberry - $.75
+None - $0.00
+
+Sizes
+12oz.
+160z.
+20oz.
+

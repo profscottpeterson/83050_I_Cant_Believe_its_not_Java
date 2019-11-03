@@ -151,10 +151,10 @@
             this.largeRadioBtn.Font = new System.Drawing.Font("Goudy Stout", 7.8F);
             this.largeRadioBtn.Location = new System.Drawing.Point(25, 137);
             this.largeRadioBtn.Name = "largeRadioBtn";
-            this.largeRadioBtn.Size = new System.Drawing.Size(94, 23);
+            this.largeRadioBtn.Size = new System.Drawing.Size(118, 23);
             this.largeRadioBtn.TabIndex = 48;
             this.largeRadioBtn.TabStop = true;
-            this.largeRadioBtn.Text = "20oz.";
+            this.largeRadioBtn.Text = "Large";
             this.largeRadioBtn.UseVisualStyleBackColor = true;
             // 
             // mediumRadioBtn
@@ -163,10 +163,10 @@
             this.mediumRadioBtn.Font = new System.Drawing.Font("Goudy Stout", 7.8F);
             this.mediumRadioBtn.Location = new System.Drawing.Point(25, 88);
             this.mediumRadioBtn.Name = "mediumRadioBtn";
-            this.mediumRadioBtn.Size = new System.Drawing.Size(94, 23);
+            this.mediumRadioBtn.Size = new System.Drawing.Size(143, 23);
             this.mediumRadioBtn.TabIndex = 47;
             this.mediumRadioBtn.TabStop = true;
-            this.mediumRadioBtn.Text = "16oz.";
+            this.mediumRadioBtn.Text = "Medium";
             this.mediumRadioBtn.UseVisualStyleBackColor = true;
             // 
             // smallRadioBtn
@@ -175,10 +175,10 @@
             this.smallRadioBtn.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.smallRadioBtn.Location = new System.Drawing.Point(25, 44);
             this.smallRadioBtn.Name = "smallRadioBtn";
-            this.smallRadioBtn.Size = new System.Drawing.Size(94, 23);
+            this.smallRadioBtn.Size = new System.Drawing.Size(119, 23);
             this.smallRadioBtn.TabIndex = 46;
             this.smallRadioBtn.TabStop = true;
-            this.smallRadioBtn.Text = "12oz.";
+            this.smallRadioBtn.Text = "Small";
             this.smallRadioBtn.UseVisualStyleBackColor = true;
             // 
             // voidBtn
@@ -574,7 +574,7 @@
             this.groupBox4.Controls.Add(this.smallRadioBtn);
             this.groupBox4.Location = new System.Drawing.Point(511, 48);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(144, 183);
+            this.groupBox4.Size = new System.Drawing.Size(201, 183);
             this.groupBox4.TabIndex = 68;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "SIzes";

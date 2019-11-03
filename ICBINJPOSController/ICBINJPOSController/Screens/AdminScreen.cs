@@ -16,5 +16,10 @@ namespace ICBINJPOSController
         {
             InitializeComponent();
         }
+
+        private void AdminScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
