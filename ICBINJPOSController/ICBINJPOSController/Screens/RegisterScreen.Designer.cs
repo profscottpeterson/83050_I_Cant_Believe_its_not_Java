@@ -39,11 +39,10 @@
             this.mediumRadioBtn = new System.Windows.Forms.RadioButton();
             this.smallRadioBtn = new System.Windows.Forms.RadioButton();
             this.voidBtn = new System.Windows.Forms.Button();
-            this.enterBtn = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
             this.minus10Btn = new System.Windows.Forms.Button();
             this.minusBtn = new System.Windows.Forms.Button();
-            this.totalBtn = new System.Windows.Forms.Button();
+            this.payBtn = new System.Windows.Forms.Button();
             this.numericPadBtn = new System.Windows.Forms.Button();
             this.coffeeBtn = new System.Windows.Forms.Button();
             this.cappuchinoBtn = new System.Windows.Forms.Button();
@@ -72,8 +71,14 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.currentUserLabel = new System.Windows.Forms.Label();
             this.UsersNameLbl = new System.Windows.Forms.Label();
-            this.OrderLbl = new System.Windows.Forms.ListBox();
+            this.OrderLbx = new System.Windows.Forms.ListBox();
             this.qtyPanel = new System.Windows.Forms.Panel();
+            this.qty0Btn = new System.Windows.Forms.Button();
+            this.qty9Btn = new System.Windows.Forms.Button();
+            this.qty8Btn = new System.Windows.Forms.Button();
+            this.qty5Btn = new System.Windows.Forms.Button();
+            this.qty6Btn = new System.Windows.Forms.Button();
+            this.qty7Btn = new System.Windows.Forms.Button();
             this.qty2Btn = new System.Windows.Forms.Button();
             this.qty3Btn = new System.Windows.Forms.Button();
             this.qty4Btn = new System.Windows.Forms.Button();
@@ -89,9 +94,9 @@
             // 
             this.totalLbl.AutoSize = true;
             this.totalLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalLbl.Location = new System.Drawing.Point(1670, 726);
+            this.totalLbl.Location = new System.Drawing.Point(1670, 636);
             this.totalLbl.Name = "totalLbl";
-            this.totalLbl.Size = new System.Drawing.Size(74, 29);
+            this.totalLbl.Size = new System.Drawing.Size(56, 24);
             this.totalLbl.TabIndex = 56;
             this.totalLbl.Text = "Total:";
             // 
@@ -99,9 +104,9 @@
             // 
             this.taxLbl.AutoSize = true;
             this.taxLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taxLbl.Location = new System.Drawing.Point(1532, 726);
+            this.taxLbl.Location = new System.Drawing.Point(1532, 636);
             this.taxLbl.Name = "taxLbl";
-            this.taxLbl.Size = new System.Drawing.Size(59, 29);
+            this.taxLbl.Size = new System.Drawing.Size(47, 24);
             this.taxLbl.TabIndex = 55;
             this.taxLbl.Text = "Tax:";
             // 
@@ -109,9 +114,9 @@
             // 
             this.totalPriceLbl.AutoSize = true;
             this.totalPriceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalPriceLbl.Location = new System.Drawing.Point(1740, 726);
+            this.totalPriceLbl.Location = new System.Drawing.Point(1740, 636);
             this.totalPriceLbl.Name = "totalPriceLbl";
-            this.totalPriceLbl.Size = new System.Drawing.Size(71, 29);
+            this.totalPriceLbl.Size = new System.Drawing.Size(55, 24);
             this.totalPriceLbl.TabIndex = 54;
             this.totalPriceLbl.Text = "$0.00";
             // 
@@ -119,9 +124,9 @@
             // 
             this.taxPriceLbl.AutoSize = true;
             this.taxPriceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taxPriceLbl.Location = new System.Drawing.Point(1585, 726);
+            this.taxPriceLbl.Location = new System.Drawing.Point(1585, 636);
             this.taxPriceLbl.Name = "taxPriceLbl";
-            this.taxPriceLbl.Size = new System.Drawing.Size(71, 29);
+            this.taxPriceLbl.Size = new System.Drawing.Size(55, 24);
             this.taxPriceLbl.TabIndex = 53;
             this.taxPriceLbl.Text = "$0.00";
             // 
@@ -129,9 +134,9 @@
             // 
             this.subtotalPriceLbl.AutoSize = true;
             this.subtotalPriceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subtotalPriceLbl.Location = new System.Drawing.Point(1444, 726);
+            this.subtotalPriceLbl.Location = new System.Drawing.Point(1444, 636);
             this.subtotalPriceLbl.Name = "subtotalPriceLbl";
-            this.subtotalPriceLbl.Size = new System.Drawing.Size(71, 29);
+            this.subtotalPriceLbl.Size = new System.Drawing.Size(55, 24);
             this.subtotalPriceLbl.TabIndex = 52;
             this.subtotalPriceLbl.Text = "$0.00";
             // 
@@ -139,9 +144,9 @@
             // 
             this.subtotalLbl.AutoSize = true;
             this.subtotalLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subtotalLbl.Location = new System.Drawing.Point(1389, 726);
+            this.subtotalLbl.Location = new System.Drawing.Point(1389, 636);
             this.subtotalLbl.Name = "subtotalLbl";
-            this.subtotalLbl.Size = new System.Drawing.Size(62, 29);
+            this.subtotalLbl.Size = new System.Drawing.Size(49, 24);
             this.subtotalLbl.TabIndex = 51;
             this.subtotalLbl.Text = "Sub:";
             // 
@@ -151,7 +156,7 @@
             this.largeRadioBtn.Font = new System.Drawing.Font("Goudy Stout", 7.8F);
             this.largeRadioBtn.Location = new System.Drawing.Point(25, 137);
             this.largeRadioBtn.Name = "largeRadioBtn";
-            this.largeRadioBtn.Size = new System.Drawing.Size(118, 23);
+            this.largeRadioBtn.Size = new System.Drawing.Size(93, 19);
             this.largeRadioBtn.TabIndex = 48;
             this.largeRadioBtn.TabStop = true;
             this.largeRadioBtn.Text = "Large";
@@ -163,7 +168,7 @@
             this.mediumRadioBtn.Font = new System.Drawing.Font("Goudy Stout", 7.8F);
             this.mediumRadioBtn.Location = new System.Drawing.Point(25, 88);
             this.mediumRadioBtn.Name = "mediumRadioBtn";
-            this.mediumRadioBtn.Size = new System.Drawing.Size(143, 23);
+            this.mediumRadioBtn.Size = new System.Drawing.Size(114, 19);
             this.mediumRadioBtn.TabIndex = 47;
             this.mediumRadioBtn.TabStop = true;
             this.mediumRadioBtn.Text = "Medium";
@@ -175,7 +180,7 @@
             this.smallRadioBtn.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.smallRadioBtn.Location = new System.Drawing.Point(25, 44);
             this.smallRadioBtn.Name = "smallRadioBtn";
-            this.smallRadioBtn.Size = new System.Drawing.Size(119, 23);
+            this.smallRadioBtn.Size = new System.Drawing.Size(95, 19);
             this.smallRadioBtn.TabIndex = 46;
             this.smallRadioBtn.TabStop = true;
             this.smallRadioBtn.Text = "Small";
@@ -192,18 +197,7 @@
             this.voidBtn.TabIndex = 45;
             this.voidBtn.Text = "Void";
             this.voidBtn.UseVisualStyleBackColor = false;
-            // 
-            // enterBtn
-            // 
-            this.enterBtn.BackColor = System.Drawing.Color.Salmon;
-            this.enterBtn.Font = new System.Drawing.Font("Cooper Black", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterBtn.Location = new System.Drawing.Point(1351, 827);
-            this.enterBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.enterBtn.Name = "enterBtn";
-            this.enterBtn.Size = new System.Drawing.Size(158, 96);
-            this.enterBtn.TabIndex = 44;
-            this.enterBtn.Text = "Enter";
-            this.enterBtn.UseVisualStyleBackColor = false;
+            this.voidBtn.Click += new System.EventHandler(this.voidBtn_Click);
             // 
             // backButton
             // 
@@ -241,17 +235,18 @@
             this.minusBtn.Text = "-";
             this.minusBtn.UseVisualStyleBackColor = false;
             // 
-            // totalBtn
+            // payBtn
             // 
-            this.totalBtn.BackColor = System.Drawing.Color.Salmon;
-            this.totalBtn.Font = new System.Drawing.Font("Cooper Black", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalBtn.Location = new System.Drawing.Point(1675, 827);
-            this.totalBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.totalBtn.Name = "totalBtn";
-            this.totalBtn.Size = new System.Drawing.Size(158, 96);
-            this.totalBtn.TabIndex = 40;
-            this.totalBtn.Text = "Total";
-            this.totalBtn.UseVisualStyleBackColor = false;
+            this.payBtn.BackColor = System.Drawing.Color.Salmon;
+            this.payBtn.Font = new System.Drawing.Font("Cooper Black", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.payBtn.Location = new System.Drawing.Point(1675, 827);
+            this.payBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.payBtn.Name = "payBtn";
+            this.payBtn.Size = new System.Drawing.Size(158, 96);
+            this.payBtn.TabIndex = 40;
+            this.payBtn.Text = "Pay";
+            this.payBtn.UseVisualStyleBackColor = false;
+            this.payBtn.Click += new System.EventHandler(this.payBtn_Click);
             // 
             // numericPadBtn
             // 
@@ -276,6 +271,7 @@
             this.coffeeBtn.TabIndex = 32;
             this.coffeeBtn.Text = "Coffee";
             this.coffeeBtn.UseVisualStyleBackColor = false;
+            this.coffeeBtn.Click += new System.EventHandler(this.coffeeBtn_Click);
             // 
             // cappuchinoBtn
             // 
@@ -288,6 +284,7 @@
             this.cappuchinoBtn.TabIndex = 37;
             this.cappuchinoBtn.Text = "Cappuccino";
             this.cappuchinoBtn.UseVisualStyleBackColor = false;
+            this.cappuchinoBtn.Click += new System.EventHandler(this.cappuchinoBtn_Click);
             // 
             // espressoBtn
             // 
@@ -300,6 +297,7 @@
             this.espressoBtn.TabIndex = 30;
             this.espressoBtn.Text = "Espresso";
             this.espressoBtn.UseVisualStyleBackColor = false;
+            this.espressoBtn.Click += new System.EventHandler(this.espressoBtn_Click);
             // 
             // teaBtn
             // 
@@ -312,6 +310,7 @@
             this.teaBtn.TabIndex = 31;
             this.teaBtn.Text = "Tea";
             this.teaBtn.UseVisualStyleBackColor = false;
+            this.teaBtn.Click += new System.EventHandler(this.teaBtn_Click);
             // 
             // cocoaBtn
             // 
@@ -324,6 +323,7 @@
             this.cocoaBtn.TabIndex = 36;
             this.cocoaBtn.Text = "Hot Cocoa";
             this.cocoaBtn.UseVisualStyleBackColor = false;
+            this.cocoaBtn.Click += new System.EventHandler(this.cocoaBtn_Click);
             // 
             // icedCoffeeBtn
             // 
@@ -336,6 +336,7 @@
             this.icedCoffeeBtn.TabIndex = 33;
             this.icedCoffeeBtn.Text = "Iced Coffee";
             this.icedCoffeeBtn.UseVisualStyleBackColor = false;
+            this.icedCoffeeBtn.Click += new System.EventHandler(this.icedCoffeeBtn_Click);
             // 
             // frappuchinoBtn
             // 
@@ -348,6 +349,7 @@
             this.frappuchinoBtn.TabIndex = 34;
             this.frappuchinoBtn.Text = "Frappuccino";
             this.frappuchinoBtn.UseVisualStyleBackColor = false;
+            this.frappuchinoBtn.Click += new System.EventHandler(this.frappuchinoBtn_Click);
             // 
             // icedTeaBtn
             // 
@@ -360,6 +362,7 @@
             this.icedTeaBtn.TabIndex = 35;
             this.icedTeaBtn.Text = "Iced Tea";
             this.icedTeaBtn.UseVisualStyleBackColor = false;
+            this.icedTeaBtn.Click += new System.EventHandler(this.icedTeaBtn_Click);
             // 
             // smoothieBtn
             // 
@@ -372,6 +375,7 @@
             this.smoothieBtn.TabIndex = 28;
             this.smoothieBtn.Text = "Smoothie";
             this.smoothieBtn.UseVisualStyleBackColor = false;
+            this.smoothieBtn.Click += new System.EventHandler(this.smoothieBtn_Click);
             // 
             // refresherBtn
             // 
@@ -384,6 +388,7 @@
             this.refresherBtn.TabIndex = 29;
             this.refresherBtn.Text = "Refresher";
             this.refresherBtn.UseVisualStyleBackColor = false;
+            this.refresherBtn.Click += new System.EventHandler(this.refresherBtn_Click);
             // 
             // plus10Btn
             // 
@@ -435,6 +440,7 @@
             this.chaiBtn.TabIndex = 38;
             this.chaiBtn.Text = "Chai";
             this.chaiBtn.UseVisualStyleBackColor = false;
+            this.chaiBtn.Click += new System.EventHandler(this.chaiBtn_Click);
             // 
             // coldDrinks
             // 
@@ -462,6 +468,7 @@
             this.milkBtn.TabIndex = 36;
             this.milkBtn.Text = "Milk";
             this.milkBtn.UseVisualStyleBackColor = false;
+            this.milkBtn.Click += new System.EventHandler(this.milkBtn_Click);
             // 
             // coolerDrinks
             // 
@@ -489,6 +496,7 @@
             this.orangeJuiceBtn.TabIndex = 36;
             this.orangeJuiceBtn.Text = "Orange Juice";
             this.orangeJuiceBtn.UseVisualStyleBackColor = false;
+            this.orangeJuiceBtn.Click += new System.EventHandler(this.orangeJuiceBtn_Click);
             // 
             // waterBtn
             // 
@@ -501,6 +509,7 @@
             this.waterBtn.TabIndex = 33;
             this.waterBtn.Text = "Water";
             this.waterBtn.UseVisualStyleBackColor = false;
+            this.waterBtn.Click += new System.EventHandler(this.waterBtn_Click);
             // 
             // sevenUpBtn
             // 
@@ -513,6 +522,7 @@
             this.sevenUpBtn.TabIndex = 34;
             this.sevenUpBtn.Text = "7up";
             this.sevenUpBtn.UseVisualStyleBackColor = false;
+            this.sevenUpBtn.Click += new System.EventHandler(this.sevenUpBtn_Click);
             // 
             // cokeBtn
             // 
@@ -525,6 +535,7 @@
             this.cokeBtn.TabIndex = 35;
             this.cokeBtn.Text = "Coke";
             this.cokeBtn.UseVisualStyleBackColor = false;
+            this.cokeBtn.Click += new System.EventHandler(this.cokeBtn_Click);
             // 
             // pepsiBtn
             // 
@@ -537,6 +548,7 @@
             this.pepsiBtn.TabIndex = 28;
             this.pepsiBtn.Text = "Pepsi";
             this.pepsiBtn.UseVisualStyleBackColor = false;
+            this.pepsiBtn.Click += new System.EventHandler(this.pepsiBtn_Click);
             // 
             // muscleMilkBtn
             // 
@@ -549,6 +561,7 @@
             this.muscleMilkBtn.TabIndex = 29;
             this.muscleMilkBtn.Text = "Muscle Milk";
             this.muscleMilkBtn.UseVisualStyleBackColor = false;
+            this.muscleMilkBtn.Click += new System.EventHandler(this.muscleMilkBtn_Click);
             // 
             // FlavorsPanel
             // 
@@ -562,9 +575,9 @@
             "Hazelnut",
             "Strawberry",
             "None"});
-            this.FlavorsPanel.Location = new System.Drawing.Point(39, 654);
+            this.FlavorsPanel.Location = new System.Drawing.Point(511, 248);
             this.FlavorsPanel.Name = "FlavorsPanel";
-            this.FlavorsPanel.Size = new System.Drawing.Size(438, 136);
+            this.FlavorsPanel.Size = new System.Drawing.Size(201, 130);
             this.FlavorsPanel.TabIndex = 67;
             // 
             // groupBox4
@@ -585,7 +598,7 @@
             this.currentUserLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.currentUserLabel.Location = new System.Drawing.Point(1390, 9);
             this.currentUserLabel.Name = "currentUserLabel";
-            this.currentUserLabel.Size = new System.Drawing.Size(210, 19);
+            this.currentUserLabel.Size = new System.Drawing.Size(166, 15);
             this.currentUserLabel.TabIndex = 72;
             this.currentUserLabel.Text = "Current User:";
             // 
@@ -597,21 +610,26 @@
             this.UsersNameLbl.Size = new System.Drawing.Size(195, 19);
             this.UsersNameLbl.TabIndex = 73;
             // 
-            // OrderLbl
+            // OrderLbx
             // 
-            this.OrderLbl.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.OrderLbl.FormattingEnabled = true;
-            this.OrderLbl.ItemHeight = 18;
-            this.OrderLbl.Location = new System.Drawing.Point(1385, 44);
-            this.OrderLbl.Name = "OrderLbl";
-            this.OrderLbl.ScrollAlwaysVisible = true;
-            this.OrderLbl.Size = new System.Drawing.Size(439, 670);
-            this.OrderLbl.TabIndex = 74;
+            this.OrderLbx.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.OrderLbx.FormattingEnabled = true;
+            this.OrderLbx.Location = new System.Drawing.Point(1385, 44);
+            this.OrderLbx.Name = "OrderLbx";
+            this.OrderLbx.ScrollAlwaysVisible = true;
+            this.OrderLbx.Size = new System.Drawing.Size(439, 589);
+            this.OrderLbx.TabIndex = 74;
             // 
             // qtyPanel
             // 
             this.qtyPanel.BackColor = System.Drawing.Color.Coral;
             this.qtyPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.qtyPanel.Controls.Add(this.qty0Btn);
+            this.qtyPanel.Controls.Add(this.qty9Btn);
+            this.qtyPanel.Controls.Add(this.qty8Btn);
+            this.qtyPanel.Controls.Add(this.qty5Btn);
+            this.qtyPanel.Controls.Add(this.qty6Btn);
+            this.qtyPanel.Controls.Add(this.qty7Btn);
             this.qtyPanel.Controls.Add(this.qty2Btn);
             this.qtyPanel.Controls.Add(this.qty3Btn);
             this.qtyPanel.Controls.Add(this.qty4Btn);
@@ -620,8 +638,104 @@
             this.qtyPanel.Location = new System.Drawing.Point(1313, 44);
             this.qtyPanel.Name = "qtyPanel";
             this.qtyPanel.Padding = new System.Windows.Forms.Padding(3);
-            this.qtyPanel.Size = new System.Drawing.Size(66, 670);
+            this.qtyPanel.Size = new System.Drawing.Size(66, 589);
             this.qtyPanel.TabIndex = 75;
+            // 
+            // qty0Btn
+            // 
+            this.qty0Btn.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.qty0Btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.qty0Btn.FlatAppearance.BorderSize = 2;
+            this.qty0Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.qty0Btn.Font = new System.Drawing.Font("Cooper Black", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qty0Btn.Location = new System.Drawing.Point(8, 470);
+            this.qty0Btn.Margin = new System.Windows.Forms.Padding(2);
+            this.qty0Btn.Name = "qty0Btn";
+            this.qty0Btn.Size = new System.Drawing.Size(51, 54);
+            this.qty0Btn.TabIndex = 42;
+            this.qty0Btn.Text = "0";
+            this.qty0Btn.UseVisualStyleBackColor = false;
+            this.qty0Btn.Click += new System.EventHandler(this.qty0Btn_Click);
+            // 
+            // qty9Btn
+            // 
+            this.qty9Btn.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.qty9Btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.qty9Btn.FlatAppearance.BorderSize = 2;
+            this.qty9Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.qty9Btn.Font = new System.Drawing.Font("Cooper Black", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qty9Btn.Location = new System.Drawing.Point(8, 412);
+            this.qty9Btn.Margin = new System.Windows.Forms.Padding(2);
+            this.qty9Btn.Name = "qty9Btn";
+            this.qty9Btn.Size = new System.Drawing.Size(51, 54);
+            this.qty9Btn.TabIndex = 41;
+            this.qty9Btn.Text = "9";
+            this.qty9Btn.UseVisualStyleBackColor = false;
+            this.qty9Btn.Click += new System.EventHandler(this.qty9Btn_Click);
+            // 
+            // qty8Btn
+            // 
+            this.qty8Btn.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.qty8Btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.qty8Btn.FlatAppearance.BorderSize = 2;
+            this.qty8Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.qty8Btn.Font = new System.Drawing.Font("Cooper Black", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qty8Btn.Location = new System.Drawing.Point(8, 354);
+            this.qty8Btn.Margin = new System.Windows.Forms.Padding(2);
+            this.qty8Btn.Name = "qty8Btn";
+            this.qty8Btn.Size = new System.Drawing.Size(51, 54);
+            this.qty8Btn.TabIndex = 40;
+            this.qty8Btn.Text = "8";
+            this.qty8Btn.UseVisualStyleBackColor = false;
+            this.qty8Btn.Click += new System.EventHandler(this.qty8Btn_Click);
+            // 
+            // qty5Btn
+            // 
+            this.qty5Btn.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.qty5Btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.qty5Btn.FlatAppearance.BorderSize = 2;
+            this.qty5Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.qty5Btn.Font = new System.Drawing.Font("Cooper Black", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qty5Btn.Location = new System.Drawing.Point(8, 178);
+            this.qty5Btn.Margin = new System.Windows.Forms.Padding(2);
+            this.qty5Btn.Name = "qty5Btn";
+            this.qty5Btn.Size = new System.Drawing.Size(51, 54);
+            this.qty5Btn.TabIndex = 39;
+            this.qty5Btn.Text = "5";
+            this.qty5Btn.UseVisualStyleBackColor = false;
+            this.qty5Btn.Click += new System.EventHandler(this.qty5Btn_Click);
+            // 
+            // qty6Btn
+            // 
+            this.qty6Btn.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.qty6Btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.qty6Btn.FlatAppearance.BorderSize = 2;
+            this.qty6Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.qty6Btn.Font = new System.Drawing.Font("Cooper Black", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qty6Btn.Location = new System.Drawing.Point(8, 237);
+            this.qty6Btn.Margin = new System.Windows.Forms.Padding(2);
+            this.qty6Btn.Name = "qty6Btn";
+            this.qty6Btn.Size = new System.Drawing.Size(51, 54);
+            this.qty6Btn.TabIndex = 38;
+            this.qty6Btn.Text = "6";
+            this.qty6Btn.UseVisualStyleBackColor = false;
+            this.qty6Btn.Click += new System.EventHandler(this.qty6Btn_Click);
+            // 
+            // qty7Btn
+            // 
+            this.qty7Btn.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.qty7Btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.qty7Btn.FlatAppearance.BorderSize = 2;
+            this.qty7Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.qty7Btn.Font = new System.Drawing.Font("Cooper Black", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qty7Btn.Location = new System.Drawing.Point(8, 296);
+            this.qty7Btn.Margin = new System.Windows.Forms.Padding(2);
+            this.qty7Btn.Name = "qty7Btn";
+            this.qty7Btn.Size = new System.Drawing.Size(51, 54);
+            this.qty7Btn.TabIndex = 37;
+            this.qty7Btn.Text = "7";
+            this.qty7Btn.UseVisualStyleBackColor = false;
+            this.qty7Btn.Click += new System.EventHandler(this.qty7Btn_Click);
             // 
             // qty2Btn
             // 
@@ -630,37 +744,40 @@
             this.qty2Btn.FlatAppearance.BorderSize = 2;
             this.qty2Btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.qty2Btn.Font = new System.Drawing.Font("Cooper Black", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty2Btn.Location = new System.Drawing.Point(8, 68);
+            this.qty2Btn.Location = new System.Drawing.Point(8, 5);
             this.qty2Btn.Margin = new System.Windows.Forms.Padding(2);
             this.qty2Btn.Name = "qty2Btn";
             this.qty2Btn.Size = new System.Drawing.Size(51, 54);
             this.qty2Btn.TabIndex = 36;
             this.qty2Btn.Text = "2";
             this.qty2Btn.UseVisualStyleBackColor = false;
+            this.qty2Btn.Click += new System.EventHandler(this.qty2Btn_Click);
             // 
             // qty3Btn
             // 
             this.qty3Btn.BackColor = System.Drawing.Color.WhiteSmoke;
             this.qty3Btn.Font = new System.Drawing.Font("Cooper Black", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty3Btn.Location = new System.Drawing.Point(8, 126);
+            this.qty3Btn.Location = new System.Drawing.Point(8, 63);
             this.qty3Btn.Margin = new System.Windows.Forms.Padding(2);
             this.qty3Btn.Name = "qty3Btn";
             this.qty3Btn.Size = new System.Drawing.Size(51, 54);
             this.qty3Btn.TabIndex = 35;
             this.qty3Btn.Text = "3";
             this.qty3Btn.UseVisualStyleBackColor = false;
+            this.qty3Btn.Click += new System.EventHandler(this.qty3Btn_Click);
             // 
             // qty4Btn
             // 
             this.qty4Btn.BackColor = System.Drawing.Color.WhiteSmoke;
             this.qty4Btn.Font = new System.Drawing.Font("Cooper Black", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty4Btn.Location = new System.Drawing.Point(8, 184);
+            this.qty4Btn.Location = new System.Drawing.Point(8, 120);
             this.qty4Btn.Margin = new System.Windows.Forms.Padding(2);
             this.qty4Btn.Name = "qty4Btn";
             this.qty4Btn.Size = new System.Drawing.Size(51, 54);
             this.qty4Btn.TabIndex = 34;
             this.qty4Btn.Text = "4";
             this.qty4Btn.UseVisualStyleBackColor = false;
+            this.qty4Btn.Click += new System.EventHandler(this.qty4Btn_Click);
             // 
             // qty1Btn
             // 
@@ -669,23 +786,24 @@
             this.qty1Btn.FlatAppearance.BorderSize = 2;
             this.qty1Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.qty1Btn.Font = new System.Drawing.Font("Cooper Black", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty1Btn.Location = new System.Drawing.Point(8, 7);
+            this.qty1Btn.Location = new System.Drawing.Point(8, 528);
             this.qty1Btn.Margin = new System.Windows.Forms.Padding(2);
             this.qty1Btn.Name = "qty1Btn";
             this.qty1Btn.Size = new System.Drawing.Size(51, 54);
             this.qty1Btn.TabIndex = 33;
             this.qty1Btn.Text = "1";
             this.qty1Btn.UseVisualStyleBackColor = false;
+            this.qty1Btn.Click += new System.EventHandler(this.qty2Btn_Click);
             // 
             // RegisterScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Coral;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1850, 950);
             this.Controls.Add(this.qtyPanel);
-            this.Controls.Add(this.OrderLbl);
+            this.Controls.Add(this.OrderLbx);
             this.Controls.Add(this.UsersNameLbl);
             this.Controls.Add(this.currentUserLabel);
             this.Controls.Add(this.groupBox4);
@@ -700,11 +818,10 @@
             this.Controls.Add(this.subtotalPriceLbl);
             this.Controls.Add(this.subtotalLbl);
             this.Controls.Add(this.voidBtn);
-            this.Controls.Add(this.enterBtn);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.minus10Btn);
             this.Controls.Add(this.minusBtn);
-            this.Controls.Add(this.totalBtn);
+            this.Controls.Add(this.payBtn);
             this.Controls.Add(this.numericPadBtn);
             this.Controls.Add(this.plus10Btn);
             this.Controls.Add(this.plusBtn);
@@ -735,11 +852,10 @@
         private System.Windows.Forms.RadioButton mediumRadioBtn;
         private System.Windows.Forms.RadioButton smallRadioBtn;
         private System.Windows.Forms.Button voidBtn;
-        private System.Windows.Forms.Button enterBtn;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Button minus10Btn;
         private System.Windows.Forms.Button minusBtn;
-        private System.Windows.Forms.Button totalBtn;
+        private System.Windows.Forms.Button payBtn;
         private System.Windows.Forms.Button numericPadBtn;
         private System.Windows.Forms.Button coffeeBtn;
         private System.Windows.Forms.Button cappuchinoBtn;
@@ -768,11 +884,17 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label currentUserLabel;
         private System.Windows.Forms.Label UsersNameLbl;
-        private System.Windows.Forms.ListBox OrderLbl;
+        private System.Windows.Forms.ListBox OrderLbx;
         private System.Windows.Forms.Panel qtyPanel;
         private System.Windows.Forms.Button qty2Btn;
         private System.Windows.Forms.Button qty3Btn;
         private System.Windows.Forms.Button qty4Btn;
         private System.Windows.Forms.Button qty1Btn;
+        private System.Windows.Forms.Button qty0Btn;
+        private System.Windows.Forms.Button qty9Btn;
+        private System.Windows.Forms.Button qty8Btn;
+        private System.Windows.Forms.Button qty5Btn;
+        private System.Windows.Forms.Button qty6Btn;
+        private System.Windows.Forms.Button qty7Btn;
     }
 }

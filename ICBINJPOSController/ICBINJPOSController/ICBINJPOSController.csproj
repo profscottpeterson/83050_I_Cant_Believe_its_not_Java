@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Admin.cs" />
+    <Compile Include="Classes\Menu.cs" />
     <Compile Include="Screens\AdminScreen.cs">
       <SubType>Form</SubType>
     </Compile>

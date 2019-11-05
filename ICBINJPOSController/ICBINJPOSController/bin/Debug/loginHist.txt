@@ -50,3 +50,42 @@
 *William ,Admin ,User Name and Password Incorrect!  Please Check and try again! - 10/30/2019 9:43:39 PM
 *William ,Bacon ,Successful Login! - 10/30/2019 9:43:49 PM
 *William  , ,User Name and Password Incorrect!  Please Check and try again! - 10/30/2019 9:46:03 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 10:57:10 AM
+*Dawn ,Eggs ,Successful Login! - 11/4/2019 10:57:36 AM
+*Dawn ,Eggs ,Successful Login! - 11/4/2019 10:59:50 AM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 11:05:51 AM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 11:09:55 AM
+*Dawn ,dkjlkaj ,User Name and Password Incorrect!  Please Check and try again! - 11/4/2019 11:10:03 AM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 11:10:15 AM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 11:19:47 AM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 12:46:19 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 12:48:29 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 12:52:19 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 1:22:37 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 1:23:40 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 1:32:59 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 1:35:31 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 1:39:12 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 1:40:47 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 1:55:09 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 2:02:40 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 2:17:46 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 2:36:05 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 2:41:30 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 2:46:48 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 3:03:46 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 3:04:56 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 4:38:37 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 4:39:44 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 4:41:38 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 4:44:00 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 4:46:16 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 4:54:41 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 5:02:11 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 5:03:53 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 5:32:43 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 5:35:14 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 5:39:34 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 5:41:19 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 5:42:41 PM
+* , ,Please Fill out both Username and Password Fields! - 11/4/2019 5:46:43 PM

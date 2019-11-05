@@ -16,6 +16,15 @@ namespace ICBINJPOSController
             set { quantity = value; }
         }
 
+        //private int id;
+
+        //public int Id
+        //{
+        //    get { return id; }
+        //    set { id = value; }
+        //}
+
+
         private string description;
 
         public string Description
@@ -49,19 +58,12 @@ namespace ICBINJPOSController
             this.price = price;
         }
 
-        public void VoidItem()
+        public Item(string itemDesc, double price)
         {
-
+            this.description = itemDesc;
+            this.price = price;
         }
 
-        public void ChangeQuantity()
-        {
-
-        }
-
-        public void Enter()
-        {
-
-        }
+        
     }
 }

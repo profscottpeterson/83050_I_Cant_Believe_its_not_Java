@@ -33,6 +33,8 @@ namespace ICBINJPOSController
         //login button functions
         private void LoginButton_Click(object sender, EventArgs e)
         {
+          
+
             //Instance of new screens
             LoginScreen loginScreen = new LoginScreen();
             RegisterScreen registerScreen = new RegisterScreen();
@@ -46,11 +48,15 @@ namespace ICBINJPOSController
                 {
                     var Employee = new User();
 
+                    //***REMOVE, JUST ADDED FOR EASE OF USE
+                    Employee.employeeLoggedIn = true;
+
+
                     Employee.employeeName = userNameTextBox.Text;
                     Employee.employeePass = passWordTextBox.Text;
                     Employee.OpenEmpFile();
                     Employee.EmployeeLogin(Employee.employeeName, Employee.employeePass);
-
+                    
                     if (Employee.employeeLoggedIn == true)
                     {
                         MessageBox.Show("Successful Login!");

@@ -8,12 +8,29 @@ namespace ICBINJPOSController
 {
     public class Transaction
     {
+        private string transDate;
+
+        public string TransDate
+        {
+            get { return transDate; }
+            set { transDate = value; }
+        }
+
+        private string transTime;
+
+        public string TransTime
+        {
+            get { return transTime; }
+            set { transTime = value; }
+        }
+
+
         /// <summary>
         /// This field is the current user.
         /// </summary>
-        private User currentUser;
+        private string currentUser;
 
-        public User CurrentUser
+        public string CurrentUser
         {
             // ***Should this be read-only?***
             get { return currentUser; }
@@ -50,6 +67,11 @@ namespace ICBINJPOSController
             set { subtotal = value; }
         }
 
+       
+        // *** Is this correct way to set class var constants?
+        public const double TaxRate = 0.055;
+        
+
         private double tax;
 
         public double Tax
@@ -58,29 +80,39 @@ namespace ICBINJPOSController
             set { tax = value; }
         }
 
-        private static double total;
+        private double total;
 
-        public static double Total
+        public double Total
         {
             get { return total; }
             set { total = value; }
         }
-
-        public void SubTotal()
+         
+        public string CalcSubTotal()
         {
-
+            this.Subtotal = this.Order.Sum(x => x.Price);
+            return this.Subtotal.ToString();
         }
 
-        public void CalcTax()
+        public string CalcTax()
         {
-
+            this.Tax = (this.Subtotal * Transaction.TaxRate);
+            return this.Tax.ToString();
         }
 
-        public void CalcTotal()
+        public string CalcTotal()
         {
-
+            this.Total = (this.Subtotal + this.Tax);
+            return this.Total.ToString();
         }
 
-
+        public Transaction(string transDate, string transTime, string currentUser, int transNumber )
+        {
+            this.TransDate = transDate;
+            this.TransTime = transTime;
+            this.CurrentUser = currentUser;
+            this.transNum = transNumber;
+            this.Order = new List<Item>();
+        }
     }
 }

@@ -37,9 +37,9 @@ namespace ICBINJPOSController
             set { cashDue = value; }
         }
 
-        public double CalcCashDue()
+        public double CalcCashDue(double transTotal)
         {
-            this.cashDue = Transaction.Total - this.cashRec;
+            this.cashDue = transTotal - this.cashRec;
 
             if (this.cashDue > 0)
             {

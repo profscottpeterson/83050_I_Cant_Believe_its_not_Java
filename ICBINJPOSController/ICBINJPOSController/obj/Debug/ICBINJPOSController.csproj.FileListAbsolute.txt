@@ -20,3 +20,17 @@ C:\Users\Dange\Desktop\POS Project Git Repository\ICBINJPOSController\ICBINJPOSC
 C:\Users\Dange\Desktop\POS Project Git Repository\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.AdminScreen.resources
 C:\Users\Dange\Desktop\POS Project Git Repository\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.RegisterScreen.resources
 C:\Users\Dange\Desktop\POS Project Git Repository\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.ReportingScreen.resources
+C:\Users\meyer\Documents\2GitRepo\83050_I_Cant_Believe_its_not_Java\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.csprojAssemblyReference.cache
+C:\Users\meyer\Documents\2GitRepo\83050_I_Cant_Believe_its_not_Java\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.AdminScreen.resources
+C:\Users\meyer\Documents\2GitRepo\83050_I_Cant_Believe_its_not_Java\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.OptionsScreen.resources
+C:\Users\meyer\Documents\2GitRepo\83050_I_Cant_Believe_its_not_Java\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.Properties.Resources.resources
+C:\Users\meyer\Documents\2GitRepo\83050_I_Cant_Believe_its_not_Java\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.LoginScreen.resources
+C:\Users\meyer\Documents\2GitRepo\83050_I_Cant_Believe_its_not_Java\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.RegisterScreen.resources
+C:\Users\meyer\Documents\2GitRepo\83050_I_Cant_Believe_its_not_Java\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.ReportingScreen.resources
+C:\Users\meyer\Documents\2GitRepo\83050_I_Cant_Believe_its_not_Java\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.csproj.GenerateResource.cache
+C:\Users\meyer\Documents\2GitRepo\83050_I_Cant_Believe_its_not_Java\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.csproj.CoreCompileInputs.cache
+C:\Users\meyer\Documents\2GitRepo\83050_I_Cant_Believe_its_not_Java\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.exe
+C:\Users\meyer\Documents\2GitRepo\83050_I_Cant_Believe_its_not_Java\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.pdb
+C:\Users\meyer\Documents\2GitRepo\83050_I_Cant_Believe_its_not_Java\ICBINJPOSController\ICBINJPOSController\bin\Debug\ICBINJPOSController.exe.config
+C:\Users\meyer\Documents\2GitRepo\83050_I_Cant_Believe_its_not_Java\ICBINJPOSController\ICBINJPOSController\bin\Debug\ICBINJPOSController.exe
+C:\Users\meyer\Documents\2GitRepo\83050_I_Cant_Believe_its_not_Java\ICBINJPOSController\ICBINJPOSController\bin\Debug\ICBINJPOSController.pdb
