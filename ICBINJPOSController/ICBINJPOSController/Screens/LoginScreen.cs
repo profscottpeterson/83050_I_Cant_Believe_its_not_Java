@@ -46,16 +46,16 @@ namespace ICBINJPOSController
                 //Cashier login validation
                 if(AuthSelect.SelectedIndex == 0)
                 {
-                    var Employee = new User();
+                    User Employee = new User();
 
                     //***REMOVE, JUST ADDED FOR EASE OF USE
                     Employee.employeeLoggedIn = true;
 
 
-                    Employee.employeeName = userNameTextBox.Text;
-                    Employee.employeePass = passWordTextBox.Text;
+                    User.employeeName = userNameTextBox.Text;
+                    User.employeePass = passWordTextBox.Text;
                     Employee.OpenEmpFile();
-                    Employee.EmployeeLogin(Employee.employeeName, Employee.employeePass);
+                    Employee.EmployeeLogin(User.employeeName, User.employeePass);
                     
                     if (Employee.employeeLoggedIn == true)
                     {
@@ -89,10 +89,10 @@ namespace ICBINJPOSController
                 {
                     var Manager = new User();
 
-                    Manager.managerName = userNameTextBox.Text;
-                    Manager.managerPass = passWordTextBox.Text;
+                    User.managerName = userNameTextBox.Text;
+                    User.managerPass = passWordTextBox.Text;
                     Manager.OpenMgtFile();
-                    Manager.ManagerLogin(Manager.managerName, Manager.managerPass);
+                    Manager.ManagerLogin(User.managerName, User.managerPass);
 
                     if (Manager.managerLoggedIn == true)
                     {
@@ -126,10 +126,10 @@ namespace ICBINJPOSController
                 {
                     var Administrator = new User();
 
-                    Administrator.adminName = userNameTextBox.Text;
-                    Administrator.adminPass = passWordTextBox.Text;
+                    User.adminName = userNameTextBox.Text;
+                    User.adminPass = passWordTextBox.Text;
                     Administrator.OpenAdminFile();
-                    Administrator.AdminLogin(Administrator.adminName, Administrator.adminPass);
+                    Administrator.AdminLogin(User.adminName, User.adminPass);
 
                     if (Administrator.administratorLoggedIn == true)
                     {

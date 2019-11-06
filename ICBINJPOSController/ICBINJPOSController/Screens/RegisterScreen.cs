@@ -18,6 +18,7 @@ namespace ICBINJPOSController
         //TODO test
         private string currentUser = User.employeeName;
 
+        ////does this need to be am empty constant in order to hold the number up adding to it?
         private int currentTransNum = 1;
 
         private Transaction currentTransaction;
@@ -410,6 +411,10 @@ namespace ICBINJPOSController
             AddItemToOrder(orangeJuiceBtn.Text);
         }
 
+        private void RegisterScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

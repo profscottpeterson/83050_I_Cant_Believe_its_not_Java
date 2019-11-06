@@ -21,11 +21,11 @@ namespace ICBINJPOSController
 
         //to users names and passwords to hold textbox text
         public static string employeeName;
-        public string employeePass;
-        public string managerName;
-        public string managerPass;
-        public string adminName;
-        public string adminPass;
+        public static string employeePass;
+        public static string managerName;
+        public static string managerPass;
+        public static string adminName;
+        public static string adminPass;
 
         //lists to hold ID, Usernames and Passwords
         List<string> empID = new List<string>();
@@ -90,8 +90,8 @@ namespace ICBINJPOSController
 
         public void EmployeeLogin(string name, string password)
         {
-            this.employeeName = name;
-            this.employeePass = password;
+            employeeName = name;
+            employeePass = password;
 
             //if employee username and password correct
             if (empUserName.Contains(employeeName) && empPassWord.Contains(employeePass) && Array.IndexOf(empUserName.ToArray(), employeeName) == Array.IndexOf(empPassWord.ToArray(), employeePass))
@@ -133,8 +133,8 @@ namespace ICBINJPOSController
 
         public void ManagerLogin(string name, string password)
         {
-            this.managerName = name;
-            this.managerPass = password;
+            managerName = name;
+            managerPass = password;
 
             //if manager username and password correct
             if (mgtUserName.Contains(managerName) && mgtPassWord.Contains(managerPass) && Array.IndexOf(mgtUserName.ToArray(), managerName) == Array.IndexOf(mgtPassWord.ToArray(), managerPass))
@@ -176,8 +176,8 @@ namespace ICBINJPOSController
 
         public void AdminLogin(string name, string password)
         {
-            this.adminName = name;
-            this.adminPass = password;
+            adminName = name;
+            adminPass = password;
 
             //if administrator username and password correct
             if (adminUserName.Contains(adminName) && adminPassWord.Contains(adminPass) && Array.IndexOf(adminUserName.ToArray(), adminName) == Array.IndexOf(adminPassWord.ToArray(), adminPass))

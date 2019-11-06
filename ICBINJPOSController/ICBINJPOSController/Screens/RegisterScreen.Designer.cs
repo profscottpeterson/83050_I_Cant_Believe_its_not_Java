@@ -97,7 +97,7 @@
             this.totalLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalLbl.Location = new System.Drawing.Point(1670, 636);
             this.totalLbl.Name = "totalLbl";
-            this.totalLbl.Size = new System.Drawing.Size(56, 24);
+            this.totalLbl.Size = new System.Drawing.Size(74, 29);
             this.totalLbl.TabIndex = 56;
             this.totalLbl.Text = "Total:";
             // 
@@ -107,7 +107,7 @@
             this.taxLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taxLbl.Location = new System.Drawing.Point(1532, 636);
             this.taxLbl.Name = "taxLbl";
-            this.taxLbl.Size = new System.Drawing.Size(47, 24);
+            this.taxLbl.Size = new System.Drawing.Size(59, 29);
             this.taxLbl.TabIndex = 55;
             this.taxLbl.Text = "Tax:";
             // 
@@ -117,7 +117,7 @@
             this.totalPriceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalPriceLbl.Location = new System.Drawing.Point(1740, 636);
             this.totalPriceLbl.Name = "totalPriceLbl";
-            this.totalPriceLbl.Size = new System.Drawing.Size(55, 24);
+            this.totalPriceLbl.Size = new System.Drawing.Size(71, 29);
             this.totalPriceLbl.TabIndex = 54;
             this.totalPriceLbl.Text = "$0.00";
             // 
@@ -127,7 +127,7 @@
             this.taxPriceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taxPriceLbl.Location = new System.Drawing.Point(1585, 636);
             this.taxPriceLbl.Name = "taxPriceLbl";
-            this.taxPriceLbl.Size = new System.Drawing.Size(55, 24);
+            this.taxPriceLbl.Size = new System.Drawing.Size(71, 29);
             this.taxPriceLbl.TabIndex = 53;
             this.taxPriceLbl.Text = "$0.00";
             // 
@@ -137,7 +137,7 @@
             this.subtotalPriceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subtotalPriceLbl.Location = new System.Drawing.Point(1444, 636);
             this.subtotalPriceLbl.Name = "subtotalPriceLbl";
-            this.subtotalPriceLbl.Size = new System.Drawing.Size(55, 24);
+            this.subtotalPriceLbl.Size = new System.Drawing.Size(71, 29);
             this.subtotalPriceLbl.TabIndex = 52;
             this.subtotalPriceLbl.Text = "$0.00";
             // 
@@ -147,7 +147,7 @@
             this.subtotalLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subtotalLbl.Location = new System.Drawing.Point(1389, 636);
             this.subtotalLbl.Name = "subtotalLbl";
-            this.subtotalLbl.Size = new System.Drawing.Size(49, 24);
+            this.subtotalLbl.Size = new System.Drawing.Size(62, 29);
             this.subtotalLbl.TabIndex = 51;
             this.subtotalLbl.Text = "Sub:";
             // 
@@ -157,7 +157,7 @@
             this.largeRadioBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.largeRadioBtn.Location = new System.Drawing.Point(25, 137);
             this.largeRadioBtn.Name = "largeRadioBtn";
-            this.largeRadioBtn.Size = new System.Drawing.Size(52, 17);
+            this.largeRadioBtn.Size = new System.Drawing.Size(66, 21);
             this.largeRadioBtn.TabIndex = 48;
             this.largeRadioBtn.TabStop = true;
             this.largeRadioBtn.Text = "Large";
@@ -169,7 +169,7 @@
             this.mediumRadioBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.mediumRadioBtn.Location = new System.Drawing.Point(25, 88);
             this.mediumRadioBtn.Name = "mediumRadioBtn";
-            this.mediumRadioBtn.Size = new System.Drawing.Size(62, 17);
+            this.mediumRadioBtn.Size = new System.Drawing.Size(78, 21);
             this.mediumRadioBtn.TabIndex = 47;
             this.mediumRadioBtn.TabStop = true;
             this.mediumRadioBtn.Text = "Medium";
@@ -181,7 +181,7 @@
             this.smallRadioBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.smallRadioBtn.Location = new System.Drawing.Point(25, 44);
             this.smallRadioBtn.Name = "smallRadioBtn";
-            this.smallRadioBtn.Size = new System.Drawing.Size(50, 17);
+            this.smallRadioBtn.Size = new System.Drawing.Size(63, 21);
             this.smallRadioBtn.TabIndex = 46;
             this.smallRadioBtn.TabStop = true;
             this.smallRadioBtn.Text = "Small";
@@ -578,7 +578,7 @@
             "None"});
             this.FlavorsPanel.Location = new System.Drawing.Point(511, 248);
             this.FlavorsPanel.Name = "FlavorsPanel";
-            this.FlavorsPanel.Size = new System.Drawing.Size(201, 130);
+            this.FlavorsPanel.Size = new System.Drawing.Size(201, 114);
             this.FlavorsPanel.TabIndex = 67;
             // 
             // groupBox4
@@ -599,7 +599,7 @@
             this.currentUserLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.currentUserLabel.Location = new System.Drawing.Point(1390, 9);
             this.currentUserLabel.Name = "currentUserLabel";
-            this.currentUserLabel.Size = new System.Drawing.Size(69, 13);
+            this.currentUserLabel.Size = new System.Drawing.Size(93, 17);
             this.currentUserLabel.TabIndex = 72;
             this.currentUserLabel.Text = "Current User:";
             // 
@@ -615,10 +615,11 @@
             // 
             this.OrderLbx.BackColor = System.Drawing.SystemColors.ControlLight;
             this.OrderLbx.FormattingEnabled = true;
+            this.OrderLbx.ItemHeight = 16;
             this.OrderLbx.Location = new System.Drawing.Point(1385, 44);
             this.OrderLbx.Name = "OrderLbx";
             this.OrderLbx.ScrollAlwaysVisible = true;
-            this.OrderLbx.Size = new System.Drawing.Size(439, 589);
+            this.OrderLbx.Size = new System.Drawing.Size(439, 580);
             this.OrderLbx.TabIndex = 74;
             // 
             // qtyPanel
@@ -811,7 +812,7 @@
             // 
             // RegisterScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Coral;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
@@ -845,6 +846,7 @@
             this.Name = "RegisterScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterScreen";
+            this.Load += new System.EventHandler(this.RegisterScreen_Load);
             this.hotDrinks.ResumeLayout(false);
             this.coldDrinks.ResumeLayout(false);
             this.coolerDrinks.ResumeLayout(false);
