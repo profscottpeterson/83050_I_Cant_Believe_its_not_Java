@@ -15,7 +15,8 @@ namespace ICBINJPOSController
         // Fields go here
         private string currentDate = DateTime.Now.ToShortDateString();
 
-        private string currentUser = "";
+        //TODO test
+        private string currentUser = User.employeeName;
 
         private int currentTransNum = 1;
 
@@ -45,9 +46,9 @@ namespace ICBINJPOSController
 
         public void OpenTransaction()
         {
-
+            //***This may not be necessary
             //***Use currentUser field when ready.
-            this.currentTransaction = new Transaction(DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), "Dawn" , currentTransNum);
+            this.currentTransaction = new Transaction(DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), currentUser , currentTransNum);
         }
 
         // Close Transaction when payment is processed.
@@ -56,16 +57,20 @@ namespace ICBINJPOSController
             // Increase transactoin number by one for next transaction.
             this.currentTransNum = currentTransNum + 1;
             this.currentUser = "";
-            this.currentTransaction.Order = null;
+            //TODO test
+            this.currentTransaction = new Transaction(DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), currentUser, currentTransNum);
             OrderLbx.Items.Clear();
         }
 
         public void ChangeQuantity(string quantityBtnText)
         {
+            // Added this so there is no longer an error.
+            int tempQuantity;
+
             // Concatenate string quantity to allow values over 9.
             this.strQuantity = this.strQuantity + quantityBtnText;
 
-            if (int.TryParse(this.strQuantity, out int tempQuantity))
+            if (int.TryParse(this.strQuantity, out tempQuantity))
             {
                 this.quantitySelected = tempQuantity;
             }
@@ -116,15 +121,48 @@ namespace ICBINJPOSController
                     if (sizeSelected == "Small")
                     {
                         price = i.Price * .5 * quantity;
+
+                        // Checks to see if flavor is being used or not and adds 50 cents extra
+                        if (FlavorsPanel.GetItemChecked(5))
+                        {
+                            // Does nothing but use as placeholder for no flavor choice
+                        }
+                        else
+                        {
+                            // Adds 50 cents for cost of flavor
+                            price = price + .5;
+                        }
                     }
                     else if (sizeSelected == "Medium")
                     {
                         price = i.Price * .75 * quantity;
+
+                        // Checks to see if flavor is being used or not and adds 50 cents extra
+                        if (FlavorsPanel.GetItemChecked(5))
+                        {
+                            // Does nothing but use as placeholder for no flavor choice
+                        }
+                        else
+                        {
+                            // Adds 50 cents for cost of flavor
+                            price = price + .5;
+                        }
                     }
                     else
                     {
                         // Large is equivilent to original menu price
                         price = i.Price * quantity;
+
+                        // Checks to see if flavor is being used or not and adds 50 cents extra
+                        if (FlavorsPanel.GetItemChecked(5))
+                        {
+                            // Does nothing but use as placeholder for no flavor choice
+                        }
+                        else
+                        {
+                            // Adds 50 cents for cost of flavor
+                            price = price + .5;
+                        }
                     }
                 }
             }  
@@ -156,6 +194,7 @@ namespace ICBINJPOSController
 
                         // Add the Item to the Order listbox.
                         OrderLbx.Items.Add(lineItem.Quantity.ToString() + " " + lineItem.Size + " " + lineItem.Description + "\t" + lineItem.Price.ToString());
+
                         // Add line item price to Order list.
                         this.currentTransaction.Order.Add(lineItem);
 
@@ -213,7 +252,24 @@ namespace ICBINJPOSController
             this.OpenTransaction();
         }
 
-       
+        private void cancelBtn_Click(object sender, EventArgs e)
+
+
+        {
+            //TODO TEST THAT ACUALLY CANCELED
+           this.CloseTransaction();
+            //// Removes all items from order listbox
+            //OrderLbx.Items.Clear();
+
+            //for(int x=0;x < currentTransaction.Order.Count; x++)
+            //{
+            //    currentTransaction.Order.RemoveAt(x);
+            //}
+
+            //// Return all values to $0.00
+            //this.Totals();
+        }
+
 
         private void qty1Btn_Click(object sender, EventArgs e)
         {
@@ -353,6 +409,7 @@ namespace ICBINJPOSController
         {
             AddItemToOrder(orangeJuiceBtn.Text);
         }
+
     }
 
 

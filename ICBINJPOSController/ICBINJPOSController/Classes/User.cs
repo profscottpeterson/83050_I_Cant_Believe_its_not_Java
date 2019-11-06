@@ -20,7 +20,7 @@ namespace ICBINJPOSController
         public bool loginBlank;
 
         //to users names and passwords to hold textbox text
-        public string employeeName;
+        public static string employeeName;
         public string employeePass;
         public string managerName;
         public string managerPass;

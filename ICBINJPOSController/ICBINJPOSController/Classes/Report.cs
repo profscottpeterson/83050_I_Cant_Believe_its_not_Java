@@ -11,7 +11,7 @@ namespace ICBINJPOSController
     {
         public void RunUserReport()
         {
-
+            
         }
 
         public void RunDailyReport()

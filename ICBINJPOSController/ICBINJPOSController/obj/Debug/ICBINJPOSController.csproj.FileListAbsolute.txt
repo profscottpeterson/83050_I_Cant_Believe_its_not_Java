@@ -34,3 +34,16 @@ C:\Users\meyer\Documents\2GitRepo\83050_I_Cant_Believe_its_not_Java\ICBINJPOSCon
 C:\Users\meyer\Documents\2GitRepo\83050_I_Cant_Believe_its_not_Java\ICBINJPOSController\ICBINJPOSController\bin\Debug\ICBINJPOSController.exe.config
 C:\Users\meyer\Documents\2GitRepo\83050_I_Cant_Believe_its_not_Java\ICBINJPOSController\ICBINJPOSController\bin\Debug\ICBINJPOSController.exe
 C:\Users\meyer\Documents\2GitRepo\83050_I_Cant_Believe_its_not_Java\ICBINJPOSController\ICBINJPOSController\bin\Debug\ICBINJPOSController.pdb
+D:\TeamDev\83050_Team1\ICBINJPOSController\ICBINJPOSController\bin\Debug\ICBINJPOSController.exe.config
+D:\TeamDev\83050_Team1\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.exe
+D:\TeamDev\83050_Team1\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.pdb
+D:\TeamDev\83050_Team1\ICBINJPOSController\ICBINJPOSController\bin\Debug\ICBINJPOSController.exe
+D:\TeamDev\83050_Team1\ICBINJPOSController\ICBINJPOSController\bin\Debug\ICBINJPOSController.pdb
+D:\TeamDev\83050_Team1\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.csprojResolveAssemblyReference.cache
+D:\TeamDev\83050_Team1\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.AdminScreen.resources
+D:\TeamDev\83050_Team1\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.OptionsScreen.resources
+D:\TeamDev\83050_Team1\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.Properties.Resources.resources
+D:\TeamDev\83050_Team1\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.LoginScreen.resources
+D:\TeamDev\83050_Team1\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.RegisterScreen.resources
+D:\TeamDev\83050_Team1\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.ReportingScreen.resources
+D:\TeamDev\83050_Team1\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.csproj.GenerateResource.Cache

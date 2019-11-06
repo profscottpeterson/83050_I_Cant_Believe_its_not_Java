@@ -83,6 +83,7 @@
             this.qty3Btn = new System.Windows.Forms.Button();
             this.qty4Btn = new System.Windows.Forms.Button();
             this.qty1Btn = new System.Windows.Forms.Button();
+            this.cancelBtn = new System.Windows.Forms.Button();
             this.hotDrinks.SuspendLayout();
             this.coldDrinks.SuspendLayout();
             this.coolerDrinks.SuspendLayout();
@@ -153,10 +154,10 @@
             // largeRadioBtn
             // 
             this.largeRadioBtn.AutoSize = true;
-            this.largeRadioBtn.Font = new System.Drawing.Font("Goudy Stout", 7.8F);
+            this.largeRadioBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.largeRadioBtn.Location = new System.Drawing.Point(25, 137);
             this.largeRadioBtn.Name = "largeRadioBtn";
-            this.largeRadioBtn.Size = new System.Drawing.Size(93, 19);
+            this.largeRadioBtn.Size = new System.Drawing.Size(52, 17);
             this.largeRadioBtn.TabIndex = 48;
             this.largeRadioBtn.TabStop = true;
             this.largeRadioBtn.Text = "Large";
@@ -165,10 +166,10 @@
             // mediumRadioBtn
             // 
             this.mediumRadioBtn.AutoSize = true;
-            this.mediumRadioBtn.Font = new System.Drawing.Font("Goudy Stout", 7.8F);
+            this.mediumRadioBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.mediumRadioBtn.Location = new System.Drawing.Point(25, 88);
             this.mediumRadioBtn.Name = "mediumRadioBtn";
-            this.mediumRadioBtn.Size = new System.Drawing.Size(114, 19);
+            this.mediumRadioBtn.Size = new System.Drawing.Size(62, 17);
             this.mediumRadioBtn.TabIndex = 47;
             this.mediumRadioBtn.TabStop = true;
             this.mediumRadioBtn.Text = "Medium";
@@ -177,10 +178,10 @@
             // smallRadioBtn
             // 
             this.smallRadioBtn.AutoSize = true;
-            this.smallRadioBtn.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.smallRadioBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.smallRadioBtn.Location = new System.Drawing.Point(25, 44);
             this.smallRadioBtn.Name = "smallRadioBtn";
-            this.smallRadioBtn.Size = new System.Drawing.Size(95, 19);
+            this.smallRadioBtn.Size = new System.Drawing.Size(50, 17);
             this.smallRadioBtn.TabIndex = 46;
             this.smallRadioBtn.TabStop = true;
             this.smallRadioBtn.Text = "Small";
@@ -189,7 +190,7 @@
             // voidBtn
             // 
             this.voidBtn.BackColor = System.Drawing.Color.Salmon;
-            this.voidBtn.Font = new System.Drawing.Font("Cooper Black", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.voidBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.voidBtn.Location = new System.Drawing.Point(1513, 827);
             this.voidBtn.Margin = new System.Windows.Forms.Padding(2);
             this.voidBtn.Name = "voidBtn";
@@ -202,7 +203,7 @@
             // backButton
             // 
             this.backButton.BackColor = System.Drawing.Color.Brown;
-            this.backButton.Font = new System.Drawing.Font("Cooper Black", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.Location = new System.Drawing.Point(39, 827);
             this.backButton.Margin = new System.Windows.Forms.Padding(2);
             this.backButton.Name = "backButton";
@@ -214,7 +215,7 @@
             // minus10Btn
             // 
             this.minus10Btn.BackColor = System.Drawing.Color.Salmon;
-            this.minus10Btn.Font = new System.Drawing.Font("Cooper Black", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minus10Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minus10Btn.Location = new System.Drawing.Point(1031, 827);
             this.minus10Btn.Margin = new System.Windows.Forms.Padding(2);
             this.minus10Btn.Name = "minus10Btn";
@@ -226,7 +227,7 @@
             // minusBtn
             // 
             this.minusBtn.BackColor = System.Drawing.Color.Salmon;
-            this.minusBtn.Font = new System.Drawing.Font("Cooper Black", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minusBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minusBtn.Location = new System.Drawing.Point(1150, 827);
             this.minusBtn.Margin = new System.Windows.Forms.Padding(2);
             this.minusBtn.Name = "minusBtn";
@@ -238,7 +239,7 @@
             // payBtn
             // 
             this.payBtn.BackColor = System.Drawing.Color.Salmon;
-            this.payBtn.Font = new System.Drawing.Font("Cooper Black", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.payBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.payBtn.Location = new System.Drawing.Point(1675, 827);
             this.payBtn.Margin = new System.Windows.Forms.Padding(2);
             this.payBtn.Name = "payBtn";
@@ -251,7 +252,7 @@
             // numericPadBtn
             // 
             this.numericPadBtn.BackColor = System.Drawing.Color.Salmon;
-            this.numericPadBtn.Font = new System.Drawing.Font("Cooper Black", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericPadBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericPadBtn.Location = new System.Drawing.Point(501, 827);
             this.numericPadBtn.Margin = new System.Windows.Forms.Padding(2);
             this.numericPadBtn.Name = "numericPadBtn";
@@ -263,7 +264,7 @@
             // coffeeBtn
             // 
             this.coffeeBtn.BackColor = System.Drawing.Color.Salmon;
-            this.coffeeBtn.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.coffeeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.coffeeBtn.Location = new System.Drawing.Point(20, 32);
             this.coffeeBtn.Margin = new System.Windows.Forms.Padding(2);
             this.coffeeBtn.Name = "coffeeBtn";
@@ -276,7 +277,7 @@
             // cappuchinoBtn
             // 
             this.cappuchinoBtn.BackColor = System.Drawing.Color.Salmon;
-            this.cappuchinoBtn.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cappuchinoBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cappuchinoBtn.Location = new System.Drawing.Point(157, 32);
             this.cappuchinoBtn.Margin = new System.Windows.Forms.Padding(2);
             this.cappuchinoBtn.Name = "cappuchinoBtn";
@@ -289,7 +290,7 @@
             // espressoBtn
             // 
             this.espressoBtn.BackColor = System.Drawing.Color.Salmon;
-            this.espressoBtn.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.espressoBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.espressoBtn.Location = new System.Drawing.Point(20, 105);
             this.espressoBtn.Margin = new System.Windows.Forms.Padding(2);
             this.espressoBtn.Name = "espressoBtn";
@@ -302,7 +303,7 @@
             // teaBtn
             // 
             this.teaBtn.BackColor = System.Drawing.Color.Salmon;
-            this.teaBtn.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teaBtn.Location = new System.Drawing.Point(293, 32);
             this.teaBtn.Margin = new System.Windows.Forms.Padding(2);
             this.teaBtn.Name = "teaBtn";
@@ -315,7 +316,7 @@
             // cocoaBtn
             // 
             this.cocoaBtn.BackColor = System.Drawing.Color.Salmon;
-            this.cocoaBtn.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cocoaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cocoaBtn.Location = new System.Drawing.Point(157, 105);
             this.cocoaBtn.Margin = new System.Windows.Forms.Padding(2);
             this.cocoaBtn.Name = "cocoaBtn";
@@ -328,7 +329,7 @@
             // icedCoffeeBtn
             // 
             this.icedCoffeeBtn.BackColor = System.Drawing.Color.Salmon;
-            this.icedCoffeeBtn.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.icedCoffeeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.icedCoffeeBtn.Location = new System.Drawing.Point(20, 35);
             this.icedCoffeeBtn.Margin = new System.Windows.Forms.Padding(2);
             this.icedCoffeeBtn.Name = "icedCoffeeBtn";
@@ -341,7 +342,7 @@
             // frappuchinoBtn
             // 
             this.frappuchinoBtn.BackColor = System.Drawing.Color.Salmon;
-            this.frappuchinoBtn.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.frappuchinoBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.frappuchinoBtn.Location = new System.Drawing.Point(20, 105);
             this.frappuchinoBtn.Margin = new System.Windows.Forms.Padding(2);
             this.frappuchinoBtn.Name = "frappuchinoBtn";
@@ -354,7 +355,7 @@
             // icedTeaBtn
             // 
             this.icedTeaBtn.BackColor = System.Drawing.Color.Salmon;
-            this.icedTeaBtn.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.icedTeaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.icedTeaBtn.Location = new System.Drawing.Point(294, 35);
             this.icedTeaBtn.Margin = new System.Windows.Forms.Padding(2);
             this.icedTeaBtn.Name = "icedTeaBtn";
@@ -367,7 +368,7 @@
             // smoothieBtn
             // 
             this.smoothieBtn.BackColor = System.Drawing.Color.Salmon;
-            this.smoothieBtn.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.smoothieBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.smoothieBtn.Location = new System.Drawing.Point(157, 35);
             this.smoothieBtn.Margin = new System.Windows.Forms.Padding(2);
             this.smoothieBtn.Name = "smoothieBtn";
@@ -380,7 +381,7 @@
             // refresherBtn
             // 
             this.refresherBtn.BackColor = System.Drawing.Color.Salmon;
-            this.refresherBtn.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refresherBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refresherBtn.Location = new System.Drawing.Point(157, 105);
             this.refresherBtn.Margin = new System.Windows.Forms.Padding(2);
             this.refresherBtn.Name = "refresherBtn";
@@ -393,7 +394,7 @@
             // plus10Btn
             // 
             this.plus10Btn.BackColor = System.Drawing.Color.Salmon;
-            this.plus10Btn.Font = new System.Drawing.Font("Cooper Black", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.plus10Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plus10Btn.Location = new System.Drawing.Point(912, 827);
             this.plus10Btn.Margin = new System.Windows.Forms.Padding(2);
             this.plus10Btn.Name = "plus10Btn";
@@ -405,7 +406,7 @@
             // plusBtn
             // 
             this.plusBtn.BackColor = System.Drawing.Color.Salmon;
-            this.plusBtn.Font = new System.Drawing.Font("Cooper Black", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.plusBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plusBtn.Location = new System.Drawing.Point(793, 827);
             this.plusBtn.Margin = new System.Windows.Forms.Padding(2);
             this.plusBtn.Name = "plusBtn";
@@ -432,7 +433,7 @@
             // chaiBtn
             // 
             this.chaiBtn.BackColor = System.Drawing.Color.Salmon;
-            this.chaiBtn.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chaiBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chaiBtn.Location = new System.Drawing.Point(296, 105);
             this.chaiBtn.Margin = new System.Windows.Forms.Padding(2);
             this.chaiBtn.Name = "chaiBtn";
@@ -460,7 +461,7 @@
             // milkBtn
             // 
             this.milkBtn.BackColor = System.Drawing.Color.Salmon;
-            this.milkBtn.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.milkBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.milkBtn.Location = new System.Drawing.Point(293, 105);
             this.milkBtn.Margin = new System.Windows.Forms.Padding(2);
             this.milkBtn.Name = "milkBtn";
@@ -488,7 +489,7 @@
             // orangeJuiceBtn
             // 
             this.orangeJuiceBtn.BackColor = System.Drawing.Color.Salmon;
-            this.orangeJuiceBtn.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orangeJuiceBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orangeJuiceBtn.Location = new System.Drawing.Point(293, 105);
             this.orangeJuiceBtn.Margin = new System.Windows.Forms.Padding(2);
             this.orangeJuiceBtn.Name = "orangeJuiceBtn";
@@ -501,7 +502,7 @@
             // waterBtn
             // 
             this.waterBtn.BackColor = System.Drawing.Color.Salmon;
-            this.waterBtn.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.waterBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.waterBtn.Location = new System.Drawing.Point(20, 35);
             this.waterBtn.Margin = new System.Windows.Forms.Padding(2);
             this.waterBtn.Name = "waterBtn";
@@ -514,7 +515,7 @@
             // sevenUpBtn
             // 
             this.sevenUpBtn.BackColor = System.Drawing.Color.Salmon;
-            this.sevenUpBtn.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sevenUpBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sevenUpBtn.Location = new System.Drawing.Point(20, 105);
             this.sevenUpBtn.Margin = new System.Windows.Forms.Padding(2);
             this.sevenUpBtn.Name = "sevenUpBtn";
@@ -527,7 +528,7 @@
             // cokeBtn
             // 
             this.cokeBtn.BackColor = System.Drawing.Color.Salmon;
-            this.cokeBtn.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cokeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cokeBtn.Location = new System.Drawing.Point(294, 35);
             this.cokeBtn.Margin = new System.Windows.Forms.Padding(2);
             this.cokeBtn.Name = "cokeBtn";
@@ -540,7 +541,7 @@
             // pepsiBtn
             // 
             this.pepsiBtn.BackColor = System.Drawing.Color.Salmon;
-            this.pepsiBtn.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pepsiBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pepsiBtn.Location = new System.Drawing.Point(157, 35);
             this.pepsiBtn.Margin = new System.Windows.Forms.Padding(2);
             this.pepsiBtn.Name = "pepsiBtn";
@@ -553,7 +554,7 @@
             // muscleMilkBtn
             // 
             this.muscleMilkBtn.BackColor = System.Drawing.Color.Salmon;
-            this.muscleMilkBtn.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.muscleMilkBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.muscleMilkBtn.Location = new System.Drawing.Point(157, 105);
             this.muscleMilkBtn.Margin = new System.Windows.Forms.Padding(2);
             this.muscleMilkBtn.Name = "muscleMilkBtn";
@@ -566,7 +567,7 @@
             // FlavorsPanel
             // 
             this.FlavorsPanel.BackColor = System.Drawing.Color.Coral;
-            this.FlavorsPanel.Font = new System.Drawing.Font("Cooper Black", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FlavorsPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FlavorsPanel.FormattingEnabled = true;
             this.FlavorsPanel.Items.AddRange(new object[] {
             "French Vanilla",
@@ -598,7 +599,7 @@
             this.currentUserLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.currentUserLabel.Location = new System.Drawing.Point(1390, 9);
             this.currentUserLabel.Name = "currentUserLabel";
-            this.currentUserLabel.Size = new System.Drawing.Size(166, 15);
+            this.currentUserLabel.Size = new System.Drawing.Size(69, 13);
             this.currentUserLabel.TabIndex = 72;
             this.currentUserLabel.Text = "Current User:";
             // 
@@ -647,7 +648,7 @@
             this.qty0Btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.qty0Btn.FlatAppearance.BorderSize = 2;
             this.qty0Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.qty0Btn.Font = new System.Drawing.Font("Cooper Black", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qty0Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.qty0Btn.Location = new System.Drawing.Point(8, 470);
             this.qty0Btn.Margin = new System.Windows.Forms.Padding(2);
             this.qty0Btn.Name = "qty0Btn";
@@ -663,7 +664,7 @@
             this.qty9Btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.qty9Btn.FlatAppearance.BorderSize = 2;
             this.qty9Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.qty9Btn.Font = new System.Drawing.Font("Cooper Black", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qty9Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.qty9Btn.Location = new System.Drawing.Point(8, 412);
             this.qty9Btn.Margin = new System.Windows.Forms.Padding(2);
             this.qty9Btn.Name = "qty9Btn";
@@ -679,7 +680,7 @@
             this.qty8Btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.qty8Btn.FlatAppearance.BorderSize = 2;
             this.qty8Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.qty8Btn.Font = new System.Drawing.Font("Cooper Black", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qty8Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.qty8Btn.Location = new System.Drawing.Point(8, 354);
             this.qty8Btn.Margin = new System.Windows.Forms.Padding(2);
             this.qty8Btn.Name = "qty8Btn";
@@ -695,7 +696,7 @@
             this.qty5Btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.qty5Btn.FlatAppearance.BorderSize = 2;
             this.qty5Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.qty5Btn.Font = new System.Drawing.Font("Cooper Black", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qty5Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.qty5Btn.Location = new System.Drawing.Point(8, 178);
             this.qty5Btn.Margin = new System.Windows.Forms.Padding(2);
             this.qty5Btn.Name = "qty5Btn";
@@ -711,7 +712,7 @@
             this.qty6Btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.qty6Btn.FlatAppearance.BorderSize = 2;
             this.qty6Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.qty6Btn.Font = new System.Drawing.Font("Cooper Black", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qty6Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.qty6Btn.Location = new System.Drawing.Point(8, 237);
             this.qty6Btn.Margin = new System.Windows.Forms.Padding(2);
             this.qty6Btn.Name = "qty6Btn";
@@ -727,7 +728,7 @@
             this.qty7Btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.qty7Btn.FlatAppearance.BorderSize = 2;
             this.qty7Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.qty7Btn.Font = new System.Drawing.Font("Cooper Black", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qty7Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.qty7Btn.Location = new System.Drawing.Point(8, 296);
             this.qty7Btn.Margin = new System.Windows.Forms.Padding(2);
             this.qty7Btn.Name = "qty7Btn";
@@ -743,7 +744,7 @@
             this.qty2Btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.qty2Btn.FlatAppearance.BorderSize = 2;
             this.qty2Btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.qty2Btn.Font = new System.Drawing.Font("Cooper Black", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qty2Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.qty2Btn.Location = new System.Drawing.Point(8, 5);
             this.qty2Btn.Margin = new System.Windows.Forms.Padding(2);
             this.qty2Btn.Name = "qty2Btn";
@@ -756,7 +757,7 @@
             // qty3Btn
             // 
             this.qty3Btn.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.qty3Btn.Font = new System.Drawing.Font("Cooper Black", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qty3Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.qty3Btn.Location = new System.Drawing.Point(8, 63);
             this.qty3Btn.Margin = new System.Windows.Forms.Padding(2);
             this.qty3Btn.Name = "qty3Btn";
@@ -769,7 +770,7 @@
             // qty4Btn
             // 
             this.qty4Btn.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.qty4Btn.Font = new System.Drawing.Font("Cooper Black", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qty4Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.qty4Btn.Location = new System.Drawing.Point(8, 120);
             this.qty4Btn.Margin = new System.Windows.Forms.Padding(2);
             this.qty4Btn.Name = "qty4Btn";
@@ -785,7 +786,7 @@
             this.qty1Btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.qty1Btn.FlatAppearance.BorderSize = 2;
             this.qty1Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.qty1Btn.Font = new System.Drawing.Font("Cooper Black", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qty1Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.qty1Btn.Location = new System.Drawing.Point(8, 528);
             this.qty1Btn.Margin = new System.Windows.Forms.Padding(2);
             this.qty1Btn.Name = "qty1Btn";
@@ -795,9 +796,22 @@
             this.qty1Btn.UseVisualStyleBackColor = false;
             this.qty1Btn.Click += new System.EventHandler(this.qty2Btn_Click);
             // 
+            // cancelBtn
+            // 
+            this.cancelBtn.BackColor = System.Drawing.Color.Salmon;
+            this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelBtn.Location = new System.Drawing.Point(1341, 827);
+            this.cancelBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(158, 96);
+            this.cancelBtn.TabIndex = 45;
+            this.cancelBtn.Text = "Cancel";
+            this.cancelBtn.UseVisualStyleBackColor = false;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+            // 
             // RegisterScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Coral;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
@@ -817,6 +831,7 @@
             this.Controls.Add(this.taxPriceLbl);
             this.Controls.Add(this.subtotalPriceLbl);
             this.Controls.Add(this.subtotalLbl);
+            this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.voidBtn);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.minus10Btn);
@@ -825,7 +840,7 @@
             this.Controls.Add(this.numericPadBtn);
             this.Controls.Add(this.plus10Btn);
             this.Controls.Add(this.plusBtn);
-            this.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.Name = "RegisterScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -896,5 +911,6 @@
         private System.Windows.Forms.Button qty5Btn;
         private System.Windows.Forms.Button qty6Btn;
         private System.Windows.Forms.Button qty7Btn;
+        private System.Windows.Forms.Button cancelBtn;
     }
 }
