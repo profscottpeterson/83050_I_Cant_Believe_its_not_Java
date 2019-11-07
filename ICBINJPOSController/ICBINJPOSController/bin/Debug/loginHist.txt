@@ -92,3 +92,14 @@
 * , ,Please Fill out both Username and Password Fields! - 11/5/2019 5:32:04 PM
 * , ,Please Fill out both Username and Password Fields! - 11/5/2019 5:46:50 PM
 *William ,Bacon ,Successful Login! - 11/5/2019 9:00:48 PM
+*William ,Bacon ,Successful Login! - 11/6/2019 7:12:50 PM
+*William ,Password1 ,User Name and Password Incorrect!  Please Check and try again! - 11/6/2019 7:33:51 PM
+* , ,Please Fill out both Username and Password Fields! - 11/6/2019 7:33:54 PM
+*William , ,User Name and Password Incorrect!  Please Check and try again! - 11/6/2019 7:34:06 PM
+*William , ,User Name and Password Incorrect!  Please Check and try again! - 11/6/2019 7:34:15 PM
+*William ,Bacon ,User Name and Password Incorrect!  Please Check and try again! - 11/6/2019 7:34:32 PM
+* , ,Please Fill out both Username and Password Fields! - 11/6/2019 7:34:34 PM
+*William ,Bacon ,Successful Login! - 11/6/2019 7:34:43 PM
+*william , ,User Name and Password Incorrect!  Please Check and try again! - 11/6/2019 7:37:16 PM
+* ,fralin ,Please Fill out both Username and Password Fields! - 11/6/2019 7:37:21 PM
+* , ,Please Fill out both Username and Password Fields! - 11/6/2019 7:37:24 PM

@@ -27,66 +27,6 @@ namespace ICBINJPOSController
         public static string adminName;
         public static string adminPass;
 
-        //lists to hold ID, Usernames and Passwords
-        List<string> empID = new List<string>();
-        List<string> empUserName = new List<string>();
-        List<string> empPassWord = new List<string>();
-        List<string> mgtID = new List<string>();
-        List<string> mgtUserName = new List<string>();
-        List<string> mgtPassWord = new List<string>();
-        List<string> adminID = new List<string>();
-        List<string> adminUserName = new List<string>();
-        List<string> adminPassWord = new List<string>();
-
-
-        public void OpenEmpFile()
-        {
-            //instantiate stream reader file
-            StreamReader streamEmployee = new StreamReader("employeeAuth.txt");
-            string emp = "";
-
-            //read line emp, split each whitespace separated entry to an array & add to list
-            while ((emp = streamEmployee.ReadLine()) != null)
-            {
-                string[] entries = emp.Split(" ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-                empID.Add(entries[0]);
-                empUserName.Add(entries[1]);
-                empPassWord.Add(entries[2]);
-            }
-        }
-
-        public void OpenMgtFile()
-        {
-            //instantiate stream reader file
-            StreamReader streamManagement = new StreamReader("managementAuth.txt");
-            string mgt = "";
-
-            //read line mgt, split each whitespace separated entry to an array & add to list
-            while ((mgt = streamManagement.ReadLine()) != null)
-            {
-                string[] entries = mgt.Split(" ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-                mgtID.Add(entries[0]);
-                mgtUserName.Add(entries[1]);
-                mgtPassWord.Add(entries[2]);
-            }
-        }
-
-        public void OpenAdminFile()
-        {
-            //instantiate stream reader file
-            StreamReader streamAdministrator = new StreamReader("administratorAuth.txt");
-            string admin = "";
-
-            //read line admin, split each whitespace separated entry to an array & add to list
-            while ((admin = streamAdministrator.ReadLine()) != null)
-            {
-                string[] entries = admin.Split(" ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-                adminID.Add(entries[0]);
-                adminUserName.Add(entries[1]);
-                adminPassWord.Add(entries[2]);
-            }
-        }
-
 
         public void EmployeeLogin(string name, string password)
         {
@@ -94,7 +34,7 @@ namespace ICBINJPOSController
             employeePass = password;
 
             //if employee username and password correct
-            if (empUserName.Contains(employeeName) && empPassWord.Contains(employeePass) && Array.IndexOf(empUserName.ToArray(), employeeName) == Array.IndexOf(empPassWord.ToArray(), employeePass))
+            if (File.empUserName.Contains(employeeName) && File.empPassWord.Contains(employeePass) && Array.IndexOf(File.empUserName.ToArray(), employeeName) == Array.IndexOf(File.empPassWord.ToArray(), employeePass))
             {
                 employeeLoggedIn = true;
                 msgtxt = "Successful Login!";
@@ -106,7 +46,7 @@ namespace ICBINJPOSController
             }
 
             //if employee username or password incorrect
-            else if ((employeeName != "") || (employeePass != "") && Array.IndexOf(empUserName.ToArray(), employeeName) != Array.IndexOf(empPassWord.ToArray(), employeePass))
+            else if ((employeeName != "") || (employeePass != "") && Array.IndexOf(File.empUserName.ToArray(), employeeName) != Array.IndexOf(File.empPassWord.ToArray(), employeePass))
             {
                 loginIncorrect = true;
                 msgtxt = "User Name and Password Incorrect!  Please Check and try again!";
@@ -118,7 +58,7 @@ namespace ICBINJPOSController
             }
 
             //if username or password left blank
-            else if ((employeeName == "") || (employeePass == ""))
+            else if ((employeeName == "") || (employeePass == "" || employeeName != "" && employeePass == "" || employeeName == "" && employeePass != ""))
             {
                 loginBlank = true;
                 msgtxt = "Please Fill out both Username and Password Fields!";
@@ -128,7 +68,7 @@ namespace ICBINJPOSController
                 blankFormHist.WriteLine("*" + employeeName + " ," + employeePass + " ," + msgtxt + " - " + DateTime.Now);
                 blankFormHist.Close();
             }
-
+            
         }
 
         public void ManagerLogin(string name, string password)
@@ -137,7 +77,7 @@ namespace ICBINJPOSController
             managerPass = password;
 
             //if manager username and password correct
-            if (mgtUserName.Contains(managerName) && mgtPassWord.Contains(managerPass) && Array.IndexOf(mgtUserName.ToArray(), managerName) == Array.IndexOf(mgtPassWord.ToArray(), managerPass))
+            if (File.mgtUserName.Contains(managerName) && File.mgtPassWord.Contains(managerPass) && Array.IndexOf(File.mgtUserName.ToArray(), managerName) == Array.IndexOf(File.mgtPassWord.ToArray(), managerPass))
             {
                 managerLoggedIn = true;
                 msgtxt = "Successful Login!";
@@ -149,7 +89,7 @@ namespace ICBINJPOSController
             }
 
             //if manager username or password incorrect
-            else if ((managerName != "") || (managerPass != "") && Array.IndexOf(mgtUserName.ToArray(), managerName) != Array.IndexOf(mgtPassWord.ToArray(), managerPass))
+            else if ((managerName != "") || (managerPass != "") && Array.IndexOf(File.mgtUserName.ToArray(), managerName) != Array.IndexOf(File.mgtPassWord.ToArray(), managerPass))
             {
                 loginIncorrect = true;
                 msgtxt = "User Name and Password Incorrect!  Please Check and try again!";
@@ -161,7 +101,7 @@ namespace ICBINJPOSController
             }
 
             //if username or password left blank
-            else if ((managerName == "") || (managerPass == ""))
+            else if ((employeeName == "") || (employeePass == "" || employeeName != "" && employeePass == "" || employeeName == "" && employeePass != ""))
             {
                 loginBlank = true;
                 msgtxt = "Please Fill out both Username and Password Fields!";
@@ -180,7 +120,7 @@ namespace ICBINJPOSController
             adminPass = password;
 
             //if administrator username and password correct
-            if (adminUserName.Contains(adminName) && adminPassWord.Contains(adminPass) && Array.IndexOf(adminUserName.ToArray(), adminName) == Array.IndexOf(adminPassWord.ToArray(), adminPass))
+            if (File.adminUserName.Contains(adminName) && File.adminPassWord.Contains(adminPass) && Array.IndexOf(File.adminUserName.ToArray(), adminName) == Array.IndexOf(File.adminPassWord.ToArray(), adminPass))
             {
                 administratorLoggedIn = true;
                 msgtxt = "Successful Login!";
@@ -192,7 +132,7 @@ namespace ICBINJPOSController
             }
 
             //if administrator username or password incorrect
-            else if ((adminName != "") || (adminPass != "") && Array.IndexOf(adminUserName.ToArray(), adminName) != Array.IndexOf(adminPassWord.ToArray(), adminPass))
+            else if ((adminName != "") || (adminPass != "") && Array.IndexOf(File.adminUserName.ToArray(), adminName) != Array.IndexOf(File.adminPassWord.ToArray(), adminPass))
             {
                 loginIncorrect = true;
                 msgtxt = "User Name and Password Incorrect!  Please Check and try again!";
@@ -204,7 +144,7 @@ namespace ICBINJPOSController
             }
 
             //if username or password left blank
-            else if ((adminName == "") || (adminPass == ""))
+            else if ((employeeName == "") || (employeePass == "" || employeeName != "" && employeePass == "" || employeeName == "" && employeePass != ""))
             {
                 loginBlank = true;
                 msgtxt = "Please Fill out both Username and Password Fields!";
@@ -215,7 +155,5 @@ namespace ICBINJPOSController
                 blankFormHist.Close();
             }
         }
-
-
     }
 }
