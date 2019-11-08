@@ -19,13 +19,13 @@ namespace ICBINJPOSController
 
         public int Expiration { get; set; }
 
-        // Cash recieved from customer.
-        private double cashRec;
+        // Amount recieved from customer.
+        private double tendered;
 
-        public double CashRec
+        public double Tendered
         {
-            get { return cashRec; }
-            set { cashRec = value; }
+            get { return tendered; }
+            set { tendered = value; }
         }
 
         // Cash due to customer.
@@ -37,13 +37,14 @@ namespace ICBINJPOSController
             set { cashDue = value; }
         }
 
-        public double CalcCashDue(double transTotal)
+        public double CalcCashDue(double transTotal, double tendered)
         {
-            this.cashDue = transTotal - this.cashRec;
+            this.cashDue = transTotal - tendered;
 
             if (this.cashDue > 0)
             {
-                this.OpenDrawer();
+                //Still owe money message user.
+                System.Windows.Forms.MessageBox.Show("A balance of " + this.cashDue.ToString("c") + " is still owed.");
                 return this.cashDue;
 
             }

@@ -34,10 +34,10 @@ namespace ICBINJPOSController
         private void LoginButton_Click(object sender, EventArgs e)
         {
             //Instance of new screens
-            LoginScreen loginScreen = new LoginScreen();
-            RegisterScreen registerScreen = new RegisterScreen();
-            OptionsScreen optionsScreen = new OptionsScreen();
-            ReportingScreen reportingScreen = new ReportingScreen();
+            //LoginScreen loginScreen = new LoginScreen();
+            
+            //OptionsScreen optionsScreen = new OptionsScreen();
+            //ReportingScreen reportingScreen = new ReportingScreen();
 
             //instances of User and File classes
             User Users = new User();
@@ -59,8 +59,12 @@ namespace ICBINJPOSController
                     
                     if (Users.employeeLoggedIn == true)
                     {
-                        MessageBox.Show("Successful Login!");
-                        loginScreen.Hide();
+                        MessageBox.Show("Successful Login.");
+
+                        //***Hide current screen.
+                        this.Hide();
+                        //***Open register screen when validation is complete.
+                        RegisterScreen registerScreen = new RegisterScreen();
                         registerScreen.ShowDialog();
                         this.userNameTextBox.Clear();
                         this.passWordTextBox.Clear();
@@ -68,7 +72,7 @@ namespace ICBINJPOSController
                     }
                     else if (Users.loginIncorrect == true)
                     {
-                        MessageBox.Show("User Name and Password Incorrect!  Please Check and try again!");
+                        MessageBox.Show("User Name and Password Incorrect.  Please Check and try again.");
                         Users.employeeLoggedIn = false;
                         this.userNameTextBox.Clear();
                         this.passWordTextBox.Clear();
@@ -76,7 +80,7 @@ namespace ICBINJPOSController
                     }  
                     else if (Users.loginBlank == true)
                     {
-                        MessageBox.Show("Please Fill out both Username and Password Fields!");
+                        MessageBox.Show("Please Fill out both Username and Password Fields.");
                         Users.employeeLoggedIn = false;
                         this.userNameTextBox.Clear();
                         this.passWordTextBox.Clear();
@@ -95,8 +99,12 @@ namespace ICBINJPOSController
 
                     if (Users.managerLoggedIn == true)
                     {
-                        MessageBox.Show("Successful Login!");
-                        loginScreen.Hide();
+                        MessageBox.Show("Successful Login.");
+
+                        //***Hide current screen.
+                        this.Hide();
+                        //***Open reporting screen when validation is complete.
+                        ReportingScreen reportingScreen = new ReportingScreen();
                         reportingScreen.ShowDialog();
                         this.userNameTextBox.Clear();
                         this.passWordTextBox.Clear();
@@ -104,7 +112,7 @@ namespace ICBINJPOSController
                     }
                     else if (Users.loginIncorrect == true)
                     {
-                        MessageBox.Show("User Name and Password Incorrect!  Please Check and try again!");
+                        MessageBox.Show("User Name and Password Incorrect. Please Check and try again.");
                         Users.managerLoggedIn = false;
                         this.userNameTextBox.Clear();
                         this.passWordTextBox.Clear();
@@ -112,7 +120,7 @@ namespace ICBINJPOSController
                     }
                     else if (Users.loginBlank == true)
                     {
-                        MessageBox.Show("Please Fill out both Username and Password Fields!");
+                        MessageBox.Show("Please Fill out both Username and Password Fields.");
                         Users.managerLoggedIn = false;
                         this.userNameTextBox.Clear();
                         this.passWordTextBox.Clear();
@@ -131,8 +139,12 @@ namespace ICBINJPOSController
 
                     if (Users.administratorLoggedIn == true)
                     {
-                        MessageBox.Show("Successful Login!");
-                        loginScreen.Hide();
+                        MessageBox.Show("Successful Login.");
+
+                        //***Hide current screen.
+                        this.Hide();
+                        //***Open option screen when validation is complete.
+                        OptionsScreen optionsScreen = new OptionsScreen();
                         optionsScreen.ShowDialog();
                         this.userNameTextBox.Clear();
                         this.passWordTextBox.Clear();
@@ -140,7 +152,7 @@ namespace ICBINJPOSController
                     }
                     else if (Users.loginIncorrect == true)
                     {
-                        MessageBox.Show("User Name and Password Incorrect!  Please Check and try again!");
+                        MessageBox.Show("User Name and Password Incorrect. Please Check and try again.");
                         Users.administratorLoggedIn = false;
                         this.userNameTextBox.Clear();
                         this.passWordTextBox.Clear();
@@ -148,7 +160,7 @@ namespace ICBINJPOSController
                     }
                     else if (Users.loginBlank == true)
                     {
-                        MessageBox.Show("Please Fill out both Username and Password Fields!");
+                        MessageBox.Show("Please Fill out both Username and Password Fields.");
                         Users.administratorLoggedIn = false;
                         this.userNameTextBox.Clear();
                         this.passWordTextBox.Clear();
@@ -170,5 +182,6 @@ namespace ICBINJPOSController
             this.passWordTextBox.Clear();
             this.userNameTextBox.Focus();
         }
+        
     }
 }

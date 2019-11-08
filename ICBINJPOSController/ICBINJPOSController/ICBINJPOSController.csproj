@@ -49,8 +49,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Admin.cs" />
-    <Compile Include="Classes\Menu.cs" />
-    <Compile Include="File.cs" />
+    <Compile Include="Classes\File.cs" />
+    <Compile Include="CoffeeShopMenu.cs" />
+    <Compile Include="PaymentScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentScreen.Designer.cs">
+      <DependentUpon>PaymentScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\AdminScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     </Compile>
     <Compile Include="Classes\Transaction.cs" />
     <Compile Include="Classes\User.cs" />
+    <EmbeddedResource Include="PaymentScreen.resx">
+      <DependentUpon>PaymentScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\AdminScreen.resx">
       <DependentUpon>AdminScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +134,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\DrinkMenu.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

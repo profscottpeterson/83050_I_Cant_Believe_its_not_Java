@@ -23,6 +23,8 @@ namespace ICBINJPOSController
 
         private Transaction currentTransaction;
 
+        private CoffeeShopMenu menu = new CoffeeShopMenu();
+
         // Holds string value of quantity button selected.
         private string strQuantity = ""; 
 
@@ -38,10 +40,10 @@ namespace ICBINJPOSController
             InitializeComponent();
 
             // Show current date.
-            UsersNameLbl.Text = currentDate;
+            dateLbl.Text = currentDate;
             // Show current user using static var.
-            //UsersNameLbl.Text = User.employeeName;
-
+            UsersNameLbl.Text = User.employeeName;
+           
             OpenTransaction();
         }
 
@@ -50,6 +52,7 @@ namespace ICBINJPOSController
             //***This may not be necessary
             //***Use currentUser field when ready.
             this.currentTransaction = new Transaction(DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), currentUser , currentTransNum);
+          
         }
 
         // Close Transaction when payment is processed.
@@ -92,7 +95,7 @@ namespace ICBINJPOSController
             }
             else if (mediumRadioBtn.Checked == true)
             {
-                this.sizeSelected = mediumRadioBtn.Text;
+                this.sizeSelected = "Med";
                 return true;
             }
             else if (largeRadioBtn.Checked == true)
@@ -110,61 +113,63 @@ namespace ICBINJPOSController
 
         public double FindPrice(string sizeSelected, int quantity, string itemBtnSelected)
         {
+            // Returns a zero if price is not found.
             double price = 0;
-            Menu m = new Menu();
-
+            List<Item> tempMenu = this.menu.IcbinjMenu.ToList();
+            
             // Find the item's price in the menu
-            foreach (Item i in m.icbinjMenu)
+            foreach (Item i in tempMenu)
             {
-                if (itemBtnSelected == i.Description)
+                if (i.Description == itemBtnSelected)
                 {
                     // Modify menu price according to size.
                     if (sizeSelected == "Small")
                     {
-                        price = i.Price * .5 * quantity;
-
-                        // Checks to see if flavor is being used or not and adds 50 cents extra
-                        if (FlavorsPanel.GetItemChecked(5))
-                        {
-                            // Does nothing but use as placeholder for no flavor choice
-                        }
-                        else
-                        {
-                            // Adds 50 cents for cost of flavor
-                            price = price + .5;
-                        }
+                        price = i.PriceOptions[0] * quantity;
+                        
+                        //// Checks to see if flavor is being used or not and adds 50 cents extra
+                        //if (FlavorsPanel.GetItemChecked(5))
+                        //{
+                        //    // Does nothing but use as placeholder for no flavor choice
+                        //}
+                        //else
+                        //{
+                        //    // Adds 50 cents for cost of flavor
+                        //    price = price + .5;
+                        //}
                     }
                     else if (sizeSelected == "Medium")
                     {
-                        price = i.Price * .75 * quantity;
-
+                        price = i.PriceOptions[1] * quantity;
+                        
                         // Checks to see if flavor is being used or not and adds 50 cents extra
-                        if (FlavorsPanel.GetItemChecked(5))
-                        {
-                            // Does nothing but use as placeholder for no flavor choice
-                        }
-                        else
-                        {
-                            // Adds 50 cents for cost of flavor
-                            price = price + .5;
-                        }
+                        //if (FlavorsPanel.GetItemChecked(5))
+                        //{
+                        //    // Does nothing but use as placeholder for no flavor choice
+                        //}
+                        //else
+                        //{
+                        //    // Adds 50 cents for cost of flavor
+                        //    price = price + .5;
+                        //}
                     }
                     else
                     {
                         // Large is equivilent to original menu price
-                        price = i.Price * quantity;
-
+                        price = i.PriceOptions[2] * quantity;
+                        
                         // Checks to see if flavor is being used or not and adds 50 cents extra
-                        if (FlavorsPanel.GetItemChecked(5))
-                        {
-                            // Does nothing but use as placeholder for no flavor choice
-                        }
-                        else
-                        {
-                            // Adds 50 cents for cost of flavor
-                            price = price + .5;
-                        }
+                        //if (FlavorsPanel.GetItemChecked(5))
+                        //{
+                        //    // Does nothing but use as placeholder for no flavor choice
+                        //}
+                        //else
+                        //{
+                        //    // Adds 50 cents for cost of flavor
+                        //    price = price + .5;
+                        //}
                     }
+                    break;
                 }
             }  
 
@@ -186,7 +191,7 @@ namespace ICBINJPOSController
                     // If menu item is not found.
                     if (itemPrice == 0)
                     {
-                        MessageBox.Show("Sorry item not found, seek administrator's assistance.");
+                        MessageBox.Show("Sorry item price not found, seek administrator's assistance.");
                     }
                     else
                     {
@@ -194,7 +199,7 @@ namespace ICBINJPOSController
                         Item lineItem = new Item(this.quantitySelected, buttonText, this.sizeSelected, itemPrice);
 
                         // Add the Item to the Order listbox.
-                        OrderLbx.Items.Add(lineItem.Quantity.ToString() + " " + lineItem.Size + " " + lineItem.Description + "\t" + lineItem.Price.ToString());
+                        OrderLbx.Items.Add(lineItem.Quantity.ToString() + " " + lineItem.Size + " " + lineItem.Description + "\t\t" + lineItem.Price.ToString("c"));
 
                         // Add line item price to Order list.
                         this.currentTransaction.Order.Add(lineItem);
@@ -227,49 +232,11 @@ namespace ICBINJPOSController
             totalPriceLbl.Text = this.currentTransaction.CalcTotal();
         }
 
-        private void voidBtn_Click(object sender, EventArgs e)
-        {
-            // Variable to hold item selected, must store in var, because listbox order changes on removal.
-            int currentSelection = OrderLbx.SelectedIndex;
-
-            // Find the line item selected and remove it.
-            OrderLbx.Items.RemoveAt(currentSelection);
-
-            // Remove line item selected from current order.
-            currentTransaction.Order.RemoveAt(currentSelection);
-
-            // Subtract line item price to transaction subtotal.
-            this.Totals(); 
-        }
-
-        private void payBtn_Click(object sender, EventArgs e)
-        {
-            //TODO payment screen and processing
-
-            // If payment is successfull close transaction.
-            this.CloseTransaction();
-
-            // Open a new transaction.
-            this.OpenTransaction();
-        }
-
-        private void cancelBtn_Click(object sender, EventArgs e)
 
 
-        {
-            //TODO TEST THAT ACUALLY CANCELED
-           this.CloseTransaction();
-            //// Removes all items from order listbox
-            //OrderLbx.Items.Clear();
 
-            //for(int x=0;x < currentTransaction.Order.Count; x++)
-            //{
-            //    currentTransaction.Order.RemoveAt(x);
-            //}
 
-            //// Return all values to $0.00
-            //this.Totals();
-        }
+
 
 
         private void qty1Btn_Click(object sender, EventArgs e)
@@ -411,9 +378,81 @@ namespace ICBINJPOSController
             AddItemToOrder(orangeJuiceBtn.Text);
         }
 
-        private void RegisterScreen_Load(object sender, EventArgs e)
+        private void payBtn_Click(object sender, EventArgs e)
         {
+            //TODO payment screen and processing
+            PaymentScreen paymentScreen = new PaymentScreen();
+            paymentScreen.ShowDialog();
 
+            // If payment is successfull close transaction.
+            this.CloseTransaction();
+
+            // Open a new transaction.
+            this.OpenTransaction();
+        }
+
+        private void voidBtn_Click(object sender, EventArgs e)
+        {
+            if (OrderLbx.SelectedIndex != -1)
+            {
+                // Variable to hold item selected, must store in var, because listbox order changes on removal.
+                int currentSelection = OrderLbx.SelectedIndex;
+
+                // Find the line item selected and remove it.
+                OrderLbx.Items.RemoveAt(currentSelection);
+
+                // Remove line item selected from current order.
+                currentTransaction.Order.RemoveAt(currentSelection);
+
+                // Subtract line item price to transaction subtotal.
+                this.Totals();
+            }
+            else
+            {
+                MessageBox.Show("Please select an item to void.");
+            }
+        }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            //TODO TEST THAT ACUALLY CANCELED
+            this.CloseTransaction();
+            //// Removes all items from order listbox
+            //OrderLbx.Items.Clear();
+
+            //for(int x=0;x < currentTransaction.Order.Count; x++)
+            //{
+            //    currentTransaction.Order.RemoveAt(x);
+            //}
+
+            //// Return all values to $0.00
+            //this.Totals();
+        }
+
+        private void vanillaBtn_Click(object sender, EventArgs e)
+        {
+            AddItemToOrder("Flavor");
+        }
+
+        private void mochaBtn_Click(object sender, EventArgs e)
+        {
+            AddItemToOrder("Flavor");
+        }
+
+        private void caramelBtn_Click(object sender, EventArgs e)
+        {
+            AddItemToOrder("Flavor");
+        }
+        
+
+        private void hazelnutBtn_Click(object sender, EventArgs e)
+        {
+            AddItemToOrder("Flavor");
+        }
+
+        private void strawberryBtn_Click(object sender, EventArgs e)
+        {
+            AddItemToOrder("Flavor");
         }
     }
 

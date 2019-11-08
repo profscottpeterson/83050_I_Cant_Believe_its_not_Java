@@ -80,9 +80,9 @@ namespace ICBINJPOSController
             set { tax = value; }
         }
 
-        private double total;
+        private static double total;
 
-        public double Total
+        public static double Total
         {
             get { return total; }
             set { total = value; }
@@ -91,19 +91,19 @@ namespace ICBINJPOSController
         public string CalcSubTotal()
         {
             this.Subtotal = this.Order.Sum(x => x.Price);
-            return this.Subtotal.ToString();
+            return this.Subtotal.ToString("c");
         }
 
         public string CalcTax()
         {
             this.Tax = (this.Subtotal * Transaction.TaxRate);
-            return this.Tax.ToString();
+            return this.Tax.ToString("c");
         }
 
         public string CalcTotal()
         {
-            this.Total = (this.Subtotal + this.Tax);
-            return this.Total.ToString();
+            Total = (this.Subtotal + this.Tax);
+            return Total.ToString("c");
         }
 
         public Transaction(string transDate, string transTime, string currentUser, int transNumber )
