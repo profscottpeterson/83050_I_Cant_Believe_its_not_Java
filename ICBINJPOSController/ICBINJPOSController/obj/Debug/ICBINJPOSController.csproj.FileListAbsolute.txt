@@ -48,3 +48,4 @@ D:\TeamDev\83050_Team1\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJP
 D:\TeamDev\83050_Team1\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.ReportingScreen.resources
 D:\TeamDev\83050_Team1\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.csproj.GenerateResource.Cache
 C:\Users\meyer\Documents\2GitRepo\83050_I_Cant_Believe_its_not_Java\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.PaymentScreen.resources
+D:\TeamDev\83050_Team1\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.PaymentScreen.resources

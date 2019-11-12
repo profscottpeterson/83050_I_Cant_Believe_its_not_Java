@@ -64,6 +64,7 @@ namespace ICBINJPOSController
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+
             lblTendered.Text = "";
         }
         private void btnCancel_Click(object sender, EventArgs e)
@@ -96,6 +97,23 @@ namespace ICBINJPOSController
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            // Deleting the last character in tendered label
+            // by using .Remove to remove what is after the length
+            // given in parathesis. If there is only one character long
+            // it will clear the label
+
+            string tempVar;
+            tempVar = lblTendered.Text;
+            if (tempVar.Length <= 1)
+            {
+                lblTendered.Text = "";
+            }
+            else
+            {
+                tempVar = tempVar.Remove(tempVar.Length - 1);
+                lblTendered.Text = tempVar;
+            }
+
 
         }
 
