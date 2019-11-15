@@ -33,12 +33,6 @@ namespace ICBINJPOSController
         //login button functions
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            //Instance of new screens
-            //LoginScreen loginScreen = new LoginScreen();
-            
-            //OptionsScreen optionsScreen = new OptionsScreen();
-            //ReportingScreen reportingScreen = new ReportingScreen();
-
             //instances of User and File classes
             User Users = new User();
             File Files = new File();
@@ -49,7 +43,7 @@ namespace ICBINJPOSController
                 if(AuthSelect.SelectedIndex == 0)
                 {
                     //***REMOVE, JUST ADDED FOR EASE OF USE
-                    Users.employeeLoggedIn = true;
+                    User.employeeLoggedIn = true;
 
                     //Pass text box text into variable, open file, pass username & passwork into method
                     User.employeeName = userNameTextBox.Text;
@@ -57,31 +51,31 @@ namespace ICBINJPOSController
                     Files.OpenEmpFile();
                     Users.EmployeeLogin(User.employeeName, User.employeePass);
                     
-                    if (Users.employeeLoggedIn == true)
+                    if (User.employeeLoggedIn == true)
                     {
-                        MessageBox.Show("Successful Login.");
-
-                        //***Hide current screen.
+                        MessageBox.Show("Successful Login.");                 
                         this.Hide();
-                        //***Open register screen when validation is complete.
+                        //**options screen test
+                        //OptionsScreen registerScreen = new OptionsScreen();
+
                         RegisterScreen registerScreen = new RegisterScreen();
                         registerScreen.ShowDialog();
                         this.userNameTextBox.Clear();
                         this.passWordTextBox.Clear();
                         this.userNameTextBox.Focus();
                     }
-                    else if (Users.loginIncorrect == true)
+                    else if (User.loginIncorrect == true)
                     {
                         MessageBox.Show("User Name and Password Incorrect.  Please Check and try again.");
-                        Users.employeeLoggedIn = false;
+                        User.employeeLoggedIn = false;
                         this.userNameTextBox.Clear();
                         this.passWordTextBox.Clear();
                         this.userNameTextBox.Focus();
                     }  
-                    else if (Users.loginBlank == true)
+                    else if (User.loginBlank == true)
                     {
                         MessageBox.Show("Please Fill out both Username and Password Fields.");
-                        Users.employeeLoggedIn = false;
+                        User.employeeLoggedIn = false;
                         this.userNameTextBox.Clear();
                         this.passWordTextBox.Clear();
                         this.userNameTextBox.Focus();
@@ -91,37 +85,40 @@ namespace ICBINJPOSController
                 //Manager login validation
                 if (AuthSelect.SelectedIndex == 1)
                 {
+                    //***REMOVE, JUST ADDED FOR EASE OF USE
+                    User.managerLoggedIn = true;
+
                     //Pass text box text into variable, open file, pass username & passwork into method
                     User.managerName = userNameTextBox.Text;
                     User.managerPass = passWordTextBox.Text;
                     Files.OpenMgtFile();
                     Users.ManagerLogin(User.managerName, User.managerPass);
 
-                    if (Users.managerLoggedIn == true)
+                    if (User.managerLoggedIn == true)
                     {
                         MessageBox.Show("Successful Login.");
-
-                        //***Hide current screen.
                         this.Hide();
-                        //***Open reporting screen when validation is complete.
+                        //**options screen test
+                        //OptionsScreen reportingScreen = new OptionsScreen();
+
                         ReportingScreen reportingScreen = new ReportingScreen();
                         reportingScreen.ShowDialog();
                         this.userNameTextBox.Clear();
                         this.passWordTextBox.Clear();
                         this.userNameTextBox.Focus();
                     }
-                    else if (Users.loginIncorrect == true)
+                    else if (User.loginIncorrect == true)
                     {
                         MessageBox.Show("User Name and Password Incorrect. Please Check and try again.");
-                        Users.managerLoggedIn = false;
+                        User.managerLoggedIn = false;
                         this.userNameTextBox.Clear();
                         this.passWordTextBox.Clear();
                         this.userNameTextBox.Focus();
                     }
-                    else if (Users.loginBlank == true)
+                    else if (User.loginBlank == true)
                     {
                         MessageBox.Show("Please Fill out both Username and Password Fields.");
-                        Users.managerLoggedIn = false;
+                        User.managerLoggedIn = false;
                         this.userNameTextBox.Clear();
                         this.passWordTextBox.Clear();
                         this.userNameTextBox.Focus();
@@ -131,37 +128,37 @@ namespace ICBINJPOSController
                 //Administrator login validation
                 if (AuthSelect.SelectedIndex == 2)
                 {
+                    //***REMOVE, JUST ADDED FOR EASE OF USE
+                    User.administratorLoggedIn = true;
+
                     //Pass text box text into variable, open file, pass username & passwork into method
                     User.adminName = userNameTextBox.Text;
                     User.adminPass = passWordTextBox.Text;
                     Files.OpenAdminFile();
                     Users.AdminLogin(User.adminName, User.adminPass);
 
-                    if (Users.administratorLoggedIn == true)
+                    if (User.administratorLoggedIn == true)
                     {
                         MessageBox.Show("Successful Login.");
-
-                        //***Hide current screen.
                         this.Hide();
-                        //***Open option screen when validation is complete.
                         OptionsScreen optionsScreen = new OptionsScreen();
                         optionsScreen.ShowDialog();
                         this.userNameTextBox.Clear();
                         this.passWordTextBox.Clear();
                         this.userNameTextBox.Focus();
                     }
-                    else if (Users.loginIncorrect == true)
+                    else if (User.loginIncorrect == true)
                     {
                         MessageBox.Show("User Name and Password Incorrect. Please Check and try again.");
-                        Users.administratorLoggedIn = false;
+                        User.administratorLoggedIn = false;
                         this.userNameTextBox.Clear();
                         this.passWordTextBox.Clear();
                         this.userNameTextBox.Focus();
                     }
-                    else if (Users.loginBlank == true)
+                    else if (User.loginBlank == true)
                     {
                         MessageBox.Show("Please Fill out both Username and Password Fields.");
-                        Users.administratorLoggedIn = false;
+                        User.administratorLoggedIn = false;
                         this.userNameTextBox.Clear();
                         this.passWordTextBox.Clear();
                         this.userNameTextBox.Focus();

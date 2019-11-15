@@ -13,11 +13,11 @@ namespace ICBINJPOSController
         public string msgtxt;
 
         //flag to show message box messages
-        public bool employeeLoggedIn;
-        public bool managerLoggedIn;
-        public bool administratorLoggedIn;
-        public bool loginIncorrect;
-        public bool loginBlank;
+        static public bool employeeLoggedIn;
+        static public bool managerLoggedIn;
+        static public bool administratorLoggedIn;
+        static public bool loginIncorrect;
+        static public bool loginBlank;
 
         //to users names and passwords to hold textbox text
         public static string employeeName;
@@ -154,6 +154,30 @@ namespace ICBINJPOSController
                 blankFormHist.WriteLine("*" + adminName + " ," + adminPass + " ," + msgtxt + " - " + DateTime.Now);
                 blankFormHist.Close();
             }
+        }
+
+        //sign out button functions
+        public void SignOut()
+        {
+            AdminScreen adminScreen = new AdminScreen();
+            LoginScreen loginScreen = new LoginScreen();
+            OptionsScreen optionScreen = new OptionsScreen();
+            RegisterScreen registerScreen = new RegisterScreen();
+            ReportingScreen reportingScreen = new ReportingScreen();
+
+            //set all login bool to false
+            User.employeeLoggedIn = false;
+            User.managerLoggedIn = false;
+            User.administratorLoggedIn = false;
+
+            //hide all open screens and open login screen
+            adminScreen.Hide();
+            optionScreen.Hide();
+            registerScreen.Hide();
+            reportingScreen.Hide();
+            loginScreen.ShowDialog();
+
+            
         }
     }
 }

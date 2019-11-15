@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ICBINJPOSController
 {
     public class Admin : User
-    {
+    {        
         public void AddUserPassword()
         {
             // Add User to list, create password, check for errors

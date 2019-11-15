@@ -454,6 +454,11 @@ namespace ICBINJPOSController
         {
             AddItemToOrder("Flavor");
         }
+
+        private void RegisterScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

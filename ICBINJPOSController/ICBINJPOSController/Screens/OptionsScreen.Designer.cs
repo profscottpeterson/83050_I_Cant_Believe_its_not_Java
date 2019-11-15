@@ -29,228 +29,232 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OptionsScreen));
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.signOutButton = new System.Windows.Forms.Button();
-            this.reportingButton = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.adminButton = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.registerButton = new System.Windows.Forms.Button();
+            this.blank1btn = new System.Windows.Forms.Button();
+            this.blank2btn = new System.Windows.Forms.Button();
+            this.signOutBtn = new System.Windows.Forms.Button();
+            this.reportingBtn = new System.Windows.Forms.Button();
+            this.blank3btn = new System.Windows.Forms.Button();
+            this.blank4btn = new System.Windows.Forms.Button();
+            this.blank5btn = new System.Windows.Forms.Button();
+            this.adminBtn = new System.Windows.Forms.Button();
+            this.blank6btn = new System.Windows.Forms.Button();
+            this.blank7btn = new System.Windows.Forms.Button();
+            this.blank10btn = new System.Windows.Forms.Button();
+            this.blank9btn = new System.Windows.Forms.Button();
+            this.blank8btn = new System.Windows.Forms.Button();
+            this.blank11btn = new System.Windows.Forms.Button();
+            this.blank12btn = new System.Windows.Forms.Button();
+            this.registerBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button2
+            // blank1btn
             // 
-            this.button2.BackColor = System.Drawing.Color.Coral;
-            this.button2.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(80, 351);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(289, 67);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = false;
+            this.blank1btn.BackColor = System.Drawing.Color.Coral;
+            this.blank1btn.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blank1btn.Location = new System.Drawing.Point(107, 432);
+            this.blank1btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.blank1btn.Name = "blank1btn";
+            this.blank1btn.Size = new System.Drawing.Size(385, 82);
+            this.blank1btn.TabIndex = 0;
+            this.blank1btn.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // blank2btn
             // 
-            this.button3.BackColor = System.Drawing.Color.Coral;
-            this.button3.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(80, 514);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(289, 67);
-            this.button3.TabIndex = 2;
-            this.button3.UseVisualStyleBackColor = false;
+            this.blank2btn.BackColor = System.Drawing.Color.Coral;
+            this.blank2btn.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blank2btn.Location = new System.Drawing.Point(107, 633);
+            this.blank2btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.blank2btn.Name = "blank2btn";
+            this.blank2btn.Size = new System.Drawing.Size(385, 82);
+            this.blank2btn.TabIndex = 0;
+            this.blank2btn.UseVisualStyleBackColor = false;
             // 
-            // signOutButton
+            // signOutBtn
             // 
-            this.signOutButton.BackColor = System.Drawing.Color.Coral;
-            this.signOutButton.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signOutButton.Location = new System.Drawing.Point(80, 677);
-            this.signOutButton.Margin = new System.Windows.Forms.Padding(2);
-            this.signOutButton.Name = "signOutButton";
-            this.signOutButton.Size = new System.Drawing.Size(289, 67);
-            this.signOutButton.TabIndex = 3;
-            this.signOutButton.Text = "Sign Out";
-            this.signOutButton.UseVisualStyleBackColor = false;
+            this.signOutBtn.BackColor = System.Drawing.Color.Coral;
+            this.signOutBtn.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signOutBtn.Location = new System.Drawing.Point(107, 833);
+            this.signOutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.signOutBtn.Name = "signOutBtn";
+            this.signOutBtn.Size = new System.Drawing.Size(385, 82);
+            this.signOutBtn.TabIndex = 4;
+            this.signOutBtn.Text = "Sign Out";
+            this.signOutBtn.UseVisualStyleBackColor = false;
+            this.signOutBtn.Click += new System.EventHandler(this.signOutBtn_Click);
             // 
-            // reportingButton
+            // reportingBtn
             // 
-            this.reportingButton.BackColor = System.Drawing.Color.Coral;
-            this.reportingButton.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportingButton.Location = new System.Drawing.Point(403, 188);
-            this.reportingButton.Margin = new System.Windows.Forms.Padding(2);
-            this.reportingButton.Name = "reportingButton";
-            this.reportingButton.Size = new System.Drawing.Size(289, 67);
-            this.reportingButton.TabIndex = 4;
-            this.reportingButton.Text = "Reporting";
-            this.reportingButton.UseVisualStyleBackColor = false;
+            this.reportingBtn.BackColor = System.Drawing.Color.Coral;
+            this.reportingBtn.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportingBtn.Location = new System.Drawing.Point(537, 231);
+            this.reportingBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.reportingBtn.Name = "reportingBtn";
+            this.reportingBtn.Size = new System.Drawing.Size(385, 82);
+            this.reportingBtn.TabIndex = 2;
+            this.reportingBtn.Text = "Reporting";
+            this.reportingBtn.UseVisualStyleBackColor = false;
+            this.reportingBtn.Click += new System.EventHandler(this.reportingBtn_Click);
             // 
-            // button6
+            // blank3btn
             // 
-            this.button6.BackColor = System.Drawing.Color.Coral;
-            this.button6.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(403, 351);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(289, 67);
-            this.button6.TabIndex = 5;
-            this.button6.UseVisualStyleBackColor = false;
+            this.blank3btn.BackColor = System.Drawing.Color.Coral;
+            this.blank3btn.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blank3btn.Location = new System.Drawing.Point(537, 432);
+            this.blank3btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.blank3btn.Name = "blank3btn";
+            this.blank3btn.Size = new System.Drawing.Size(385, 82);
+            this.blank3btn.TabIndex = 0;
+            this.blank3btn.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // blank4btn
             // 
-            this.button7.BackColor = System.Drawing.Color.Coral;
-            this.button7.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(403, 514);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(289, 67);
-            this.button7.TabIndex = 6;
-            this.button7.UseVisualStyleBackColor = false;
+            this.blank4btn.BackColor = System.Drawing.Color.Coral;
+            this.blank4btn.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blank4btn.Location = new System.Drawing.Point(537, 633);
+            this.blank4btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.blank4btn.Name = "blank4btn";
+            this.blank4btn.Size = new System.Drawing.Size(385, 82);
+            this.blank4btn.TabIndex = 0;
+            this.blank4btn.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // blank5btn
             // 
-            this.button8.BackColor = System.Drawing.Color.Coral;
-            this.button8.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(403, 677);
-            this.button8.Margin = new System.Windows.Forms.Padding(2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(289, 67);
-            this.button8.TabIndex = 7;
-            this.button8.UseVisualStyleBackColor = false;
+            this.blank5btn.BackColor = System.Drawing.Color.Coral;
+            this.blank5btn.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blank5btn.Location = new System.Drawing.Point(537, 833);
+            this.blank5btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.blank5btn.Name = "blank5btn";
+            this.blank5btn.Size = new System.Drawing.Size(385, 82);
+            this.blank5btn.TabIndex = 0;
+            this.blank5btn.UseVisualStyleBackColor = false;
             // 
-            // adminButton
+            // adminBtn
             // 
-            this.adminButton.BackColor = System.Drawing.Color.Coral;
-            this.adminButton.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminButton.Location = new System.Drawing.Point(980, 188);
-            this.adminButton.Margin = new System.Windows.Forms.Padding(2);
-            this.adminButton.Name = "adminButton";
-            this.adminButton.Size = new System.Drawing.Size(289, 67);
-            this.adminButton.TabIndex = 8;
-            this.adminButton.Text = "Administration";
-            this.adminButton.UseVisualStyleBackColor = false;
+            this.adminBtn.BackColor = System.Drawing.Color.Coral;
+            this.adminBtn.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminBtn.Location = new System.Drawing.Point(1307, 231);
+            this.adminBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.adminBtn.Name = "adminBtn";
+            this.adminBtn.Size = new System.Drawing.Size(385, 82);
+            this.adminBtn.TabIndex = 3;
+            this.adminBtn.Text = "Administration";
+            this.adminBtn.UseVisualStyleBackColor = false;
+            this.adminBtn.Click += new System.EventHandler(this.adminBtn_Click);
             // 
-            // button10
+            // blank6btn
             // 
-            this.button10.BackColor = System.Drawing.Color.Coral;
-            this.button10.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(980, 351);
-            this.button10.Margin = new System.Windows.Forms.Padding(2);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(289, 67);
-            this.button10.TabIndex = 9;
-            this.button10.UseVisualStyleBackColor = false;
+            this.blank6btn.BackColor = System.Drawing.Color.Coral;
+            this.blank6btn.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blank6btn.Location = new System.Drawing.Point(1307, 432);
+            this.blank6btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.blank6btn.Name = "blank6btn";
+            this.blank6btn.Size = new System.Drawing.Size(385, 82);
+            this.blank6btn.TabIndex = 0;
+            this.blank6btn.UseVisualStyleBackColor = false;
             // 
-            // button11
+            // blank7btn
             // 
-            this.button11.BackColor = System.Drawing.Color.Coral;
-            this.button11.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(980, 514);
-            this.button11.Margin = new System.Windows.Forms.Padding(2);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(289, 67);
-            this.button11.TabIndex = 10;
-            this.button11.UseVisualStyleBackColor = false;
+            this.blank7btn.BackColor = System.Drawing.Color.Coral;
+            this.blank7btn.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blank7btn.Location = new System.Drawing.Point(1307, 633);
+            this.blank7btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.blank7btn.Name = "blank7btn";
+            this.blank7btn.Size = new System.Drawing.Size(385, 82);
+            this.blank7btn.TabIndex = 0;
+            this.blank7btn.UseVisualStyleBackColor = false;
             // 
-            // button12
+            // blank10btn
             // 
-            this.button12.BackColor = System.Drawing.Color.Coral;
-            this.button12.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(1293, 351);
-            this.button12.Margin = new System.Windows.Forms.Padding(2);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(289, 67);
-            this.button12.TabIndex = 11;
-            this.button12.UseVisualStyleBackColor = false;
+            this.blank10btn.BackColor = System.Drawing.Color.Coral;
+            this.blank10btn.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blank10btn.Location = new System.Drawing.Point(1724, 432);
+            this.blank10btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.blank10btn.Name = "blank10btn";
+            this.blank10btn.Size = new System.Drawing.Size(385, 82);
+            this.blank10btn.TabIndex = 0;
+            this.blank10btn.UseVisualStyleBackColor = false;
             // 
-            // button13
+            // blank9btn
             // 
-            this.button13.BackColor = System.Drawing.Color.Coral;
-            this.button13.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.Location = new System.Drawing.Point(1293, 188);
-            this.button13.Margin = new System.Windows.Forms.Padding(2);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(289, 67);
-            this.button13.TabIndex = 12;
-            this.button13.UseVisualStyleBackColor = false;
+            this.blank9btn.BackColor = System.Drawing.Color.Coral;
+            this.blank9btn.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blank9btn.Location = new System.Drawing.Point(1724, 231);
+            this.blank9btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.blank9btn.Name = "blank9btn";
+            this.blank9btn.Size = new System.Drawing.Size(385, 82);
+            this.blank9btn.TabIndex = 0;
+            this.blank9btn.UseVisualStyleBackColor = false;
             // 
-            // button14
+            // blank8btn
             // 
-            this.button14.BackColor = System.Drawing.Color.Coral;
-            this.button14.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.Location = new System.Drawing.Point(980, 677);
-            this.button14.Margin = new System.Windows.Forms.Padding(2);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(289, 67);
-            this.button14.TabIndex = 13;
-            this.button14.UseVisualStyleBackColor = false;
+            this.blank8btn.BackColor = System.Drawing.Color.Coral;
+            this.blank8btn.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blank8btn.Location = new System.Drawing.Point(1307, 833);
+            this.blank8btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.blank8btn.Name = "blank8btn";
+            this.blank8btn.Size = new System.Drawing.Size(385, 82);
+            this.blank8btn.TabIndex = 0;
+            this.blank8btn.UseVisualStyleBackColor = false;
             // 
-            // button15
+            // blank11btn
             // 
-            this.button15.BackColor = System.Drawing.Color.Coral;
-            this.button15.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.Location = new System.Drawing.Point(1293, 514);
-            this.button15.Margin = new System.Windows.Forms.Padding(2);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(289, 67);
-            this.button15.TabIndex = 14;
-            this.button15.UseVisualStyleBackColor = false;
+            this.blank11btn.BackColor = System.Drawing.Color.Coral;
+            this.blank11btn.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blank11btn.Location = new System.Drawing.Point(1724, 633);
+            this.blank11btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.blank11btn.Name = "blank11btn";
+            this.blank11btn.Size = new System.Drawing.Size(385, 82);
+            this.blank11btn.TabIndex = 0;
+            this.blank11btn.UseVisualStyleBackColor = false;
             // 
-            // button16
+            // blank12btn
             // 
-            this.button16.BackColor = System.Drawing.Color.Coral;
-            this.button16.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.Location = new System.Drawing.Point(1293, 677);
-            this.button16.Margin = new System.Windows.Forms.Padding(2);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(289, 67);
-            this.button16.TabIndex = 15;
-            this.button16.UseVisualStyleBackColor = false;
+            this.blank12btn.BackColor = System.Drawing.Color.Coral;
+            this.blank12btn.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blank12btn.Location = new System.Drawing.Point(1724, 833);
+            this.blank12btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.blank12btn.Name = "blank12btn";
+            this.blank12btn.Size = new System.Drawing.Size(385, 82);
+            this.blank12btn.TabIndex = 0;
+            this.blank12btn.UseVisualStyleBackColor = false;
             // 
-            // registerButton
+            // registerBtn
             // 
-            this.registerButton.BackColor = System.Drawing.Color.Coral;
-            this.registerButton.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registerButton.Location = new System.Drawing.Point(80, 188);
-            this.registerButton.Margin = new System.Windows.Forms.Padding(2);
-            this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(289, 67);
-            this.registerButton.TabIndex = 0;
-            this.registerButton.Text = "Register";
-            this.registerButton.UseVisualStyleBackColor = false;
+            this.registerBtn.BackColor = System.Drawing.Color.Coral;
+            this.registerBtn.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registerBtn.Location = new System.Drawing.Point(107, 231);
+            this.registerBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.registerBtn.Name = "registerBtn";
+            this.registerBtn.Size = new System.Drawing.Size(385, 82);
+            this.registerBtn.TabIndex = 1;
+            this.registerBtn.Text = "Register";
+            this.registerBtn.UseVisualStyleBackColor = false;
+            this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
             // 
             // OptionsScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1850, 950);
-            this.Controls.Add(this.button16);
-            this.Controls.Add(this.button15);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.adminButton);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.reportingButton);
-            this.Controls.Add(this.signOutButton);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.registerButton);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.ClientSize = new System.Drawing.Size(2300, 1125);
+            this.Controls.Add(this.blank12btn);
+            this.Controls.Add(this.blank11btn);
+            this.Controls.Add(this.blank8btn);
+            this.Controls.Add(this.blank9btn);
+            this.Controls.Add(this.blank10btn);
+            this.Controls.Add(this.blank7btn);
+            this.Controls.Add(this.blank6btn);
+            this.Controls.Add(this.adminBtn);
+            this.Controls.Add(this.blank5btn);
+            this.Controls.Add(this.blank4btn);
+            this.Controls.Add(this.blank3btn);
+            this.Controls.Add(this.reportingBtn);
+            this.Controls.Add(this.signOutBtn);
+            this.Controls.Add(this.blank2btn);
+            this.Controls.Add(this.blank1btn);
+            this.Controls.Add(this.registerBtn);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "OptionsScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OptionsScreen";
@@ -261,21 +265,21 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button signOutButton;
-        private System.Windows.Forms.Button reportingButton;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button adminButton;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button registerButton;
+        private System.Windows.Forms.Button blank1btn;
+        private System.Windows.Forms.Button blank2btn;
+        private System.Windows.Forms.Button signOutBtn;
+        private System.Windows.Forms.Button reportingBtn;
+        private System.Windows.Forms.Button blank3btn;
+        private System.Windows.Forms.Button blank4btn;
+        private System.Windows.Forms.Button blank5btn;
+        private System.Windows.Forms.Button adminBtn;
+        private System.Windows.Forms.Button blank6btn;
+        private System.Windows.Forms.Button blank7btn;
+        private System.Windows.Forms.Button blank10btn;
+        private System.Windows.Forms.Button blank9btn;
+        private System.Windows.Forms.Button blank8btn;
+        private System.Windows.Forms.Button blank11btn;
+        private System.Windows.Forms.Button blank12btn;
+        private System.Windows.Forms.Button registerBtn;
     }
 }
