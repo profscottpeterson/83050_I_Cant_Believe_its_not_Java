@@ -57,14 +57,18 @@ namespace ICBINJPOSController
         }
 
         // Close Transaction when payment is processed.
-        public void CloseTransaction()
+        public void CloseAndOpenNewTransaction()
         {
             // Increase transactoin number by one for next transaction.
             this.currentTransNum = currentTransNum + 1;
             this.currentUser = "";
             //TODO test
-            this.currentTransaction = new Transaction(DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), currentUser, currentTransNum);
+            OpenTransaction();
             OrderLbx.Items.Clear();
+
+            subtotalPriceLbl.Text = "";
+            taxPriceLbl.Text = "";
+            totalPriceLbl.Text = "";
         }
 
         public void ChangeQuantity(string quantityBtnText)
@@ -386,10 +390,8 @@ namespace ICBINJPOSController
             paymentScreen.ShowDialog();
 
             // If payment is successfull close transaction.
-            this.CloseTransaction();
-
-            // Open a new transaction.
-            this.OpenTransaction();
+            this.CloseAndOpenNewTransaction();
+            
         }
 
         private void voidBtn_Click(object sender, EventArgs e)
@@ -417,17 +419,16 @@ namespace ICBINJPOSController
         private void cancelBtn_Click(object sender, EventArgs e)
         {
             //TODO TEST THAT ACUALLY CANCELED
-            this.CloseTransaction();
-            //// Removes all items from order listbox
-            //OrderLbx.Items.Clear();
+            this.OpenTransaction();
 
-            //for(int x=0;x < currentTransaction.Order.Count; x++)
-            //{
-            //    currentTransaction.Order.RemoveAt(x);
-            //}
-
-            //// Return all values to $0.00
-            //this.Totals();
+            // Empty field values.
+            this.quantitySelected = 1;
+            this.strQuantity = "";
+            this.sizeSelected = "";
+            this.subtotalPriceLbl.Text = "";
+            this.taxPriceLbl.Text = "";
+            this.totalPriceLbl.Text = "";
+            this.OrderLbx.Text = "";
         }
 
         private void vanillaBtn_Click(object sender, EventArgs e)

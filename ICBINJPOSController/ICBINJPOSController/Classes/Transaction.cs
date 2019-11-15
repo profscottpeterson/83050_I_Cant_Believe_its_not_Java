@@ -96,13 +96,13 @@ namespace ICBINJPOSController
 
         public string CalcTax()
         {
-            this.Tax = (this.Subtotal * Transaction.TaxRate);
+            this.Tax = Math.Round(this.Subtotal * Transaction.TaxRate, 2);
             return this.Tax.ToString("c");
         }
 
         public string CalcTotal()
         {
-            Total = (this.Subtotal + this.Tax);
+            Total = Math.Round(this.Subtotal + this.Tax, 2);
             return Total.ToString("c");
         }
 

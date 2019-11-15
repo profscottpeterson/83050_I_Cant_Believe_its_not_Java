@@ -65,7 +65,7 @@ namespace ICBINJPOSController
         private void btnClose_Click(object sender, EventArgs e)
         {
 
-            lblTendered.Text = "";
+            this.Close();
         }
         private void btnCancel_Click(object sender, EventArgs e)
         {
