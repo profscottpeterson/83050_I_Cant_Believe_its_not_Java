@@ -24,6 +24,7 @@ namespace ICBINJPOSController
         private Transaction currentTransaction;
 
         private CoffeeShopMenu menu = new CoffeeShopMenu();
+        private User Users = new User();
 
         // Holds string value of quantity button selected.
         private string strQuantity = ""; 
@@ -458,6 +459,20 @@ namespace ICBINJPOSController
         private void RegisterScreen_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Users.GoBack();
+            
+        }
+
+        private void signOutBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Users.SignOut();
+            
         }
     }
 

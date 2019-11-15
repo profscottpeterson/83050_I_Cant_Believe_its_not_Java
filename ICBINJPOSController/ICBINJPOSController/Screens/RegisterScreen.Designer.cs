@@ -91,6 +91,7 @@
             this.hazelnutBtn = new System.Windows.Forms.Button();
             this.strawberryBtn = new System.Windows.Forms.Button();
             this.caramelBtn = new System.Windows.Forms.Button();
+            this.signOutBtn = new System.Windows.Forms.Button();
             this.hotDrinks.SuspendLayout();
             this.coldDrinks.SuspendLayout();
             this.coolerDrinks.SuspendLayout();
@@ -103,7 +104,7 @@
             this.largeRadioBtn.AutoSize = true;
             this.largeRadioBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.largeRadioBtn.Location = new System.Drawing.Point(33, 169);
-            this.largeRadioBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.largeRadioBtn.Margin = new System.Windows.Forms.Padding(4);
             this.largeRadioBtn.Name = "largeRadioBtn";
             this.largeRadioBtn.Size = new System.Drawing.Size(66, 21);
             this.largeRadioBtn.TabIndex = 48;
@@ -116,7 +117,7 @@
             this.mediumRadioBtn.AutoSize = true;
             this.mediumRadioBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.mediumRadioBtn.Location = new System.Drawing.Point(33, 108);
-            this.mediumRadioBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mediumRadioBtn.Margin = new System.Windows.Forms.Padding(4);
             this.mediumRadioBtn.Name = "mediumRadioBtn";
             this.mediumRadioBtn.Size = new System.Drawing.Size(78, 21);
             this.mediumRadioBtn.TabIndex = 47;
@@ -129,7 +130,7 @@
             this.smallRadioBtn.AutoSize = true;
             this.smallRadioBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.smallRadioBtn.Location = new System.Drawing.Point(33, 54);
-            this.smallRadioBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.smallRadioBtn.Margin = new System.Windows.Forms.Padding(4);
             this.smallRadioBtn.Name = "smallRadioBtn";
             this.smallRadioBtn.Size = new System.Drawing.Size(63, 21);
             this.smallRadioBtn.TabIndex = 46;
@@ -139,21 +140,22 @@
             // 
             // backButton
             // 
-            this.backButton.BackColor = System.Drawing.Color.Brown;
+            this.backButton.BackColor = System.Drawing.Color.Red;
             this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backButton.Location = new System.Drawing.Point(52, 1018);
+            this.backButton.Location = new System.Drawing.Point(320, 837);
             this.backButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(237, 118);
             this.backButton.TabIndex = 43;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // minus10Btn
             // 
             this.minus10Btn.BackColor = System.Drawing.Color.Salmon;
             this.minus10Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minus10Btn.Location = new System.Drawing.Point(1375, 1018);
+            this.minus10Btn.Location = new System.Drawing.Point(1327, 837);
             this.minus10Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.minus10Btn.Name = "minus10Btn";
             this.minus10Btn.Size = new System.Drawing.Size(153, 118);
@@ -165,7 +167,7 @@
             // 
             this.minusBtn.BackColor = System.Drawing.Color.Salmon;
             this.minusBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minusBtn.Location = new System.Drawing.Point(1533, 1018);
+            this.minusBtn.Location = new System.Drawing.Point(1485, 837);
             this.minusBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.minusBtn.Name = "minusBtn";
             this.minusBtn.Size = new System.Drawing.Size(153, 118);
@@ -177,7 +179,7 @@
             // 
             this.numericPadBtn.BackColor = System.Drawing.Color.Salmon;
             this.numericPadBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericPadBtn.Location = new System.Drawing.Point(668, 1018);
+            this.numericPadBtn.Location = new System.Drawing.Point(620, 837);
             this.numericPadBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericPadBtn.Name = "numericPadBtn";
             this.numericPadBtn.Size = new System.Drawing.Size(281, 118);
@@ -319,7 +321,7 @@
             // 
             this.plus10Btn.BackColor = System.Drawing.Color.Salmon;
             this.plus10Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plus10Btn.Location = new System.Drawing.Point(1216, 1018);
+            this.plus10Btn.Location = new System.Drawing.Point(1168, 837);
             this.plus10Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.plus10Btn.Name = "plus10Btn";
             this.plus10Btn.Size = new System.Drawing.Size(153, 118);
@@ -331,7 +333,7 @@
             // 
             this.plusBtn.BackColor = System.Drawing.Color.Salmon;
             this.plusBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plusBtn.Location = new System.Drawing.Point(1057, 1018);
+            this.plusBtn.Location = new System.Drawing.Point(1009, 837);
             this.plusBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.plusBtn.Name = "plusBtn";
             this.plusBtn.Size = new System.Drawing.Size(153, 118);
@@ -348,9 +350,9 @@
             this.hotDrinks.Controls.Add(this.cocoaBtn);
             this.hotDrinks.Controls.Add(this.teaBtn);
             this.hotDrinks.Location = new System.Drawing.Point(52, 59);
-            this.hotDrinks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hotDrinks.Margin = new System.Windows.Forms.Padding(4);
             this.hotDrinks.Name = "hotDrinks";
-            this.hotDrinks.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hotDrinks.Padding = new System.Windows.Forms.Padding(4);
             this.hotDrinks.Size = new System.Drawing.Size(584, 225);
             this.hotDrinks.TabIndex = 64;
             this.hotDrinks.TabStop = false;
@@ -378,9 +380,9 @@
             this.coldDrinks.Controls.Add(this.smoothieBtn);
             this.coldDrinks.Controls.Add(this.refresherBtn);
             this.coldDrinks.Location = new System.Drawing.Point(52, 305);
-            this.coldDrinks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.coldDrinks.Margin = new System.Windows.Forms.Padding(4);
             this.coldDrinks.Name = "coldDrinks";
-            this.coldDrinks.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.coldDrinks.Padding = new System.Windows.Forms.Padding(4);
             this.coldDrinks.Size = new System.Drawing.Size(584, 225);
             this.coldDrinks.TabIndex = 65;
             this.coldDrinks.TabStop = false;
@@ -408,9 +410,9 @@
             this.coolerDrinks.Controls.Add(this.pepsiBtn);
             this.coolerDrinks.Controls.Add(this.muscleMilkBtn);
             this.coolerDrinks.Location = new System.Drawing.Point(52, 553);
-            this.coolerDrinks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.coolerDrinks.Margin = new System.Windows.Forms.Padding(4);
             this.coolerDrinks.Name = "coolerDrinks";
-            this.coolerDrinks.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.coolerDrinks.Padding = new System.Windows.Forms.Padding(4);
             this.coolerDrinks.Size = new System.Drawing.Size(584, 225);
             this.coolerDrinks.TabIndex = 66;
             this.coolerDrinks.TabStop = false;
@@ -507,7 +509,7 @@
             "Strawberry",
             "None"});
             this.FlavorsPanel.Location = new System.Drawing.Point(1015, 59);
-            this.FlavorsPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FlavorsPanel.Margin = new System.Windows.Forms.Padding(4);
             this.FlavorsPanel.Name = "FlavorsPanel";
             this.FlavorsPanel.Size = new System.Drawing.Size(267, 136);
             this.FlavorsPanel.TabIndex = 67;
@@ -518,9 +520,9 @@
             this.groupBox4.Controls.Add(this.mediumRadioBtn);
             this.groupBox4.Controls.Add(this.smallRadioBtn);
             this.groupBox4.Location = new System.Drawing.Point(681, 59);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(268, 225);
             this.groupBox4.TabIndex = 68;
             this.groupBox4.TabStop = false;
@@ -699,7 +701,7 @@
             this.OrderLbx.FormattingEnabled = true;
             this.OrderLbx.ItemHeight = 24;
             this.OrderLbx.Location = new System.Drawing.Point(1845, 59);
-            this.OrderLbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.OrderLbx.Margin = new System.Windows.Forms.Padding(4);
             this.OrderLbx.Name = "OrderLbx";
             this.OrderLbx.ScrollAlwaysVisible = true;
             this.OrderLbx.Size = new System.Drawing.Size(507, 700);
@@ -887,9 +889,9 @@
             this.groupBox1.Controls.Add(this.strawberryBtn);
             this.groupBox1.Controls.Add(this.caramelBtn);
             this.groupBox1.Location = new System.Drawing.Point(681, 305);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(584, 225);
             this.groupBox1.TabIndex = 102;
             this.groupBox1.TabStop = false;
@@ -934,6 +936,19 @@
             this.caramelBtn.UseVisualStyleBackColor = false;
             this.caramelBtn.Click += new System.EventHandler(this.caramelBtn_Click);
             // 
+            // signOutBtn
+            // 
+            this.signOutBtn.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.signOutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signOutBtn.Location = new System.Drawing.Point(52, 837);
+            this.signOutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.signOutBtn.Name = "signOutBtn";
+            this.signOutBtn.Size = new System.Drawing.Size(237, 118);
+            this.signOutBtn.TabIndex = 103;
+            this.signOutBtn.Text = "Sign Out";
+            this.signOutBtn.UseVisualStyleBackColor = false;
+            this.signOutBtn.Click += new System.EventHandler(this.signOutBtn_Click);
+            // 
             // RegisterScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -941,6 +956,7 @@
             this.BackColor = System.Drawing.Color.Coral;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(2467, 1169);
+            this.Controls.Add(this.signOutBtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.qty2Btn);
             this.Controls.Add(this.qty5Btn);
@@ -1057,5 +1073,6 @@
         private System.Windows.Forms.Button hazelnutBtn;
         private System.Windows.Forms.Button strawberryBtn;
         private System.Windows.Forms.Button caramelBtn;
+        private System.Windows.Forms.Button signOutBtn;
     }
 }

@@ -175,9 +175,22 @@ namespace ICBINJPOSController
             optionScreen.Hide();
             registerScreen.Hide();
             reportingScreen.Hide();
-            loginScreen.ShowDialog();
+            loginScreen.ShowDialog();        
+        }
 
-            
+        public void GoBack()
+        {
+            AdminScreen adminScreen = new AdminScreen();
+            LoginScreen loginScreen = new LoginScreen();
+            OptionsScreen optionScreen = new OptionsScreen();
+            RegisterScreen registerScreen = new RegisterScreen();
+            ReportingScreen reportingScreen = new ReportingScreen();
+
+            //hide all open screens and open options screen
+            adminScreen.Hide();
+            registerScreen.Hide();
+            reportingScreen.Hide();
+            optionScreen.ShowDialog();         
         }
     }
 }
