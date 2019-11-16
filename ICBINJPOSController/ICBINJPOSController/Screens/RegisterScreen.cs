@@ -355,7 +355,7 @@ namespace ICBINJPOSController
 
         private void waterBtn_Click(object sender, EventArgs e)
         {
-            AddItemToOrder(coffeeBtn.Text);
+            AddItemToOrder(waterBtn.Text);
         }
 
         private void pepsiBtn_Click(object sender, EventArgs e)

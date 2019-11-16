@@ -254,6 +254,7 @@
             this.itemLbx.Name = "itemLbx";
             this.itemLbx.Size = new System.Drawing.Size(686, 580);
             this.itemLbx.TabIndex = 101;
+            this.itemLbx.SelectedIndexChanged += new System.EventHandler(this.itemLbx_SelectedIndexChanged);
             // 
             // sizeLbl
             // 
