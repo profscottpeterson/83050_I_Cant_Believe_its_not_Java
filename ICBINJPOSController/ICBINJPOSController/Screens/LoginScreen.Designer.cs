@@ -122,10 +122,10 @@
             "Cashier",
             "Manager",
             "Administrator"});
-            this.AuthSelect.Location = new System.Drawing.Point(96, 236);
+            this.AuthSelect.Location = new System.Drawing.Point(69, 236);
             this.AuthSelect.MaxDropDownItems = 3;
             this.AuthSelect.Name = "AuthSelect";
-            this.AuthSelect.Size = new System.Drawing.Size(319, 31);
+            this.AuthSelect.Size = new System.Drawing.Size(346, 31);
             this.AuthSelect.TabIndex = 1;
             // 
             // LoginScreen
