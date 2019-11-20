@@ -55,6 +55,8 @@
             this.setUserIdLbl = new System.Windows.Forms.Label();
             this.setUserIdTxtBox = new System.Windows.Forms.TextBox();
             this.clearUserBtn = new System.Windows.Forms.Button();
+            this.backBtn = new System.Windows.Forms.Button();
+            this.signOutBtn = new System.Windows.Forms.Button();
             this.priceMaintGrp.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -78,7 +80,7 @@
             this.priceMaintGrp.Controls.Add(this.clearTextBtn);
             this.priceMaintGrp.Location = new System.Drawing.Point(748, 67);
             this.priceMaintGrp.Name = "priceMaintGrp";
-            this.priceMaintGrp.Size = new System.Drawing.Size(740, 757);
+            this.priceMaintGrp.Size = new System.Drawing.Size(740, 716);
             this.priceMaintGrp.TabIndex = 33;
             this.priceMaintGrp.TabStop = false;
             this.priceMaintGrp.Text = "Price Maintenance";
@@ -90,7 +92,7 @@
             this.deleteItemBtn.Enabled = false;
             this.deleteItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.deleteItemBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteItemBtn.Location = new System.Drawing.Point(521, 502);
+            this.deleteItemBtn.Location = new System.Drawing.Point(522, 436);
             this.deleteItemBtn.Name = "deleteItemBtn";
             this.deleteItemBtn.Size = new System.Drawing.Size(165, 57);
             this.deleteItemBtn.TabIndex = 107;
@@ -140,7 +142,7 @@
             this.itemLbx.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.itemLbx.FormattingEnabled = true;
             this.itemLbx.ItemHeight = 23;
-            this.itemLbx.Location = new System.Drawing.Point(18, 243);
+            this.itemLbx.Location = new System.Drawing.Point(18, 209);
             this.itemLbx.Name = "itemLbx";
             this.itemLbx.Size = new System.Drawing.Size(466, 487);
             this.itemLbx.TabIndex = 101;
@@ -180,7 +182,7 @@
             this.modifyItemBtn.BackColor = System.Drawing.Color.Coral;
             this.modifyItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.modifyItemBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modifyItemBtn.Location = new System.Drawing.Point(521, 314);
+            this.modifyItemBtn.Location = new System.Drawing.Point(522, 248);
             this.modifyItemBtn.Name = "modifyItemBtn";
             this.modifyItemBtn.Size = new System.Drawing.Size(165, 57);
             this.modifyItemBtn.TabIndex = 12;
@@ -195,7 +197,7 @@
             this.addItemBtn.Enabled = false;
             this.addItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addItemBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addItemBtn.Location = new System.Drawing.Point(521, 413);
+            this.addItemBtn.Location = new System.Drawing.Point(522, 347);
             this.addItemBtn.Name = "addItemBtn";
             this.addItemBtn.Size = new System.Drawing.Size(165, 57);
             this.addItemBtn.TabIndex = 13;
@@ -217,7 +219,7 @@
             this.clearTextBtn.BackColor = System.Drawing.Color.Coral;
             this.clearTextBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.clearTextBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearTextBtn.Location = new System.Drawing.Point(521, 600);
+            this.clearTextBtn.Location = new System.Drawing.Point(522, 534);
             this.clearTextBtn.Name = "clearTextBtn";
             this.clearTextBtn.Size = new System.Drawing.Size(165, 57);
             this.clearTextBtn.TabIndex = 18;
@@ -242,7 +244,7 @@
             this.groupBox2.Controls.Add(this.clearUserBtn);
             this.groupBox2.Location = new System.Drawing.Point(12, 67);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(715, 753);
+            this.groupBox2.Size = new System.Drawing.Size(715, 716);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
@@ -380,6 +382,30 @@
             this.clearUserBtn.Text = "Clear All";
             this.clearUserBtn.UseVisualStyleBackColor = false;
             // 
+            // backBtn
+            // 
+            this.backBtn.BackColor = System.Drawing.Color.Red;
+            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.backBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backBtn.Location = new System.Drawing.Point(50, 797);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(147, 91);
+            this.backBtn.TabIndex = 19;
+            this.backBtn.Text = "Back";
+            this.backBtn.UseVisualStyleBackColor = false;
+            // 
+            // signOutBtn
+            // 
+            this.signOutBtn.BackColor = System.Drawing.Color.Snow;
+            this.signOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.signOutBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signOutBtn.Location = new System.Drawing.Point(222, 797);
+            this.signOutBtn.Name = "signOutBtn";
+            this.signOutBtn.Size = new System.Drawing.Size(147, 91);
+            this.signOutBtn.TabIndex = 34;
+            this.signOutBtn.Text = "Sign Out";
+            this.signOutBtn.UseVisualStyleBackColor = false;
+            // 
             // AdminScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 18F);
@@ -387,6 +413,8 @@
             this.BackColor = System.Drawing.Color.Coral;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1500, 900);
+            this.Controls.Add(this.signOutBtn);
+            this.Controls.Add(this.backBtn);
             this.Controls.Add(this.priceMaintGrp);
             this.Controls.Add(this.groupBox2);
             this.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -433,5 +461,7 @@
         private System.Windows.Forms.Label largePriceLbl;
         private System.Windows.Forms.TextBox largePriceTxt;
         private System.Windows.Forms.Button deleteItemBtn;
+        private System.Windows.Forms.Button backBtn;
+        private System.Windows.Forms.Button signOutBtn;
     }
 }
