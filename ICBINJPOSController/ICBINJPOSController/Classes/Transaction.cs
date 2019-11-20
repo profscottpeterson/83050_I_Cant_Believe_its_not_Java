@@ -24,19 +24,7 @@ namespace ICBINJPOSController
             set { transTime = value; }
         }
 
-
-        /// <summary>
-        /// This field is the current user.
-        /// </summary>
-        private string currentUser;
-
-        public string CurrentUser
-        {
-            // ***Should this be read-only?***
-            get { return currentUser; }
-            set { currentUser = value; }
-        }
-
+        
         /// <summary>
         /// This field is the transaction number.
         /// </summary>
@@ -46,6 +34,17 @@ namespace ICBINJPOSController
         {
             get { return transNum; }
             set { transNum = value; }
+        }
+
+        /// <summary>
+        /// This field is the current user.
+        /// </summary>
+        private string currentUser;
+
+        public string CurrentUser
+        {
+            get { return currentUser; }
+            set { currentUser = value; }
         }
 
         /// <summary>

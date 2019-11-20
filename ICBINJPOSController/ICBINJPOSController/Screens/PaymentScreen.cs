@@ -13,47 +13,80 @@ namespace ICBINJPOSController
     public partial class PaymentScreen : Form
     {
         Payment currentPayment = new Payment();
+        bool paymentComplete = false;
 
         public PaymentScreen()
         {
             InitializeComponent();
-            this.lblBalance.Text = Transaction.Total.ToString("c");
+
+            currentPayment.CurrentBalance = Transaction.Total;
+            this.lblTotal.Text = Transaction.Total.ToString("c");
             lblStillDue.Visible = false;
             
         }
 
-        public void DisplayAmntDue(double amountPaid)
+       // TODO OPEN DRAWER
+        public void OpenDrawer()
         {
-            if (currentPayment.CalcCashDue(Transaction.Total, amountPaid) > 0)
-            {
-                lblStillDue.Visible = true;
-                lblChangeSwitch.Visible = false;
-            }
-            else
+            MessageBox.Show("Drawer Opened.");
+        }
+           
+        public void CalcCurrentBalance(double tendered, bool IsCash)
+        {
+            currentPayment.CurrentBalance -= tendered;
+            
+            // Paid in full, display change due to customer.
+           
+            if (currentPayment.CurrentBalance <= 0)
             {
                 lblChangeSwitch.Visible = true;
                 lblStillDue.Visible = false;
+                paymentComplete = true;
+                
+                btnCash.Enabled = false;
+                btnCredit.Enabled = false;
+                
+                // I want to change this, so more logical. So there can be cash and credit in same transaction. -DM
+                currentPayment.TotalCashCollected = Transaction.Total;
             }
+
+            // If there is still money due.
+            else if (currentPayment.CurrentBalance > 0)
+            { 
              
-            lblDue.Text = currentPayment.CashDue.ToString("c");
+                //Still owe money message user.
+                MessageBox.Show("A balance of " + currentPayment.CurrentBalance.ToString("c") + " is still owed.");
+
+                lblBalanceDue.Text = currentPayment.CurrentBalance.ToString("c");
+
+                // Display Still Due warning label.
+                lblStillDue.Visible = true;
+                lblChangeSwitch.Visible = false;
+
+                // Clear payment tender label?
+                
+            }
+
+            // Display the amount still owed by customer OR to customer.
+            lblDue.Text = currentPayment.CurrentBalance.ToString("c");
         }
 
         private void btn5Dollars_Click(object sender, EventArgs e)
         {
             lblTendered.Text = "5.00";
-            DisplayAmntDue(5);
+            CalcCurrentBalance(5, true);
         }
 
         private void btn10Dollars_Click(object sender, EventArgs e)
         {
             lblTendered.Text = "10.00";
-            DisplayAmntDue(10);
+            CalcCurrentBalance(10, true);
         }
 
         private void btn20Dollars_Click(object sender, EventArgs e)
         {
             lblTendered.Text = "20.00";
-            DisplayAmntDue(20);
+            CalcCurrentBalance(20, true);
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -64,18 +97,34 @@ namespace ICBINJPOSController
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+            if (paymentComplete)
+            {
+                this.Close();
 
-            this.Close();
+                // Send a report of Transaction
+                
+
+            }
+            else
+            {
+                MessageBox.Show("There is still a balance of " + currentPayment.CurrentBalance.ToString("c") + " due.");
+            }
         }
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
-
         }
 
         private void btnCredit_Click(object sender, EventArgs e)
         {
-
+            CreditProcessing cpScreen = new CreditProcessing();
+            cpScreen.ShowDialog();
+            //If credit approved, add to credit totals.
+            if (true)
+            {   
+                // Change to that cash and credit can be in same Transaction.
+                currentPayment.TotalCreditCollected = Transaction.Total;
+            }
         }
 
         // User enters the amount of cash given with keypad, clicks cash, calculate change due.
@@ -85,7 +134,7 @@ namespace ICBINJPOSController
 
             if(double.TryParse(lblTendered.Text, out amountPaid))
             {
-                this.DisplayAmntDue(amountPaid);
+                this.CalcCurrentBalance(amountPaid, true);
             }
             else
             {
@@ -168,5 +217,7 @@ namespace ICBINJPOSController
         {
             lblTendered.Text += ".";
         }
+
+        
     }
 }

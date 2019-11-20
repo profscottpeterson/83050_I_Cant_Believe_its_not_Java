@@ -19,6 +19,18 @@ namespace ICBINJPOSController
 
         public int Expiration { get; set; }
 
+
+        // Tracks current balance throughout transaction.
+        private double currentBalance;
+
+        public double CurrentBalance
+        {
+            get { return currentBalance; }
+            set { currentBalance = value; }
+        }
+
+
+
         // Amount recieved from customer.
         private double tendered;
 
@@ -28,39 +40,26 @@ namespace ICBINJPOSController
             set { tendered = value; }
         }
 
-        // Cash due to customer.
-        private double cashDue;
 
-        public double CashDue
+
+        // Cash collected from customer.
+        private double totalCashCollected;
+
+        public double TotalCashCollected
         {
-            get { return cashDue; }
-            set { cashDue = value; }
+            get { return totalCashCollected; }
+            set { totalCashCollected = value; }
         }
 
-        public double CalcCashDue(double transTotal, double tendered)
+        private double totalCreditCollected;
+
+        public double TotalCreditCollected
         {
-            this.cashDue = transTotal - tendered;
-
-            if (this.cashDue > 0)
-            {
-                //Still owe money message user.
-                System.Windows.Forms.MessageBox.Show("A balance of " + this.cashDue.ToString("c") + " is still owed.");
-                return this.cashDue;
-
-            }
-            else if (this.cashDue < 0)
-            {
-                this.OpenDrawer();
-                return this.cashDue;
-
-            }
-            else
-            {
-                // No change due, don't open drawer.
-                return this.cashDue;
-
-            }
+            get { return totalCreditCollected; }
+            set { totalCreditCollected = value; }
         }
+
+
 
         public void RunCreditCard()
         {

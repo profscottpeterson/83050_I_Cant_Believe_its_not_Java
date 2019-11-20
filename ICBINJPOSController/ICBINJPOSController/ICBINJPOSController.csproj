@@ -50,11 +50,17 @@
   <ItemGroup>
     <Compile Include="Classes\Admin.cs" />
     <Compile Include="Classes\File.cs" />
-    <Compile Include="CoffeeShopMenu.cs" />
-    <Compile Include="PaymentScreen.cs">
+    <Compile Include="Classes\CoffeeShopMenu.cs" />
+    <Compile Include="CreditProcessing.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PaymentScreen.Designer.cs">
+    <Compile Include="CreditProcessing.Designer.cs">
+      <DependentUpon>CreditProcessing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\PaymentScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\PaymentScreen.Designer.cs">
       <DependentUpon>PaymentScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\AdminScreen.cs">
@@ -95,7 +101,10 @@
     </Compile>
     <Compile Include="Classes\Transaction.cs" />
     <Compile Include="Classes\User.cs" />
-    <EmbeddedResource Include="PaymentScreen.resx">
+    <EmbeddedResource Include="CreditProcessing.resx">
+      <DependentUpon>CreditProcessing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\PaymentScreen.resx">
       <DependentUpon>PaymentScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\AdminScreen.resx">

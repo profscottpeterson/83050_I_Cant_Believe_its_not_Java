@@ -16,7 +16,7 @@ namespace ICBINJPOSController
         private string currentDate = DateTime.Now.ToShortDateString();
 
         //TODO test
-        private string currentUser = User.employeeName;
+        private string currentUser;
 
         ////does this need to be am empty constant in order to hold the number up adding to it?
         private int currentTransNum = 1;
@@ -40,17 +40,20 @@ namespace ICBINJPOSController
 
             InitializeComponent();
 
-            // Show current date.
-            dateLbl.Text = currentDate;
-            // Show current user using static var.
-            UsersNameLbl.Text = User.employeeName;
-           
-            OpenTransaction();
+            // Start a new Transaction
+            this.OpenTransaction();
         }
 
         public void OpenTransaction()
         {
-            //***This may not be necessary
+            // Show current date.
+            dateLbl.Text = currentDate;
+
+            this.currentUser = User.employeeName;
+
+            // Show current user using static var.
+            UsersNameLbl.Text = currentUser;
+
             //***Use currentUser field when ready.
             this.currentTransaction = new Transaction(DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), currentUser , currentTransNum);
           
@@ -59,25 +62,26 @@ namespace ICBINJPOSController
         // Close Transaction when payment is processed.
         public void CloseAndOpenNewTransaction()
         {
-            // Increase transactoin number by one for next transaction.
+            ResetFields();
+            ResetControls();
+            this.currentTransaction = null;
+
+            // Increase transaction number by one for next transaction.
             this.currentTransNum = currentTransNum + 1;
-            this.currentUser = "";
+            
             //TODO test
             OpenTransaction();
-            OrderLbx.Items.Clear();
-
-            subtotalPriceLbl.Text = "";
-            taxPriceLbl.Text = "";
-            totalPriceLbl.Text = "";
+            
         }
 
         public void ChangeQuantity(string quantityBtnText)
         {
-            // Added this so there is no longer an error.
+            
             int tempQuantity;
 
             // Concatenate string quantity to allow values over 9.
             this.strQuantity = this.strQuantity + quantityBtnText;
+            quantityLbl.Text = this.strQuantity;
 
             if (int.TryParse(this.strQuantity, out tempQuantity))
             {
@@ -131,49 +135,19 @@ namespace ICBINJPOSController
                     if (sizeSelected == "Small")
                     {
                         price = i.PriceOptions[0] * quantity;
-                        
-                        //// Checks to see if flavor is being used or not and adds 50 cents extra
-                        //if (FlavorsPanel.GetItemChecked(5))
-                        //{
-                        //    // Does nothing but use as placeholder for no flavor choice
-                        //}
-                        //else
-                        //{
-                        //    // Adds 50 cents for cost of flavor
-                        //    price = price + .5;
-                        //}
+                      
                     }
                     else if (sizeSelected == "Medium")
                     {
                         price = i.PriceOptions[1] * quantity;
                         
-                        // Checks to see if flavor is being used or not and adds 50 cents extra
-                        //if (FlavorsPanel.GetItemChecked(5))
-                        //{
-                        //    // Does nothing but use as placeholder for no flavor choice
-                        //}
-                        //else
-                        //{
-                        //    // Adds 50 cents for cost of flavor
-                        //    price = price + .5;
-                        //}
                     }
                     else
                     {
-                        // Large is equivilent to original menu price
+                        // Large price
                         price = i.PriceOptions[2] * quantity;
-                        
-                        // Checks to see if flavor is being used or not and adds 50 cents extra
-                        //if (FlavorsPanel.GetItemChecked(5))
-                        //{
-                        //    // Does nothing but use as placeholder for no flavor choice
-                        //}
-                        //else
-                        //{
-                        //    // Adds 50 cents for cost of flavor
-                        //    price = price + .5;
-                        //}
                     }
+
                     break;
                 }
             }  
@@ -219,10 +193,11 @@ namespace ICBINJPOSController
                 MessageBox.Show("Invalid quantity, must be larger than zero.");
             }
 
-            // Empty field values.
-            this.quantitySelected = 1;
-            this.strQuantity = "";
-            this.sizeSelected = "";
+            // Reset field values.
+            this.ResetFields();
+            // Reset sizes.
+            this.ResetRadioButtons();
+            this.quantityLbl.Text = "";
         }
 
         public void Totals()
@@ -236,12 +211,6 @@ namespace ICBINJPOSController
             // Calculate Grand Total and display in label.
             totalPriceLbl.Text = this.currentTransaction.CalcTotal();
         }
-
-
-
-
-
-
 
 
         private void qty1Btn_Click(object sender, EventArgs e)
@@ -418,18 +387,42 @@ namespace ICBINJPOSController
 
         private void cancelBtn_Click(object sender, EventArgs e)
         {
-            //TODO TEST THAT ACUALLY CANCELED
+            // Open a new transaction, reset fields and controls.
+            // Open transaction does not increase transaction number.
             this.OpenTransaction();
+            this.ResetFields();
+            this.ResetControls();
+        }
 
-            // Empty field values.
+        public void ResetFields()
+        {
+            // Reset field values.
             this.quantitySelected = 1;
             this.strQuantity = "";
             this.sizeSelected = "";
+        }
+
+        public void ResetRadioButtons()
+        {
+            this.largeRadioBtn.Checked = false;
+            this.mediumRadioBtn.Checked = false;
+            this.smallRadioBtn.Checked = false;
+        }
+
+        public void ResetControls()
+        {
+            //Reset RadioButtons
+            this.ResetRadioButtons();
+
+            // Reset Controls
             this.subtotalPriceLbl.Text = "";
             this.taxPriceLbl.Text = "";
             this.totalPriceLbl.Text = "";
-            this.OrderLbx.Text = "";
+            this.OrderLbx.Items.Clear();
+            this.quantityLbl.Text = "";
         }
+
+
 
         private void vanillaBtn_Click(object sender, EventArgs e)
         {
@@ -457,10 +450,7 @@ namespace ICBINJPOSController
             AddItemToOrder("Flavor");
         }
 
-        private void RegisterScreen_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void backButton_Click(object sender, EventArgs e)
         {
@@ -475,7 +465,7 @@ namespace ICBINJPOSController
             Users.SignOut();
             
         }
+
     }
-
-
+    
 }
