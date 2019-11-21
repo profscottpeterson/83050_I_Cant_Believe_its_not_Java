@@ -49,7 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Admin.cs" />
-    <Compile Include="Classes\File.cs" />
+    <Compile Include="Classes\Files.cs" />
     <Compile Include="Classes\CoffeeShopMenu.cs" />
     <Compile Include="CreditProcessing.cs">
       <SubType>Form</SubType>

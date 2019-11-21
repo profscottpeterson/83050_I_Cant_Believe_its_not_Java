@@ -7,7 +7,7 @@ using System.IO;
 
 namespace ICBINJPOSController
 {
-    public class File
+    public class Files
     {
         //lists to hold ID, Usernames and Passwords
         public static List<string> empID = new List<string>();

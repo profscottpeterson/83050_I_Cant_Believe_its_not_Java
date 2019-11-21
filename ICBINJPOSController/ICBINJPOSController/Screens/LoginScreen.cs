@@ -35,7 +35,7 @@ namespace ICBINJPOSController
         {
             //instances of User and File classes
             User Users = new User();
-            File Files = new File();
+            Files Files = new Files();
 
             try
             {   

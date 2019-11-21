@@ -34,7 +34,7 @@ namespace ICBINJPOSController
             employeePass = password;
 
             //if employee username and password correct
-            if (File.empUserName.Contains(employeeName) && File.empPassWord.Contains(employeePass) && Array.IndexOf(File.empUserName.ToArray(), employeeName) == Array.IndexOf(File.empPassWord.ToArray(), employeePass))
+            if (Files.empUserName.Contains(employeeName) && Files.empPassWord.Contains(employeePass) && Array.IndexOf(Files.empUserName.ToArray(), employeeName) == Array.IndexOf(Files.empPassWord.ToArray(), employeePass))
             {
                 employeeLoggedIn = true;
                 msgtxt = "Successful Login!";
@@ -46,7 +46,7 @@ namespace ICBINJPOSController
             }
 
             //if employee username or password incorrect
-            else if ((employeeName != "") || (employeePass != "") && Array.IndexOf(File.empUserName.ToArray(), employeeName) != Array.IndexOf(File.empPassWord.ToArray(), employeePass))
+            else if ((employeeName != "") || (employeePass != "") && Array.IndexOf(Files.empUserName.ToArray(), employeeName) != Array.IndexOf(Files.empPassWord.ToArray(), employeePass))
             {
                 loginIncorrect = true;
                 msgtxt = "User Name and Password Incorrect!  Please Check and try again!";
@@ -77,7 +77,7 @@ namespace ICBINJPOSController
             managerPass = password;
 
             //if manager username and password correct
-            if (File.mgtUserName.Contains(managerName) && File.mgtPassWord.Contains(managerPass) && Array.IndexOf(File.mgtUserName.ToArray(), managerName) == Array.IndexOf(File.mgtPassWord.ToArray(), managerPass))
+            if (Files.mgtUserName.Contains(managerName) && Files.mgtPassWord.Contains(managerPass) && Array.IndexOf(Files.mgtUserName.ToArray(), managerName) == Array.IndexOf(Files.mgtPassWord.ToArray(), managerPass))
             {
                 managerLoggedIn = true;
                 msgtxt = "Successful Login!";
@@ -89,7 +89,7 @@ namespace ICBINJPOSController
             }
 
             //if manager username or password incorrect
-            else if ((managerName != "") || (managerPass != "") && Array.IndexOf(File.mgtUserName.ToArray(), managerName) != Array.IndexOf(File.mgtPassWord.ToArray(), managerPass))
+            else if ((managerName != "") || (managerPass != "") && Array.IndexOf(Files.mgtUserName.ToArray(), managerName) != Array.IndexOf(Files.mgtPassWord.ToArray(), managerPass))
             {
                 loginIncorrect = true;
                 msgtxt = "User Name and Password Incorrect!  Please Check and try again!";
@@ -120,7 +120,7 @@ namespace ICBINJPOSController
             adminPass = password;
 
             //if administrator username and password correct
-            if (File.adminUserName.Contains(adminName) && File.adminPassWord.Contains(adminPass) && Array.IndexOf(File.adminUserName.ToArray(), adminName) == Array.IndexOf(File.adminPassWord.ToArray(), adminPass))
+            if (Files.adminUserName.Contains(adminName) && Files.adminPassWord.Contains(adminPass) && Array.IndexOf(Files.adminUserName.ToArray(), adminName) == Array.IndexOf(Files.adminPassWord.ToArray(), adminPass))
             {
                 administratorLoggedIn = true;
                 msgtxt = "Successful Login!";
@@ -132,7 +132,7 @@ namespace ICBINJPOSController
             }
 
             //if administrator username or password incorrect
-            else if ((adminName != "") || (adminPass != "") && Array.IndexOf(File.adminUserName.ToArray(), adminName) != Array.IndexOf(File.adminPassWord.ToArray(), adminPass))
+            else if ((adminName != "") || (adminPass != "") && Array.IndexOf(Files.adminUserName.ToArray(), adminName) != Array.IndexOf(Files.adminPassWord.ToArray(), adminPass))
             {
                 loginIncorrect = true;
                 msgtxt = "User Name and Password Incorrect!  Please Check and try again!";

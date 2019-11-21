@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.priceMaintGrp = new System.Windows.Forms.GroupBox();
+            this.SaveBtn = new System.Windows.Forms.Button();
             this.deleteItemBtn = new System.Windows.Forms.Button();
             this.medPriceLbl = new System.Windows.Forms.Label();
             this.mediumPriceTxt = new System.Windows.Forms.TextBox();
@@ -42,7 +43,7 @@
             this.addItemBtn = new System.Windows.Forms.Button();
             this.itemDescLbl = new System.Windows.Forms.Label();
             this.clearTextBtn = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.userMaintGrp = new System.Windows.Forms.GroupBox();
             this.selectUserLbl = new System.Windows.Forms.Label();
             this.setUserLbl = new System.Windows.Forms.Label();
             this.setPasswordLbl = new System.Windows.Forms.Label();
@@ -58,13 +59,14 @@
             this.backBtn = new System.Windows.Forms.Button();
             this.signOutBtn = new System.Windows.Forms.Button();
             this.priceMaintGrp.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.userMaintGrp.SuspendLayout();
             this.SuspendLayout();
             // 
             // priceMaintGrp
             // 
             this.priceMaintGrp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.priceMaintGrp.BackColor = System.Drawing.Color.LightGray;
+            this.priceMaintGrp.Controls.Add(this.SaveBtn);
             this.priceMaintGrp.Controls.Add(this.deleteItemBtn);
             this.priceMaintGrp.Controls.Add(this.medPriceLbl);
             this.priceMaintGrp.Controls.Add(this.mediumPriceTxt);
@@ -80,10 +82,23 @@
             this.priceMaintGrp.Controls.Add(this.clearTextBtn);
             this.priceMaintGrp.Location = new System.Drawing.Point(748, 67);
             this.priceMaintGrp.Name = "priceMaintGrp";
-            this.priceMaintGrp.Size = new System.Drawing.Size(740, 716);
+            this.priceMaintGrp.Size = new System.Drawing.Size(740, 622);
             this.priceMaintGrp.TabIndex = 33;
             this.priceMaintGrp.TabStop = false;
             this.priceMaintGrp.Text = "Price Maintenance";
+            // 
+            // SaveBtn
+            // 
+            this.SaveBtn.BackColor = System.Drawing.Color.Coral;
+            this.SaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SaveBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveBtn.Location = new System.Drawing.Point(524, 547);
+            this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.Size = new System.Drawing.Size(165, 57);
+            this.SaveBtn.TabIndex = 108;
+            this.SaveBtn.Text = "Save Changes";
+            this.SaveBtn.UseVisualStyleBackColor = false;
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
             // deleteItemBtn
             // 
@@ -92,7 +107,7 @@
             this.deleteItemBtn.Enabled = false;
             this.deleteItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.deleteItemBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteItemBtn.Location = new System.Drawing.Point(522, 436);
+            this.deleteItemBtn.Location = new System.Drawing.Point(524, 381);
             this.deleteItemBtn.Name = "deleteItemBtn";
             this.deleteItemBtn.Size = new System.Drawing.Size(165, 57);
             this.deleteItemBtn.TabIndex = 107;
@@ -144,7 +159,7 @@
             this.itemLbx.ItemHeight = 23;
             this.itemLbx.Location = new System.Drawing.Point(18, 209);
             this.itemLbx.Name = "itemLbx";
-            this.itemLbx.Size = new System.Drawing.Size(466, 487);
+            this.itemLbx.Size = new System.Drawing.Size(466, 395);
             this.itemLbx.TabIndex = 101;
             this.itemLbx.SelectedIndexChanged += new System.EventHandler(this.itemLbx_SelectedIndexChanged);
             // 
@@ -182,7 +197,7 @@
             this.modifyItemBtn.BackColor = System.Drawing.Color.Coral;
             this.modifyItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.modifyItemBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modifyItemBtn.Location = new System.Drawing.Point(522, 248);
+            this.modifyItemBtn.Location = new System.Drawing.Point(524, 214);
             this.modifyItemBtn.Name = "modifyItemBtn";
             this.modifyItemBtn.Size = new System.Drawing.Size(165, 57);
             this.modifyItemBtn.TabIndex = 12;
@@ -197,7 +212,7 @@
             this.addItemBtn.Enabled = false;
             this.addItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addItemBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addItemBtn.Location = new System.Drawing.Point(522, 347);
+            this.addItemBtn.Location = new System.Drawing.Point(524, 296);
             this.addItemBtn.Name = "addItemBtn";
             this.addItemBtn.Size = new System.Drawing.Size(165, 57);
             this.addItemBtn.TabIndex = 13;
@@ -219,35 +234,36 @@
             this.clearTextBtn.BackColor = System.Drawing.Color.Coral;
             this.clearTextBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.clearTextBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearTextBtn.Location = new System.Drawing.Point(522, 534);
+            this.clearTextBtn.Location = new System.Drawing.Point(524, 463);
             this.clearTextBtn.Name = "clearTextBtn";
             this.clearTextBtn.Size = new System.Drawing.Size(165, 57);
             this.clearTextBtn.TabIndex = 18;
             this.clearTextBtn.Text = "Clear Text";
             this.clearTextBtn.UseVisualStyleBackColor = false;
+            this.clearTextBtn.Click += new System.EventHandler(this.clearTextBtn_Click);
             // 
-            // groupBox2
+            // userMaintGrp
             // 
-            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox2.BackColor = System.Drawing.Color.LightGray;
-            this.groupBox2.Controls.Add(this.selectUserLbl);
-            this.groupBox2.Controls.Add(this.setUserLbl);
-            this.groupBox2.Controls.Add(this.setPasswordLbl);
-            this.groupBox2.Controls.Add(this.setUserTxtBox);
-            this.groupBox2.Controls.Add(this.setPasswordTxtBox);
-            this.groupBox2.Controls.Add(this.addUserBtn);
-            this.groupBox2.Controls.Add(this.deleteUserBtn);
-            this.groupBox2.Controls.Add(this.userSelectComboBox);
-            this.groupBox2.Controls.Add(this.modifyUserBtn);
-            this.groupBox2.Controls.Add(this.setUserIdLbl);
-            this.groupBox2.Controls.Add(this.setUserIdTxtBox);
-            this.groupBox2.Controls.Add(this.clearUserBtn);
-            this.groupBox2.Location = new System.Drawing.Point(12, 67);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(715, 716);
-            this.groupBox2.TabIndex = 32;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.userMaintGrp.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.userMaintGrp.BackColor = System.Drawing.Color.LightGray;
+            this.userMaintGrp.Controls.Add(this.selectUserLbl);
+            this.userMaintGrp.Controls.Add(this.setUserLbl);
+            this.userMaintGrp.Controls.Add(this.setPasswordLbl);
+            this.userMaintGrp.Controls.Add(this.setUserTxtBox);
+            this.userMaintGrp.Controls.Add(this.setPasswordTxtBox);
+            this.userMaintGrp.Controls.Add(this.addUserBtn);
+            this.userMaintGrp.Controls.Add(this.deleteUserBtn);
+            this.userMaintGrp.Controls.Add(this.userSelectComboBox);
+            this.userMaintGrp.Controls.Add(this.modifyUserBtn);
+            this.userMaintGrp.Controls.Add(this.setUserIdLbl);
+            this.userMaintGrp.Controls.Add(this.setUserIdTxtBox);
+            this.userMaintGrp.Controls.Add(this.clearUserBtn);
+            this.userMaintGrp.Location = new System.Drawing.Point(12, 67);
+            this.userMaintGrp.Name = "userMaintGrp";
+            this.userMaintGrp.Size = new System.Drawing.Size(715, 622);
+            this.userMaintGrp.TabIndex = 32;
+            this.userMaintGrp.TabStop = false;
+            this.userMaintGrp.Text = "User Maintenance";
             // 
             // selectUserLbl
             // 
@@ -387,24 +403,26 @@
             this.backBtn.BackColor = System.Drawing.Color.Red;
             this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.backBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backBtn.Location = new System.Drawing.Point(50, 797);
+            this.backBtn.Location = new System.Drawing.Point(99, 695);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(147, 91);
             this.backBtn.TabIndex = 19;
             this.backBtn.Text = "Back";
             this.backBtn.UseVisualStyleBackColor = false;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // signOutBtn
             // 
             this.signOutBtn.BackColor = System.Drawing.Color.Snow;
             this.signOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.signOutBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signOutBtn.Location = new System.Drawing.Point(222, 797);
+            this.signOutBtn.Location = new System.Drawing.Point(271, 695);
             this.signOutBtn.Name = "signOutBtn";
             this.signOutBtn.Size = new System.Drawing.Size(147, 91);
             this.signOutBtn.TabIndex = 34;
             this.signOutBtn.Text = "Sign Out";
             this.signOutBtn.UseVisualStyleBackColor = false;
+            this.signOutBtn.Click += new System.EventHandler(this.signOutBtn_Click);
             // 
             // AdminScreen
             // 
@@ -416,18 +434,17 @@
             this.Controls.Add(this.signOutBtn);
             this.Controls.Add(this.backBtn);
             this.Controls.Add(this.priceMaintGrp);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.userMaintGrp);
             this.Font = new System.Drawing.Font("Goudy Stout", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.Name = "AdminScreen";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "AdminScreen";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AdminScreen_Load);
             this.priceMaintGrp.ResumeLayout(false);
             this.priceMaintGrp.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.userMaintGrp.ResumeLayout(false);
+            this.userMaintGrp.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -443,7 +460,7 @@
         private System.Windows.Forms.Button addItemBtn;
         private System.Windows.Forms.Label itemDescLbl;
         private System.Windows.Forms.Button clearTextBtn;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox userMaintGrp;
         private System.Windows.Forms.Label selectUserLbl;
         private System.Windows.Forms.Label setUserLbl;
         private System.Windows.Forms.Label setPasswordLbl;
@@ -463,5 +480,6 @@
         private System.Windows.Forms.Button deleteItemBtn;
         private System.Windows.Forms.Button backBtn;
         private System.Windows.Forms.Button signOutBtn;
+        private System.Windows.Forms.Button SaveBtn;
     }
 }

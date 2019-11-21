@@ -454,6 +454,7 @@ namespace ICBINJPOSController
 
         private void backButton_Click(object sender, EventArgs e)
         {
+            //Go back to options screen
             this.Hide();
             Users.GoBack();
             
@@ -461,6 +462,7 @@ namespace ICBINJPOSController
 
         private void signOutBtn_Click(object sender, EventArgs e)
         {
+            //sign out & go back to login screen
             this.Hide();
             Users.SignOut();
             
