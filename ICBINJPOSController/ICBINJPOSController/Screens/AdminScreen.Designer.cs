@@ -47,14 +47,14 @@
             this.selectUserLbl = new System.Windows.Forms.Label();
             this.setUserLbl = new System.Windows.Forms.Label();
             this.setPasswordLbl = new System.Windows.Forms.Label();
-            this.setUserTxtBox = new System.Windows.Forms.TextBox();
-            this.setPasswordTxtBox = new System.Windows.Forms.TextBox();
+            this.userTxt = new System.Windows.Forms.TextBox();
+            this.passwordTxt = new System.Windows.Forms.TextBox();
             this.addUserBtn = new System.Windows.Forms.Button();
             this.deleteUserBtn = new System.Windows.Forms.Button();
             this.userSelectComboBox = new System.Windows.Forms.ComboBox();
             this.modifyUserBtn = new System.Windows.Forms.Button();
             this.setUserIdLbl = new System.Windows.Forms.Label();
-            this.setUserIdTxtBox = new System.Windows.Forms.TextBox();
+            this.userIdTxt = new System.Windows.Forms.TextBox();
             this.clearUserBtn = new System.Windows.Forms.Button();
             this.backBtn = new System.Windows.Forms.Button();
             this.signOutBtn = new System.Windows.Forms.Button();
@@ -249,14 +249,14 @@
             this.userMaintGrp.Controls.Add(this.selectUserLbl);
             this.userMaintGrp.Controls.Add(this.setUserLbl);
             this.userMaintGrp.Controls.Add(this.setPasswordLbl);
-            this.userMaintGrp.Controls.Add(this.setUserTxtBox);
-            this.userMaintGrp.Controls.Add(this.setPasswordTxtBox);
+            this.userMaintGrp.Controls.Add(this.userTxt);
+            this.userMaintGrp.Controls.Add(this.passwordTxt);
             this.userMaintGrp.Controls.Add(this.addUserBtn);
             this.userMaintGrp.Controls.Add(this.deleteUserBtn);
             this.userMaintGrp.Controls.Add(this.userSelectComboBox);
             this.userMaintGrp.Controls.Add(this.modifyUserBtn);
             this.userMaintGrp.Controls.Add(this.setUserIdLbl);
-            this.userMaintGrp.Controls.Add(this.setUserIdTxtBox);
+            this.userMaintGrp.Controls.Add(this.userIdTxt);
             this.userMaintGrp.Controls.Add(this.clearUserBtn);
             this.userMaintGrp.Location = new System.Drawing.Point(12, 67);
             this.userMaintGrp.Name = "userMaintGrp";
@@ -295,21 +295,21 @@
             this.setPasswordLbl.TabIndex = 7;
             this.setPasswordLbl.Text = "Set Password:";
             // 
-            // setUserTxtBox
+            // userTxt
             // 
-            this.setUserTxtBox.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.setUserTxtBox.Location = new System.Drawing.Point(312, 310);
-            this.setUserTxtBox.Name = "setUserTxtBox";
-            this.setUserTxtBox.Size = new System.Drawing.Size(385, 27);
-            this.setUserTxtBox.TabIndex = 10;
+            this.userTxt.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userTxt.Location = new System.Drawing.Point(312, 310);
+            this.userTxt.Name = "userTxt";
+            this.userTxt.Size = new System.Drawing.Size(385, 27);
+            this.userTxt.TabIndex = 10;
             // 
-            // setPasswordTxtBox
+            // passwordTxt
             // 
-            this.setPasswordTxtBox.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.setPasswordTxtBox.Location = new System.Drawing.Point(312, 369);
-            this.setPasswordTxtBox.Name = "setPasswordTxtBox";
-            this.setPasswordTxtBox.Size = new System.Drawing.Size(385, 27);
-            this.setPasswordTxtBox.TabIndex = 11;
+            this.passwordTxt.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordTxt.Location = new System.Drawing.Point(312, 369);
+            this.passwordTxt.Name = "passwordTxt";
+            this.passwordTxt.Size = new System.Drawing.Size(385, 27);
+            this.passwordTxt.TabIndex = 11;
             // 
             // addUserBtn
             // 
@@ -322,6 +322,7 @@
             this.addUserBtn.TabIndex = 12;
             this.addUserBtn.Text = "Add User";
             this.addUserBtn.UseVisualStyleBackColor = false;
+            this.addUserBtn.Click += new System.EventHandler(this.addUserBtn_Click);
             // 
             // deleteUserBtn
             // 
@@ -378,13 +379,13 @@
             this.setUserIdLbl.TabIndex = 16;
             this.setUserIdLbl.Text = "Set User ID:";
             // 
-            // setUserIdTxtBox
+            // userIdTxt
             // 
-            this.setUserIdTxtBox.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.setUserIdTxtBox.Location = new System.Drawing.Point(312, 245);
-            this.setUserIdTxtBox.Name = "setUserIdTxtBox";
-            this.setUserIdTxtBox.Size = new System.Drawing.Size(385, 27);
-            this.setUserIdTxtBox.TabIndex = 17;
+            this.userIdTxt.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userIdTxt.Location = new System.Drawing.Point(312, 245);
+            this.userIdTxt.Name = "userIdTxt";
+            this.userIdTxt.Size = new System.Drawing.Size(385, 27);
+            this.userIdTxt.TabIndex = 17;
             // 
             // clearUserBtn
             // 
@@ -464,14 +465,14 @@
         private System.Windows.Forms.Label selectUserLbl;
         private System.Windows.Forms.Label setUserLbl;
         private System.Windows.Forms.Label setPasswordLbl;
-        private System.Windows.Forms.TextBox setUserTxtBox;
-        private System.Windows.Forms.TextBox setPasswordTxtBox;
+        private System.Windows.Forms.TextBox userTxt;
+        private System.Windows.Forms.TextBox passwordTxt;
         private System.Windows.Forms.Button addUserBtn;
         private System.Windows.Forms.Button deleteUserBtn;
         private System.Windows.Forms.ComboBox userSelectComboBox;
         private System.Windows.Forms.Button modifyUserBtn;
         private System.Windows.Forms.Label setUserIdLbl;
-        private System.Windows.Forms.TextBox setUserIdTxtBox;
+        private System.Windows.Forms.TextBox userIdTxt;
         private System.Windows.Forms.Button clearUserBtn;
         private System.Windows.Forms.Label medPriceLbl;
         private System.Windows.Forms.TextBox mediumPriceTxt;

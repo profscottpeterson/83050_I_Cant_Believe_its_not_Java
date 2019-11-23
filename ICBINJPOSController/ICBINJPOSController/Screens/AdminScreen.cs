@@ -19,10 +19,89 @@ namespace ICBINJPOSController
             InitializeComponent();
         }
 
+        private List<string> EmpID = new List<string>();
+        private List<string> EmpUserName = new List<string>();
+        private List<string> EmpPassWord = new List<string>();
         User Users = new User();
         string empty = " ";
 
+        private void addUserBtn_Click(object sender, EventArgs e)
+        {
+            if(userSelectComboBox.SelectedIndex == 0)
+            {
+                using(StreamReader empFile = new StreamReader("employeeAuth.txt"))
+                {
+                    string emp = "";
 
+                    while ((emp = empFile.ReadLine()) != null)
+                    {
+                        string[] entries = emp.Split(" ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                        EmpID.Add(entries[0]);
+                        EmpUserName.Add(entries[1]);
+                        EmpPassWord.Add(entries[2]);
+                    }
+                }
+                if (userIdTxt.Text != "" && userTxt.Text != "" && passwordTxt.Text != "")
+                {
+                    if(!EmpID.Contains(userIdTxt.Text)) // add numerical validation
+                    {
+                        if (!EmpPassWord.Contains(passwordTxt.Text)) //add length validation
+                        {
+                            using(StreamWriter empLine = new StreamWriter("employeeAuth.txt"))
+                            {
+                                empLine.WriteLine(userIdTxt.Text + " " + userTxt.Text + " " + passwordTxt.Text);
+                                MessageBox.Show("New Employee has been added!");
+                                userIdTxt.Clear();
+                                userTxt.Clear();
+                                passwordTxt.Clear();
+                                userIdTxt.Focus();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please enter a different password!");
+                            passwordTxt.Clear();
+                            passwordTxt.Focus();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("ID alreayd in use! Please enter a new ID!");
+                        userIdTxt.Clear();
+                        userIdTxt.Focus();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please fill out all fields!");
+                    userIdTxt.Clear();
+                    userTxt.Clear();
+                    passwordTxt.Clear();
+                    userIdTxt.Focus();
+                }
+            }
+            if (userSelectComboBox.SelectedIndex == 1)
+            {
+                MessageBox.Show("Incomplete code");
+                //using (StreamReader mgtFile = new StreamReader("managementAuth.txt"))
+                //{
+
+                //}
+            }
+            if(userSelectComboBox.SelectedIndex == 2)
+            {
+                MessageBox.Show("Incomplete code");
+                //using (StreamReader adminFile = new StreamReader("administratorAuth.txt"))
+                //{
+
+                //}
+            }
+            if(userSelectComboBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a User Type!");
+                userSelectComboBox.Focus();
+            }
+        }
 
         private void AdminScreen_Load(object sender, EventArgs e)
         {
@@ -170,5 +249,6 @@ namespace ICBINJPOSController
             this.Hide();
             Users.SignOut();
         }
+
     }
 }
