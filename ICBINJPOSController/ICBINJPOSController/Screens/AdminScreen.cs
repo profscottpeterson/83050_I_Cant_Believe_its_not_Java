@@ -232,18 +232,21 @@ namespace ICBINJPOSController
                 item[2] = mediumPriceTxt.Text;
                 item[3] = largePriceTxt.Text;
 
+                //loop through item array
                 for(var z = 1; z < 4;)
                 {
-                    //validate text field length
+                    //validate array field length
                     if (item[z].Length >= 4 && item[z].Length <= 6)
                     {
                         z++;
                     }
+                    //error message for invalid array field length
                     else
                     {
                         MessageBox.Show("Price must be between $0.00 and $99.99!");
                         break;
                     }
+                    //validate that all items in array are proper length
                     if(z == 4)
                     {
                         //loop through each array index
@@ -287,7 +290,16 @@ namespace ICBINJPOSController
                     }
                 }
 
-   
+                //clear text boxes
+                descLbl.Text = " ";
+                smallPriceTxt.Clear();
+                mediumPriceTxt.Clear();
+                largePriceTxt.Clear();
+            }
+            //error message if no item selected
+            else
+            {
+                MessageBox.Show("Please select an item to modify!");
             }
         }
 
@@ -349,7 +361,6 @@ namespace ICBINJPOSController
                 smallPriceTxt.Clear();
                 mediumPriceTxt.Clear();
                 largePriceTxt.Clear();
-
             }
         }
 
