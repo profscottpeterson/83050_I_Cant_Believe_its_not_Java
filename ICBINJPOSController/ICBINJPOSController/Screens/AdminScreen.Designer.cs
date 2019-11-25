@@ -401,6 +401,7 @@
             // 
             // backBtn
             // 
+            this.backBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.backBtn.BackColor = System.Drawing.Color.Red;
             this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.backBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -414,6 +415,7 @@
             // 
             // signOutBtn
             // 
+            this.signOutBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.signOutBtn.BackColor = System.Drawing.Color.Snow;
             this.signOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.signOutBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
