@@ -31,24 +31,20 @@ namespace ICBINJPOSController
 
         // Holds final numeric quantity selected.
         private int quantitySelected = 1;
-
+        
         // Holds the size selected by checkbox.
         private string sizeSelected = "";
 
         public RegisterScreen()
         {
-
             InitializeComponent();
-
-            // Start a new Transaction
-            this.OpenTransaction();
         }
 
         public void OpenTransaction()
         {
             // Show current date.
             dateLbl.Text = currentDate;
-
+            quantityLbl.Text = "1";
             this.currentUser = User.employeeName;
 
             // Show current user using static var.
@@ -197,7 +193,8 @@ namespace ICBINJPOSController
             this.ResetFields();
             // Reset sizes.
             this.ResetRadioButtons();
-            this.quantityLbl.Text = "";
+            // Change quantity to default value.
+            this.quantityLbl.Text = "1";
         }
 
         public void Totals()
@@ -426,28 +423,28 @@ namespace ICBINJPOSController
 
         private void vanillaBtn_Click(object sender, EventArgs e)
         {
-            AddItemToOrder("Flavor");
+            AddItemToOrder("Vanilla Flavor");
         }
 
         private void mochaBtn_Click(object sender, EventArgs e)
         {
-            AddItemToOrder("Flavor");
+            AddItemToOrder("Mocha Flavor");
         }
 
         private void caramelBtn_Click(object sender, EventArgs e)
         {
-            AddItemToOrder("Flavor");
+            AddItemToOrder("Caramel Flavor");
         }
         
 
         private void hazelnutBtn_Click(object sender, EventArgs e)
         {
-            AddItemToOrder("Flavor");
+            AddItemToOrder("Hazelnut Flavor");
         }
 
         private void strawberryBtn_Click(object sender, EventArgs e)
         {
-            AddItemToOrder("Flavor");
+            AddItemToOrder("Strawberry Flavor");
         }
 
         
@@ -468,6 +465,10 @@ namespace ICBINJPOSController
             
         }
 
+        private void RegisterScreen_Load(object sender, EventArgs e)
+        {
+            // Start a new Transaction
+            this.OpenTransaction();
+        }
     }
-    
 }

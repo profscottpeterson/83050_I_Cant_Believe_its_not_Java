@@ -6,10 +6,6 @@ using System.Threading.Tasks;
 
 namespace ICBINJPOSController
 {
-    
-
-
-
     public class Report
     {
         private int numOfTransactions;
@@ -44,19 +40,30 @@ namespace ICBINJPOSController
             set { totalTax = value; }
         }
 
+        private string reportUser;
+
+        public string ReportUser
+        {
+            get { return reportUser; }
+            set { reportUser = value; }
+        }
+
 
 
         public void RunUserReport()
         {
-            string currentUser = User.employeeName;
+            
         }
 
         public void RunDailyReport()
         {
 
         }
-
-        public void ClearReport()
+        public void PrintUserReport()
+        {
+           
+        }
+        public void PrintDailyReport()
         {
 
         }

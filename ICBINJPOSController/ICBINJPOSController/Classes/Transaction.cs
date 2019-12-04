@@ -71,9 +71,9 @@ namespace ICBINJPOSController
         public const double TaxRate = 0.055;
         
 
-        private double tax;
+        private static double tax;
 
-        public double Tax
+        public static double Tax
         {
             get { return tax; }
             set { tax = value; }
@@ -95,13 +95,13 @@ namespace ICBINJPOSController
 
         public string CalcTax()
         {
-            this.Tax = Math.Round(this.Subtotal * Transaction.TaxRate, 2);
-            return this.Tax.ToString("c");
+            Transaction.Tax = Math.Round(this.Subtotal * Transaction.TaxRate, 2);
+            return Transaction.Tax.ToString("c");
         }
 
         public string CalcTotal()
         {
-            Total = Math.Round(this.Subtotal + this.Tax, 2);
+            Transaction.Total = Math.Round(this.Subtotal + Transaction.Tax, 2);
             return Total.ToString("c");
         }
 

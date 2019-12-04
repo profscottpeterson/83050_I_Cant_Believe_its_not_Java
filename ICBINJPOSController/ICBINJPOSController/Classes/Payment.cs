@@ -8,33 +8,39 @@ namespace ICBINJPOSController
 {
     public class Payment
     {
-        // Not sure if its secure to have cc num in an object
-        private int creditCardNum;
+        // Holds last four digits of credit card, for receipt.
+        private static string creditCardNum;
 
-        public int CreditCardNum
+        public static string CreditCardNum
         {
             get { return creditCardNum; }
             set { creditCardNum = value; }
         }
 
-        public int Expiration { get; set; }
+        // Check if Credit Card processed successfully.
+        private static bool creditSuccessful;
 
+        public static bool CreditSuccessful
+        {
+            get { return creditSuccessful; }
+            set { creditSuccessful = value; }
+        }
 
         // Tracks current balance throughout transaction.
-        private double currentBalance;
+        private static double currentBalance;
 
-        public double CurrentBalance
+        public static double CurrentBalance
         {
             get { return currentBalance; }
             set { currentBalance = value; }
         }
 
-
+        
 
         // Amount recieved from customer.
-        private double tendered;
+        private static double tendered;
 
-        public double Tendered
+        public static double Tendered
         {
             get { return tendered; }
             set { tendered = value; }
@@ -69,6 +75,7 @@ namespace ICBINJPOSController
         public void OpenDrawer()
         {
             // Open the register drawer.
+            System.Windows.Forms.MessageBox.Show("Drawer Opened.");
         }
     }
 }

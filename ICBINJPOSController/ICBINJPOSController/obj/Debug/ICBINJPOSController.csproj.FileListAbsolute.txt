@@ -52,3 +52,18 @@ D:\TeamDev\83050_Team1\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJP
 C:\Users\Dange\Desktop\POS Project Git Repository\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.PaymentScreen.resources
 C:\Users\meyer\Documents\2GitRepo\83050_I_Cant_Believe_its_not_Java\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.CreditProcessing.resources
 C:\Users\Dange\Desktop\POS Project Git Repository\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.CreditProcessing.resources
+E:\TEAM DEVELOPMENT\POS12.3.19\ICBINJPOSController\ICBINJPOSController\bin\Debug\ICBINJPOSController.exe.config
+E:\TEAM DEVELOPMENT\POS12.3.19\ICBINJPOSController\ICBINJPOSController\bin\Debug\ICBINJPOSController.exe
+E:\TEAM DEVELOPMENT\POS12.3.19\ICBINJPOSController\ICBINJPOSController\bin\Debug\ICBINJPOSController.pdb
+E:\TEAM DEVELOPMENT\POS12.3.19\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.csprojAssemblyReference.cache
+E:\TEAM DEVELOPMENT\POS12.3.19\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.CreditProcessing.resources
+E:\TEAM DEVELOPMENT\POS12.3.19\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.PaymentScreen.resources
+E:\TEAM DEVELOPMENT\POS12.3.19\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.AdminScreen.resources
+E:\TEAM DEVELOPMENT\POS12.3.19\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.OptionsScreen.resources
+E:\TEAM DEVELOPMENT\POS12.3.19\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.Properties.Resources.resources
+E:\TEAM DEVELOPMENT\POS12.3.19\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.LoginScreen.resources
+E:\TEAM DEVELOPMENT\POS12.3.19\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.RegisterScreen.resources
+E:\TEAM DEVELOPMENT\POS12.3.19\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.ReportingScreen.resources
+E:\TEAM DEVELOPMENT\POS12.3.19\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.csproj.GenerateResource.cache
+E:\TEAM DEVELOPMENT\POS12.3.19\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.exe
+E:\TEAM DEVELOPMENT\POS12.3.19\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.pdb

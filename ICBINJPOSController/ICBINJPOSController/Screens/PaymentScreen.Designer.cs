@@ -59,6 +59,8 @@
             this.lblStillDue = new System.Windows.Forms.Label();
             this.lblBalanceDue = new System.Windows.Forms.Label();
             this.lblBal = new System.Windows.Forms.Label();
+            this.lblPayments = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnClose
@@ -92,15 +94,16 @@
             this.label7.Location = new System.Drawing.Point(125, 9);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(314, 18);
+            this.label7.Size = new System.Drawing.Size(401, 24);
             this.label7.TabIndex = 96;
             this.label7.Text = "Please enter amount then select payment type.";
             // 
             // lblTendered
             // 
             this.lblTendered.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTendered.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblTendered.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTendered.Location = new System.Drawing.Point(256, 129);
+            this.lblTendered.Location = new System.Drawing.Point(183, 134);
             this.lblTendered.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTendered.Name = "lblTendered";
             this.lblTendered.Size = new System.Drawing.Size(112, 32);
@@ -109,44 +112,46 @@
             // 
             // lblDue
             // 
-            this.lblDue.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblDue.BackColor = System.Drawing.Color.Transparent;
             this.lblDue.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDue.Location = new System.Drawing.Point(256, 170);
+            this.lblDue.Location = new System.Drawing.Point(183, 175);
             this.lblDue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDue.Name = "lblDue";
             this.lblDue.Size = new System.Drawing.Size(112, 32);
             this.lblDue.TabIndex = 94;
             this.lblDue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblDue.UseMnemonic = false;
             // 
             // lblChangeSwitch
             // 
             this.lblChangeSwitch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChangeSwitch.Location = new System.Drawing.Point(40, 170);
+            this.lblChangeSwitch.Location = new System.Drawing.Point(37, 175);
             this.lblChangeSwitch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblChangeSwitch.Name = "lblChangeSwitch";
-            this.lblChangeSwitch.Size = new System.Drawing.Size(208, 32);
+            this.lblChangeSwitch.Size = new System.Drawing.Size(138, 32);
             this.lblChangeSwitch.TabIndex = 93;
             this.lblChangeSwitch.Text = "Change Due:";
             this.lblChangeSwitch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblTotal
             // 
-            this.lblTotal.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTotal.BackColor = System.Drawing.Color.Transparent;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(258, 44);
+            this.lblTotal.Location = new System.Drawing.Point(185, 49);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(112, 32);
             this.lblTotal.TabIndex = 92;
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTotal.UseMnemonic = false;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(40, 129);
+            this.label2.Location = new System.Drawing.Point(37, 134);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(208, 32);
+            this.label2.Size = new System.Drawing.Size(138, 32);
             this.label2.TabIndex = 91;
             this.label2.Text = "Amount Tendered:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -154,12 +159,12 @@
             // lblTot
             // 
             this.lblTot.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTot.Location = new System.Drawing.Point(42, 44);
+            this.lblTot.Location = new System.Drawing.Point(39, 49);
             this.lblTot.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTot.Name = "lblTot";
-            this.lblTot.Size = new System.Drawing.Size(208, 32);
+            this.lblTot.Size = new System.Drawing.Size(138, 32);
             this.lblTot.TabIndex = 90;
-            this.lblTot.Text = "Total Due:";
+            this.lblTot.Text = "Transaction Total:";
             this.lblTot.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnCredit
@@ -443,40 +448,62 @@
             this.lblStillDue.AutoSize = true;
             this.lblStillDue.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStillDue.ForeColor = System.Drawing.Color.Red;
-            this.lblStillDue.Location = new System.Drawing.Point(390, 94);
+            this.lblStillDue.Location = new System.Drawing.Point(305, 99);
             this.lblStillDue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStillDue.Name = "lblStillDue";
-            this.lblStillDue.Size = new System.Drawing.Size(62, 18);
+            this.lblStillDue.Size = new System.Drawing.Size(78, 24);
             this.lblStillDue.TabIndex = 99;
             this.lblStillDue.Text = "Still Due";
             // 
             // lblBalanceDue
             // 
-            this.lblBalanceDue.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblBalanceDue.BackColor = System.Drawing.Color.Transparent;
             this.lblBalanceDue.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBalanceDue.Location = new System.Drawing.Point(258, 87);
+            this.lblBalanceDue.Location = new System.Drawing.Point(185, 92);
             this.lblBalanceDue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBalanceDue.Name = "lblBalanceDue";
             this.lblBalanceDue.Size = new System.Drawing.Size(112, 32);
             this.lblBalanceDue.TabIndex = 101;
             this.lblBalanceDue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblBalanceDue.UseMnemonic = false;
             // 
             // lblBal
             // 
             this.lblBal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBal.Location = new System.Drawing.Point(42, 87);
+            this.lblBal.Location = new System.Drawing.Point(39, 92);
             this.lblBal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBal.Name = "lblBal";
-            this.lblBal.Size = new System.Drawing.Size(208, 32);
+            this.lblBal.Size = new System.Drawing.Size(138, 32);
             this.lblBal.TabIndex = 100;
             this.lblBal.Text = "Balance Due:";
             this.lblBal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // lblPayments
+            // 
+            this.lblPayments.BackColor = System.Drawing.SystemColors.Info;
+            this.lblPayments.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPayments.Location = new System.Drawing.Point(405, 80);
+            this.lblPayments.Name = "lblPayments";
+            this.lblPayments.Size = new System.Drawing.Size(130, 127);
+            this.lblPayments.TabIndex = 102;
+            this.lblPayments.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(402, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(150, 24);
+            this.label1.TabIndex = 103;
+            this.label1.Text = "Payments Made:";
+            // 
             // PaymentScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(619, 669);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblPayments);
             this.Controls.Add(this.lblBalanceDue);
             this.Controls.Add(this.lblBal);
             this.Controls.Add(this.lblStillDue);
@@ -513,6 +540,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PaymentScreen";
             this.Text = "PaymentScreen";
+            this.Load += new System.EventHandler(this.PaymentScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -551,5 +579,7 @@
         private System.Windows.Forms.Label lblStillDue;
         private System.Windows.Forms.Label lblBalanceDue;
         private System.Windows.Forms.Label lblBal;
+        private System.Windows.Forms.Label lblPayments;
+        private System.Windows.Forms.Label label1;
     }
 }

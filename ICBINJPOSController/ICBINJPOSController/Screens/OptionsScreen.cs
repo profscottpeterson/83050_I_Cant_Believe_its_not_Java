@@ -159,6 +159,7 @@ namespace ICBINJPOSController
         {
             this.Hide();
             Users.SignOut();
+            
         }
     }
 }

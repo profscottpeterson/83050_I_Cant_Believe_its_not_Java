@@ -159,6 +159,14 @@ namespace ICBINJPOSController
         //sign out button functions
         public void SignOut()
         {
+            // TODO
+            // Write user report to file
+            //*** Read user report values if not null
+            // Add new values to values in the file.
+            LoginScreen.userReport.RunUserReport();
+
+
+
             AdminScreen adminScreen = new AdminScreen();
             LoginScreen loginScreen = new LoginScreen();
             OptionsScreen optionScreen = new OptionsScreen();

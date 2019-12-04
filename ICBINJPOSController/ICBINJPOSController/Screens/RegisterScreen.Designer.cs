@@ -101,7 +101,7 @@
             this.largeRadioBtn.Location = new System.Drawing.Point(395, 29);
             this.largeRadioBtn.Margin = new System.Windows.Forms.Padding(4);
             this.largeRadioBtn.Name = "largeRadioBtn";
-            this.largeRadioBtn.Size = new System.Drawing.Size(96, 33);
+            this.largeRadioBtn.Size = new System.Drawing.Size(76, 28);
             this.largeRadioBtn.TabIndex = 48;
             this.largeRadioBtn.TabStop = true;
             this.largeRadioBtn.Text = "Large";
@@ -114,7 +114,7 @@
             this.mediumRadioBtn.Location = new System.Drawing.Point(209, 29);
             this.mediumRadioBtn.Margin = new System.Windows.Forms.Padding(4);
             this.mediumRadioBtn.Name = "mediumRadioBtn";
-            this.mediumRadioBtn.Size = new System.Drawing.Size(121, 33);
+            this.mediumRadioBtn.Size = new System.Drawing.Size(97, 28);
             this.mediumRadioBtn.TabIndex = 47;
             this.mediumRadioBtn.TabStop = true;
             this.mediumRadioBtn.Text = "Medium";
@@ -127,7 +127,7 @@
             this.smallRadioBtn.Location = new System.Drawing.Point(39, 29);
             this.smallRadioBtn.Margin = new System.Windows.Forms.Padding(4);
             this.smallRadioBtn.Name = "smallRadioBtn";
-            this.smallRadioBtn.Size = new System.Drawing.Size(95, 33);
+            this.smallRadioBtn.Size = new System.Drawing.Size(74, 28);
             this.smallRadioBtn.TabIndex = 46;
             this.smallRadioBtn.TabStop = true;
             this.smallRadioBtn.Text = "Small";
@@ -456,7 +456,7 @@
             this.qty2Btn.FlatAppearance.BorderSize = 2;
             this.qty2Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.qty2Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty2Btn.Location = new System.Drawing.Point(971, 47);
+            this.qty2Btn.Location = new System.Drawing.Point(977, 81);
             this.qty2Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.qty2Btn.Name = "qty2Btn";
             this.qty2Btn.Size = new System.Drawing.Size(68, 66);
@@ -472,7 +472,7 @@
             this.qty5Btn.FlatAppearance.BorderSize = 2;
             this.qty5Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.qty5Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty5Btn.Location = new System.Drawing.Point(971, 261);
+            this.qty5Btn.Location = new System.Drawing.Point(977, 295);
             this.qty5Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.qty5Btn.Name = "qty5Btn";
             this.qty5Btn.Size = new System.Drawing.Size(68, 66);
@@ -488,7 +488,7 @@
             this.qty3Btn.FlatAppearance.BorderSize = 2;
             this.qty3Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.qty3Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty3Btn.Location = new System.Drawing.Point(971, 118);
+            this.qty3Btn.Location = new System.Drawing.Point(977, 152);
             this.qty3Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.qty3Btn.Name = "qty3Btn";
             this.qty3Btn.Size = new System.Drawing.Size(68, 66);
@@ -504,7 +504,7 @@
             this.qty8Btn.FlatAppearance.BorderSize = 2;
             this.qty8Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.qty8Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty8Btn.Location = new System.Drawing.Point(971, 475);
+            this.qty8Btn.Location = new System.Drawing.Point(977, 509);
             this.qty8Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.qty8Btn.Name = "qty8Btn";
             this.qty8Btn.Size = new System.Drawing.Size(68, 66);
@@ -520,7 +520,7 @@
             this.qty4Btn.FlatAppearance.BorderSize = 2;
             this.qty4Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.qty4Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty4Btn.Location = new System.Drawing.Point(971, 190);
+            this.qty4Btn.Location = new System.Drawing.Point(977, 224);
             this.qty4Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.qty4Btn.Name = "qty4Btn";
             this.qty4Btn.Size = new System.Drawing.Size(68, 66);
@@ -536,7 +536,7 @@
             this.qty6Btn.FlatAppearance.BorderSize = 2;
             this.qty6Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.qty6Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty6Btn.Location = new System.Drawing.Point(971, 333);
+            this.qty6Btn.Location = new System.Drawing.Point(977, 367);
             this.qty6Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.qty6Btn.Name = "qty6Btn";
             this.qty6Btn.Size = new System.Drawing.Size(68, 66);
@@ -552,7 +552,7 @@
             this.qty9Btn.FlatAppearance.BorderSize = 2;
             this.qty9Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.qty9Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty9Btn.Location = new System.Drawing.Point(970, 545);
+            this.qty9Btn.Location = new System.Drawing.Point(976, 579);
             this.qty9Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.qty9Btn.Name = "qty9Btn";
             this.qty9Btn.Size = new System.Drawing.Size(68, 66);
@@ -568,7 +568,7 @@
             this.qty7Btn.FlatAppearance.BorderSize = 2;
             this.qty7Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.qty7Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty7Btn.Location = new System.Drawing.Point(971, 404);
+            this.qty7Btn.Location = new System.Drawing.Point(977, 438);
             this.qty7Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.qty7Btn.Name = "qty7Btn";
             this.qty7Btn.Size = new System.Drawing.Size(68, 66);
@@ -584,7 +584,7 @@
             this.qty0Btn.FlatAppearance.BorderSize = 2;
             this.qty0Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.qty0Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty0Btn.Location = new System.Drawing.Point(970, 616);
+            this.qty0Btn.Location = new System.Drawing.Point(976, 650);
             this.qty0Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.qty0Btn.Name = "qty0Btn";
             this.qty0Btn.Size = new System.Drawing.Size(68, 66);
@@ -597,7 +597,7 @@
             // 
             this.dateLbl.BackColor = System.Drawing.Color.White;
             this.dateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateLbl.Location = new System.Drawing.Point(1342, 9);
+            this.dateLbl.Location = new System.Drawing.Point(1333, 9);
             this.dateLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dateLbl.Name = "dateLbl";
             this.dateLbl.Size = new System.Drawing.Size(135, 23);
@@ -620,19 +620,19 @@
             this.OrderLbx.BackColor = System.Drawing.SystemColors.ControlLight;
             this.OrderLbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderLbx.FormattingEnabled = true;
-            this.OrderLbx.ItemHeight = 24;
-            this.OrderLbx.Location = new System.Drawing.Point(1059, 47);
+            this.OrderLbx.ItemHeight = 18;
+            this.OrderLbx.Location = new System.Drawing.Point(1052, 81);
             this.OrderLbx.Margin = new System.Windows.Forms.Padding(4);
             this.OrderLbx.Name = "OrderLbx";
             this.OrderLbx.ScrollAlwaysVisible = true;
-            this.OrderLbx.Size = new System.Drawing.Size(425, 700);
+            this.OrderLbx.Size = new System.Drawing.Size(425, 706);
             this.OrderLbx.TabIndex = 99;
             // 
             // UsersNameLbl
             // 
             this.UsersNameLbl.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.UsersNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsersNameLbl.Location = new System.Drawing.Point(1199, 9);
+            this.UsersNameLbl.Location = new System.Drawing.Point(1190, 9);
             this.UsersNameLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UsersNameLbl.Name = "UsersNameLbl";
             this.UsersNameLbl.Size = new System.Drawing.Size(135, 23);
@@ -642,7 +642,7 @@
             // 
             this.currentUserLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.currentUserLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.currentUserLabel.Location = new System.Drawing.Point(1081, 9);
+            this.currentUserLabel.Location = new System.Drawing.Point(1072, 9);
             this.currentUserLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.currentUserLabel.Name = "currentUserLabel";
             this.currentUserLabel.Size = new System.Drawing.Size(126, 23);
@@ -656,7 +656,7 @@
             this.qty1Btn.FlatAppearance.BorderSize = 2;
             this.qty1Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.qty1Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty1Btn.Location = new System.Drawing.Point(970, 688);
+            this.qty1Btn.Location = new System.Drawing.Point(976, 722);
             this.qty1Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.qty1Btn.Name = "qty1Btn";
             this.qty1Btn.Size = new System.Drawing.Size(68, 66);
@@ -669,11 +669,11 @@
             // 
             this.totalLbl.AutoSize = true;
             this.totalLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalLbl.Location = new System.Drawing.Point(1357, 755);
+            this.totalLbl.Location = new System.Drawing.Point(1359, 43);
             this.totalLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.totalLbl.Name = "totalLbl";
             this.totalLbl.Padding = new System.Windows.Forms.Padding(7, 6, 0, 6);
-            this.totalLbl.Size = new System.Drawing.Size(63, 36);
+            this.totalLbl.Size = new System.Drawing.Size(52, 30);
             this.totalLbl.TabIndex = 96;
             this.totalLbl.Text = "Total:";
             // 
@@ -681,11 +681,11 @@
             // 
             this.taxLbl.AutoSize = true;
             this.taxLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taxLbl.Location = new System.Drawing.Point(1214, 755);
+            this.taxLbl.Location = new System.Drawing.Point(1216, 43);
             this.taxLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.taxLbl.Name = "taxLbl";
             this.taxLbl.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.taxLbl.Size = new System.Drawing.Size(61, 36);
+            this.taxLbl.Size = new System.Drawing.Size(50, 30);
             this.taxLbl.TabIndex = 95;
             this.taxLbl.Text = "Tax:";
             // 
@@ -693,11 +693,11 @@
             // 
             this.totalPriceLbl.AutoSize = true;
             this.totalPriceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalPriceLbl.Location = new System.Drawing.Point(1417, 755);
+            this.totalPriceLbl.Location = new System.Drawing.Point(1419, 43);
             this.totalPriceLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.totalPriceLbl.Name = "totalPriceLbl";
             this.totalPriceLbl.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.totalPriceLbl.Size = new System.Drawing.Size(69, 36);
+            this.totalPriceLbl.Size = new System.Drawing.Size(58, 30);
             this.totalPriceLbl.TabIndex = 94;
             this.totalPriceLbl.Text = "$0.00";
             // 
@@ -705,11 +705,11 @@
             // 
             this.taxPriceLbl.AutoSize = true;
             this.taxPriceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taxPriceLbl.Location = new System.Drawing.Point(1272, 755);
+            this.taxPriceLbl.Location = new System.Drawing.Point(1274, 43);
             this.taxPriceLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.taxPriceLbl.Name = "taxPriceLbl";
             this.taxPriceLbl.Padding = new System.Windows.Forms.Padding(7, 6, 0, 6);
-            this.taxPriceLbl.Size = new System.Drawing.Size(62, 36);
+            this.taxPriceLbl.Size = new System.Drawing.Size(51, 30);
             this.taxPriceLbl.TabIndex = 93;
             this.taxPriceLbl.Text = "$0.00";
             // 
@@ -717,11 +717,11 @@
             // 
             this.subtotalPriceLbl.AutoSize = true;
             this.subtotalPriceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subtotalPriceLbl.Location = new System.Drawing.Point(1133, 755);
+            this.subtotalPriceLbl.Location = new System.Drawing.Point(1132, 43);
             this.subtotalPriceLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.subtotalPriceLbl.Name = "subtotalPriceLbl";
             this.subtotalPriceLbl.Padding = new System.Windows.Forms.Padding(7, 6, 0, 6);
-            this.subtotalPriceLbl.Size = new System.Drawing.Size(62, 36);
+            this.subtotalPriceLbl.Size = new System.Drawing.Size(51, 30);
             this.subtotalPriceLbl.TabIndex = 92;
             this.subtotalPriceLbl.Text = "$0.00";
             // 
@@ -729,11 +729,11 @@
             // 
             this.subtotalLbl.AutoSize = true;
             this.subtotalLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subtotalLbl.Location = new System.Drawing.Point(1058, 755);
+            this.subtotalLbl.Location = new System.Drawing.Point(1060, 43);
             this.subtotalLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.subtotalLbl.Name = "subtotalLbl";
             this.subtotalLbl.Padding = new System.Windows.Forms.Padding(7, 6, 0, 6);
-            this.subtotalLbl.Size = new System.Drawing.Size(89, 36);
+            this.subtotalLbl.Size = new System.Drawing.Size(73, 30);
             this.subtotalLbl.TabIndex = 91;
             this.subtotalLbl.Text = "Subtotal:";
             // 
@@ -875,26 +875,27 @@
             // 
             this.label2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(928, 9);
+            this.label2.Location = new System.Drawing.Point(865, 47);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 23);
+            this.label2.Size = new System.Drawing.Size(128, 23);
             this.label2.TabIndex = 105;
-            this.label2.Text = "Quantity:";
+            this.label2.Text = "Quantity Selected:";
             // 
             // quantityLbl
             // 
             this.quantityLbl.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.quantityLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantityLbl.Location = new System.Drawing.Point(1010, 9);
+            this.quantityLbl.Location = new System.Drawing.Point(995, 47);
             this.quantityLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.quantityLbl.Name = "quantityLbl";
             this.quantityLbl.Size = new System.Drawing.Size(49, 23);
             this.quantityLbl.TabIndex = 106;
+            this.quantityLbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // RegisterScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Chocolate;
@@ -939,6 +940,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "RegisterScreen";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.RegisterScreen_Load);
             this.hotDrinks.ResumeLayout(false);
             this.coldDrinks.ResumeLayout(false);
             this.coolerDrinks.ResumeLayout(false);

@@ -12,6 +12,10 @@ namespace ICBINJPOSController
 {
     public partial class LoginScreen : Form
     {
+        static public Report dailyReport = new Report();
+        static public Report userReport = new Report();
+
+
         public LoginScreen()
         {
             InitializeComponent();

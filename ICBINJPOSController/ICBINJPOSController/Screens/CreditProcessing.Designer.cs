@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblExpiration = new System.Windows.Forms.Label();
             this.labelCardNum = new System.Windows.Forms.Label();
-            this.tbxEnterExpiration = new System.Windows.Forms.TextBox();
             this.tbxEnterCardNum = new System.Windows.Forms.TextBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -47,49 +45,34 @@
             this.btn3 = new System.Windows.Forms.Button();
             this.btn4 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
-            this.lblCreditApprovedDenial = new System.Windows.Forms.Label();
-            this.btnSlash = new System.Windows.Forms.Button();
+            this.monthTbx = new System.Windows.Forms.TextBox();
+            this.lblExpiration = new System.Windows.Forms.Label();
+            this.yearTbx = new System.Windows.Forms.TextBox();
+            this.lblTotalCharge = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // lblExpiration
-            // 
-            this.lblExpiration.AutoSize = true;
-            this.lblExpiration.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExpiration.Location = new System.Drawing.Point(51, 66);
-            this.lblExpiration.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblExpiration.Name = "lblExpiration";
-            this.lblExpiration.Size = new System.Drawing.Size(116, 18);
-            this.lblExpiration.TabIndex = 122;
-            this.lblExpiration.Text = "Enter Expiration:";
             // 
             // labelCardNum
             // 
             this.labelCardNum.AutoSize = true;
             this.labelCardNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCardNum.Location = new System.Drawing.Point(27, 28);
+            this.labelCardNum.Location = new System.Drawing.Point(59, 61);
             this.labelCardNum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCardNum.Name = "labelCardNum";
             this.labelCardNum.Size = new System.Drawing.Size(140, 18);
             this.labelCardNum.TabIndex = 121;
             this.labelCardNum.Text = "Enter Card Number:";
             // 
-            // tbxEnterExpiration
-            // 
-            this.tbxEnterExpiration.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxEnterExpiration.Location = new System.Drawing.Point(186, 62);
-            this.tbxEnterExpiration.Margin = new System.Windows.Forms.Padding(4);
-            this.tbxEnterExpiration.Name = "tbxEnterExpiration";
-            this.tbxEnterExpiration.Size = new System.Drawing.Size(148, 24);
-            this.tbxEnterExpiration.TabIndex = 120;
-            // 
             // tbxEnterCardNum
             // 
             this.tbxEnterCardNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxEnterCardNum.Location = new System.Drawing.Point(186, 23);
+            this.tbxEnterCardNum.Location = new System.Drawing.Point(218, 55);
             this.tbxEnterCardNum.Margin = new System.Windows.Forms.Padding(4);
             this.tbxEnterCardNum.Name = "tbxEnterCardNum";
             this.tbxEnterCardNum.Size = new System.Drawing.Size(148, 24);
             this.tbxEnterCardNum.TabIndex = 119;
+            this.tbxEnterCardNum.TextChanged += new System.EventHandler(this.tbxEnterCardNum_TextChanged);
             // 
             // btnClose
             // 
@@ -101,6 +84,7 @@
             this.btnClose.TabIndex = 118;
             this.btnClose.Text = "Send";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnCancel
             // 
@@ -112,6 +96,7 @@
             this.btnCancel.TabIndex = 117;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnDelete
             // 
@@ -126,6 +111,7 @@
             this.btnDelete.TabIndex = 116;
             this.btnDelete.Text = "Del";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClear
             // 
@@ -304,39 +290,80 @@
             this.btn1.UseVisualStyleBackColor = false;
             this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
-            // lblCreditApprovedDenial
+            // monthTbx
             // 
-            this.lblCreditApprovedDenial.AutoSize = true;
-            this.lblCreditApprovedDenial.Location = new System.Drawing.Point(54, 104);
-            this.lblCreditApprovedDenial.Name = "lblCreditApprovedDenial";
-            this.lblCreditApprovedDenial.Size = new System.Drawing.Size(0, 13);
-            this.lblCreditApprovedDenial.TabIndex = 123;
+            this.monthTbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monthTbx.Location = new System.Drawing.Point(218, 95);
+            this.monthTbx.Margin = new System.Windows.Forms.Padding(4);
+            this.monthTbx.MaxLength = 2;
+            this.monthTbx.Name = "monthTbx";
+            this.monthTbx.Size = new System.Drawing.Size(30, 24);
+            this.monthTbx.TabIndex = 120;
+            this.monthTbx.TextChanged += new System.EventHandler(this.tbxEnterExpiration_TextChanged);
             // 
-            // btnSlash
+            // lblExpiration
             // 
-            this.btnSlash.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSlash.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSlash.FlatAppearance.BorderSize = 2;
-            this.btnSlash.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSlash.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSlash.Location = new System.Drawing.Point(308, 198);
-            this.btnSlash.Name = "btnSlash";
-            this.btnSlash.Size = new System.Drawing.Size(76, 75);
-            this.btnSlash.TabIndex = 124;
-            this.btnSlash.Text = "/";
-            this.btnSlash.UseVisualStyleBackColor = false;
-            this.btnSlash.Click += new System.EventHandler(this.btnSlash_Click);
+            this.lblExpiration.AutoSize = true;
+            this.lblExpiration.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExpiration.Location = new System.Drawing.Point(83, 99);
+            this.lblExpiration.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblExpiration.Name = "lblExpiration";
+            this.lblExpiration.Size = new System.Drawing.Size(116, 18);
+            this.lblExpiration.TabIndex = 122;
+            this.lblExpiration.Text = "Enter Expiration:";
+            // 
+            // yearTbx
+            // 
+            this.yearTbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yearTbx.Location = new System.Drawing.Point(281, 95);
+            this.yearTbx.Margin = new System.Windows.Forms.Padding(4);
+            this.yearTbx.MaxLength = 2;
+            this.yearTbx.Name = "yearTbx";
+            this.yearTbx.Size = new System.Drawing.Size(30, 24);
+            this.yearTbx.TabIndex = 126;
+            // 
+            // lblTotalCharge
+            // 
+            this.lblTotalCharge.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalCharge.Location = new System.Drawing.Point(219, 28);
+            this.lblTotalCharge.Name = "lblTotalCharge";
+            this.lblTotalCharge.Size = new System.Drawing.Size(115, 24);
+            this.lblTotalCharge.TabIndex = 123;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(94, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 18);
+            this.label1.TabIndex = 127;
+            this.label1.Text = "Total Charged:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(252, 99);
+            this.label2.Margin = new System.Windows.Forms.Padding(0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(28, 18);
+            this.label2.TabIndex = 128;
+            this.label2.Text = "/20";
             // 
             // CreditProcessing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(453, 509);
-            this.Controls.Add(this.btnSlash);
-            this.Controls.Add(this.lblCreditApprovedDenial);
+            this.ClientSize = new System.Drawing.Size(453, 528);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.yearTbx);
+            this.Controls.Add(this.lblTotalCharge);
             this.Controls.Add(this.lblExpiration);
             this.Controls.Add(this.labelCardNum);
-            this.Controls.Add(this.tbxEnterExpiration);
+            this.Controls.Add(this.monthTbx);
             this.Controls.Add(this.tbxEnterCardNum);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnCancel);
@@ -355,16 +382,14 @@
             this.Controls.Add(this.btn1);
             this.Name = "CreditProcessing";
             this.Text = "Credit Card Processing";
+            this.Load += new System.EventHandler(this.CreditProcessing_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblExpiration;
         private System.Windows.Forms.Label labelCardNum;
-        private System.Windows.Forms.TextBox tbxEnterExpiration;
         private System.Windows.Forms.TextBox tbxEnterCardNum;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnCancel;
@@ -381,7 +406,11 @@
         private System.Windows.Forms.Button btn3;
         private System.Windows.Forms.Button btn4;
         private System.Windows.Forms.Button btn1;
-        private System.Windows.Forms.Label lblCreditApprovedDenial;
-        private System.Windows.Forms.Button btnSlash;
+        private System.Windows.Forms.TextBox monthTbx;
+        private System.Windows.Forms.Label lblExpiration;
+        private System.Windows.Forms.TextBox yearTbx;
+        private System.Windows.Forms.Label lblTotalCharge;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

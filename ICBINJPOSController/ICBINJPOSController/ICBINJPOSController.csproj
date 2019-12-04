@@ -51,10 +51,10 @@
     <Compile Include="Classes\Admin.cs" />
     <Compile Include="Classes\Files.cs" />
     <Compile Include="Classes\CoffeeShopMenu.cs" />
-    <Compile Include="CreditProcessing.cs">
+    <Compile Include="Screens\CreditProcessing.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreditProcessing.Designer.cs">
+    <Compile Include="Screens\CreditProcessing.Designer.cs">
       <DependentUpon>CreditProcessing.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\PaymentScreen.cs">
@@ -101,7 +101,7 @@
     </Compile>
     <Compile Include="Classes\Transaction.cs" />
     <Compile Include="Classes\User.cs" />
-    <EmbeddedResource Include="CreditProcessing.resx">
+    <EmbeddedResource Include="Screens\CreditProcessing.resx">
       <DependentUpon>CreditProcessing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\PaymentScreen.resx">
