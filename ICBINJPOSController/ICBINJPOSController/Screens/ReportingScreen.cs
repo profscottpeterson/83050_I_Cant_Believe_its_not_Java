@@ -24,8 +24,8 @@ namespace ICBINJPOSController
             // Select a user.
             string userSelected = userLbx.SelectedItem.ToString();
 
-            
-            
+
+
            
                                      
                 // Find the user report file by standardized filename or User class variable.
@@ -58,6 +58,24 @@ namespace ICBINJPOSController
                     userLbx.Items.Add(lineSegment[1]);
                 }
             }
+
+            dailyTotalNumOfTransLabel.Visible = false;
+            dailyTotalTaxLabel.Visible = false;
+            dailyTotalCashSalesLabel.Visible = false;
+            dailyTotalCreditSalesLabel.Visible = false;
+        }
+
+        private void dailyReportBtn_Click(object sender, EventArgs e)
+        {
+            dailyTotalNumOfTransLabel.Visible = true;
+            dailyTotalTaxLabel.Visible = true;
+            dailyTotalCashSalesLabel.Visible = true;
+            dailyTotalCreditSalesLabel.Visible = true;
+
+            dailyTotalNumOfTransLabel.Text = LoginScreen.dailyReport.NumOfTransactions.ToString();
+            dailyTotalTaxLabel.Text = LoginScreen.dailyReport.TotalTax.ToString();
+            dailyTotalCashSalesLabel.Text = LoginScreen.dailyReport.TotalCashSales.ToString();
+            dailyTotalCreditSalesLabel.Text = LoginScreen.dailyReport.TotalCreditSales.ToString();
         }
     }
 }

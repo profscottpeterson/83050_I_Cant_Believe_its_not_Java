@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace ICBINJPOSController
 {
@@ -197,6 +198,59 @@ namespace ICBINJPOSController
             this.quantityLbl.Text = "1";
         }
 
+        public void PrintReceipt()
+        {
+            // checks the existance of file and either creates it or updates it
+            string path = @"Receipt.txt";
+            if (!File.Exists(path))
+            {
+                using (StreamWriter writer = File.CreateText(path))
+                {
+                    // writes receipt to text file
+
+                    //write date, time, user, and transaction number to receipt
+                    writer.WriteLine("Date: " + currentTransaction.TransDate + " " + currentTransaction.TransTime);
+                    writer.WriteLine("Current User: " + currentTransaction.CurrentUser);
+                    writer.WriteLine("Transaction: " + currentTransaction.TransNum);
+
+                    //write order to receipt
+                    foreach (var item in currentTransaction.Order)
+                    {
+                        writer.WriteLine(item.Quantity.ToString() + " " + item.Size + " " + item.Description + "\t\t" + item.Price.ToString("c"));
+                    }
+
+                    // writes price info to receipt
+                    writer.WriteLine("Subtotal: " + subtotalPriceLbl.Text + "  ||  " +
+                                     "Taxes: " + taxPriceLbl.Text + "  ||  " +
+                                     "Total: " + totalPriceLbl.Text);
+                }
+
+            }
+            else
+            {
+                using (StreamWriter writer = File.AppendText(path))
+                {
+                    // writes receipt to text file
+
+                    //write date, time, user, and transaction number to receipt
+                    writer.WriteLine("Date: " + currentTransaction.TransDate + " " + currentTransaction.TransTime);
+                    writer.WriteLine("Current User: " + currentTransaction.CurrentUser);
+                    writer.WriteLine("Transaction: " + currentTransaction.TransNum);
+
+                    //write order to receipt
+                    foreach (var item in currentTransaction.Order)
+                    {
+                        writer.WriteLine(item.Quantity.ToString() + " " + item.Size + " " + item.Description + "\t\t" + item.Price.ToString("c"));
+                    }
+
+                    // writes price info to receipt
+                    writer.WriteLine("Subtotal: " + subtotalPriceLbl.Text + "  ||  " +
+                                     "Taxes: " + taxPriceLbl.Text + "  ||  " +
+                                     "Total: " + totalPriceLbl.Text);
+                }
+            }
+        }
+
         public void Totals()
         {
             // Call subtotal and display in label.
@@ -354,6 +408,9 @@ namespace ICBINJPOSController
             //TODO payment screen and processing
             PaymentScreen paymentScreen = new PaymentScreen();
             paymentScreen.ShowDialog();
+
+            // Sends Receipt to Text file
+            PrintReceipt();
 
             // If payment is successfull close transaction.
             this.CloseAndOpenNewTransaction();
