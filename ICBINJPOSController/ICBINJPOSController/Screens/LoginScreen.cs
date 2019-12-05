@@ -12,17 +12,12 @@ namespace ICBINJPOSController
 {
     public partial class LoginScreen : Form
     {
-        static public Report dailyReport = new Report();
-        static public Report userReport = new Report();
-
-
         public LoginScreen()
         {
             InitializeComponent();
 
         }
-
-
+        
         //login screen
         private void LoginScreen_Load(object sender, EventArgs e)
         {
@@ -47,7 +42,7 @@ namespace ICBINJPOSController
                 if(AuthSelect.SelectedIndex == 0)
                 {
                     //***REMOVE, JUST ADDED FOR EASE OF USE
-                    User.employeeLoggedIn = true;
+                    //User.employeeLoggedIn = true;
 
                     //Pass text box text into variable, open file, pass username & passwork into method
                     User.employeeName = userNameTextBox.Text;
@@ -133,7 +128,7 @@ namespace ICBINJPOSController
                 if (AuthSelect.SelectedIndex == 2)
                 {
                     //***REMOVE, JUST ADDED FOR EASE OF USE
-                    User.administratorLoggedIn = true;
+                    //User.administratorLoggedIn = true;
 
                     //Pass text box text into variable, open file, pass username & passwork into method
                     User.adminName = userNameTextBox.Text;

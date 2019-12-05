@@ -540,7 +540,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PaymentScreen";
             this.Text = "PaymentScreen";
-            this.Load += new System.EventHandler(this.PaymentScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

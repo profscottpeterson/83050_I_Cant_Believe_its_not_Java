@@ -12,34 +12,14 @@ using System.Windows.Forms;
 namespace ICBINJPOSController
 {
     public partial class ReportingScreen : Form
-    {
+    {   
+        // Report fields to hold built report values.
+        Report dailyReport = new Report();
+        Report userReport = new Report();
+
         public ReportingScreen()
         {
             InitializeComponent();
-        }
-
-        private void userReportBtn_Click(object sender, EventArgs e)
-        {
-            // TODO
-            // Select a user.
-            string userSelected = userLbx.SelectedItem.ToString();
-
-
-
-           
-                                     
-                // Find the user report file by standardized filename or User class variable.
-
-
-                // Print to screen to simulate printing report?
-            
-
-
-
-
-
-
-
         }
 
         private void ReportingScreen_Load(object sender, EventArgs e)
@@ -48,12 +28,12 @@ namespace ICBINJPOSController
             using (StreamReader employees = new StreamReader("employeeAuth.txt"))
             {
                 string fileLines = "";
-               
+
                 while ((fileLines = employees.ReadLine()) != null && !employees.EndOfStream)
                 {
                     // File delimeter is a space.
                     String[] lineSegment = fileLines.Split(' ');
-                   
+
                     // Add user name to listbox.
                     userLbx.Items.Add(lineSegment[1]);
                 }
@@ -65,17 +45,61 @@ namespace ICBINJPOSController
             dailyTotalCreditSalesLabel.Visible = false;
         }
 
-        private void dailyReportBtn_Click(object sender, EventArgs e)
+        private void userShowReportBtn_Click(object sender, EventArgs e)
+        {
+            if (userLbx.SelectedIndex != -1)
+            {
+                // Selected user.
+                string userSelected = userLbx.SelectedItem.ToString();
+
+                // Set the reports user.
+                userReport.ReportUser = userSelected;
+                // Build a report, filling report values from a file.
+                userReport.BuildReport(true, userReport.ReportUser);
+                
+
+                // Display report variables to matching tbxs.
+                currentUserLabel.Text = userReport.ReportUser;
+                userTotalNumOfTransLabel.Text = userReport.NumOfTransactions.ToString();
+                userTotalTaxLabel.Text = userReport.TotalTax.ToString();
+                userTotalCashSalesLabel.Text = userReport.TotalCashSales.ToString();
+                userTotalCreditSalesLabel.Text = userReport.TotalCreditSales.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Please select a user.");
+            }
+        }
+
+        private void dailyShowReportBtn_Click(object sender, EventArgs e)                            
         {
             dailyTotalNumOfTransLabel.Visible = true;
             dailyTotalTaxLabel.Visible = true;
             dailyTotalCashSalesLabel.Visible = true;
             dailyTotalCreditSalesLabel.Visible = true;
 
-            dailyTotalNumOfTransLabel.Text = LoginScreen.dailyReport.NumOfTransactions.ToString();
-            dailyTotalTaxLabel.Text = LoginScreen.dailyReport.TotalTax.ToString();
-            dailyTotalCashSalesLabel.Text = LoginScreen.dailyReport.TotalCashSales.ToString();
-            dailyTotalCreditSalesLabel.Text = LoginScreen.dailyReport.TotalCreditSales.ToString();
+            // Build a report, filling report values from a file.
+            dailyReport.BuildReport(false, "");
+
+            dailyTotalNumOfTransLabel.Text = dailyReport.NumOfTransactions.ToString();
+            dailyTotalTaxLabel.Text = dailyReport.TotalTax.ToString();
+            dailyTotalCashSalesLabel.Text = dailyReport.TotalCashSales.ToString();
+            dailyTotalCreditSalesLabel.Text = dailyReport.TotalCreditSales.ToString();
+        }
+
+        private void printUserReportBtn_Click(object sender, EventArgs e)
+        {
+            userReport.PrintReport(true, userReport);
+            userReport.ClearSavedTransactions(true, userReport.ReportUser);
+            userReport = null;
+            
+        }
+
+        private void printDailyReport_Click(object sender, EventArgs e)
+        {
+            dailyReport.PrintReport(false, dailyReport);
+            dailyReport.ClearSavedTransactions(false, "");
+            dailyReport = null;
         }
     }
 }

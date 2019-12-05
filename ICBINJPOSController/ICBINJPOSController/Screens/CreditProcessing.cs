@@ -21,6 +21,17 @@ namespace ICBINJPOSController
         // Holds the credit card input from user.
         string userInput = "";
 
+        private void CreditProcessing_Load(object sender, EventArgs e)
+        {
+            // Display the current Balance Being Charged to the card.
+            lblTotalCharge.Text = Payment.Tendered.ToString("c");
+            // Credit Card Number entered first so place focus on its tbx.
+            tbxEnterCardNum.Focus();
+
+            tbxMonth.Hide();
+            tbxYear.Hide();
+        }
+        
         public void EnterData(string input)
         {
             userInput += input;
@@ -32,62 +43,71 @@ namespace ICBINJPOSController
             }
             else
             {
-                monthTbx.Text = userInput;
+                tbxMonth.Text = userInput;
             }
         }
 
         private void tbxEnterCardNum_TextChanged(object sender, EventArgs e)
         {
-            this.ActiveControl = tbxEnterCardNum;
-            tbxEnterCardNum.Focus();
+            // Remove invalid characters.
+            string tempCC = tbxEnterCardNum.Text.Replace(".|,|-", "");
+            tbxEnterCardNum.Text = tempCC;
 
-            if (tbxEnterCardNum.TextLength == 16)
+            // Make sure the CC is 16 digits long.
+            if (tempCC.Length == 16)
             {
-                userInput = "";
-                MessageBox.Show("Please enter expiration date");
-                cardNumFinished = true;
-                monthTbx.Show();
-                yearTbx.Show();
-                monthTbx.Focus();
+                double tempCardNum;
+
+                if (double.TryParse(tbxEnterCardNum.Text, out tempCardNum))
+                {
+                    userInput = "";
+                    MessageBox.Show("Please enter expiration date");
+                    cardNumFinished = true;
+                    tbxMonth.Show();
+                    tbxYear.Show();
+                    tbxMonth.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("Only enter numeric values.");
+                    tbxEnterCardNum.Text = "";
+                }
             }
         }
 
         private void tbxEnterExpiration_TextChanged(object sender, EventArgs e)
         {
-            if (monthTbx.TextLength == 2)
+            if (tbxMonth.TextLength == 2)
             {
                 // Int to hold month input by user.
                 int userMonth = 0;
 
-                int.TryParse(monthTbx.Text, out userMonth);
-                if (userMonth > 0 && userMonth < 13)
+                if (int.TryParse(tbxMonth.Text, out userMonth))
                 {
-                    // Put focus on year tbx for user entry.
-                    yearTbx.Focus();
+                    if (userMonth > 0 && userMonth < 13)
+                    {
+                        // Put focus on year tbx for user entry.
+                        tbxYear.Focus();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please enter a valid month, 01-12.");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Please enter a valid month, 01-12.");
+                    MessageBox.Show("Only enter numeric values.");
                 }
             }
         }
 
-        private void CreditProcessing_Load(object sender, EventArgs e)
-        {
-            // Display the current Balance Being Charged to the card.
-            lblTotalCharge.Text = Payment.Tendered.ToString("c");
-            // Credit Card Number entered first so place focus on its tbx.
-            tbxEnterCardNum.Focus();
+        
 
-            monthTbx.Hide();
-            yearTbx.Hide();
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
+        private void btnSend_Click(object sender, EventArgs e)
         {
             if (tbxEnterCardNum.TextLength < 17)
             {
-                if (monthTbx.TextLength == 2 && yearTbx.TextLength == 2)
+                if (tbxMonth.TextLength == 2 && tbxYear.TextLength == 2)
                 {
                     // Holds the integer month the user entered.
                     int userMonth = 0;
@@ -95,12 +115,12 @@ namespace ICBINJPOSController
                     int userYr = 0;
 
                     // Convert textbox strings to ints.
-                    int.TryParse(monthTbx.Text, out userMonth);
-                    int.TryParse(yearTbx.Text, out userYr);
+                    int.TryParse(tbxMonth.Text, out userMonth);
+                    int.TryParse(tbxYear.Text, out userYr);
 
                     // Find the days in the month selected for that year.
                     int daysInMonth = DateTime.DaysInMonth(userYr, userMonth);
-                    string userDate = monthTbx.Text + "/" + daysInMonth + "/20" + yearTbx.Text;
+                    string userDate = tbxMonth.Text + "/" + daysInMonth + "/20" + tbxYear.Text;
                     DateTime expDate = Convert.ToDateTime(userDate);
 
                     DateTime.TryParse(userDate, out expDate);
@@ -118,7 +138,7 @@ namespace ICBINJPOSController
                     }
                     else
                     {
-                        MessageBox.Show("This card expired " + expDate.ToShortDateString() + " .\nPlease try a different payment method.");
+                        MessageBox.Show(this, "This card expired " + expDate.ToShortDateString() + " .\nPlease try a different payment method.");
                     }
                 }
                 else
@@ -128,7 +148,7 @@ namespace ICBINJPOSController
             }
             else
             {
-                MessageBox.Show("Please enter all 16 digits of the account number.");
+                MessageBox.Show(this, "Please enter all 16 digits of the account number.");
             }
         }
 
@@ -137,6 +157,14 @@ namespace ICBINJPOSController
             Payment.CreditSuccessful = false;
             ActiveForm.Close();
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            tbxEnterCardNum.Text = "";
+            tbxMonth.Text = "";
+            tbxYear.Text = "";
+        }
+
         private void btn1_Click(object sender, EventArgs e)
         {
             EnterData("1");
@@ -188,38 +216,5 @@ namespace ICBINJPOSController
         {
             EnterData(".");
         }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            // Deleting the last character in tendered label
-            // by using .Remove to remove what is after the length
-            // given in parathesis. If there is only one character long
-            // it will clear the label
-            
-            string tempVar;
-            if (tbxEnterCardNum.Focused)
-            {
-                tempVar = tbxEnterCardNum.Text;
-                if (tempVar.Length <= 1)
-                {
-                    tbxEnterCardNum.Text = "";
-                }
-                else
-                {
-                    tempVar = tempVar.Remove(tempVar.Length - 1);
-                    tbxEnterCardNum.Text = tempVar;
-                }
-            }
-        }
-
-        //private void tbxEnterCardNum_Click(object sender, EventArgs e)
-        //{
-         //   tbxEnterCardNum.Focus();
-        //}
-
-        //private void tbxEnterCardNum_KeyDown(object sender, KeyEventArgs e)
-       // {
-        //    tbxEnterCardNum.Focus();
-        //}
     }
 }
