@@ -2,3 +2,5 @@
 002 Dawn Eggs
 003 Cole Sausage
 004 William Toast
+005 Dawn Ham
+006 Cole Coffee
