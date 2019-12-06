@@ -35,8 +35,16 @@ namespace ICBINJPOSController
 
         public void OpenEmpFile()
         {
+            //clear all list contents upon opening new file
+            EmpID.Clear();
+            empID.Clear();
+            EmpUserName.Clear();
+            empUserName.Clear();
+            EmpPassWord.Clear();
+            empPassWord.Clear();
+
             //instantiate stream reader file
-            using(StreamReader streamEmployee = new StreamReader("employeeAuth.txt"))
+            using (StreamReader streamEmployee = new StreamReader("employeeAuth.txt"))
             {
                 //variable to hold line
                 string emp = "";
@@ -54,11 +62,19 @@ namespace ICBINJPOSController
                 empID = EmpID;
                 empUserName = EmpUserName;
                 empPassWord = EmpPassWord;
-            }        
+            }
         }
 
         public void OpenMgtFile()
         {
+            //clear all list contents upon opening new file
+            MgtID.Clear();
+            mgtID.Clear();
+            MgtUserName.Clear();
+            mgtUserName.Clear();
+            MgtPassWord.Clear();
+            mgtPassWord.Clear();
+
             //instantiate stream reader file
             using (StreamReader streamManagement = new StreamReader("managementAuth.txt"))
             {
@@ -83,6 +99,14 @@ namespace ICBINJPOSController
 
         public void OpenAdminFile()
         {
+            //clear all list contents upon opening new file
+            AdminID.Clear();
+            adminID.Clear();
+            AdminUserName.Clear();
+            adminUserName.Clear();
+            AdminPassWord.Clear();
+            adminPassWord.Clear();
+
             //instantiate stream reader file
             using (StreamReader streamAdministrator = new StreamReader("administratorAuth.txt"))
             {

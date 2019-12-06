@@ -47,7 +47,7 @@
             this.selectUserLbl = new System.Windows.Forms.Label();
             this.setUserLbl = new System.Windows.Forms.Label();
             this.setPasswordLbl = new System.Windows.Forms.Label();
-            this.userTxt = new System.Windows.Forms.TextBox();
+            this.userNameTxt = new System.Windows.Forms.TextBox();
             this.passwordTxt = new System.Windows.Forms.TextBox();
             this.addUserBtn = new System.Windows.Forms.Button();
             this.deleteUserBtn = new System.Windows.Forms.Button();
@@ -249,7 +249,7 @@
             this.userMaintGrp.Controls.Add(this.selectUserLbl);
             this.userMaintGrp.Controls.Add(this.setUserLbl);
             this.userMaintGrp.Controls.Add(this.setPasswordLbl);
-            this.userMaintGrp.Controls.Add(this.userTxt);
+            this.userMaintGrp.Controls.Add(this.userNameTxt);
             this.userMaintGrp.Controls.Add(this.passwordTxt);
             this.userMaintGrp.Controls.Add(this.addUserBtn);
             this.userMaintGrp.Controls.Add(this.deleteUserBtn);
@@ -281,9 +281,9 @@
             this.setUserLbl.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.setUserLbl.Location = new System.Drawing.Point(34, 313);
             this.setUserLbl.Name = "setUserLbl";
-            this.setUserLbl.Size = new System.Drawing.Size(165, 23);
+            this.setUserLbl.Size = new System.Drawing.Size(265, 23);
             this.setUserLbl.TabIndex = 8;
-            this.setUserLbl.Text = "Set User:";
+            this.setUserLbl.Text = "Set User Name:";
             // 
             // setPasswordLbl
             // 
@@ -295,13 +295,13 @@
             this.setPasswordLbl.TabIndex = 7;
             this.setPasswordLbl.Text = "Set Password:";
             // 
-            // userTxt
+            // userNameTxt
             // 
-            this.userTxt.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userTxt.Location = new System.Drawing.Point(312, 310);
-            this.userTxt.Name = "userTxt";
-            this.userTxt.Size = new System.Drawing.Size(385, 27);
-            this.userTxt.TabIndex = 10;
+            this.userNameTxt.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userNameTxt.Location = new System.Drawing.Point(312, 310);
+            this.userNameTxt.Name = "userNameTxt";
+            this.userNameTxt.Size = new System.Drawing.Size(385, 27);
+            this.userNameTxt.TabIndex = 10;
             // 
             // passwordTxt
             // 
@@ -336,6 +336,7 @@
             this.deleteUserBtn.TabIndex = 13;
             this.deleteUserBtn.Text = "Delete User";
             this.deleteUserBtn.UseVisualStyleBackColor = false;
+            this.deleteUserBtn.Click += new System.EventHandler(this.deleteUserBtn_Click);
             // 
             // userSelectComboBox
             // 
@@ -467,7 +468,7 @@
         private System.Windows.Forms.Label selectUserLbl;
         private System.Windows.Forms.Label setUserLbl;
         private System.Windows.Forms.Label setPasswordLbl;
-        private System.Windows.Forms.TextBox userTxt;
+        private System.Windows.Forms.TextBox userNameTxt;
         private System.Windows.Forms.TextBox passwordTxt;
         private System.Windows.Forms.Button addUserBtn;
         private System.Windows.Forms.Button deleteUserBtn;

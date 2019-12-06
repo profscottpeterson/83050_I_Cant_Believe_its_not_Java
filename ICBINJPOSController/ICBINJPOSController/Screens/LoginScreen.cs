@@ -54,9 +54,6 @@ namespace ICBINJPOSController
                     {
                         MessageBox.Show("Successful Login.");                 
                         this.Hide();
-                        //**options screen test
-                        //OptionsScreen registerScreen = new OptionsScreen();
-
                         RegisterScreen registerScreen = new RegisterScreen();
                         registerScreen.ShowDialog();
                         this.userNameTextBox.Clear();
@@ -85,7 +82,7 @@ namespace ICBINJPOSController
                 if (AuthSelect.SelectedIndex == 1)
                 {
                     //***REMOVE, JUST ADDED FOR EASE OF USE
-                    User.managerLoggedIn = true;
+                    //User.managerLoggedIn = true;
 
                     //Pass text box text into variable, open file, pass username & passwork into method
                     User.managerName = userNameTextBox.Text;
@@ -97,9 +94,6 @@ namespace ICBINJPOSController
                     {
                         MessageBox.Show("Successful Login.");
                         this.Hide();
-                        //**options screen test
-                        //OptionsScreen reportingScreen = new OptionsScreen();
-
                         ReportingScreen reportingScreen = new ReportingScreen();
                         reportingScreen.ShowDialog();
                         this.userNameTextBox.Clear();
@@ -128,7 +122,7 @@ namespace ICBINJPOSController
                 if (AuthSelect.SelectedIndex == 2)
                 {
                     //***REMOVE, JUST ADDED FOR EASE OF USE
-                    //User.administratorLoggedIn = true;
+                    User.administratorLoggedIn = true;
 
                     //Pass text box text into variable, open file, pass username & passwork into method
                     User.adminName = userNameTextBox.Text;
