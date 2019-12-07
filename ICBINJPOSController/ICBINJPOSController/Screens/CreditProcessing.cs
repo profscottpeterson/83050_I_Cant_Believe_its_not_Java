@@ -17,7 +17,7 @@ namespace ICBINJPOSController
             InitializeComponent();
         }
 
-        bool cardNumFinished = false;
+        bool cardNumFinished, monthFinished = false;
         // Holds the credit card input from user.
         string userInput = "";
 
@@ -27,9 +27,6 @@ namespace ICBINJPOSController
             lblTotalCharge.Text = Payment.Tendered.ToString("c");
             // Credit Card Number entered first so place focus on its tbx.
             tbxEnterCardNum.Focus();
-
-            tbxMonth.Hide();
-            tbxYear.Hide();
         }
         
         public void EnterData(string input)
@@ -41,9 +38,13 @@ namespace ICBINJPOSController
                 tbxEnterCardNum.Text = userInput;
 
             }
-            else
+            else if (monthFinished == false)
             {
                 tbxMonth.Text = userInput;
+            }
+            else
+            {
+                tbxYear.Text = userInput;
             }
         }
 
@@ -63,8 +64,6 @@ namespace ICBINJPOSController
                     userInput = "";
                     MessageBox.Show("Please enter expiration date");
                     cardNumFinished = true;
-                    tbxMonth.Show();
-                    tbxYear.Show();
                     tbxMonth.Focus();
                 }
                 else
@@ -75,7 +74,7 @@ namespace ICBINJPOSController
             }
         }
 
-        private void tbxEnterExpiration_TextChanged(object sender, EventArgs e)
+        private void tbxMonth_TextChanged(object sender, EventArgs e)
         {
             if (tbxMonth.TextLength == 2)
             {
@@ -86,12 +85,16 @@ namespace ICBINJPOSController
                 {
                     if (userMonth > 0 && userMonth < 13)
                     {
+                        monthFinished = true;
+
                         // Put focus on year tbx for user entry.
                         tbxYear.Focus();
+
                     }
                     else
                     {
                         MessageBox.Show("Please enter a valid month, 01-12.");
+                        tbxMonth.Text = "";
                     }
                 }
                 else
@@ -100,8 +103,6 @@ namespace ICBINJPOSController
                 }
             }
         }
-
-        
 
         private void btnSend_Click(object sender, EventArgs e)
         {
@@ -139,6 +140,8 @@ namespace ICBINJPOSController
                     else
                     {
                         MessageBox.Show(this, "This card expired " + expDate.ToShortDateString() + " .\nPlease try a different payment method.");
+                        tbxMonth.Text = "";
+                        tbxYear.Text = "";
                     }
                 }
                 else
@@ -212,6 +215,8 @@ namespace ICBINJPOSController
         {
             EnterData("0");
         }
+
+
         private void btnDecPt_Click(object sender, EventArgs e)
         {
             EnterData(".");

@@ -15,7 +15,6 @@ namespace ICBINJPOSController
         public LoginScreen()
         {
             InitializeComponent();
-
         }
         
         //login screen

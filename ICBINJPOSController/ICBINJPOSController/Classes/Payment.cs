@@ -65,7 +65,14 @@ namespace ICBINJPOSController
             set { totalCreditCollected = value; }
         }
 
+        // Track if payment completed.
+        private static bool paymentComplete;
 
+        public static bool PaymentComplete
+        {
+            get { return paymentComplete; }
+            set { paymentComplete = value; }
+        }
 
         public void RunCreditCard()
         {

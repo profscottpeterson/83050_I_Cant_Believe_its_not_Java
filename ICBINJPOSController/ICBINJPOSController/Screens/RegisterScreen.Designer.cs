@@ -102,7 +102,7 @@
             this.largeRadioBtn.Margin = new System.Windows.Forms.Padding(4);
             this.largeRadioBtn.Name = "largeRadioBtn";
             this.largeRadioBtn.Size = new System.Drawing.Size(76, 28);
-            this.largeRadioBtn.TabIndex = 48;
+            this.largeRadioBtn.TabIndex = 2;
             this.largeRadioBtn.TabStop = true;
             this.largeRadioBtn.Text = "Large";
             this.largeRadioBtn.UseVisualStyleBackColor = true;
@@ -115,7 +115,7 @@
             this.mediumRadioBtn.Margin = new System.Windows.Forms.Padding(4);
             this.mediumRadioBtn.Name = "mediumRadioBtn";
             this.mediumRadioBtn.Size = new System.Drawing.Size(97, 28);
-            this.mediumRadioBtn.TabIndex = 47;
+            this.mediumRadioBtn.TabIndex = 1;
             this.mediumRadioBtn.TabStop = true;
             this.mediumRadioBtn.Text = "Medium";
             this.mediumRadioBtn.UseVisualStyleBackColor = true;
@@ -128,7 +128,7 @@
             this.smallRadioBtn.Margin = new System.Windows.Forms.Padding(4);
             this.smallRadioBtn.Name = "smallRadioBtn";
             this.smallRadioBtn.Size = new System.Drawing.Size(74, 28);
-            this.smallRadioBtn.TabIndex = 46;
+            this.smallRadioBtn.TabIndex = 0;
             this.smallRadioBtn.TabStop = true;
             this.smallRadioBtn.Text = "Small";
             this.smallRadioBtn.UseVisualStyleBackColor = true;
@@ -141,7 +141,7 @@
             this.backButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(153, 52);
-            this.backButton.TabIndex = 43;
+            this.backButton.TabIndex = 13;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
@@ -154,7 +154,7 @@
             this.coffeeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.coffeeBtn.Name = "coffeeBtn";
             this.coffeeBtn.Size = new System.Drawing.Size(153, 46);
-            this.coffeeBtn.TabIndex = 32;
+            this.coffeeBtn.TabIndex = 0;
             this.coffeeBtn.Text = "Coffee";
             this.coffeeBtn.UseVisualStyleBackColor = false;
             this.coffeeBtn.Click += new System.EventHandler(this.coffeeBtn_Click);
@@ -167,7 +167,7 @@
             this.cappuchinoBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cappuchinoBtn.Name = "cappuchinoBtn";
             this.cappuchinoBtn.Size = new System.Drawing.Size(153, 46);
-            this.cappuchinoBtn.TabIndex = 37;
+            this.cappuchinoBtn.TabIndex = 1;
             this.cappuchinoBtn.Text = "Cappuccino";
             this.cappuchinoBtn.UseVisualStyleBackColor = false;
             this.cappuchinoBtn.Click += new System.EventHandler(this.cappuchinoBtn_Click);
@@ -180,7 +180,7 @@
             this.espressoBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.espressoBtn.Name = "espressoBtn";
             this.espressoBtn.Size = new System.Drawing.Size(153, 46);
-            this.espressoBtn.TabIndex = 30;
+            this.espressoBtn.TabIndex = 3;
             this.espressoBtn.Text = "Espresso";
             this.espressoBtn.UseVisualStyleBackColor = false;
             this.espressoBtn.Click += new System.EventHandler(this.espressoBtn_Click);
@@ -193,7 +193,7 @@
             this.teaBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.teaBtn.Name = "teaBtn";
             this.teaBtn.Size = new System.Drawing.Size(153, 46);
-            this.teaBtn.TabIndex = 31;
+            this.teaBtn.TabIndex = 2;
             this.teaBtn.Text = "Tea";
             this.teaBtn.UseVisualStyleBackColor = false;
             this.teaBtn.Click += new System.EventHandler(this.teaBtn_Click);
@@ -206,7 +206,7 @@
             this.cocoaBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cocoaBtn.Name = "cocoaBtn";
             this.cocoaBtn.Size = new System.Drawing.Size(153, 46);
-            this.cocoaBtn.TabIndex = 36;
+            this.cocoaBtn.TabIndex = 4;
             this.cocoaBtn.Text = "Hot Cocoa";
             this.cocoaBtn.UseVisualStyleBackColor = false;
             this.cocoaBtn.Click += new System.EventHandler(this.cocoaBtn_Click);
@@ -219,7 +219,7 @@
             this.icedCoffeeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.icedCoffeeBtn.Name = "icedCoffeeBtn";
             this.icedCoffeeBtn.Size = new System.Drawing.Size(153, 46);
-            this.icedCoffeeBtn.TabIndex = 33;
+            this.icedCoffeeBtn.TabIndex = 0;
             this.icedCoffeeBtn.Text = "Iced Coffee";
             this.icedCoffeeBtn.UseVisualStyleBackColor = false;
             this.icedCoffeeBtn.Click += new System.EventHandler(this.icedCoffeeBtn_Click);
@@ -232,7 +232,7 @@
             this.frappuchinoBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.frappuchinoBtn.Name = "frappuchinoBtn";
             this.frappuchinoBtn.Size = new System.Drawing.Size(153, 46);
-            this.frappuchinoBtn.TabIndex = 34;
+            this.frappuchinoBtn.TabIndex = 3;
             this.frappuchinoBtn.Text = "Frappuccino";
             this.frappuchinoBtn.UseVisualStyleBackColor = false;
             this.frappuchinoBtn.Click += new System.EventHandler(this.frappuchinoBtn_Click);
@@ -245,7 +245,7 @@
             this.icedTeaBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.icedTeaBtn.Name = "icedTeaBtn";
             this.icedTeaBtn.Size = new System.Drawing.Size(153, 46);
-            this.icedTeaBtn.TabIndex = 35;
+            this.icedTeaBtn.TabIndex = 2;
             this.icedTeaBtn.Text = "Iced Tea";
             this.icedTeaBtn.UseVisualStyleBackColor = false;
             this.icedTeaBtn.Click += new System.EventHandler(this.icedTeaBtn_Click);
@@ -258,7 +258,7 @@
             this.smoothieBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.smoothieBtn.Name = "smoothieBtn";
             this.smoothieBtn.Size = new System.Drawing.Size(153, 46);
-            this.smoothieBtn.TabIndex = 28;
+            this.smoothieBtn.TabIndex = 1;
             this.smoothieBtn.Text = "Smoothie";
             this.smoothieBtn.UseVisualStyleBackColor = false;
             this.smoothieBtn.Click += new System.EventHandler(this.smoothieBtn_Click);
@@ -271,7 +271,7 @@
             this.refresherBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.refresherBtn.Name = "refresherBtn";
             this.refresherBtn.Size = new System.Drawing.Size(153, 46);
-            this.refresherBtn.TabIndex = 29;
+            this.refresherBtn.TabIndex = 4;
             this.refresherBtn.Text = "Refresher";
             this.refresherBtn.UseVisualStyleBackColor = false;
             this.refresherBtn.Click += new System.EventHandler(this.refresherBtn_Click);
@@ -290,7 +290,7 @@
             this.hotDrinks.Name = "hotDrinks";
             this.hotDrinks.Padding = new System.Windows.Forms.Padding(4);
             this.hotDrinks.Size = new System.Drawing.Size(584, 187);
-            this.hotDrinks.TabIndex = 64;
+            this.hotDrinks.TabIndex = 4;
             this.hotDrinks.TabStop = false;
             this.hotDrinks.Text = "Hot Drinks";
             // 
@@ -302,7 +302,7 @@
             this.chaiBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chaiBtn.Name = "chaiBtn";
             this.chaiBtn.Size = new System.Drawing.Size(153, 46);
-            this.chaiBtn.TabIndex = 38;
+            this.chaiBtn.TabIndex = 5;
             this.chaiBtn.Text = "Chai";
             this.chaiBtn.UseVisualStyleBackColor = false;
             this.chaiBtn.Click += new System.EventHandler(this.chaiBtn_Click);
@@ -321,7 +321,7 @@
             this.coldDrinks.Name = "coldDrinks";
             this.coldDrinks.Padding = new System.Windows.Forms.Padding(4);
             this.coldDrinks.Size = new System.Drawing.Size(584, 187);
-            this.coldDrinks.TabIndex = 65;
+            this.coldDrinks.TabIndex = 5;
             this.coldDrinks.TabStop = false;
             this.coldDrinks.Text = "Cold Drinks";
             // 
@@ -333,7 +333,7 @@
             this.milkBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.milkBtn.Name = "milkBtn";
             this.milkBtn.Size = new System.Drawing.Size(153, 46);
-            this.milkBtn.TabIndex = 36;
+            this.milkBtn.TabIndex = 5;
             this.milkBtn.Text = "Milk";
             this.milkBtn.UseVisualStyleBackColor = false;
             this.milkBtn.Click += new System.EventHandler(this.milkBtn_Click);
@@ -352,7 +352,7 @@
             this.coolerDrinks.Name = "coolerDrinks";
             this.coolerDrinks.Padding = new System.Windows.Forms.Padding(4);
             this.coolerDrinks.Size = new System.Drawing.Size(584, 187);
-            this.coolerDrinks.TabIndex = 66;
+            this.coolerDrinks.TabIndex = 8;
             this.coolerDrinks.TabStop = false;
             this.coolerDrinks.Text = "Cooler Drinks";
             // 
@@ -364,7 +364,7 @@
             this.orangeJuiceBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.orangeJuiceBtn.Name = "orangeJuiceBtn";
             this.orangeJuiceBtn.Size = new System.Drawing.Size(153, 46);
-            this.orangeJuiceBtn.TabIndex = 36;
+            this.orangeJuiceBtn.TabIndex = 5;
             this.orangeJuiceBtn.Text = "Orange Juice";
             this.orangeJuiceBtn.UseVisualStyleBackColor = false;
             this.orangeJuiceBtn.Click += new System.EventHandler(this.orangeJuiceBtn_Click);
@@ -377,7 +377,7 @@
             this.waterBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.waterBtn.Name = "waterBtn";
             this.waterBtn.Size = new System.Drawing.Size(153, 46);
-            this.waterBtn.TabIndex = 33;
+            this.waterBtn.TabIndex = 0;
             this.waterBtn.Text = "Water";
             this.waterBtn.UseVisualStyleBackColor = false;
             this.waterBtn.Click += new System.EventHandler(this.waterBtn_Click);
@@ -390,7 +390,7 @@
             this.sevenUpBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sevenUpBtn.Name = "sevenUpBtn";
             this.sevenUpBtn.Size = new System.Drawing.Size(153, 46);
-            this.sevenUpBtn.TabIndex = 34;
+            this.sevenUpBtn.TabIndex = 3;
             this.sevenUpBtn.Text = "7up";
             this.sevenUpBtn.UseVisualStyleBackColor = false;
             this.sevenUpBtn.Click += new System.EventHandler(this.sevenUpBtn_Click);
@@ -403,7 +403,7 @@
             this.cokeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cokeBtn.Name = "cokeBtn";
             this.cokeBtn.Size = new System.Drawing.Size(153, 46);
-            this.cokeBtn.TabIndex = 35;
+            this.cokeBtn.TabIndex = 2;
             this.cokeBtn.Text = "Coke";
             this.cokeBtn.UseVisualStyleBackColor = false;
             this.cokeBtn.Click += new System.EventHandler(this.cokeBtn_Click);
@@ -416,7 +416,7 @@
             this.pepsiBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pepsiBtn.Name = "pepsiBtn";
             this.pepsiBtn.Size = new System.Drawing.Size(153, 46);
-            this.pepsiBtn.TabIndex = 28;
+            this.pepsiBtn.TabIndex = 1;
             this.pepsiBtn.Text = "Pepsi";
             this.pepsiBtn.UseVisualStyleBackColor = false;
             this.pepsiBtn.Click += new System.EventHandler(this.pepsiBtn_Click);
@@ -429,7 +429,7 @@
             this.muscleMilkBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.muscleMilkBtn.Name = "muscleMilkBtn";
             this.muscleMilkBtn.Size = new System.Drawing.Size(153, 46);
-            this.muscleMilkBtn.TabIndex = 29;
+            this.muscleMilkBtn.TabIndex = 4;
             this.muscleMilkBtn.Text = "Muscle Milk";
             this.muscleMilkBtn.UseVisualStyleBackColor = false;
             this.muscleMilkBtn.Click += new System.EventHandler(this.muscleMilkBtn_Click);
@@ -445,7 +445,7 @@
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(584, 79);
-            this.groupBox4.TabIndex = 68;
+            this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "SIzes";
             // 
@@ -456,11 +456,11 @@
             this.qty2Btn.FlatAppearance.BorderSize = 2;
             this.qty2Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.qty2Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty2Btn.Location = new System.Drawing.Point(977, 81);
+            this.qty2Btn.Location = new System.Drawing.Point(1002, 121);
             this.qty2Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.qty2Btn.Name = "qty2Btn";
             this.qty2Btn.Size = new System.Drawing.Size(68, 66);
-            this.qty2Btn.TabIndex = 81;
+            this.qty2Btn.TabIndex = 1;
             this.qty2Btn.Text = "2";
             this.qty2Btn.UseVisualStyleBackColor = false;
             this.qty2Btn.Click += new System.EventHandler(this.qty2Btn_Click);
@@ -472,11 +472,11 @@
             this.qty5Btn.FlatAppearance.BorderSize = 2;
             this.qty5Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.qty5Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty5Btn.Location = new System.Drawing.Point(977, 295);
+            this.qty5Btn.Location = new System.Drawing.Point(1002, 335);
             this.qty5Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.qty5Btn.Name = "qty5Btn";
             this.qty5Btn.Size = new System.Drawing.Size(68, 66);
-            this.qty5Btn.TabIndex = 84;
+            this.qty5Btn.TabIndex = 14;
             this.qty5Btn.Text = "5";
             this.qty5Btn.UseVisualStyleBackColor = false;
             this.qty5Btn.Click += new System.EventHandler(this.qty5Btn_Click);
@@ -488,11 +488,11 @@
             this.qty3Btn.FlatAppearance.BorderSize = 2;
             this.qty3Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.qty3Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty3Btn.Location = new System.Drawing.Point(977, 152);
+            this.qty3Btn.Location = new System.Drawing.Point(1002, 192);
             this.qty3Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.qty3Btn.Name = "qty3Btn";
             this.qty3Btn.Size = new System.Drawing.Size(68, 66);
-            this.qty3Btn.TabIndex = 80;
+            this.qty3Btn.TabIndex = 2;
             this.qty3Btn.Text = "3";
             this.qty3Btn.UseVisualStyleBackColor = false;
             this.qty3Btn.Click += new System.EventHandler(this.qty3Btn_Click);
@@ -504,11 +504,11 @@
             this.qty8Btn.FlatAppearance.BorderSize = 2;
             this.qty8Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.qty8Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty8Btn.Location = new System.Drawing.Point(977, 509);
+            this.qty8Btn.Location = new System.Drawing.Point(1002, 549);
             this.qty8Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.qty8Btn.Name = "qty8Btn";
             this.qty8Btn.Size = new System.Drawing.Size(68, 66);
-            this.qty8Btn.TabIndex = 86;
+            this.qty8Btn.TabIndex = 17;
             this.qty8Btn.Text = "8";
             this.qty8Btn.UseVisualStyleBackColor = false;
             this.qty8Btn.Click += new System.EventHandler(this.qty8Btn_Click);
@@ -520,11 +520,11 @@
             this.qty4Btn.FlatAppearance.BorderSize = 2;
             this.qty4Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.qty4Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty4Btn.Location = new System.Drawing.Point(977, 224);
+            this.qty4Btn.Location = new System.Drawing.Point(1002, 264);
             this.qty4Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.qty4Btn.Name = "qty4Btn";
             this.qty4Btn.Size = new System.Drawing.Size(68, 66);
-            this.qty4Btn.TabIndex = 79;
+            this.qty4Btn.TabIndex = 3;
             this.qty4Btn.Text = "4";
             this.qty4Btn.UseVisualStyleBackColor = false;
             this.qty4Btn.Click += new System.EventHandler(this.qty4Btn_Click);
@@ -536,11 +536,11 @@
             this.qty6Btn.FlatAppearance.BorderSize = 2;
             this.qty6Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.qty6Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty6Btn.Location = new System.Drawing.Point(977, 367);
+            this.qty6Btn.Location = new System.Drawing.Point(1002, 407);
             this.qty6Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.qty6Btn.Name = "qty6Btn";
             this.qty6Btn.Size = new System.Drawing.Size(68, 66);
-            this.qty6Btn.TabIndex = 83;
+            this.qty6Btn.TabIndex = 15;
             this.qty6Btn.Text = "6";
             this.qty6Btn.UseVisualStyleBackColor = false;
             this.qty6Btn.Click += new System.EventHandler(this.qty6Btn_Click);
@@ -552,11 +552,11 @@
             this.qty9Btn.FlatAppearance.BorderSize = 2;
             this.qty9Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.qty9Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty9Btn.Location = new System.Drawing.Point(976, 579);
+            this.qty9Btn.Location = new System.Drawing.Point(1001, 619);
             this.qty9Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.qty9Btn.Name = "qty9Btn";
             this.qty9Btn.Size = new System.Drawing.Size(68, 66);
-            this.qty9Btn.TabIndex = 87;
+            this.qty9Btn.TabIndex = 18;
             this.qty9Btn.Text = "9";
             this.qty9Btn.UseVisualStyleBackColor = false;
             this.qty9Btn.Click += new System.EventHandler(this.qty9Btn_Click);
@@ -568,11 +568,11 @@
             this.qty7Btn.FlatAppearance.BorderSize = 2;
             this.qty7Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.qty7Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty7Btn.Location = new System.Drawing.Point(977, 438);
+            this.qty7Btn.Location = new System.Drawing.Point(1002, 478);
             this.qty7Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.qty7Btn.Name = "qty7Btn";
             this.qty7Btn.Size = new System.Drawing.Size(68, 66);
-            this.qty7Btn.TabIndex = 82;
+            this.qty7Btn.TabIndex = 16;
             this.qty7Btn.Text = "7";
             this.qty7Btn.UseVisualStyleBackColor = false;
             this.qty7Btn.Click += new System.EventHandler(this.qty7Btn_Click);
@@ -584,30 +584,31 @@
             this.qty0Btn.FlatAppearance.BorderSize = 2;
             this.qty0Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.qty0Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty0Btn.Location = new System.Drawing.Point(976, 650);
+            this.qty0Btn.Location = new System.Drawing.Point(1001, 690);
             this.qty0Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.qty0Btn.Name = "qty0Btn";
             this.qty0Btn.Size = new System.Drawing.Size(68, 66);
-            this.qty0Btn.TabIndex = 88;
+            this.qty0Btn.TabIndex = 19;
             this.qty0Btn.Text = "0";
             this.qty0Btn.UseVisualStyleBackColor = false;
             this.qty0Btn.Click += new System.EventHandler(this.qty0Btn_Click);
             // 
             // dateLbl
             // 
-            this.dateLbl.BackColor = System.Drawing.Color.White;
+            this.dateLbl.BackColor = System.Drawing.SystemColors.Control;
             this.dateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateLbl.Location = new System.Drawing.Point(1333, 9);
+            this.dateLbl.Location = new System.Drawing.Point(1290, 38);
             this.dateLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dateLbl.Name = "dateLbl";
-            this.dateLbl.Size = new System.Drawing.Size(135, 23);
+            this.dateLbl.Size = new System.Drawing.Size(79, 30);
             this.dateLbl.TabIndex = 101;
+            this.dateLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // refundBtn
             // 
             this.refundBtn.BackColor = System.Drawing.Color.Salmon;
             this.refundBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refundBtn.Location = new System.Drawing.Point(640, 635);
+            this.refundBtn.Location = new System.Drawing.Point(658, 623);
             this.refundBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.refundBtn.Name = "refundBtn";
             this.refundBtn.Size = new System.Drawing.Size(286, 69);
@@ -621,7 +622,7 @@
             this.OrderLbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderLbx.FormattingEnabled = true;
             this.OrderLbx.ItemHeight = 18;
-            this.OrderLbx.Location = new System.Drawing.Point(1052, 81);
+            this.OrderLbx.Location = new System.Drawing.Point(1076, 122);
             this.OrderLbx.Margin = new System.Windows.Forms.Padding(4);
             this.OrderLbx.Name = "OrderLbx";
             this.OrderLbx.ScrollAlwaysVisible = true;
@@ -630,24 +631,26 @@
             // 
             // UsersNameLbl
             // 
-            this.UsersNameLbl.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.UsersNameLbl.BackColor = System.Drawing.SystemColors.Control;
             this.UsersNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsersNameLbl.Location = new System.Drawing.Point(1190, 9);
+            this.UsersNameLbl.Location = new System.Drawing.Point(1173, 38);
             this.UsersNameLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UsersNameLbl.Name = "UsersNameLbl";
-            this.UsersNameLbl.Size = new System.Drawing.Size(135, 23);
+            this.UsersNameLbl.Size = new System.Drawing.Size(103, 30);
             this.UsersNameLbl.TabIndex = 98;
+            this.UsersNameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // currentUserLabel
             // 
-            this.currentUserLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.currentUserLabel.BackColor = System.Drawing.SystemColors.Control;
             this.currentUserLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.currentUserLabel.Location = new System.Drawing.Point(1072, 9);
+            this.currentUserLabel.Location = new System.Drawing.Point(1077, 38);
             this.currentUserLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.currentUserLabel.Name = "currentUserLabel";
-            this.currentUserLabel.Size = new System.Drawing.Size(126, 23);
+            this.currentUserLabel.Size = new System.Drawing.Size(98, 30);
             this.currentUserLabel.TabIndex = 97;
             this.currentUserLabel.Text = "Current User:";
+            this.currentUserLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // qty1Btn
             // 
@@ -656,11 +659,11 @@
             this.qty1Btn.FlatAppearance.BorderSize = 2;
             this.qty1Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.qty1Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty1Btn.Location = new System.Drawing.Point(976, 722);
+            this.qty1Btn.Location = new System.Drawing.Point(1001, 762);
             this.qty1Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.qty1Btn.Name = "qty1Btn";
             this.qty1Btn.Size = new System.Drawing.Size(68, 66);
-            this.qty1Btn.TabIndex = 78;
+            this.qty1Btn.TabIndex = 20;
             this.qty1Btn.Text = "1";
             this.qty1Btn.UseVisualStyleBackColor = false;
             this.qty1Btn.Click += new System.EventHandler(this.qty1Btn_Click);
@@ -668,84 +671,93 @@
             // totalLbl
             // 
             this.totalLbl.AutoSize = true;
+            this.totalLbl.BackColor = System.Drawing.SystemColors.Control;
             this.totalLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalLbl.Location = new System.Drawing.Point(1359, 43);
+            this.totalLbl.Location = new System.Drawing.Point(1367, 80);
             this.totalLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.totalLbl.Name = "totalLbl";
             this.totalLbl.Padding = new System.Windows.Forms.Padding(7, 6, 0, 6);
             this.totalLbl.Size = new System.Drawing.Size(52, 30);
             this.totalLbl.TabIndex = 96;
             this.totalLbl.Text = "Total:";
+            this.totalLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // taxLbl
             // 
             this.taxLbl.AutoSize = true;
+            this.taxLbl.BackColor = System.Drawing.SystemColors.Control;
             this.taxLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taxLbl.Location = new System.Drawing.Point(1216, 43);
+            this.taxLbl.Location = new System.Drawing.Point(1240, 80);
             this.taxLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.taxLbl.Name = "taxLbl";
             this.taxLbl.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.taxLbl.Size = new System.Drawing.Size(50, 30);
             this.taxLbl.TabIndex = 95;
             this.taxLbl.Text = "Tax:";
+            this.taxLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // totalPriceLbl
             // 
-            this.totalPriceLbl.AutoSize = true;
+            this.totalPriceLbl.BackColor = System.Drawing.SystemColors.Control;
             this.totalPriceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalPriceLbl.Location = new System.Drawing.Point(1419, 43);
+            this.totalPriceLbl.Location = new System.Drawing.Point(1418, 80);
             this.totalPriceLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.totalPriceLbl.Name = "totalPriceLbl";
             this.totalPriceLbl.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.totalPriceLbl.Size = new System.Drawing.Size(58, 30);
+            this.totalPriceLbl.Size = new System.Drawing.Size(81, 30);
             this.totalPriceLbl.TabIndex = 94;
             this.totalPriceLbl.Text = "$0.00";
+            this.totalPriceLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // taxPriceLbl
             // 
-            this.taxPriceLbl.AutoSize = true;
+            this.taxPriceLbl.BackColor = System.Drawing.SystemColors.Control;
             this.taxPriceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taxPriceLbl.Location = new System.Drawing.Point(1274, 43);
+            this.taxPriceLbl.Location = new System.Drawing.Point(1290, 80);
             this.taxPriceLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.taxPriceLbl.Name = "taxPriceLbl";
             this.taxPriceLbl.Padding = new System.Windows.Forms.Padding(7, 6, 0, 6);
-            this.taxPriceLbl.Size = new System.Drawing.Size(51, 30);
+            this.taxPriceLbl.Size = new System.Drawing.Size(69, 30);
             this.taxPriceLbl.TabIndex = 93;
             this.taxPriceLbl.Text = "$0.00";
+            this.taxPriceLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // subtotalPriceLbl
             // 
-            this.subtotalPriceLbl.AutoSize = true;
+            this.subtotalPriceLbl.BackColor = System.Drawing.SystemColors.Control;
             this.subtotalPriceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subtotalPriceLbl.Location = new System.Drawing.Point(1132, 43);
+            this.subtotalPriceLbl.Location = new System.Drawing.Point(1147, 80);
             this.subtotalPriceLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.subtotalPriceLbl.Name = "subtotalPriceLbl";
             this.subtotalPriceLbl.Padding = new System.Windows.Forms.Padding(7, 6, 0, 6);
-            this.subtotalPriceLbl.Size = new System.Drawing.Size(51, 30);
+            this.subtotalPriceLbl.Size = new System.Drawing.Size(85, 30);
             this.subtotalPriceLbl.TabIndex = 92;
             this.subtotalPriceLbl.Text = "$0.00";
+            this.subtotalPriceLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // subtotalLbl
             // 
             this.subtotalLbl.AutoSize = true;
+            this.subtotalLbl.BackColor = System.Drawing.SystemColors.Control;
             this.subtotalLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subtotalLbl.Location = new System.Drawing.Point(1060, 43);
+            this.subtotalLbl.Location = new System.Drawing.Point(1077, 80);
             this.subtotalLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.subtotalLbl.Name = "subtotalLbl";
             this.subtotalLbl.Padding = new System.Windows.Forms.Padding(7, 6, 0, 6);
             this.subtotalLbl.Size = new System.Drawing.Size(73, 30);
             this.subtotalLbl.TabIndex = 91;
             this.subtotalLbl.Text = "Subtotal:";
+            this.subtotalLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cancelBtn
             // 
             this.cancelBtn.BackColor = System.Drawing.Color.Salmon;
             this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelBtn.Location = new System.Drawing.Point(640, 722);
+            this.cancelBtn.Location = new System.Drawing.Point(658, 710);
             this.cancelBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(286, 69);
-            this.cancelBtn.TabIndex = 90;
+            this.cancelBtn.TabIndex = 11;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = false;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
@@ -754,11 +766,11 @@
             // 
             this.voidBtn.BackColor = System.Drawing.Color.Salmon;
             this.voidBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.voidBtn.Location = new System.Drawing.Point(640, 542);
+            this.voidBtn.Location = new System.Drawing.Point(658, 530);
             this.voidBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.voidBtn.Name = "voidBtn";
             this.voidBtn.Size = new System.Drawing.Size(286, 69);
-            this.voidBtn.TabIndex = 89;
+            this.voidBtn.TabIndex = 10;
             this.voidBtn.Text = "Void";
             this.voidBtn.UseVisualStyleBackColor = false;
             this.voidBtn.Click += new System.EventHandler(this.voidBtn_Click);
@@ -767,11 +779,11 @@
             // 
             this.payBtn.BackColor = System.Drawing.Color.Salmon;
             this.payBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.payBtn.Location = new System.Drawing.Point(640, 451);
+            this.payBtn.Location = new System.Drawing.Point(658, 439);
             this.payBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.payBtn.Name = "payBtn";
             this.payBtn.Size = new System.Drawing.Size(286, 69);
-            this.payBtn.TabIndex = 85;
+            this.payBtn.TabIndex = 9;
             this.payBtn.Text = "Pay";
             this.payBtn.UseVisualStyleBackColor = false;
             this.payBtn.Click += new System.EventHandler(this.payBtn_Click);
@@ -784,7 +796,7 @@
             this.vanillaBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.vanillaBtn.Name = "vanillaBtn";
             this.vanillaBtn.Size = new System.Drawing.Size(153, 46);
-            this.vanillaBtn.TabIndex = 32;
+            this.vanillaBtn.TabIndex = 0;
             this.vanillaBtn.Text = "French Vanilla";
             this.vanillaBtn.UseVisualStyleBackColor = false;
             this.vanillaBtn.Click += new System.EventHandler(this.vanillaBtn_Click);
@@ -797,7 +809,7 @@
             this.mochaBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mochaBtn.Name = "mochaBtn";
             this.mochaBtn.Size = new System.Drawing.Size(153, 46);
-            this.mochaBtn.TabIndex = 37;
+            this.mochaBtn.TabIndex = 3;
             this.mochaBtn.Text = "Mocha";
             this.mochaBtn.UseVisualStyleBackColor = false;
             this.mochaBtn.Click += new System.EventHandler(this.mochaBtn_Click);
@@ -815,7 +827,7 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(207, 367);
-            this.groupBox1.TabIndex = 102;
+            this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Flavors";
             // 
@@ -827,7 +839,7 @@
             this.hazelnutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.hazelnutBtn.Name = "hazelnutBtn";
             this.hazelnutBtn.Size = new System.Drawing.Size(153, 46);
-            this.hazelnutBtn.TabIndex = 30;
+            this.hazelnutBtn.TabIndex = 1;
             this.hazelnutBtn.Text = "Hazelnut";
             this.hazelnutBtn.UseVisualStyleBackColor = false;
             this.hazelnutBtn.Click += new System.EventHandler(this.hazelnutBtn_Click);
@@ -840,7 +852,7 @@
             this.strawberryBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.strawberryBtn.Name = "strawberryBtn";
             this.strawberryBtn.Size = new System.Drawing.Size(153, 46);
-            this.strawberryBtn.TabIndex = 36;
+            this.strawberryBtn.TabIndex = 4;
             this.strawberryBtn.Text = "Strawberry";
             this.strawberryBtn.UseVisualStyleBackColor = false;
             this.strawberryBtn.Click += new System.EventHandler(this.strawberryBtn_Click);
@@ -853,7 +865,7 @@
             this.caramelBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.caramelBtn.Name = "caramelBtn";
             this.caramelBtn.Size = new System.Drawing.Size(153, 46);
-            this.caramelBtn.TabIndex = 31;
+            this.caramelBtn.TabIndex = 2;
             this.caramelBtn.Text = "Caramel";
             this.caramelBtn.UseVisualStyleBackColor = false;
             this.caramelBtn.Click += new System.EventHandler(this.caramelBtn_Click);
@@ -866,32 +878,33 @@
             this.signOutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.signOutBtn.Name = "signOutBtn";
             this.signOutBtn.Size = new System.Drawing.Size(153, 53);
-            this.signOutBtn.TabIndex = 103;
+            this.signOutBtn.TabIndex = 12;
             this.signOutBtn.Text = "Sign Out";
             this.signOutBtn.UseVisualStyleBackColor = false;
             this.signOutBtn.Click += new System.EventHandler(this.signOutBtn_Click);
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(865, 47);
+            this.label2.Location = new System.Drawing.Point(955, 80);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 23);
+            this.label2.Size = new System.Drawing.Size(66, 30);
             this.label2.TabIndex = 105;
-            this.label2.Text = "Quantity Selected:";
+            this.label2.Text = "Quantity:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // quantityLbl
             // 
-            this.quantityLbl.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.quantityLbl.BackColor = System.Drawing.SystemColors.Control;
             this.quantityLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantityLbl.Location = new System.Drawing.Point(995, 47);
+            this.quantityLbl.Location = new System.Drawing.Point(1020, 80);
             this.quantityLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.quantityLbl.Name = "quantityLbl";
-            this.quantityLbl.Size = new System.Drawing.Size(49, 23);
+            this.quantityLbl.Size = new System.Drawing.Size(49, 30);
             this.quantityLbl.TabIndex = 106;
-            this.quantityLbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.quantityLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // RegisterScreen
             // 
@@ -900,7 +913,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Chocolate;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1500, 900);
+            this.ClientSize = new System.Drawing.Size(1557, 900);
             this.Controls.Add(this.quantityLbl);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.signOutBtn);

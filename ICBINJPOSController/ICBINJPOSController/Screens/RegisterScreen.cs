@@ -409,11 +409,15 @@ namespace ICBINJPOSController
             PaymentScreen paymentScreen = new PaymentScreen();
             paymentScreen.ShowDialog();
 
-            // Sends Receipt to Text file
-            PrintReceipt();
+            if (Payment.PaymentComplete)
+            {
+                // Sends Receipt to Text file
+                PrintReceipt();
 
-            // If payment is successfull close transaction.
-            this.CloseAndOpenNewTransaction();
+                // If payment is successfull close transaction.
+                this.CloseAndOpenNewTransaction();
+            }
+            
             
         }
 
