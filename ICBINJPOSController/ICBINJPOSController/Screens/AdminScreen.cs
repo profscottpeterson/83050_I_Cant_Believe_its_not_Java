@@ -1552,11 +1552,8 @@ namespace ICBINJPOSController
             //if index is selected in listbox
             if (itemLbx.SelectedIndex != -1)
             {
-                //copy selected index items to string variable
-                string items = itemLbx.SelectedItem.ToString();
-
-                //copy string variable into seperate array entries delimited by comma
-                string[] item = items.Split(", ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                //crate array to hold textbox values
+                string[] item = new string[4];
 
                 //copy current text box text into array indexes
                 item[0] = descLbl.Text;
@@ -1567,71 +1564,62 @@ namespace ICBINJPOSController
                 //loop through item array
                 for (var z = 1; z < 4;)
                 {
-                    //validate array field length
-                    if (item[z].Length >= 4 && item[z].Length <= 6)
+                    //parse index to double 
+                    if (double.TryParse(item[z], out cost))
                     {
-                        if (double.TryParse(item[z], NumberStyles.Currency, CultureInfo.GetCultureInfo("en-US"), out cost))
+                        //round output by 2 decimal places
+                        cost = Math.Round(cost, 2);
+
+                        //validate cost limits, set numeric flag and add new cost to array
+                        if (cost >= .00 && cost <= 99.99)
                         {
+                            numeric = true;
+                            item[z] = cost.ToString("c");
                             z++;
                         }
+                        //error message for invalid price, set numeric flag
                         else
                         {
-                            MessageBox.Show("New price must be a valid decimal number!");
+                            numeric = false;
+                            MessageBox.Show("New price must be between $0.00 and $99.99!");
+                            smallPriceTxt.Clear();
+                            mediumPriceTxt.Clear();
+                            largePriceTxt.Clear();
+                            smallPriceTxt.Focus();
                             break;
                         }
                     }
-                    //error message for invalid array field length
+                    //error message for invalid characters
                     else
                     {
-                        MessageBox.Show("New price must be between $0.00 and $99.99!");
+                        numeric = false;
+                        MessageBox.Show("Please enter a monetary value not including a $ sign!");
+                        smallPriceTxt.Clear();
+                        mediumPriceTxt.Clear();
+                        largePriceTxt.Clear();
+                        smallPriceTxt.Focus();
                         break;
-                    }
-                    //validate that all items in array are proper length
-                    if (z == 4)
-                    {
-                        //loop through each array index
-                        for (var x = 1; x < 4; x++)
-                        {
-                            //loop through characters in each array index to validate characters are valid, set flags on condition
-                            for (var i = 0; i < item[x].Length;)
-                            {
-                                if (Char.IsPunctuation(item[x], i) || Char.IsWhiteSpace(item[x], i) || Char.IsDigit(item[x], i))
-                                {
-                                    i++;
-                                    numeric = true;
-                                }
-                                else
-                                {
-                                    numeric = false;
-                                    MessageBox.Show("Please do not use a $ sign or invalid characters when adding a price!");
-                                    break;
-                                }
-                            }
-                            //evaluate condition of character loop
-                            if (numeric == false)
-                            {
-                                break;
-                            }
-                        }
-                        //evaluate condition of index loop
-                        if (numeric == true)
-                        {
-                            //copy array entries to a string variable
-                            string newItems = item[0] + ", " + item[1] + ", " + item[2] + ", " + item[3];
-
-                            //add string variale and remove current items at selected index
-                            itemLbx.Items.Insert(itemLbx.SelectedIndex, newItems);
-                            itemLbx.Items.RemoveAt(itemLbx.SelectedIndex);
-                        }
                     }
                 }
 
-                //clear text boxes
-                descLbl.Text = " ";
-                smallPriceTxt.Clear();
-                mediumPriceTxt.Clear();
-                largePriceTxt.Clear();
-            }
+                //evaluate numeric flag
+                if (numeric == true)
+                {
+                    //copy array entries to a string variable
+                    string newItems = item[0] + ", " + item[1].Remove(0, 1) + ", " + item[2].Remove(0, 1) + ", " + item[3].Remove(0, 1);
+
+                    //add string variale and remove current items at selected index
+                    itemLbx.Items.Insert(itemLbx.SelectedIndex, newItems);
+                    itemLbx.Items.RemoveAt(itemLbx.SelectedIndex);
+
+                    //clear text boxes
+                    descLbl.Text = " ";
+                    smallPriceTxt.Clear();
+                    mediumPriceTxt.Clear();
+                    largePriceTxt.Clear();
+                }
+            }  
+
             //error message if no item selected
             else
             {

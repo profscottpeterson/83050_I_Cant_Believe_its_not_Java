@@ -30,6 +30,7 @@
         {
             this.loginHistLbx = new System.Windows.Forms.ListBox();
             this.backBtn = new System.Windows.Forms.Button();
+            this.clearHistBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // loginHistLbx
@@ -57,12 +58,27 @@
             this.backBtn.UseVisualStyleBackColor = false;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
+            // clearHistBtn
+            // 
+            this.clearHistBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.clearHistBtn.BackColor = System.Drawing.Color.White;
+            this.clearHistBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.clearHistBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearHistBtn.Location = new System.Drawing.Point(316, 797);
+            this.clearHistBtn.Name = "clearHistBtn";
+            this.clearHistBtn.Size = new System.Drawing.Size(251, 91);
+            this.clearHistBtn.TabIndex = 2;
+            this.clearHistBtn.Text = "Clear History";
+            this.clearHistBtn.UseVisualStyleBackColor = false;
+            this.clearHistBtn.Click += new System.EventHandler(this.clearHistBtn_Click);
+            // 
             // LoginHistoryScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Coral;
             this.ClientSize = new System.Drawing.Size(1500, 900);
+            this.Controls.Add(this.clearHistBtn);
             this.Controls.Add(this.backBtn);
             this.Controls.Add(this.loginHistLbx);
             this.Name = "LoginHistoryScreen";
@@ -78,5 +94,6 @@
 
         private System.Windows.Forms.ListBox loginHistLbx;
         private System.Windows.Forms.Button backBtn;
+        private System.Windows.Forms.Button clearHistBtn;
     }
 }
