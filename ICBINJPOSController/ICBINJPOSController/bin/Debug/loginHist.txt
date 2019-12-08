@@ -43,3 +43,50 @@
 *Dawn ,Eggs ,Successful Login! - 12/7/2019 1:47:25 AM
 *Manager ,Password1 ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 1:54:21 AM
 *Manager ,Password1 ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 1:54:38 AM
+* , ,Please Fill out both Username and Password Fields! - 12/7/2019 3:37:05 PM
+* , ,Please Fill out both Username and Password Fields! - 12/7/2019 3:37:11 PM
+*William ,Toast ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 4:02:50 PM
+* , ,Please Fill out both Username and Password Fields! - 12/7/2019 4:43:25 PM
+* , ,Please Fill out both Username and Password Fields! - 12/7/2019 4:43:29 PM
+* , ,Please Fill out both Username and Password Fields! - 12/7/2019 5:18:47 PM
+* , ,Please Fill out both Username and Password Fields! - 12/7/2019 5:28:37 PM
+* , ,Please Fill out both Username and Password Fields! - 12/7/2019 6:07:21 PM
+*w ,w ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 6:07:28 PM
+*Cole ,Coffee ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 6:41:06 PM
+*Cole ,Coffee ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 6:41:29 PM
+*Cole ,Coffee ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 6:42:37 PM
+*Cole ,Coffee ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 6:43:05 PM
+*Cole ,Coffee ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 6:43:22 PM
+*William ,Bacon ,Successful Login! - 12/7/2019 6:43:31 PM
+*Cole ,Coffee ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 6:43:48 PM
+*Cole ,Coffee ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 7:25:21 PM
+*Cole ,Coffee ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 7:53:34 PM
+*Cole ,Coffee ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 7:53:42 PM
+*Cole ,Coffee ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 7:54:27 PM
+*Cole ,Coffee ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 7:59:59 PM
+*Cole ,Coffee ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 8:20:57 PM
+*Cole ,Coffee ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 8:22:22 PM
+*Cole ,Coffee ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 8:26:26 PM
+*Cole ,Sausage ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 8:33:02 PM
+*Cole ,Sausage ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 8:33:17 PM
+*Cole ,Coffee ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 8:33:25 PM
+*William ,Bacon ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 8:33:34 PM
+*William ,Bacon ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 8:34:23 PM
+*William ,Bacon ,Successful Login! - 12/7/2019 8:40:36 PM
+*Cole ,Coffee ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 8:40:56 PM
+*Dawn ,Eggs ,Successful Login! - 12/7/2019 8:44:59 PM
+* , ,Please Fill out both Username and Password Fields! - 12/7/2019 8:56:05 PM
+* , ,Please Fill out both Username and Password Fields! - 12/7/2019 8:56:14 PM
+* , ,Please Fill out both Username and Password Fields! - 12/7/2019 8:57:28 PM
+*Cole ,Coffee ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 8:57:35 PM
+*Manager ,Password1 ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 8:57:51 PM
+* , ,Please Fill out both Username and Password Fields! - 12/7/2019 9:40:22 PM
+* , ,Please Fill out both Username and Password Fields! - 12/7/2019 9:40:26 PM
+* , ,Please Fill out both Username and Password Fields! - 12/7/2019 9:41:35 PM
+* , ,Please Fill out both Username and Password Fields! - 12/7/2019 9:41:50 PM
+*Cole ,Coffee ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 9:41:58 PM
+*Cole ,Coffee ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 9:42:28 PM
+*Cole ,Coffee ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 9:43:13 PM
+* , ,Please Fill out both Username and Password Fields! - 12/7/2019 9:45:54 PM
+*Cole ,Coffee ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 9:46:02 PM
+*William ,Bacon ,Successful Login! - 12/7/2019 10:35:41 PM

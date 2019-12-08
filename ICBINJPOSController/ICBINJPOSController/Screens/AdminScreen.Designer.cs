@@ -58,6 +58,7 @@
             this.clearUserBtn = new System.Windows.Forms.Button();
             this.backBtn = new System.Windows.Forms.Button();
             this.signOutBtn = new System.Windows.Forms.Button();
+            this.loginHistBtn = new System.Windows.Forms.Button();
             this.priceMaintGrp.SuspendLayout();
             this.userMaintGrp.SuspendLayout();
             this.SuspendLayout();
@@ -83,7 +84,7 @@
             this.priceMaintGrp.Location = new System.Drawing.Point(748, 67);
             this.priceMaintGrp.Name = "priceMaintGrp";
             this.priceMaintGrp.Size = new System.Drawing.Size(740, 622);
-            this.priceMaintGrp.TabIndex = 33;
+            this.priceMaintGrp.TabIndex = 0;
             this.priceMaintGrp.TabStop = false;
             this.priceMaintGrp.Text = "Price Maintenance";
             // 
@@ -95,7 +96,7 @@
             this.SaveBtn.Location = new System.Drawing.Point(524, 547);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(165, 57);
-            this.SaveBtn.TabIndex = 108;
+            this.SaveBtn.TabIndex = 16;
             this.SaveBtn.Text = "Save Changes";
             this.SaveBtn.UseVisualStyleBackColor = false;
             this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
@@ -110,7 +111,7 @@
             this.deleteItemBtn.Location = new System.Drawing.Point(524, 381);
             this.deleteItemBtn.Name = "deleteItemBtn";
             this.deleteItemBtn.Size = new System.Drawing.Size(165, 57);
-            this.deleteItemBtn.TabIndex = 107;
+            this.deleteItemBtn.TabIndex = 14;
             this.deleteItemBtn.Text = "Delete Item";
             this.deleteItemBtn.UseVisualStyleBackColor = false;
             // 
@@ -121,7 +122,7 @@
             this.medPriceLbl.Location = new System.Drawing.Point(14, 127);
             this.medPriceLbl.Name = "medPriceLbl";
             this.medPriceLbl.Size = new System.Drawing.Size(258, 23);
-            this.medPriceLbl.TabIndex = 105;
+            this.medPriceLbl.TabIndex = 0;
             this.medPriceLbl.Text = "Medium Price:";
             // 
             // mediumPriceTxt
@@ -131,7 +132,7 @@
             this.mediumPriceTxt.Location = new System.Drawing.Point(356, 124);
             this.mediumPriceTxt.Name = "mediumPriceTxt";
             this.mediumPriceTxt.Size = new System.Drawing.Size(276, 27);
-            this.mediumPriceTxt.TabIndex = 106;
+            this.mediumPriceTxt.TabIndex = 10;
             // 
             // largePriceLbl
             // 
@@ -140,7 +141,7 @@
             this.largePriceLbl.Location = new System.Drawing.Point(14, 163);
             this.largePriceLbl.Name = "largePriceLbl";
             this.largePriceLbl.Size = new System.Drawing.Size(227, 23);
-            this.largePriceLbl.TabIndex = 103;
+            this.largePriceLbl.TabIndex = 0;
             this.largePriceLbl.Text = "Large Price:";
             // 
             // largePriceTxt
@@ -150,7 +151,7 @@
             this.largePriceTxt.Location = new System.Drawing.Point(356, 160);
             this.largePriceTxt.Name = "largePriceTxt";
             this.largePriceTxt.Size = new System.Drawing.Size(276, 27);
-            this.largePriceTxt.TabIndex = 104;
+            this.largePriceTxt.TabIndex = 11;
             // 
             // itemLbx
             // 
@@ -160,7 +161,7 @@
             this.itemLbx.Location = new System.Drawing.Point(18, 209);
             this.itemLbx.Name = "itemLbx";
             this.itemLbx.Size = new System.Drawing.Size(466, 395);
-            this.itemLbx.TabIndex = 101;
+            this.itemLbx.TabIndex = 0;
             this.itemLbx.SelectedIndexChanged += new System.EventHandler(this.itemLbx_SelectedIndexChanged);
             // 
             // descLbl
@@ -171,7 +172,7 @@
             this.descLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.descLbl.Name = "descLbl";
             this.descLbl.Size = new System.Drawing.Size(276, 28);
-            this.descLbl.TabIndex = 99;
+            this.descLbl.TabIndex = 0;
             // 
             // smallPriceLbl
             // 
@@ -180,7 +181,7 @@
             this.smallPriceLbl.Location = new System.Drawing.Point(14, 92);
             this.smallPriceLbl.Name = "smallPriceLbl";
             this.smallPriceLbl.Size = new System.Drawing.Size(229, 23);
-            this.smallPriceLbl.TabIndex = 8;
+            this.smallPriceLbl.TabIndex = 0;
             this.smallPriceLbl.Text = "Small Price:";
             // 
             // smallPriceTxt
@@ -190,7 +191,7 @@
             this.smallPriceTxt.Location = new System.Drawing.Point(356, 89);
             this.smallPriceTxt.Name = "smallPriceTxt";
             this.smallPriceTxt.Size = new System.Drawing.Size(276, 27);
-            this.smallPriceTxt.TabIndex = 10;
+            this.smallPriceTxt.TabIndex = 9;
             // 
             // modifyItemBtn
             // 
@@ -226,7 +227,7 @@
             this.itemDescLbl.Location = new System.Drawing.Point(15, 53);
             this.itemDescLbl.Name = "itemDescLbl";
             this.itemDescLbl.Size = new System.Drawing.Size(325, 23);
-            this.itemDescLbl.TabIndex = 16;
+            this.itemDescLbl.TabIndex = 0;
             this.itemDescLbl.Text = "Item Description:";
             // 
             // clearTextBtn
@@ -237,7 +238,7 @@
             this.clearTextBtn.Location = new System.Drawing.Point(524, 463);
             this.clearTextBtn.Name = "clearTextBtn";
             this.clearTextBtn.Size = new System.Drawing.Size(165, 57);
-            this.clearTextBtn.TabIndex = 18;
+            this.clearTextBtn.TabIndex = 15;
             this.clearTextBtn.Text = "Clear Text";
             this.clearTextBtn.UseVisualStyleBackColor = false;
             this.clearTextBtn.Click += new System.EventHandler(this.clearTextBtn_Click);
@@ -261,7 +262,7 @@
             this.userMaintGrp.Location = new System.Drawing.Point(12, 67);
             this.userMaintGrp.Name = "userMaintGrp";
             this.userMaintGrp.Size = new System.Drawing.Size(715, 622);
-            this.userMaintGrp.TabIndex = 32;
+            this.userMaintGrp.TabIndex = 0;
             this.userMaintGrp.TabStop = false;
             this.userMaintGrp.Text = "User Maintenance";
             // 
@@ -271,9 +272,9 @@
             this.selectUserLbl.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.selectUserLbl.Location = new System.Drawing.Point(34, 123);
             this.selectUserLbl.Name = "selectUserLbl";
-            this.selectUserLbl.Size = new System.Drawing.Size(314, 23);
-            this.selectUserLbl.TabIndex = 14;
-            this.selectUserLbl.Text = "Select User Type:";
+            this.selectUserLbl.Size = new System.Drawing.Size(307, 23);
+            this.selectUserLbl.TabIndex = 0;
+            this.selectUserLbl.Text = "Select User Type";
             // 
             // setUserLbl
             // 
@@ -282,7 +283,7 @@
             this.setUserLbl.Location = new System.Drawing.Point(34, 313);
             this.setUserLbl.Name = "setUserLbl";
             this.setUserLbl.Size = new System.Drawing.Size(265, 23);
-            this.setUserLbl.TabIndex = 8;
+            this.setUserLbl.TabIndex = 0;
             this.setUserLbl.Text = "Set User Name:";
             // 
             // setPasswordLbl
@@ -292,7 +293,7 @@
             this.setPasswordLbl.Location = new System.Drawing.Point(34, 372);
             this.setPasswordLbl.Name = "setPasswordLbl";
             this.setPasswordLbl.Size = new System.Drawing.Size(249, 23);
-            this.setPasswordLbl.TabIndex = 7;
+            this.setPasswordLbl.TabIndex = 0;
             this.setPasswordLbl.Text = "Set Password:";
             // 
             // userNameTxt
@@ -301,7 +302,7 @@
             this.userNameTxt.Location = new System.Drawing.Point(312, 310);
             this.userNameTxt.Name = "userNameTxt";
             this.userNameTxt.Size = new System.Drawing.Size(385, 27);
-            this.userNameTxt.TabIndex = 10;
+            this.userNameTxt.TabIndex = 3;
             // 
             // passwordTxt
             // 
@@ -309,7 +310,7 @@
             this.passwordTxt.Location = new System.Drawing.Point(312, 369);
             this.passwordTxt.Name = "passwordTxt";
             this.passwordTxt.Size = new System.Drawing.Size(385, 27);
-            this.passwordTxt.TabIndex = 11;
+            this.passwordTxt.TabIndex = 4;
             // 
             // addUserBtn
             // 
@@ -319,7 +320,7 @@
             this.addUserBtn.Location = new System.Drawing.Point(38, 446);
             this.addUserBtn.Name = "addUserBtn";
             this.addUserBtn.Size = new System.Drawing.Size(147, 91);
-            this.addUserBtn.TabIndex = 12;
+            this.addUserBtn.TabIndex = 5;
             this.addUserBtn.Text = "Add User";
             this.addUserBtn.UseVisualStyleBackColor = false;
             this.addUserBtn.Click += new System.EventHandler(this.addUserBtn_Click);
@@ -333,7 +334,7 @@
             this.deleteUserBtn.Location = new System.Drawing.Point(210, 446);
             this.deleteUserBtn.Name = "deleteUserBtn";
             this.deleteUserBtn.Size = new System.Drawing.Size(147, 91);
-            this.deleteUserBtn.TabIndex = 13;
+            this.deleteUserBtn.TabIndex = 6;
             this.deleteUserBtn.Text = "Delete User";
             this.deleteUserBtn.UseVisualStyleBackColor = false;
             this.deleteUserBtn.Click += new System.EventHandler(this.deleteUserBtn_Click);
@@ -356,7 +357,7 @@
             this.userSelectComboBox.MaxDropDownItems = 3;
             this.userSelectComboBox.Name = "userSelectComboBox";
             this.userSelectComboBox.Size = new System.Drawing.Size(319, 31);
-            this.userSelectComboBox.TabIndex = 9;
+            this.userSelectComboBox.TabIndex = 1;
             // 
             // modifyUserBtn
             // 
@@ -366,9 +367,10 @@
             this.modifyUserBtn.Location = new System.Drawing.Point(379, 446);
             this.modifyUserBtn.Name = "modifyUserBtn";
             this.modifyUserBtn.Size = new System.Drawing.Size(147, 91);
-            this.modifyUserBtn.TabIndex = 15;
+            this.modifyUserBtn.TabIndex = 7;
             this.modifyUserBtn.Text = "Modify User";
             this.modifyUserBtn.UseVisualStyleBackColor = false;
+            this.modifyUserBtn.Click += new System.EventHandler(this.modifyUserBtn_Click);
             // 
             // setUserIdLbl
             // 
@@ -377,7 +379,7 @@
             this.setUserIdLbl.Location = new System.Drawing.Point(34, 248);
             this.setUserIdLbl.Name = "setUserIdLbl";
             this.setUserIdLbl.Size = new System.Drawing.Size(210, 23);
-            this.setUserIdLbl.TabIndex = 16;
+            this.setUserIdLbl.TabIndex = 0;
             this.setUserIdLbl.Text = "Set User ID:";
             // 
             // userIdTxt
@@ -386,7 +388,7 @@
             this.userIdTxt.Location = new System.Drawing.Point(312, 245);
             this.userIdTxt.Name = "userIdTxt";
             this.userIdTxt.Size = new System.Drawing.Size(385, 27);
-            this.userIdTxt.TabIndex = 17;
+            this.userIdTxt.TabIndex = 2;
             // 
             // clearUserBtn
             // 
@@ -396,9 +398,10 @@
             this.clearUserBtn.Location = new System.Drawing.Point(550, 446);
             this.clearUserBtn.Name = "clearUserBtn";
             this.clearUserBtn.Size = new System.Drawing.Size(147, 91);
-            this.clearUserBtn.TabIndex = 18;
+            this.clearUserBtn.TabIndex = 8;
             this.clearUserBtn.Text = "Clear All";
             this.clearUserBtn.UseVisualStyleBackColor = false;
+            this.clearUserBtn.Click += new System.EventHandler(this.clearUserBtn_Click);
             // 
             // backBtn
             // 
@@ -409,7 +412,7 @@
             this.backBtn.Location = new System.Drawing.Point(99, 695);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(147, 91);
-            this.backBtn.TabIndex = 19;
+            this.backBtn.TabIndex = 17;
             this.backBtn.Text = "Back";
             this.backBtn.UseVisualStyleBackColor = false;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
@@ -423,10 +426,24 @@
             this.signOutBtn.Location = new System.Drawing.Point(271, 695);
             this.signOutBtn.Name = "signOutBtn";
             this.signOutBtn.Size = new System.Drawing.Size(147, 91);
-            this.signOutBtn.TabIndex = 34;
+            this.signOutBtn.TabIndex = 18;
             this.signOutBtn.Text = "Sign Out";
             this.signOutBtn.UseVisualStyleBackColor = false;
             this.signOutBtn.Click += new System.EventHandler(this.signOutBtn_Click);
+            // 
+            // loginHistBtn
+            // 
+            this.loginHistBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.loginHistBtn.BackColor = System.Drawing.Color.Snow;
+            this.loginHistBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.loginHistBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginHistBtn.Location = new System.Drawing.Point(444, 695);
+            this.loginHistBtn.Name = "loginHistBtn";
+            this.loginHistBtn.Size = new System.Drawing.Size(210, 91);
+            this.loginHistBtn.TabIndex = 19;
+            this.loginHistBtn.Text = "Login History";
+            this.loginHistBtn.UseVisualStyleBackColor = false;
+            this.loginHistBtn.Click += new System.EventHandler(this.loginHistBtn_Click);
             // 
             // AdminScreen
             // 
@@ -435,6 +452,7 @@
             this.BackColor = System.Drawing.Color.Coral;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1500, 900);
+            this.Controls.Add(this.loginHistBtn);
             this.Controls.Add(this.signOutBtn);
             this.Controls.Add(this.backBtn);
             this.Controls.Add(this.priceMaintGrp);
@@ -485,5 +503,6 @@
         private System.Windows.Forms.Button backBtn;
         private System.Windows.Forms.Button signOutBtn;
         private System.Windows.Forms.Button SaveBtn;
+        private System.Windows.Forms.Button loginHistBtn;
     }
 }

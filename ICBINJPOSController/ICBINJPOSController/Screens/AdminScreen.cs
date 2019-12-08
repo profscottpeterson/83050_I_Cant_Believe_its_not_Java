@@ -18,7 +18,7 @@ namespace ICBINJPOSController
         {
             InitializeComponent();
         }
-
+        
         //varables to hold indexes
         private string id;
         private string name;
@@ -27,7 +27,7 @@ namespace ICBINJPOSController
 
         //validation flags
         private bool numeric;
-        private bool delete;
+        private bool continueFlag;
 
 
         //variable to hold double
@@ -58,7 +58,7 @@ namespace ICBINJPOSController
             {
                 string item;
 
-                while ((item = itemStream.ReadLine()) != null && !itemStream.EndOfStream)
+                while ((item = itemStream.ReadLine()) != null)
                 {
                     string[] entries = item.Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
 
@@ -79,6 +79,12 @@ namespace ICBINJPOSController
         {
             try
             {
+                //trim text box inputs
+                userIdTxt.Text.Trim();
+                userNameTxt.Text.Trim();
+                passwordTxt.Text.Trim();
+
+
                 //if cashiser is selected
                 if (userSelectComboBox.SelectedIndex == 0)
                 {
@@ -112,26 +118,53 @@ namespace ICBINJPOSController
                                 //Validate Password is not already in use
                                 if (!Files.empPassWord.Contains(passwordTxt.Text))
                                 {
-                                    //validate password length
-                                    if (passwordTxt.TextLength >= 3 && passwordTxt.TextLength <= 15)
+                                    //validate username length
+                                    if(userNameTxt.TextLength >=3 && userNameTxt.TextLength <= 15)
                                     {
-                                        //open corresponding file and append new line, reset form for next entry
-                                        using (StreamWriter empLine = File.AppendText("employeeAuth.txt"))
+                                        //validate password length
+                                        if (passwordTxt.TextLength >= 3 && passwordTxt.TextLength <= 15)
                                         {
-                                            empLine.WriteLine(userIdTxt.Text + " " + userNameTxt.Text + " " + passwordTxt.Text);
+                                            //add textbox contents to temp variables
+                                            id = userIdTxt.Text;
+                                            name = userNameTxt.Text;
+                                            pass = passwordTxt.Text;
+
+                                            //open corresponding text file and write to list string
+                                            var userFile = new List<string>(File.ReadLines("employeeAuth.txt"));
+
+                                            //add new user to list
+                                            userFile.Add(id + " " + name + " " + pass);
+
+                                            //overwrite current file for new modified file
+                                            using (StreamWriter updateFile = new StreamWriter("employeeAuth.txt"))
+                                            {
+                                                foreach (var user in userFile)
+                                                {
+                                                    updateFile.WriteLine(user);
+                                                }
+                                            }
+
+                                            //Display added message and clear all fields
                                             MessageBox.Show("New Employee has been added!");
                                             userIdTxt.Clear();
                                             userNameTxt.Clear();
                                             passwordTxt.Clear();
                                             userIdTxt.Focus();
                                         }
+                                        //error messaging for password length
+                                        else
+                                        {
+                                            MessageBox.Show("Pasword must be between 3 and 15 characters!");
+                                            passwordTxt.Clear();
+                                            passwordTxt.Focus();
+                                        }
                                     }
-                                    //error messaging for password length
+                                    //error messaging for username length
                                     else
                                     {
-                                        MessageBox.Show("Pasword must be between 3 and 15 characters!");
-                                        passwordTxt.Clear();
-                                        passwordTxt.Focus();
+                                        MessageBox.Show("Username must be between 3 and 15 characters!");
+                                        userNameTxt.Clear();
+                                        userNameTxt.Focus();
                                     }
                                 }
                                 //error messaging for password in use
@@ -202,26 +235,53 @@ namespace ICBINJPOSController
                                 //Validate Password is not already in use
                                 if (!Files.mgtPassWord.Contains(passwordTxt.Text))
                                 {
-                                    //validate password length
-                                    if (passwordTxt.TextLength >= 3 && passwordTxt.TextLength <= 15)
+                                    //validate username length
+                                    if (userNameTxt.TextLength >= 3 && userNameTxt.TextLength <= 15)
                                     {
-                                        //open corresponding file and append new line, reset form for next entry
-                                        using (StreamWriter empLine = File.AppendText("managementAuth.txt"))
+                                        //validate password length
+                                        if (passwordTxt.TextLength >= 3 && passwordTxt.TextLength <= 15)
                                         {
-                                            empLine.WriteLine(userIdTxt.Text + " " + userNameTxt.Text + " " + passwordTxt.Text);
+                                            //add textbox contents to temp variables
+                                            id = userIdTxt.Text;
+                                            name = userNameTxt.Text;
+                                            pass = passwordTxt.Text;
+
+                                            //open corresponding text file and write to list string
+                                            var userFile = new List<string>(File.ReadLines("managementAuth.txt"));
+
+                                            //add new user to list
+                                            userFile.Add(id + " " + name + " " + pass);
+
+                                            //overwrite current file for new modified file
+                                            using (StreamWriter updateFile = new StreamWriter("managementAuth.txt"))
+                                            {
+                                                foreach (var user in userFile)
+                                                {
+                                                    updateFile.WriteLine(user);
+                                                }
+                                            }
+
+                                            //Display added message and clear all fields
                                             MessageBox.Show("New Manager has been added!");
                                             userIdTxt.Clear();
                                             userNameTxt.Clear();
                                             passwordTxt.Clear();
                                             userIdTxt.Focus();
                                         }
+                                        //error messaging for password length
+                                        else
+                                        {
+                                            MessageBox.Show("Pasword must be between 3 and 15 characters!");
+                                            passwordTxt.Clear();
+                                            passwordTxt.Focus();
+                                        }
                                     }
-                                    //error messaging for password length
+                                    //error messaging for username length
                                     else
                                     {
-                                        MessageBox.Show("Pasword must be between 3 and 15 characters!");
-                                        passwordTxt.Clear();
-                                        passwordTxt.Focus();
+                                        MessageBox.Show("Username must be between 3 and 15 characters!");
+                                        userNameTxt.Clear();
+                                        userNameTxt.Focus();
                                     }
                                 }
                                 //error messaging for password in use
@@ -292,26 +352,53 @@ namespace ICBINJPOSController
                                 //Validate Password is not already in use
                                 if (!Files.adminPassWord.Contains(passwordTxt.Text))
                                 {
-                                    //validate password length
-                                    if (passwordTxt.TextLength >= 3 && passwordTxt.TextLength <= 15)
+                                    //validate username length
+                                    if (userNameTxt.TextLength >= 3 && userNameTxt.TextLength <= 15)
                                     {
-                                        //open corresponding file and append new line, reset form for next entry
-                                        using (StreamWriter empLine = File.AppendText("administratorAuth.txt"))
+                                        //validate password length
+                                        if (passwordTxt.TextLength >= 3 && passwordTxt.TextLength <= 15)
                                         {
-                                            empLine.WriteLine(userIdTxt.Text + " " + userNameTxt.Text + " " + passwordTxt.Text);
+                                            //add textbox contents to temp variables
+                                            id = userIdTxt.Text;
+                                            name = userNameTxt.Text;
+                                            pass = passwordTxt.Text;
+
+                                            //open corresponding text file and write to list string
+                                            var userFile = new List<string>(File.ReadLines("administratorAuth.txt"));
+
+                                            //add new user to list
+                                            userFile.Add(id + " " + name + " " + pass);
+
+                                            //overwrite current file for new modified file
+                                            using (StreamWriter updateFile = new StreamWriter("administratorAuth.txt"))
+                                            {
+                                                foreach (var user in userFile)
+                                                {
+                                                    updateFile.WriteLine(user);
+                                                }
+                                            }
+
+                                            //Display added message and clear all fields
                                             MessageBox.Show("New Administrator has been added!");
                                             userIdTxt.Clear();
                                             userNameTxt.Clear();
                                             passwordTxt.Clear();
                                             userIdTxt.Focus();
                                         }
+                                        //error messaging for password length
+                                        else
+                                        {
+                                            MessageBox.Show("Pasword must be between 3 and 15 characters!");
+                                            passwordTxt.Clear();
+                                            passwordTxt.Focus();
+                                        }
                                     }
-                                    //error messaging for password length
+                                    //error messaging for username length
                                     else
                                     {
-                                        MessageBox.Show("Pasword must be between 3 and 15 characters!");
-                                        passwordTxt.Clear();
-                                        passwordTxt.Focus();
+                                        MessageBox.Show("Username must be between 3 and 15 characters!");
+                                        userNameTxt.Clear();
+                                        userNameTxt.Focus();
                                     }
                                 }
                                 //error messaging for password in use
@@ -355,8 +442,8 @@ namespace ICBINJPOSController
                     MessageBox.Show("Please select a User Type!");
                     userSelectComboBox.Focus();
                 }
-                //corrupt file data or invalid file connection
             }
+            //corrupt file data or invalid file connection
             catch (Exception)
             {
                 MessageBox.Show("File loading error, Please contact System Administrator!");
@@ -368,6 +455,12 @@ namespace ICBINJPOSController
         {
             try
             {
+                //trim text box inputs
+                userIdTxt.Text.Trim();
+                userNameTxt.Text.Trim();
+                passwordTxt.Text.Trim();
+
+
                 //if cashier is selected
                 if (userSelectComboBox.SelectedIndex == 0)
                 {
@@ -410,7 +503,7 @@ namespace ICBINJPOSController
                                         //open corresponding text file, loop through array to validate textbox to array index
                                         using (StreamReader streamEmployee = new StreamReader("employeeAuth.txt"))
                                         {
-                                            while ((streamEmployee.ReadLine()) != null && !streamEmployee.EndOfStream)
+                                            while ((streamEmployee.ReadLine()) != null)
                                             {
                                                 //add indexes to temp variables
                                                 id = Files.empID[x];
@@ -420,18 +513,18 @@ namespace ICBINJPOSController
                                                 //validate textbox contents are on the same index
                                                 if (id == userIdTxt.Text && name == userNameTxt.Text && pass == passwordTxt.Text)
                                                 {
-                                                    delete = true;
+                                                    continueFlag = true;
                                                     break;
                                                 }
                                                 else
                                                 {
-                                                    delete = false;
+                                                    continueFlag = false;
                                                     x++;
                                                 }
                                             }
                                         }
                                         //verfiy validation flag if user found
-                                        if (delete == true)
+                                        if (continueFlag == true)
                                         {
                                             //set message box dialog message and title
                                             string message = "Are you sure you want to delete user?";
@@ -468,7 +561,7 @@ namespace ICBINJPOSController
                                                 userNameTxt.Clear();
                                                 passwordTxt.Clear();
                                                 userIdTxt.Focus();
-                                                delete = true;
+                                                continueFlag = true;
                                                 return;
                                             }
                                             //results if no button clicked
@@ -478,7 +571,7 @@ namespace ICBINJPOSController
                                                 MessageBox.Show("Changes have not been saved!");
 
                                                 //set validation failed flag if no button clicked
-                                                delete = false;
+                                                continueFlag = false;
 
                                                 //clear text boxes
                                                 userIdTxt.Clear();
@@ -490,7 +583,7 @@ namespace ICBINJPOSController
 
                                         }
                                         //if validationn failed to find user entered
-                                        else if (delete == false)
+                                        else if (continueFlag == false)
                                         {
                                             //changes not saved message
                                             MessageBox.Show("User information entered is incorrect!");
@@ -587,7 +680,7 @@ namespace ICBINJPOSController
                                         //open corresponding text file, loop through array to validate textbox to array index
                                         using (StreamReader streamManager = new StreamReader("managementAuth.txt"))
                                         {
-                                            while ((streamManager.ReadLine()) != null && !streamManager.EndOfStream)
+                                            while ((streamManager.ReadLine()) != null)
                                             {
                                                 //add indexes to temp variables
                                                 id = Files.mgtID[x];
@@ -597,18 +690,18 @@ namespace ICBINJPOSController
                                                 //validate textbox contents are on the same index
                                                 if (id == userIdTxt.Text && name == userNameTxt.Text && pass == passwordTxt.Text)
                                                 {
-                                                    delete = true;
+                                                    continueFlag = true;
                                                     break;
                                                 }
                                                 else
                                                 {
-                                                    delete = false;
+                                                    continueFlag = false;
                                                     x++;
                                                 }
                                             }
                                         }
                                         //verfiy validation flag if user found
-                                        if (delete == true)
+                                        if (continueFlag == true)
                                         {
                                             //set message box dialog message and title
                                             string message = "Are you sure you want to delete user?";
@@ -645,7 +738,7 @@ namespace ICBINJPOSController
                                                 userNameTxt.Clear();
                                                 passwordTxt.Clear();
                                                 userIdTxt.Focus();
-                                                delete = true;
+                                                continueFlag = true;
                                                 return;
                                             }
                                             //results if no button clicked
@@ -655,7 +748,7 @@ namespace ICBINJPOSController
                                                 MessageBox.Show("Changes have not been saved!");
 
                                                 //set validation failed flag if no button clicked
-                                                delete = false;
+                                                continueFlag = false;
 
                                                 //clear text boxes
                                                 userIdTxt.Clear();
@@ -667,7 +760,7 @@ namespace ICBINJPOSController
 
                                         }
                                         //if validationn failed to find user entered
-                                        else if (delete == false)
+                                        else if (continueFlag == false)
                                         {
                                             //changes not saved message
                                             MessageBox.Show("User information entered is incorrect!");
@@ -764,7 +857,7 @@ namespace ICBINJPOSController
                                         //open corresponding text file, loop through array to validate textbox to array index
                                         using (StreamReader streamAdmin = new StreamReader("administratorAuth.txt"))
                                         {
-                                            while ((streamAdmin.ReadLine()) != null && !streamAdmin.EndOfStream)
+                                            while ((streamAdmin.ReadLine()) != null)
                                             {
                                                 //add indexes to temp variables
                                                 id = Files.adminID[x];
@@ -774,18 +867,18 @@ namespace ICBINJPOSController
                                                 //validate textbox contents are on the same index
                                                 if (id == userIdTxt.Text && name == userNameTxt.Text && pass == passwordTxt.Text)
                                                 {
-                                                    delete = true;
+                                                    continueFlag = true;
                                                     break;
                                                 }
                                                 else
                                                 {
-                                                    delete = false;
+                                                    continueFlag = false;
                                                     x++;
                                                 }
                                             }
                                         }
                                         //verfiy validation flag if user found
-                                        if (delete == true)
+                                        if (continueFlag == true)
                                         {
                                             //set message box dialog message and title
                                             string message = "Are you sure you want to delete user?";
@@ -822,7 +915,7 @@ namespace ICBINJPOSController
                                                 userNameTxt.Clear();
                                                 passwordTxt.Clear();
                                                 userIdTxt.Focus();
-                                                delete = true;
+                                                continueFlag = true;
                                                 return;
                                             }
                                             //results if no button clicked
@@ -832,7 +925,7 @@ namespace ICBINJPOSController
                                                 MessageBox.Show("Changes have not been saved!");
 
                                                 //set validation failed flag if no button clicked
-                                                delete = false;
+                                                continueFlag = false;
 
                                                 //clear text boxes
                                                 userIdTxt.Clear();
@@ -844,7 +937,7 @@ namespace ICBINJPOSController
 
                                         }
                                         //if validationn failed to find user entered
-                                        else if (delete == false)
+                                        else if (continueFlag == false)
                                         {
                                             //changes not saved message
                                             MessageBox.Show("User information entered is incorrect!");
@@ -913,6 +1006,527 @@ namespace ICBINJPOSController
             }
         }
 
+        //modify user button
+        private void modifyUserBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //trim text box inputs
+                userIdTxt.Text.Trim();
+                userNameTxt.Text.Trim();
+                passwordTxt.Text.Trim();
+
+
+                //if cashier is selected
+                if (userSelectComboBox.SelectedIndex == 0)
+                {
+                    //instantiate stream reader file
+                    Files.OpenEmpFile();
+
+                    //validate text boxes are not blank
+                    if (userIdTxt.Text != "" && userNameTxt.Text != "" && passwordTxt.Text != "")
+                    {
+                        //loop through ID textbox to validate characters are numeric, set flags on condition
+                        for (var x = 0; x < userIdTxt.TextLength;)
+                        {
+                            if (Char.IsDigit(userIdTxt.Text, x))
+                            {
+                                x++;
+                                numeric = true;
+                            }
+                            else
+                            {
+                                numeric = false;
+                                break;
+                            }
+
+                        }
+                        //validate numeric flag for ID validation
+                        if (numeric == true)
+                        {
+                            //validate User ID is correct
+                            if (Files.empID.Contains(userIdTxt.Text))
+                            {
+                                //validate User Name is correct
+                                if (Files.empUserName.Contains(userNameTxt.Text))
+                                {
+                                    //Validate Password is correct
+                                    if (Files.empPassWord.Contains(passwordTxt.Text))
+                                    {
+                                        //index counts
+                                        var x = 0;
+
+                                        //open corresponding text file, loop through array to validate textbox to array index
+                                        using (StreamReader streamEmployee = new StreamReader("employeeAuth.txt"))
+                                        {
+                                            while ((streamEmployee.ReadLine()) != null)
+                                            {
+                                                //add indexes to temp variables
+                                                id = Files.empID[x];
+                                                name = Files.empUserName[x];
+                                                pass = Files.empPassWord[x];
+
+                                                //validate textbox contents are on the same index
+                                                if (id == userIdTxt.Text && name == userNameTxt.Text && pass == passwordTxt.Text)
+                                                {
+                                                    //open modify screen
+                                                    ModifyUserScreen openModifyUserScreen = new ModifyUserScreen();
+                                                    openModifyUserScreen.ShowDialog();
+
+                                                    //verify ModifyUserScreen cancel button flag
+                                                    if (ModifyUserScreen.cancelled == true)
+                                                    {
+                                                        continueFlag = false;
+                                                        return;
+                                                    }
+                                                    else
+                                                    {
+                                                        continueFlag = true;
+                                                        break;
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    continueFlag = false;
+                                                    x++;
+                                                }
+                                            }
+                                        }
+                                        if (continueFlag == true)
+                                        {
+                                            //variables to hold new username and password
+                                            string newUserName = ModifyUserScreen.newUser;
+                                            string newPassWord = ModifyUserScreen.newPass;
+
+                                            //open corresponding text file and write to list string
+                                            var userFile = new List<string>(File.ReadAllLines("employeeAuth.txt"));
+
+                                            //revome user from list at matching 
+                                            userFile.RemoveAt(x);
+
+                                            //add modified user to list
+                                            userFile.Add(id + " " + newUserName + " " + newPassWord);
+
+                                            //overwrite current file for new modified file
+                                            using (StreamWriter updateFile = new StreamWriter("employeeAuth.txt"))
+                                            {
+                                                foreach (var user in userFile)
+                                                {
+                                                    updateFile.WriteLine(user);
+                                                }
+
+                                            }
+                                        }
+                                        //if validationn failed to find user entered
+                                        else if (continueFlag == false)
+                                        {
+                                            //changes not saved message
+                                            MessageBox.Show("User information entered is incorrect!");
+
+                                            //clear text boxes
+                                            userIdTxt.Clear();
+                                            userNameTxt.Clear();
+                                            passwordTxt.Clear();
+                                            userIdTxt.Focus();
+                                            return;
+                                        }
+                                    }
+                                    //error messaging for user password not on file
+                                    else
+                                    {
+                                        MessageBox.Show("User Password entered not on file!");
+                                        passwordTxt.Clear();
+                                        passwordTxt.Focus();
+                                    }
+                                }
+                                //error messaging for username not on file
+                                else
+                                {
+                                    MessageBox.Show("Username entered not on file!");
+                                    userNameTxt.Clear();
+                                    userNameTxt.Focus();
+                                }
+
+                            }
+                            //error messaging for user id not on file
+                            else
+                            {
+                                MessageBox.Show("User ID entered not on file!");
+                                userIdTxt.Clear();
+                                userIdTxt.Focus();
+                            }
+
+                        }
+                        //error messaging for non numeric User ID
+                        else
+                        {
+                            MessageBox.Show("User ID must be of type numeric!");
+                            userIdTxt.Clear();
+                            userIdTxt.Focus();
+                        }
+                    }
+                    //error messaging for blank text fields
+                    else
+                    {
+                        MessageBox.Show("Please fill out all fields!");
+                        userIdTxt.Clear();
+                        userNameTxt.Clear();
+                        passwordTxt.Clear();
+                        userIdTxt.Focus();
+                    }
+                }
+
+                //if manager is selected
+                if (userSelectComboBox.SelectedIndex == 1)
+                {
+                    //instantiate stream reader file
+                    Files.OpenMgtFile();
+
+                    //validate text boxes are not blank
+                    if (userIdTxt.Text != "" && userNameTxt.Text != "" && passwordTxt.Text != "")
+                    {
+                        //loop through ID textbox to validate characters are numeric, set flags on condition
+                        for (var x = 0; x < userIdTxt.TextLength;)
+                        {
+                            if (Char.IsDigit(userIdTxt.Text, x))
+                            {
+                                x++;
+                                numeric = true;
+                            }
+                            else
+                            {
+                                numeric = false;
+                                break;
+                            }
+
+                        }
+                        //validate numeric flag for ID validation
+                        if (numeric == true)
+                        {
+                            //validate User ID is correct
+                            if (Files.mgtID.Contains(userIdTxt.Text))
+                            {
+                                //validate User Name is correct
+                                if (Files.mgtUserName.Contains(userNameTxt.Text))
+                                {
+                                    //Validate Password is correct
+                                    if (Files.mgtPassWord.Contains(passwordTxt.Text))
+                                    {
+                                        //index counts
+                                        var x = 0;
+
+                                        //open corresponding text file, loop through array to validate textbox to array index
+                                        using (StreamReader streamManager = new StreamReader("managementAuth.txt"))
+                                        {
+                                            while ((streamManager.ReadLine()) != null)
+                                            {
+                                                //add indexes to temp variables
+                                                id = Files.mgtID[x];
+                                                name = Files.mgtUserName[x];
+                                                pass = Files.mgtPassWord[x];
+
+                                                //validate textbox contents are on the same index
+                                                if (id == userIdTxt.Text && name == userNameTxt.Text && pass == passwordTxt.Text)
+                                                {
+                                                    //open modify screen
+                                                    ModifyUserScreen openModifyUserScreen = new ModifyUserScreen();
+                                                    openModifyUserScreen.ShowDialog();
+
+                                                    //verify ModifyUserScreen cancel button flag
+                                                    if (ModifyUserScreen.cancelled == true)
+                                                    {
+                                                        continueFlag = false;
+                                                        return;
+                                                    }
+                                                    else
+                                                    {
+                                                        continueFlag = true;
+                                                        break;
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    continueFlag = false;
+                                                    x++;
+                                                }
+                                            }
+                                        }
+                                        if (continueFlag == true)
+                                        {
+                                            //variables to hold new username and password
+                                            string newUserName = ModifyUserScreen.newUser;
+                                            string newPassWord = ModifyUserScreen.newPass;
+
+                                            //open corresponding text file and write to list string
+                                            var userFile = new List<string>(File.ReadAllLines("managementAuth.txt"));
+
+                                            //revome user from list at matching 
+                                            userFile.RemoveAt(x);
+
+                                            //add modified user to list
+                                            userFile.Add(id + " " + newUserName + " " + newPassWord);
+
+                                            //overwrite current file for new modified file
+                                            using (StreamWriter updateFile = new StreamWriter("managementAuth.txt"))
+                                            {
+                                                foreach (var user in userFile)
+                                                {
+                                                    updateFile.WriteLine(user);
+                                                }
+
+                                            }
+                                        }
+                                        //if validationn failed to find user entered
+                                        else if (continueFlag == false)
+                                        {
+                                            //changes not saved message
+                                            MessageBox.Show("User information entered is incorrect!");
+
+                                            //clear text boxes
+                                            userIdTxt.Clear();
+                                            userNameTxt.Clear();
+                                            passwordTxt.Clear();
+                                            userIdTxt.Focus();
+                                            return;
+                                        }
+                                    }
+                                    //error messaging for user password not on file
+                                    else
+                                    {
+                                        MessageBox.Show("User Password entered not on file!");
+                                        passwordTxt.Clear();
+                                        passwordTxt.Focus();
+                                    }
+                                }
+                                //error messaging for username not on file
+                                else
+                                {
+                                    MessageBox.Show("Username entered not on file!");
+                                    userNameTxt.Clear();
+                                    userNameTxt.Focus();
+                                }
+
+                            }
+                            //error messaging for user id not on file
+                            else
+                            {
+                                MessageBox.Show("User ID entered not on file!");
+                                userIdTxt.Clear();
+                                userIdTxt.Focus();
+                            }
+
+                        }
+                        //error messaging for non numeric User ID
+                        else
+                        {
+                            MessageBox.Show("User ID must be of type numeric!");
+                            userIdTxt.Clear();
+                            userIdTxt.Focus();
+                        }
+                    }
+                    //error messaging for blank text fields
+                    else
+                    {
+                        MessageBox.Show("Please fill out all fields!");
+                        userIdTxt.Clear();
+                        userNameTxt.Clear();
+                        passwordTxt.Clear();
+                        userIdTxt.Focus();
+                    }
+                }
+
+                //if administrator is selected
+                if (userSelectComboBox.SelectedIndex == 2)
+                {
+                    //instantiate stream reader file
+                    Files.OpenAdminFile();
+
+                    //validate text boxes are not blank
+                    if (userIdTxt.Text != "" && userNameTxt.Text != "" && passwordTxt.Text != "")
+                    {
+                        //loop through ID textbox to validate characters are numeric, set flags on condition
+                        for (var x = 0; x < userIdTxt.TextLength;)
+                        {
+                            if (Char.IsDigit(userIdTxt.Text, x))
+                            {
+                                x++;
+                                numeric = true;
+                            }
+                            else
+                            {
+                                numeric = false;
+                                break;
+                            }
+
+                        }
+                        //validate numeric flag for ID validation
+                        if (numeric == true)
+                        {
+                            //validate User ID is correct
+                            if (Files.adminID.Contains(userIdTxt.Text))
+                            {
+                                //validate User Name is correct
+                                if (Files.adminUserName.Contains(userNameTxt.Text))
+                                {
+                                    //Validate Password is correct
+                                    if (Files.adminPassWord.Contains(passwordTxt.Text))
+                                    {
+                                        //index counts
+                                        var x = 0;
+
+                                        //open corresponding text file, loop through array to validate textbox to array index
+                                        using (StreamReader streamAdministrator = new StreamReader("administratorAuth.txt"))
+                                        {
+                                            while ((streamAdministrator.ReadLine()) != null)
+                                            {
+                                                //add indexes to temp variables
+                                                id = Files.adminID[x];
+                                                name = Files.adminUserName[x];
+                                                pass = Files.adminPassWord[x];
+
+                                                //validate textbox contents are on the same index
+                                                if (id == userIdTxt.Text && name == userNameTxt.Text && pass == passwordTxt.Text)
+                                                {
+                                                    //open modify screen
+                                                    ModifyUserScreen openModifyUserScreen = new ModifyUserScreen();
+                                                    openModifyUserScreen.ShowDialog();
+
+                                                    //verify ModifyUserScreen cancel button flag
+                                                    if (ModifyUserScreen.cancelled == true)
+                                                    {
+                                                        continueFlag = false;
+                                                        return;
+                                                    }
+                                                    else
+                                                    {
+                                                        continueFlag = true;
+                                                        break;
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    continueFlag = false;
+                                                    x++;
+                                                }
+                                            }
+                                        }
+                                        if (continueFlag == true)
+                                        {
+                                            //variables to hold new username and password
+                                            string newUserName = ModifyUserScreen.newUser;
+                                            string newPassWord = ModifyUserScreen.newPass;
+
+                                            //open corresponding text file and write to list string
+                                            var userFile = new List<string>(File.ReadAllLines("administratorAuth.txt"));
+
+                                            //revome user from list at matching 
+                                            userFile.RemoveAt(x);
+
+                                            //add modified user to list
+                                            userFile.Add(id + " " + newUserName + " " + newPassWord);
+
+                                            //overwrite current file for new modified file
+                                            using (StreamWriter updateFile = new StreamWriter("administratorAuth.txt"))
+                                            {
+                                                foreach (var user in userFile)
+                                                {
+                                                    updateFile.WriteLine(user);
+                                                }
+
+                                            }
+                                        }
+                                        //if validationn failed to find user entered
+                                        else if (continueFlag == false)
+                                        {
+                                            //changes not saved message
+                                            MessageBox.Show("User information entered is incorrect!");
+
+                                            //clear text boxes
+                                            userIdTxt.Clear();
+                                            userNameTxt.Clear();
+                                            passwordTxt.Clear();
+                                            userIdTxt.Focus();
+                                            return;
+                                        }
+                                    }
+                                    //error messaging for user password not on file
+                                    else
+                                    {
+                                        MessageBox.Show("User Password entered not on file!");
+                                        passwordTxt.Clear();
+                                        passwordTxt.Focus();
+                                    }
+                                }
+                                //error messaging for username not on file
+                                else
+                                {
+                                    MessageBox.Show("Username entered not on file!");
+                                    userNameTxt.Clear();
+                                    userNameTxt.Focus();
+                                }
+
+                            }
+                            //error messaging for user id not on file
+                            else
+                            {
+                                MessageBox.Show("User ID entered not on file!");
+                                userIdTxt.Clear();
+                                userIdTxt.Focus();
+                            }
+
+                        }
+                        //error messaging for non numeric User ID
+                        else
+                        {
+                            MessageBox.Show("User ID must be of type numeric!");
+                            userIdTxt.Clear();
+                            userIdTxt.Focus();
+                        }
+                    }
+                    //error messaging for blank text fields
+                    else
+                    {
+                        MessageBox.Show("Please fill out all fields!");
+                        userIdTxt.Clear();
+                        userNameTxt.Clear();
+                        passwordTxt.Clear();
+                        userIdTxt.Focus();
+                    }
+                }
+
+                //if nothing is selected
+                if (userSelectComboBox.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Please select a User Type!");
+                    userSelectComboBox.Focus();
+                }
+            }
+
+            //corrupt file data or invalid file connection
+            catch (Exception)
+            {
+                MessageBox.Show("File loading error, Please contact System Administrator!");
+            }
+
+            //reset all fields
+            userIdTxt.Clear();
+            userNameTxt.Clear();
+            passwordTxt.Clear();
+            userIdTxt.Focus();
+        }
+
+        //clear user maintenance screen
+        private void clearUserBtn_Click(object sender, EventArgs e)
+        {
+            //reset all fields
+            userSelectComboBox.Focus();
+            userIdTxt.Clear();
+            userNameTxt.Clear();
+            passwordTxt.Clear();
+            userSelectComboBox.SelectedIndex = -1;
+        }
+
+
         //select box functionality
         private void itemLbx_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -925,10 +1539,10 @@ namespace ICBINJPOSController
                 string[] item = items.Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
 
                 //write array index contents to labels and textboxes
-                descLbl.Text = item[0].ToString();
-                smallPriceTxt.Text = item[1].ToString();
-                mediumPriceTxt.Text = item[2].ToString();
-                largePriceTxt.Text = item[3].ToString();
+                descLbl.Text = item[0].ToString().Trim();
+                smallPriceTxt.Text = item[1].ToString().Trim();
+                mediumPriceTxt.Text = item[2].ToString().Trim();
+                largePriceTxt.Text = item[3].ToString().Trim();
             }
         }
 
@@ -1003,7 +1617,7 @@ namespace ICBINJPOSController
                         if (numeric == true)
                         {
                             //copy array entries to a string variable
-                            string newItems = item[0] + "," + item[1] + "," + item[2] + "," + item[3];
+                            string newItems = item[0] + ", " + item[1] + ", " + item[2] + ", " + item[3];
 
                             //add string variale and remove current items at selected index
                             itemLbx.Items.Insert(itemLbx.SelectedIndex, newItems);
@@ -1069,7 +1683,7 @@ namespace ICBINJPOSController
                 {
                     string item;
 
-                    while ((item = itemStream.ReadLine()) != null && !itemStream.EndOfStream)
+                    while ((item = itemStream.ReadLine()) != null)
                     {
                         string[] entries = item.Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
 
@@ -1107,6 +1721,13 @@ namespace ICBINJPOSController
             //sign out & go back to login screen
             this.Hide();
             Users.SignOut();
-        }     
+        }
+
+        private void loginHistBtn_Click(object sender, EventArgs e)
+        {
+            //open history screen
+            LoginHistoryScreen loginHistoryScreen = new LoginHistoryScreen();
+            loginHistoryScreen.ShowDialog();
+        }
     }
 }

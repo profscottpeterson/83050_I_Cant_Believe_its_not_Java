@@ -44,8 +44,8 @@ namespace ICBINJPOSController
                     //User.employeeLoggedIn = true;
 
                     //Pass text box text into variable, open file, pass username & passwork into method
-                    User.employeeName = userNameTextBox.Text;
-                    User.employeePass = passWordTextBox.Text;
+                    User.employeeName = userNameTextBox.Text.Trim();
+                    User.employeePass = passWordTextBox.Text.Trim();
                     Files.OpenEmpFile();
                     Users.EmployeeLogin(User.employeeName, User.employeePass);
                     
@@ -84,8 +84,8 @@ namespace ICBINJPOSController
                     //User.managerLoggedIn = true;
 
                     //Pass text box text into variable, open file, pass username & passwork into method
-                    User.managerName = userNameTextBox.Text;
-                    User.managerPass = passWordTextBox.Text;
+                    User.managerName = userNameTextBox.Text.Trim();
+                    User.managerPass = passWordTextBox.Text.Trim();
                     Files.OpenMgtFile();
                     Users.ManagerLogin(User.managerName, User.managerPass);
 
@@ -124,8 +124,8 @@ namespace ICBINJPOSController
                     User.administratorLoggedIn = true;
 
                     //Pass text box text into variable, open file, pass username & passwork into method
-                    User.adminName = userNameTextBox.Text;
-                    User.adminPass = passWordTextBox.Text;
+                    User.adminName = userNameTextBox.Text.Trim();
+                    User.adminPass = passWordTextBox.Text.Trim();
                     Files.OpenAdminFile();
                     Users.AdminLogin(User.adminName, User.adminPass);
 
@@ -156,17 +156,26 @@ namespace ICBINJPOSController
                         this.userNameTextBox.Focus();
                     }
                 }
+
+                //if nothing is selected
+                if (AuthSelect.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Please select a User Type!");
+                    AuthSelect.Focus();
+                }
+
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                
-                MessageBox.Show(ex.Message);
-            }      
+                MessageBox.Show("File loading error, Please contact System Administrator!");
+            }
         }
 
         //clear button functions
         private void clearButton_Click(object sender, EventArgs e)
         {
+            this.AuthSelect.SelectedIndex = -1;
+            this.AuthSelect.Focus();
             this.userNameTextBox.Clear();
             this.passWordTextBox.Clear();
             this.userNameTextBox.Focus();

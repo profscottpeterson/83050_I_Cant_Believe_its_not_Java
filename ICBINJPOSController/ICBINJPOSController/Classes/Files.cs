@@ -62,6 +62,7 @@ namespace ICBINJPOSController
                 empID = EmpID;
                 empUserName = EmpUserName;
                 empPassWord = EmpPassWord;
+
             }
         }
 
@@ -82,7 +83,7 @@ namespace ICBINJPOSController
                 string mgt = "";
 
                 //read line mgt, split each whitespace separated entry to an array & add to list
-                while ((mgt = streamManagement.ReadLine()) != null && !streamManagement.EndOfStream)
+                while ((mgt = streamManagement.ReadLine()) != null)
                 {
                     string[] entries = mgt.Split(" ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
                     MgtID.Add(entries[0]);
