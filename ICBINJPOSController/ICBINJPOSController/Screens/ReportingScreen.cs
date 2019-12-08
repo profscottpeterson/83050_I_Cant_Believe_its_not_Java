@@ -39,10 +39,6 @@ namespace ICBINJPOSController
                 }
             }
 
-            dailyTotalNumOfTransLabel.Visible = false;
-            dailyTotalTaxLabel.Visible = false;
-            dailyTotalCashSalesLabel.Visible = false;
-            dailyTotalCreditSalesLabel.Visible = false;
         }
 
         private void userShowReportBtn_Click(object sender, EventArgs e)
@@ -73,10 +69,6 @@ namespace ICBINJPOSController
 
         private void dailyShowReportBtn_Click(object sender, EventArgs e)                            
         {
-            dailyTotalNumOfTransLabel.Visible = true;
-            dailyTotalTaxLabel.Visible = true;
-            dailyTotalCashSalesLabel.Visible = true;
-            dailyTotalCreditSalesLabel.Visible = true;
 
             // Build a report, filling report values from a file.
             dailyReport.BuildReport(false, "");
@@ -101,5 +93,29 @@ namespace ICBINJPOSController
             dailyReport.ClearSavedTransactions(false, "");
             dailyReport = null;
         }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            //clear out all reporting info on screen
+            currentUserLabel.Text = "   ";
+            userTotalNumOfTransLabel.Text = "   ";
+            userTotalTaxLabel.Text = "   ";
+            userTotalCashSalesLabel.Text = "   ";
+            userTotalCreditSalesLabel.Text = "   ";
+
+            dailyTotalNumOfTransLabel.Text = "   ";
+            dailyTotalTaxLabel.Text = "   ";
+            dailyTotalCashSalesLabel.Text = "   ";
+            dailyTotalCreditSalesLabel.Text = "   ";
+
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            OptionsScreen os = new OptionsScreen();
+            os.ShowDialog();
+        }
+
     }
 }

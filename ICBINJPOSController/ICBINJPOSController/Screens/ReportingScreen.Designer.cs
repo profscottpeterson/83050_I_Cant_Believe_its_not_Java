@@ -53,7 +53,8 @@
             this.printUserReportBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.printDailyReport = new System.Windows.Forms.Button();
-            this.cancelBtn = new System.Windows.Forms.Button();
+            this.backBtn = new System.Windows.Forms.Button();
+            this.clearBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // userShowReportBtn
@@ -168,7 +169,7 @@
             // 
             this.dttLabel.AutoSize = true;
             this.dttLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dttLabel.Location = new System.Drawing.Point(691, 421);
+            this.dttLabel.Location = new System.Drawing.Point(722, 418);
             this.dttLabel.Name = "dttLabel";
             this.dttLabel.Size = new System.Drawing.Size(93, 24);
             this.dttLabel.TabIndex = 2;
@@ -178,7 +179,7 @@
             // 
             this.dailyTotalTaxLabel.AutoSize = true;
             this.dailyTotalTaxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dailyTotalTaxLabel.Location = new System.Drawing.Point(803, 421);
+            this.dailyTotalTaxLabel.Location = new System.Drawing.Point(834, 418);
             this.dailyTotalTaxLabel.Name = "dailyTotalTaxLabel";
             this.dailyTotalTaxLabel.Size = new System.Drawing.Size(25, 24);
             this.dailyTotalTaxLabel.TabIndex = 2;
@@ -188,7 +189,7 @@
             // 
             this.dtcsLabel.AutoSize = true;
             this.dtcsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtcsLabel.Location = new System.Drawing.Point(629, 481);
+            this.dtcsLabel.Location = new System.Drawing.Point(660, 478);
             this.dtcsLabel.Name = "dtcsLabel";
             this.dtcsLabel.Size = new System.Drawing.Size(155, 24);
             this.dtcsLabel.TabIndex = 2;
@@ -198,7 +199,7 @@
             // 
             this.dailyTotalCashSalesLabel.AutoSize = true;
             this.dailyTotalCashSalesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dailyTotalCashSalesLabel.Location = new System.Drawing.Point(803, 481);
+            this.dailyTotalCashSalesLabel.Location = new System.Drawing.Point(834, 478);
             this.dailyTotalCashSalesLabel.Name = "dailyTotalCashSalesLabel";
             this.dailyTotalCashSalesLabel.Size = new System.Drawing.Size(25, 24);
             this.dailyTotalCashSalesLabel.TabIndex = 2;
@@ -208,7 +209,7 @@
             // 
             this.dailyTotalCreditSalesLabel.AutoSize = true;
             this.dailyTotalCreditSalesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dailyTotalCreditSalesLabel.Location = new System.Drawing.Point(803, 537);
+            this.dailyTotalCreditSalesLabel.Location = new System.Drawing.Point(834, 534);
             this.dailyTotalCreditSalesLabel.Name = "dailyTotalCreditSalesLabel";
             this.dailyTotalCreditSalesLabel.Size = new System.Drawing.Size(25, 24);
             this.dailyTotalCreditSalesLabel.TabIndex = 2;
@@ -218,7 +219,7 @@
             // 
             this.dtcrsLabel.AutoSize = true;
             this.dtcrsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtcrsLabel.Location = new System.Drawing.Point(623, 537);
+            this.dtcrsLabel.Location = new System.Drawing.Point(654, 534);
             this.dtcrsLabel.Name = "dtcrsLabel";
             this.dtcrsLabel.Size = new System.Drawing.Size(161, 24);
             this.dtcrsLabel.TabIndex = 2;
@@ -248,7 +249,7 @@
             // 
             this.dtnotLabel.AutoSize = true;
             this.dtnotLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtnotLabel.Location = new System.Drawing.Point(518, 362);
+            this.dtnotLabel.Location = new System.Drawing.Point(549, 359);
             this.dtnotLabel.Name = "dtnotLabel";
             this.dtnotLabel.Size = new System.Drawing.Size(266, 24);
             this.dtnotLabel.TabIndex = 2;
@@ -258,7 +259,7 @@
             // 
             this.dailyTotalNumOfTransLabel.AutoSize = true;
             this.dailyTotalNumOfTransLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dailyTotalNumOfTransLabel.Location = new System.Drawing.Point(803, 362);
+            this.dailyTotalNumOfTransLabel.Location = new System.Drawing.Point(834, 359);
             this.dailyTotalNumOfTransLabel.Name = "dailyTotalNumOfTransLabel";
             this.dailyTotalNumOfTransLabel.Size = new System.Drawing.Size(25, 24);
             this.dailyTotalNumOfTransLabel.TabIndex = 2;
@@ -286,7 +287,7 @@
             // 
             // printDailyReport
             // 
-            this.printDailyReport.Location = new System.Drawing.Point(585, 630);
+            this.printDailyReport.Location = new System.Drawing.Point(605, 630);
             this.printDailyReport.Name = "printDailyReport";
             this.printDailyReport.Size = new System.Drawing.Size(243, 42);
             this.printDailyReport.TabIndex = 6;
@@ -294,14 +295,25 @@
             this.printDailyReport.UseVisualStyleBackColor = true;
             this.printDailyReport.Click += new System.EventHandler(this.printDailyReport_Click);
             // 
-            // cancelBtn
+            // backBtn
             // 
-            this.cancelBtn.Location = new System.Drawing.Point(413, 700);
-            this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(75, 23);
-            this.cancelBtn.TabIndex = 7;
-            this.cancelBtn.Text = "Cancel";
-            this.cancelBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Location = new System.Drawing.Point(375, 778);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(150, 56);
+            this.backBtn.TabIndex = 7;
+            this.backBtn.Text = "Back";
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            // 
+            // clearBtn
+            // 
+            this.clearBtn.Location = new System.Drawing.Point(413, 700);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(75, 23);
+            this.clearBtn.TabIndex = 7;
+            this.clearBtn.Text = "Clear";
+            this.clearBtn.UseVisualStyleBackColor = true;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
             // ReportingScreen
             // 
@@ -310,7 +322,8 @@
             this.BackColor = System.Drawing.Color.Coral;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1500, 900);
-            this.Controls.Add(this.cancelBtn);
+            this.Controls.Add(this.clearBtn);
+            this.Controls.Add(this.backBtn);
             this.Controls.Add(this.printDailyReport);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.printUserReportBtn);
@@ -373,6 +386,7 @@
         private System.Windows.Forms.Button printUserReportBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button printDailyReport;
-        private System.Windows.Forms.Button cancelBtn;
+        private System.Windows.Forms.Button backBtn;
+        private System.Windows.Forms.Button clearBtn;
     }
 }

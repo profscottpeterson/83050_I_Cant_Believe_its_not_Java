@@ -219,6 +219,12 @@ namespace ICBINJPOSController
                         writer.WriteLine(item.Quantity.ToString() + " " + item.Size + " " + item.Description + "\t\t" + item.Price.ToString("c"));
                     }
 
+                    // checks to see if credit card was used then writes last four of card
+                    if (Payment.CreditSuccessful == true)
+                    {
+                        writer.WriteLine("Payment via Credit Card:" + Payment.CreditCardNum);
+                    }
+
                     // writes price info to receipt
                     writer.WriteLine("Subtotal: " + subtotalPriceLbl.Text + "  ||  " +
                                      "Taxes: " + taxPriceLbl.Text + "  ||  " +
@@ -241,6 +247,12 @@ namespace ICBINJPOSController
                     foreach (var item in currentTransaction.Order)
                     {
                         writer.WriteLine(item.Quantity.ToString() + " " + item.Size + " " + item.Description + "\t\t" + item.Price.ToString("c"));
+                    }
+
+                    // checks to see if credit card was used then writes last four of card
+                    if (Payment.CreditSuccessful == true)
+                    {
+                        writer.WriteLine("Payment via Credit Card:" + Payment.CreditCardNum);
                     }
 
                     // writes price info to receipt
