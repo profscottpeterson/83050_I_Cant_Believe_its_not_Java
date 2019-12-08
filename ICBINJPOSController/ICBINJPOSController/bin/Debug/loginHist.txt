@@ -90,3 +90,23 @@
 * , ,Please Fill out both Username and Password Fields! - 12/7/2019 9:45:54 PM
 *Cole ,Coffee ,User Name and Password Incorrect!  Please Check and try again! - 12/7/2019 9:46:02 PM
 *William ,Bacon ,Successful Login! - 12/7/2019 10:35:41 PM
+*William ,Bacon ,Successful Login! - 12/7/2019 11:54:22 PM
+*William ,Bacon ,Successful Login! - 12/7/2019 11:57:42 PM
+*Will ,Fralin ,Successful Login! - 12/8/2019 12:02:59 AM
+*William ,Bacon ,Successful Login! - 12/8/2019 12:04:38 AM
+*Manager ,Password1 ,Successful Login! - 12/8/2019 12:05:56 AM
+*Admin ,Admin ,User Name and Password Incorrect!  Please Check and try again! - 12/8/2019 12:07:30 AM
+* , ,Please Fill out both Username and Password Fields! - 12/8/2019 12:08:15 AM
+*William ,Bacon ,Successful Login! - 12/8/2019 12:08:23 AM
+*William ,Bacon ,User Name and Password Incorrect!  Please Check and try again! - 12/8/2019 12:09:52 AM
+*Admin ,Admin ,User Name and Password Incorrect!  Please Check and try again! - 12/8/2019 12:10:03 AM
+*William ,Bacon ,User Name and Password Incorrect!  Please Check and try again! - 12/8/2019 12:11:51 AM
+*Manager ,Password1 ,User Name and Password Incorrect!  Please Check and try again! - 12/8/2019 12:12:00 AM
+*Manager ,Password1 ,User Name and Password Incorrect!  Please Check and try again! - 12/8/2019 12:12:08 AM
+*Admin ,Admin ,User Name and Password Incorrect!  Please Check and try again! - 12/8/2019 12:12:13 AM
+* , ,Please Fill out both Username and Password Fields! - 12/8/2019 12:12:44 AM
+* , ,Please Fill out both Username and Password Fields! - 12/8/2019 12:12:50 AM
+*Manager ,Password1 ,Successful Login! - 12/8/2019 12:13:03 AM
+*William ,Bacon ,Successful Login! - 12/8/2019 12:13:42 AM
+*Jake ,Jam ,Successful Login! - 12/8/2019 12:16:20 AM
+*Mike ,Coffee ,Successful Login! - 12/8/2019 12:16:39 AM

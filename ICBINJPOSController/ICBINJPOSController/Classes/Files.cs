@@ -50,7 +50,7 @@ namespace ICBINJPOSController
                 string emp = "";
 
                 //read line emp, split each whitespace separated entry to an array & add to list
-                while ((emp = streamEmployee.ReadLine()) != null && !streamEmployee.EndOfStream)
+                while ((emp = streamEmployee.ReadLine()) != null)
                 {
                     string[] entries = emp.Split(" ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
                     EmpID.Add(entries[0]);
@@ -115,7 +115,7 @@ namespace ICBINJPOSController
                 string admin = "";
 
                 //read line admin, split each whitespace separated entry to an array & add to list
-                while ((admin = streamAdministrator.ReadLine()) != null && !streamAdministrator.EndOfStream)
+                while ((admin = streamAdministrator.ReadLine()) != null)
                 {
                     string[] entries = admin.Split(" ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
                     AdminID.Add(entries[0]);

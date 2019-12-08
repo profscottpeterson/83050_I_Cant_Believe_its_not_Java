@@ -51,10 +51,10 @@
     <Compile Include="Classes\Admin.cs" />
     <Compile Include="Classes\Files.cs" />
     <Compile Include="Classes\CoffeeShopMenu.cs" />
-    <Compile Include="LoginHistoryScreen.cs">
+    <Compile Include="Screens\LoginHistoryScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginHistoryScreen.Designer.cs">
+    <Compile Include="Screens\LoginHistoryScreen.Designer.cs">
       <DependentUpon>LoginHistoryScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\ModifyUserScreen.cs">
@@ -113,7 +113,7 @@
     </Compile>
     <Compile Include="Classes\Transaction.cs" />
     <Compile Include="Classes\User.cs" />
-    <EmbeddedResource Include="LoginHistoryScreen.resx">
+    <EmbeddedResource Include="Screens\LoginHistoryScreen.resx">
       <DependentUpon>LoginHistoryScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\ModifyUserScreen.resx">

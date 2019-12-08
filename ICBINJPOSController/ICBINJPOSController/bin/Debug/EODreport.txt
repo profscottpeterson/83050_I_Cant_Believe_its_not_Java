@@ -1,0 +1,6 @@
+12/8/2019 12:00:00 AM
+Report ran by: 
+Total Number of Transactions: 12
+Total Tax: 9.07
+Total Cash Sales 89.69
+Total Credit Sales: 83.88

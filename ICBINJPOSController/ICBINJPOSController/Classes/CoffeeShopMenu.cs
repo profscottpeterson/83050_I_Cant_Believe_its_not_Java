@@ -50,7 +50,7 @@ namespace ICBINJPOSController
                     double parsedPrice;
                    
                     // Read a line of text from file if not empty and not end of stream.
-                    while ((line = openFile.ReadLine()) != null && !openFile.EndOfStream) 
+                    while ((line = openFile.ReadLine()) != null) 
                         {
                             // Split the line into an array. Uses a delimeter (,) char to split.
                             lineSegment = line.Split(',');
