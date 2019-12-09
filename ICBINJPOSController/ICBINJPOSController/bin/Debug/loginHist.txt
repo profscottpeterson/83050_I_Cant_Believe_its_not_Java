@@ -1,0 +1,73 @@
+*Dawn ,Eggs ,Successful Login! - 12/8/2019 6:11:08 PM
+*Dawn ,Eggs ,Successful Login! - 12/8/2019 6:12:37 PM
+*Manager ,Password1 ,Successful Login! - 12/8/2019 6:20:43 PM
+*Manager ,Password1 ,Successful Login! - 12/8/2019 6:30:28 PM
+*Manager ,Password1 ,User Name and Password Incorrect!  Please Check and try again! - 12/8/2019 6:30:55 PM
+*Admin ,Admin ,User Name and Password Incorrect!  Please Check and try again! - 12/8/2019 6:34:15 PM
+*Dawn ,Eggs ,Successful Login! - 12/8/2019 6:35:50 PM
+*Dawn ,Eggs ,Successful Login! - 12/8/2019 6:39:52 PM
+*Manager ,Passwortd1 ,User Name and Password Incorrect!  Please Check and try again! - 12/8/2019 6:42:18 PM
+*Dawn ,Eggs ,Successful Login! - 12/8/2019 7:01:24 PM
+*Cole ,Coffee ,User Name and Password Incorrect!  Please Check and try again! - 12/8/2019 7:03:08 PM
+*Dawn ,Ham ,User Name and Password Incorrect!  Please Check and try again! - 12/8/2019 7:03:25 PM
+*Tom ,Toast ,Successful Login! - 12/8/2019 7:03:49 PM
+*Manager ,Password1 ,Successful Login! - 12/8/2019 7:04:54 PM
+* , ,Please Fill out both Username and Password Fields! - 12/8/2019 7:21:31 PM
+*Dawn ,Eggs ,Successful Login! - 12/8/2019 7:21:38 PM
+*Dawn ,Eggs ,Successful Login! - 12/8/2019 7:23:42 PM
+*Dawn ,Eggs ,Successful Login! - 12/8/2019 7:25:42 PM
+*Dawn ,Eggs ,Successful Login! - 12/8/2019 7:27:16 PM
+*Dawn ,Meyer ,User Name and Password Incorrect!  Please Check and try again! - 12/8/2019 7:28:45 PM
+*Dawn ,Eggs ,Successful Login! - 12/8/2019 7:28:54 PM
+*Manager ,Password1 ,User Name and Password Incorrect!  Please Check and try again! - 12/8/2019 8:18:22 PM
+*Manager ,Password1 ,User Name and Password Incorrect!  Please Check and try again! - 12/8/2019 8:18:51 PM
+*Manager ,Password1 ,User Name and Password Incorrect!  Please Check and try again! - 12/8/2019 8:20:47 PM
+*Manager ,Password1 ,User Name and Password Incorrect!  Please Check and try again! - 12/8/2019 8:21:15 PM
+*Manager ,Password1 ,Successful Login! - 12/8/2019 8:22:07 PM
+*Manager ,Password1 ,Successful Login! - 12/8/2019 8:35:05 PM
+*Manager ,Password1 ,Successful Login! - 12/8/2019 8:39:17 PM
+*Admin ,Admin ,Successful Login! - 12/8/2019 8:40:23 PM
+*Admin ,Admin ,Successful Login! - 12/8/2019 9:21:27 PM
+*Admin ,Admin ,Successful Login! - 12/8/2019 9:28:46 PM
+*Admin ,Admin ,Successful Login! - 12/8/2019 9:34:14 PM
+*Dawn ,Eggs ,Successful Login! - 12/8/2019 9:38:40 PM
+*Dawn ,Eggs ,Successful Login! - 12/8/2019 9:54:42 PM
+*Tom ,Toast ,Successful Login! - 12/8/2019 10:01:26 PM
+*Jake ,Jam ,Successful Login! - 12/8/2019 10:19:35 PM
+*Manager ,Password1 ,Successful Login! - 12/8/2019 10:24:23 PM
+*Jake ,Jam ,User Name and Password Incorrect!  Please Check and try again! - 12/8/2019 10:28:39 PM
+*Manager ,Password1 ,Successful Login! - 12/8/2019 10:28:53 PM
+*Manager ,Password1 ,Successful Login! - 12/8/2019 10:30:23 PM
+*Manager ,Password1 ,Successful Login! - 12/8/2019 10:44:44 PM
+*Manager ,Password1 ,Successful Login! - 12/8/2019 10:54:42 PM
+*Manager ,Password1 ,Successful Login! - 12/8/2019 10:55:32 PM
+*Manager ,Password1 ,Successful Login! - 12/8/2019 11:05:42 PM
+*Manager ,Password1 ,Successful Login! - 12/8/2019 11:11:38 PM
+*Manager ,Password1 ,Successful Login! - 12/8/2019 11:18:08 PM
+*Manager ,Password1 ,Successful Login! - 12/8/2019 11:19:04 PM
+*Manager ,Password1 ,Successful Login! - 12/8/2019 11:23:56 PM
+*Manager ,m ,Successful Login! - 12/8/2019 11:26:42 PM
+*Manager ,m ,Successful Login! - 12/8/2019 11:30:12 PM
+*Manager ,m ,Successful Login! - 12/8/2019 11:31:33 PM
+*Manager ,m ,Successful Login! - 12/8/2019 11:37:59 PM
+*Manager ,m ,Successful Login! - 12/8/2019 11:41:24 PM
+*Manager ,m ,Successful Login! - 12/8/2019 11:49:35 PM
+*Dawn ,Eggs ,Successful Login! - 12/8/2019 11:51:59 PM
+*Manager ,Password1 ,User Name and Password Incorrect!  Please Check and try again! - 12/8/2019 11:52:43 PM
+*Manager ,m ,Successful Login! - 12/8/2019 11:59:11 PM
+*Manager ,Password1 ,User Name and Password Incorrect!  Please Check and try again! - 12/9/2019 12:05:00 AM
+*Manager ,m ,Successful Login! - 12/9/2019 12:05:10 AM
+*Manager ,m ,Successful Login! - 12/9/2019 12:11:20 AM
+*Manager ,m ,Successful Login! - 12/9/2019 12:12:36 AM
+*Dawn ,Eggs ,Successful Login! - 12/9/2019 12:18:34 AM
+*Manager ,m ,Successful Login! - 12/9/2019 12:19:29 AM
+*Manager ,Password1 ,User Name and Password Incorrect!  Please Check and try again! - 12/9/2019 12:26:55 AM
+*Manager ,m ,Successful Login! - 12/9/2019 12:27:04 AM
+*Dawn ,Eggs ,Successful Login! - 12/9/2019 12:30:35 AM
+*Jake ,Jam ,Successful Login! - 12/9/2019 12:30:59 AM
+*Manager ,m ,Successful Login! - 12/9/2019 12:31:36 AM
+*Dawn ,Eggs ,Successful Login! - 12/9/2019 12:33:54 AM
+*Manager ,m ,Successful Login! - 12/9/2019 12:34:17 AM
+*Dawn ,Eggs ,Successful Login! - 12/9/2019 12:37:54 AM
+*Jake ,Jam ,Successful Login! - 12/9/2019 12:38:23 AM
+*Manager ,m ,Successful Login! - 12/9/2019 12:39:13 AM

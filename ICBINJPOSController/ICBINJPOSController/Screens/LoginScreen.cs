@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ICBINJPOSController
@@ -40,9 +33,6 @@ namespace ICBINJPOSController
                 //Cashier login validation
                 if(AuthSelect.SelectedIndex == 0)
                 {
-                    //***REMOVE, JUST ADDED FOR EASE OF USE
-                    //User.employeeLoggedIn = true;
-
                     //Pass text box text into variable, open file, pass username & passwork into method
                     User.employeeName = userNameTextBox.Text.Trim();
                     User.employeePass = passWordTextBox.Text.Trim();
@@ -80,9 +70,6 @@ namespace ICBINJPOSController
                 //Manager login validation
                 if (AuthSelect.SelectedIndex == 1)
                 {
-                    //***REMOVE, JUST ADDED FOR EASE OF USE
-                    //User.managerLoggedIn = true;
-
                     //Pass text box text into variable, open file, pass username & passwork into method
                     User.managerName = userNameTextBox.Text.Trim();
                     User.managerPass = passWordTextBox.Text.Trim();
@@ -92,12 +79,15 @@ namespace ICBINJPOSController
                     if (User.managerLoggedIn == true)
                     {
                         MessageBox.Show("Successful Login.");
+                        User.employeeName = User.managerName;
                         this.Hide();
                         ReportingScreen reportingScreen = new ReportingScreen();
                         reportingScreen.ShowDialog();
+                        
                         this.userNameTextBox.Clear();
                         this.passWordTextBox.Clear();
                         this.userNameTextBox.Focus();
+
                     }
                     else if (User.loginIncorrect == true)
                     {
@@ -120,9 +110,6 @@ namespace ICBINJPOSController
                 //Administrator login validation
                 if (AuthSelect.SelectedIndex == 2)
                 {
-                    //***REMOVE, JUST ADDED FOR EASE OF USE
-                    User.administratorLoggedIn = true;
-
                     //Pass text box text into variable, open file, pass username & passwork into method
                     User.adminName = userNameTextBox.Text.Trim();
                     User.adminPass = passWordTextBox.Text.Trim();

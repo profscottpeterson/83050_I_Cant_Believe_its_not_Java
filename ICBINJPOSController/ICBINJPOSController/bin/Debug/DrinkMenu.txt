@@ -1,23 +1,23 @@
-Vanilla Flavor, 1.00, 2.00, 3.00
-Hazelnut Flavor, 1.00, 2.00, 3.00
-Caramel Flavor, 1.00, 2.00, 3.00
+Vanilla Flavor,   1.00,   2.00,   3.00
+Hazelnut Flavor,   1.00,   2.00,   3.00
+Caramel Flavor,   1.00,   2.00,   3.00
 Mocha Flavor, 1.00, 2.00, 3.00
-Strawberry Flavor, 1.00, 2.00, 3.00
-Coffee, 2.00, 3.00, 4.00
-Cappuccino, 3.00, 4.00, 5.00
-Espresso, 2.15, 2.55, 3.05
-Tea, .95, 1.25, 1.75
-Chai, 1.15, 1.60, 2.00
-Hot Cocoa, 1.00, 1.50, 2.00
-Iced Coffee, 3.00, 4.00, 5.00
-Frappuccino, 3.50, 4.50, 5.50
-Iced Tea, .95, 1.25, 1.75
-Smoothie, 3.50, 4.50, 5.50
-Refresher, 2.00, 3.00, 4.00
-Milk, 1.00, 1.50, 2.00
-Pepsi, 1.00, 2.00, 3.00
-Coke, 1.00, 2.00, 3.00
-7up, 1.00, 2.00, 3.00
-Orange Juice, 2.00, 3.00, 4.00
-Muscle Milk, 3.75, 3.75, 3.75
-Water, 1.75, 1.75, 1.75
+Strawberry Flavor,   1.00,   2.00,   3.00
+Coffee,   2.00,   3.00,   4.00
+Cappuccino,   3.00,   4.00,   5.00
+Espresso,   2.15,   2.55,   3.05
+Tea,   .95,   1.25,   1.75
+Chai,   1.15,   1.60,   2.00
+Hot Cocoa,   1.00,   1.50,   2.00
+Iced Coffee,   3.00,   4.00,   5.00
+Frappuccino,   3.50,   4.50,   5.50
+Iced Tea,   .95,   1.25,   1.75
+Smoothie,   3.50,   4.50,   5.50
+Refresher,   2.00,   3.00,   4.00
+Milk,   1.00,   1.50,   2.00
+Pepsi,   1.00,   2.00,   3.00
+Coke,   1.00,   2.00,   3.00
+7up,   1.00,   2.00,   3.00
+Orange Juice,   2.00,   3.00,   4.00
+Muscle Milk,   3.75,   3.75,   3.75
+Water,   1.75,   1.75,   1.75

@@ -69,3 +69,5 @@ E:\TEAM DEVELOPMENT\POS12.3.19\ICBINJPOSController\ICBINJPOSController\obj\Debug
 E:\TEAM DEVELOPMENT\POS12.3.19\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.pdb
 C:\Users\Dange\Desktop\POS Project Git Repository\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.ModifyUserScreen.resources
 C:\Users\Dange\Desktop\POS Project Git Repository\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.LoginHistoryScreen.resources
+C:\Users\meyer\Documents\2GitRepo\83050_I_Cant_Believe_its_not_Java\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.LoginHistoryScreen.resources
+C:\Users\meyer\Documents\2GitRepo\83050_I_Cant_Believe_its_not_Java\ICBINJPOSController\ICBINJPOSController\obj\Debug\ICBINJPOSController.ModifyUserScreen.resources

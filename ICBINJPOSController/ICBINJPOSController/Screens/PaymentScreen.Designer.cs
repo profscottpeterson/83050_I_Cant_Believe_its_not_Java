@@ -509,7 +509,7 @@
             this.tbxTendered.Location = new System.Drawing.Point(229, 168);
             this.tbxTendered.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
             this.tbxTendered.Name = "tbxTendered";
-            this.tbxTendered.Size = new System.Drawing.Size(112, 20);
+            this.tbxTendered.Size = new System.Drawing.Size(105, 20);
             this.tbxTendered.TabIndex = 0;
             this.tbxTendered.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tbxTendered.WordWrap = false;

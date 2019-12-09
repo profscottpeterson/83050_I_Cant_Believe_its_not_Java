@@ -1,26 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 namespace ICBINJPOSController
 {
     public partial class ModifyUserScreen : Form
     {
-        public ModifyUserScreen()
-        {
-            InitializeComponent();
-            //focus on username text box upon load
-            newUserTxt.Focus();
-        }
-        
-
         //variables to hold new username and password
         static public string newUser;
         static public string newPass;
@@ -28,6 +12,12 @@ namespace ICBINJPOSController
         //variable to hold static bool
         static public bool cancelled;
 
+        public ModifyUserScreen()
+        {
+            InitializeComponent();
+            //focus on username text box upon load
+            newUserTxt.Focus();
+        }
 
         //save changes to username or password
         private void saveChangesBtn_Click(object sender, EventArgs e)
@@ -37,7 +27,6 @@ namespace ICBINJPOSController
                 //trim text inputs
                 newUserTxt.Text.Trim();
                 newPassTxt.Text.Trim();
-
 
                 //if new username entered
                 if (newUserTxt.Text != "" && newPassTxt.Text == "")

@@ -153,7 +153,6 @@ namespace ICBINJPOSController
             return price;
         }
 
-
         public void AddItemToOrder(string buttonText)
         {
             if (this.quantitySelected > 0)

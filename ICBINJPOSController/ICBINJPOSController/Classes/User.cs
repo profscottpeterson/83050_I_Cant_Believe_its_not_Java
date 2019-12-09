@@ -68,7 +68,6 @@ namespace ICBINJPOSController
                 blankFormHist.WriteLine("*" + employeeName + " ," + employeePass + " ," + msgtxt + " - " + DateTime.Now);
                 blankFormHist.Close();
             }
-            
         }
 
         public void ManagerLogin(string name, string password)
@@ -159,37 +158,19 @@ namespace ICBINJPOSController
         //sign out button functions
         public void SignOut()
         {
-            AdminScreen adminScreen = new AdminScreen();
+            
             LoginScreen loginScreen = new LoginScreen();
-            OptionsScreen optionScreen = new OptionsScreen();
-            RegisterScreen registerScreen = new RegisterScreen();
-            ReportingScreen reportingScreen = new ReportingScreen();
-
-            //set all login bool to false
+            loginScreen.ShowDialog();
+           
+            //set all login bool to false         
             User.employeeLoggedIn = false;
             User.managerLoggedIn = false;
-            User.administratorLoggedIn = false;
-
-            //hide all open screens and open login screen
-            adminScreen.Hide();
-            optionScreen.Hide();
-            registerScreen.Hide();
-            reportingScreen.Hide();
-            loginScreen.ShowDialog();        
+            User.administratorLoggedIn = false;          
         }
 
         public void GoBack()
-        {
-            AdminScreen adminScreen = new AdminScreen();
-            LoginScreen loginScreen = new LoginScreen();
+        {           
             OptionsScreen optionScreen = new OptionsScreen();
-            RegisterScreen registerScreen = new RegisterScreen();
-            ReportingScreen reportingScreen = new ReportingScreen();
-
-            //hide all open screens and open options screen
-            adminScreen.Hide();
-            registerScreen.Hide();
-            reportingScreen.Hide();
             optionScreen.ShowDialog();         
         }
     }

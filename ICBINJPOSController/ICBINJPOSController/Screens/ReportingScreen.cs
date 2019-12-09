@@ -12,10 +12,10 @@ using System.Windows.Forms;
 namespace ICBINJPOSController
 {
     public partial class ReportingScreen : Form
-    {   
+    {
         // Report fields to hold built report values.
-        Report dailyReport = new Report();
-        Report userReport = new Report();
+        Report userReport;
+        Report dailyReport;
 
         public ReportingScreen()
         {
@@ -24,25 +24,36 @@ namespace ICBINJPOSController
 
         private void ReportingScreen_Load(object sender, EventArgs e)
         {
+            printUserReportBtn.Enabled = false;
+
             // Upon load of screen list employees to select from.
             using (StreamReader employees = new StreamReader("employeeAuth.txt"))
             {
                 string fileLines = "";
 
-                while ((fileLines = employees.ReadLine()) != null && !employees.EndOfStream)
+                while (!employees.EndOfStream && (fileLines = employees.ReadLine()) != null)
                 {
-                    // File delimeter is a space.
-                    String[] lineSegment = fileLines.Split(' ');
+                    // Check for blank lines.
+                    if (fileLines != null && fileLines != "")
+                    {
 
-                    // Add user name to listbox.
-                    userLbx.Items.Add(lineSegment[1]);
+                        // File delimeter is a space.
+                        String[] lineSegment = fileLines.Split(' ');
+
+                        // Add user name to listbox.
+                        userLbx.Items.Add(lineSegment[1]);
+                    }
+                    else
+                    {
+                        fileLines.Skip(fileLines.Length);
+                    }
                 }
             }
-
         }
 
         private void userShowReportBtn_Click(object sender, EventArgs e)
         {
+            userReport = new Report();
             if (userLbx.SelectedIndex != -1)
             {
                 // Selected user.
@@ -51,15 +62,19 @@ namespace ICBINJPOSController
                 // Set the reports user.
                 userReport.ReportUser = userSelected;
                 // Build a report, filling report values from a file.
-                userReport.BuildReport(true, userReport.ReportUser);
-                
+                if (userReport.BuildReport(true, userReport.ReportUser))
+                {
+                    // Display report variables to matching tbxs.
+                    userLbl.Text = userReport.ReportUser;
+                    userTotalNumOfTransLabel.Text = userReport.NumOfTransactions.ToString();
+                    userTotalTaxLabel.Text = userReport.TotalTax.ToString("c");
+                    userTotalCashSalesLabel.Text = userReport.TotalCashSales.ToString("c");
+                    userTotalCreditSalesLabel.Text = userReport.TotalCreditSales.ToString("c");
 
-                // Display report variables to matching tbxs.
-                currentUserLabel.Text = userReport.ReportUser;
-                userTotalNumOfTransLabel.Text = userReport.NumOfTransactions.ToString();
-                userTotalTaxLabel.Text = userReport.TotalTax.ToString();
-                userTotalCashSalesLabel.Text = userReport.TotalCashSales.ToString();
-                userTotalCreditSalesLabel.Text = userReport.TotalCreditSales.ToString();
+                    userShowReportBtn.Enabled = false;
+                    userLbx.Enabled = false;
+                    printUserReportBtn.Enabled = true;
+                }
             }
             else
             {
@@ -67,47 +82,63 @@ namespace ICBINJPOSController
             }
         }
 
-        private void dailyShowReportBtn_Click(object sender, EventArgs e)                            
+        private void dailyShowReportBtn_Click(object sender, EventArgs e)
         {
-
+            dailyReport = new Report();
             // Build a report, filling report values from a file.
             dailyReport.BuildReport(false, "");
 
             dailyTotalNumOfTransLabel.Text = dailyReport.NumOfTransactions.ToString();
-            dailyTotalTaxLabel.Text = dailyReport.TotalTax.ToString();
-            dailyTotalCashSalesLabel.Text = dailyReport.TotalCashSales.ToString();
-            dailyTotalCreditSalesLabel.Text = dailyReport.TotalCreditSales.ToString();
+            dailyTotalTaxLabel.Text = dailyReport.TotalTax.ToString("c");
+            dailyTotalCashSalesLabel.Text = dailyReport.TotalCashSales.ToString("c");
+            dailyTotalCreditSalesLabel.Text = dailyReport.TotalCreditSales.ToString("c");
         }
 
         private void printUserReportBtn_Click(object sender, EventArgs e)
         {
-            userReport.PrintReport(true, userReport);
-            userReport.ClearSavedTransactions(true, userReport.ReportUser);
-            userReport = null;
-            
+            if (userReport.PrintReport(true, userReport))
+            {
+                userReport.ClearSavedTransactions(true, userReport.ReportUser);
+                userReport = null;
+                ClearUserReportLabels();
+                printUserReportBtn.Enabled = false;
+                showDailyReportBtn.Enabled = false;
+                clearBtn.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("The file is empty, there are no new transactions to report.");
+            }
         }
 
         private void printDailyReport_Click(object sender, EventArgs e)
         {
-            dailyReport.PrintReport(false, dailyReport);
-            dailyReport.ClearSavedTransactions(false, "");
-            dailyReport = null;
+            if (dailyReport.PrintReport(false, dailyReport))
+            {
+                dailyReport.ClearSavedTransactions(false, "");
+                ClearDailyReportLabels();
+                dailyReport = null;
+                printDailyReport.Enabled = false;
+                showDailyReportBtn.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("The file is empty, there are no new transactions to report.");
+            }
+        }
+
+        private void clearUserBtn_Click(object sender, EventArgs e)
+        {
+            ClearUserReportLabels();
+            userShowReportBtn.Enabled = true;
+            userLbx.Enabled = true;
+            userLbx.SelectedIndex = -1;
         }
 
         private void clearBtn_Click(object sender, EventArgs e)
         {
-            //clear out all reporting info on screen
-            currentUserLabel.Text = "   ";
-            userTotalNumOfTransLabel.Text = "   ";
-            userTotalTaxLabel.Text = "   ";
-            userTotalCashSalesLabel.Text = "   ";
-            userTotalCreditSalesLabel.Text = "   ";
-
-            dailyTotalNumOfTransLabel.Text = "   ";
-            dailyTotalTaxLabel.Text = "   ";
-            dailyTotalCashSalesLabel.Text = "   ";
-            dailyTotalCreditSalesLabel.Text = "   ";
-
+            // Clear out all daily reporting info on screen
+            ClearDailyReportLabels();
         }
 
         private void backBtn_Click(object sender, EventArgs e)
@@ -117,5 +148,21 @@ namespace ICBINJPOSController
             os.ShowDialog();
         }
 
+        public void ClearUserReportLabels()
+        {
+            userLbl.Text = "";
+            userTotalNumOfTransLabel.Text = "";
+            userTotalTaxLabel.Text = "";
+            userTotalCashSalesLabel.Text = "";
+            userTotalCreditSalesLabel.Text = "";
+        }
+
+        public void ClearDailyReportLabels()
+        {
+            dailyTotalNumOfTransLabel.Text = "";
+            dailyTotalTaxLabel.Text = "";
+            dailyTotalCashSalesLabel.Text = "";
+            dailyTotalCreditSalesLabel.Text = "";
+        }
     }
 }

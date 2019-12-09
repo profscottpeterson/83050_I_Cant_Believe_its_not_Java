@@ -58,12 +58,19 @@ namespace ICBINJPOSController
             {
                 string item;
 
-                while ((item = itemStream.ReadLine()) != null)
+                while (!itemStream.EndOfStream && (item = itemStream.ReadLine()) != null)
                 {
-                    string[] entries = item.Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                    // Check for blank lines.
+                    if (item != null && item != "")
+                    {
+                        string[] entries = item.Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
 
-                    itemLbx.Items.Add(entries[0] + ", " + entries[1] + ", " + entries[2] + ", " + entries[3]);
-
+                        itemLbx.Items.Add(entries[0] + ", " + entries[1] + ", " + entries[2] + ", " + entries[3]);
+                    }
+                    else
+                    {
+                        item.Skip(item.Length);
+                    }
                 }
             }
             //hide password
@@ -106,7 +113,6 @@ namespace ICBINJPOSController
                                 numeric = false;
                                 break;
                             }
-
                         }
 
                         //validate numeric flag for ID validation
@@ -223,7 +229,6 @@ namespace ICBINJPOSController
                                 numeric = false;
                                 break;
                             }
-
                         }
 
                         //validate numeric flag for ID validation
@@ -340,7 +345,6 @@ namespace ICBINJPOSController
                                 numeric = false;
                                 break;
                             }
-
                         }
 
                         //validate numeric flag for ID validation
@@ -460,7 +464,6 @@ namespace ICBINJPOSController
                 userNameTxt.Text.Trim();
                 passwordTxt.Text.Trim();
 
-
                 //if cashier is selected
                 if (userSelectComboBox.SelectedIndex == 0)
                 {
@@ -483,7 +486,6 @@ namespace ICBINJPOSController
                                 numeric = false;
                                 break;
                             }
-
                         }
                         //validate numeric flag for ID validation
                         if (numeric == true)
@@ -503,24 +505,25 @@ namespace ICBINJPOSController
                                         //open corresponding text file, loop through array to validate textbox to array index
                                         using (StreamReader streamEmployee = new StreamReader("employeeAuth.txt"))
                                         {
-                                            while ((streamEmployee.ReadLine()) != null)
+                                            while (!streamEmployee.EndOfStream && (streamEmployee.ReadLine()) != null)
                                             {
-                                                //add indexes to temp variables
-                                                id = Files.empID[x];
-                                                name = Files.empUserName[x];
-                                                pass = Files.empPassWord[x];
+                                                    //add indexes to temp variables
+                                                    id = Files.empID[x];
+                                                    name = Files.empUserName[x];
+                                                    pass = Files.empPassWord[x];
 
-                                                //validate textbox contents are on the same index
-                                                if (id == userIdTxt.Text && name == userNameTxt.Text && pass == passwordTxt.Text)
-                                                {
-                                                    continueFlag = true;
-                                                    break;
-                                                }
-                                                else
-                                                {
-                                                    continueFlag = false;
-                                                    x++;
-                                                }
+                                                    //validate textbox contents are on the same index
+                                                    if (id == userIdTxt.Text && name == userNameTxt.Text && pass == passwordTxt.Text)
+                                                    {
+                                                        continueFlag = true;
+                                                        break;
+                                                    }
+                                                    else
+                                                    {
+                                                        continueFlag = false;
+                                                        x++;
+                                                    }
+                                               
                                             }
                                         }
                                         //verfiy validation flag if user found

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
 namespace ICBINJPOSController
@@ -104,9 +101,8 @@ namespace ICBINJPOSController
             {
                 System.Windows.Forms.MessageBox.Show("Unable to clear transactions, file does not exist.");
             }
-
         }
-        public void BuildReport(bool isUser, string username)
+        public bool BuildReport(bool isUser, string username)
         {
             string path = "";
 
@@ -125,7 +121,7 @@ namespace ICBINJPOSController
                 {
                     // Holds each transaction line read from file.
                     string transaction;
-
+                   
                     // How many times the transaction line should be split.
                     int numOfSplits = 4;
 
@@ -133,99 +129,115 @@ namespace ICBINJPOSController
                     string[] lineSegmentArray = new string[numOfSplits];
 
                     // Read a line of text from file if not empty and not end of stream.
-                    while ((transaction = openFile.ReadLine()) != null || !openFile.EndOfStream)
+                    while (!openFile.EndOfStream && (transaction = openFile.ReadLine()) != null)
                     {
-                        // Split the line into an array. Uses a delimeter (,) char to split.
-                        lineSegmentArray = transaction.Split(',');
-
-                        // Read each value in the file to the class variables.
-
-                        double parsedDouble = 0.00;
-
-                        // Add Transaction to class vars
-                        // read username if building a user report.
-                        if (isUser && this.reportUser == "")
+                        // Check for blank lines.
+                        if (transaction != null && transaction != "")
                         {
-                            this.ReportUser = lineSegmentArray[0];
-                        }
+                            double parsedDouble = 0.00;
+                            // Split the line into an array. Uses a delimeter (,) char to split.
+                            lineSegmentArray = transaction.Split(',');
 
-                        // Transaction value increases with each line read, for a count.
-                        this.NumOfTransactions += 1;
+                            // Add Transaction to class vars
+                            // read username if building a user report.
+                            if (isUser && this.reportUser == "")
+                            {
+                                this.ReportUser = lineSegmentArray[0];
+                            }
 
-                       
-                        if (double.TryParse(lineSegmentArray[1], out parsedDouble))
-                        {
-                            this.TotalTax += parsedDouble;
+                            // Transaction value increases with each line read, for a count.
+                            this.numOfTransactions += 1;
+
+                            if (double.TryParse(lineSegmentArray[1], out parsedDouble))
+                            {
+                                this.TotalTax += parsedDouble;
+                            }
+                            else
+                            {
+                                System.Windows.Forms.MessageBox.Show("Tax corrupted, seek administrator assistance.");
+                            }
+
+                            if (double.TryParse(lineSegmentArray[2], out parsedDouble))
+                            {
+                                this.TotalCashSales += parsedDouble;
+                            }
+                            else
+                            {
+                                System.Windows.Forms.MessageBox.Show("Cash sales corrupted, seek administrator assistance.");
+                            }
+
+                            if (double.TryParse(lineSegmentArray[3], out parsedDouble))
+                            {
+                                this.TotalCreditSales += parsedDouble;
+                            }
+                            else
+                            {
+                                System.Windows.Forms.MessageBox.Show("Credit sales corrupted, seek administrator assistance.");
+                            }
                         }
                         else
                         {
-                            System.Windows.Forms.MessageBox.Show("Tax corrupted, seek administrator assistance.");
-                        }
-
-
-                        if (double.TryParse(lineSegmentArray[2], out parsedDouble))
-                        {
-                            this.TotalCashSales += parsedDouble;
-                        }
-                        else
-                        {
-                            System.Windows.Forms.MessageBox.Show("Cash sales corrupted, seek administrator assistance.");
-                        }
-
-
-                        if (double.TryParse(lineSegmentArray[3], out parsedDouble))
-                        {
-                            this.TotalCreditSales += parsedDouble;
-                        }
-                        else
-                        {
-                            System.Windows.Forms.MessageBox.Show("Credit sales corrupted, seek administrator assistance.");
+                            transaction.Skip(transaction.Length);
                         }
                     }
 
+                    //this.numOfTransactions = num;
+                    return true;
                 }
             }
             catch (IOException)
             {
-                System.Windows.Forms.MessageBox.Show("User transaction file doesn't exist.");
+                System.Windows.Forms.MessageBox.Show("Transaction file doesn't exist.");
+                return false;
             }
             catch (IndexOutOfRangeException)
             {
                 System.Windows.Forms.MessageBox.Show("Transaction file corrupted, seek administrator assistance.");
+                return false;
             }
         }
        
-        public void PrintReport(bool isUser, Report report)
+        public bool PrintReport(bool isUser, Report report)
         {
             string reportPath = "";
 
-            if (isUser)
+            // If there is a daily report file.
+            if (report.numOfTransactions != 0)
             {
-                reportPath = @"" + report.reportUser + "Report.txt";
+                if (isUser)
+                {
+                    reportPath = @"" + report.reportUser + "Report.txt";
+                }
+                else
+                {
+                    reportPath = @"EODreport.txt";
+                }
+
+                try
+                {
+                    using (StreamWriter sw = File.AppendText(reportPath))
+                    {
+                        // Write report values to file.
+                        sw.WriteLine(DateTime.Today);
+                        sw.WriteLine("Report ran by: " + User.employeeName);
+                        if (isUser)
+                        { sw.WriteLine("User: " + report.ReportUser); }
+                        sw.WriteLine("Total Number of Transactions: " + report.NumOfTransactions);
+                        sw.WriteLine("Total Tax: " + report.TotalTax);
+                        sw.WriteLine("Total Cash Sales " + report.TotalCashSales);
+                        sw.WriteLine("Total Credit Sales: " + report.TotalCreditSales);
+                    }
+                }
+                catch (IOException)
+                {
+                    System.Windows.Forms.MessageBox.Show("Report failed, file write error.");
+                }
+                return true;
             }
             else
             {
-                reportPath = @"EODreport.txt";
-            }
-
-            try
-            {
-                using (StreamWriter sw = File.AppendText(reportPath))
-                {
-                    // Write report values to file.
-                    sw.WriteLine(DateTime.Today);
-                    sw.WriteLine("Report ran by: " + User.employeeName);
-                    if (isUser)
-                    { sw.WriteLine("User: " + report.ReportUser); }
-                    sw.WriteLine("Total Number of Transactions: " + report.NumOfTransactions);
-                    sw.WriteLine("Total Tax: " + report.TotalTax);
-                    sw.WriteLine("Total Cash Sales " + report.TotalCashSales);
-                    sw.WriteLine("Total Credit Sales: " + report.TotalCreditSales);
-                }
-            }
-            catch (IOException)
-            {
-                System.Windows.Forms.MessageBox.Show("Report failed, file write error.");
+                // There is not a transaction file to print.
+                return false;
             }
         }
     }

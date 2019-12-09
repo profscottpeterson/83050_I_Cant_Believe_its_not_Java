@@ -35,8 +35,6 @@ namespace ICBINJPOSController
             set { currentBalance = value; }
         }
 
-        
-
         // Amount recieved from customer.
         private static double tendered;
 
@@ -45,8 +43,6 @@ namespace ICBINJPOSController
             get { return tendered; }
             set { tendered = value; }
         }
-
-
 
         // Cash collected from customer.
         private double totalCashCollected;
@@ -72,6 +68,16 @@ namespace ICBINJPOSController
         {
             get { return paymentComplete; }
             set { paymentComplete = value; }
+        }
+
+        public Payment()
+        {
+           // Reset static values.
+            creditCardNum = "";
+            creditSuccessful = false;
+            currentBalance = 0;
+            tendered = 0;
+            paymentComplete = false;
         }
 
         public void RunCreditCard()

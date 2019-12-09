@@ -48,7 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Admin.cs" />
     <Compile Include="Classes\Files.cs" />
     <Compile Include="Classes\CoffeeShopMenu.cs" />
     <Compile Include="Screens\LoginHistoryScreen.cs">

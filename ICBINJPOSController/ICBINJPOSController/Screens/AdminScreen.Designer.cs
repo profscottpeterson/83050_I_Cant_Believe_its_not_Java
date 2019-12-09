@@ -81,6 +81,7 @@
             this.priceMaintGrp.Controls.Add(this.addItemBtn);
             this.priceMaintGrp.Controls.Add(this.itemDescLbl);
             this.priceMaintGrp.Controls.Add(this.clearTextBtn);
+            this.priceMaintGrp.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.priceMaintGrp.Location = new System.Drawing.Point(748, 67);
             this.priceMaintGrp.Name = "priceMaintGrp";
             this.priceMaintGrp.Size = new System.Drawing.Size(740, 622);
@@ -92,7 +93,7 @@
             // 
             this.SaveBtn.BackColor = System.Drawing.Color.Coral;
             this.SaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SaveBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveBtn.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveBtn.Location = new System.Drawing.Point(524, 547);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(165, 57);
@@ -107,7 +108,7 @@
             this.deleteItemBtn.BackColor = System.Drawing.Color.Coral;
             this.deleteItemBtn.Enabled = false;
             this.deleteItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.deleteItemBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteItemBtn.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteItemBtn.Location = new System.Drawing.Point(524, 381);
             this.deleteItemBtn.Name = "deleteItemBtn";
             this.deleteItemBtn.Size = new System.Drawing.Size(165, 57);
@@ -118,17 +119,17 @@
             // medPriceLbl
             // 
             this.medPriceLbl.AutoSize = true;
-            this.medPriceLbl.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.medPriceLbl.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.medPriceLbl.Location = new System.Drawing.Point(14, 127);
             this.medPriceLbl.Name = "medPriceLbl";
-            this.medPriceLbl.Size = new System.Drawing.Size(258, 23);
+            this.medPriceLbl.Size = new System.Drawing.Size(114, 19);
             this.medPriceLbl.TabIndex = 0;
             this.medPriceLbl.Text = "Medium Price:";
             // 
             // mediumPriceTxt
             // 
             this.mediumPriceTxt.BackColor = System.Drawing.Color.White;
-            this.mediumPriceTxt.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mediumPriceTxt.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mediumPriceTxt.Location = new System.Drawing.Point(356, 124);
             this.mediumPriceTxt.Name = "mediumPriceTxt";
             this.mediumPriceTxt.Size = new System.Drawing.Size(276, 27);
@@ -137,17 +138,17 @@
             // largePriceLbl
             // 
             this.largePriceLbl.AutoSize = true;
-            this.largePriceLbl.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.largePriceLbl.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.largePriceLbl.Location = new System.Drawing.Point(14, 163);
             this.largePriceLbl.Name = "largePriceLbl";
-            this.largePriceLbl.Size = new System.Drawing.Size(227, 23);
+            this.largePriceLbl.Size = new System.Drawing.Size(94, 19);
             this.largePriceLbl.TabIndex = 0;
             this.largePriceLbl.Text = "Large Price:";
             // 
             // largePriceTxt
             // 
             this.largePriceTxt.BackColor = System.Drawing.Color.White;
-            this.largePriceTxt.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.largePriceTxt.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.largePriceTxt.Location = new System.Drawing.Point(356, 160);
             this.largePriceTxt.Name = "largePriceTxt";
             this.largePriceTxt.Size = new System.Drawing.Size(276, 27);
@@ -155,19 +156,19 @@
             // 
             // itemLbx
             // 
-            this.itemLbx.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itemLbx.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.itemLbx.FormattingEnabled = true;
-            this.itemLbx.ItemHeight = 23;
+            this.itemLbx.ItemHeight = 19;
             this.itemLbx.Location = new System.Drawing.Point(18, 209);
             this.itemLbx.Name = "itemLbx";
-            this.itemLbx.Size = new System.Drawing.Size(466, 395);
+            this.itemLbx.Size = new System.Drawing.Size(466, 384);
             this.itemLbx.TabIndex = 0;
             this.itemLbx.SelectedIndexChanged += new System.EventHandler(this.itemLbx_SelectedIndexChanged);
             // 
             // descLbl
             // 
             this.descLbl.BackColor = System.Drawing.Color.White;
-            this.descLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.descLbl.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descLbl.Location = new System.Drawing.Point(357, 51);
             this.descLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.descLbl.Name = "descLbl";
@@ -177,17 +178,17 @@
             // smallPriceLbl
             // 
             this.smallPriceLbl.AutoSize = true;
-            this.smallPriceLbl.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.smallPriceLbl.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.smallPriceLbl.Location = new System.Drawing.Point(14, 92);
             this.smallPriceLbl.Name = "smallPriceLbl";
-            this.smallPriceLbl.Size = new System.Drawing.Size(229, 23);
+            this.smallPriceLbl.Size = new System.Drawing.Size(92, 19);
             this.smallPriceLbl.TabIndex = 0;
             this.smallPriceLbl.Text = "Small Price:";
             // 
             // smallPriceTxt
             // 
             this.smallPriceTxt.BackColor = System.Drawing.Color.White;
-            this.smallPriceTxt.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.smallPriceTxt.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.smallPriceTxt.Location = new System.Drawing.Point(356, 89);
             this.smallPriceTxt.Name = "smallPriceTxt";
             this.smallPriceTxt.Size = new System.Drawing.Size(276, 27);
@@ -197,7 +198,7 @@
             // 
             this.modifyItemBtn.BackColor = System.Drawing.Color.Coral;
             this.modifyItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.modifyItemBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifyItemBtn.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modifyItemBtn.Location = new System.Drawing.Point(524, 214);
             this.modifyItemBtn.Name = "modifyItemBtn";
             this.modifyItemBtn.Size = new System.Drawing.Size(165, 57);
@@ -212,7 +213,7 @@
             this.addItemBtn.BackColor = System.Drawing.Color.Coral;
             this.addItemBtn.Enabled = false;
             this.addItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.addItemBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addItemBtn.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addItemBtn.Location = new System.Drawing.Point(524, 296);
             this.addItemBtn.Name = "addItemBtn";
             this.addItemBtn.Size = new System.Drawing.Size(165, 57);
@@ -223,10 +224,10 @@
             // itemDescLbl
             // 
             this.itemDescLbl.AutoSize = true;
-            this.itemDescLbl.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itemDescLbl.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.itemDescLbl.Location = new System.Drawing.Point(15, 53);
             this.itemDescLbl.Name = "itemDescLbl";
-            this.itemDescLbl.Size = new System.Drawing.Size(325, 23);
+            this.itemDescLbl.Size = new System.Drawing.Size(136, 19);
             this.itemDescLbl.TabIndex = 0;
             this.itemDescLbl.Text = "Item Description:";
             // 
@@ -234,7 +235,7 @@
             // 
             this.clearTextBtn.BackColor = System.Drawing.Color.Coral;
             this.clearTextBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.clearTextBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearTextBtn.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearTextBtn.Location = new System.Drawing.Point(524, 463);
             this.clearTextBtn.Name = "clearTextBtn";
             this.clearTextBtn.Size = new System.Drawing.Size(165, 57);
@@ -259,6 +260,7 @@
             this.userMaintGrp.Controls.Add(this.setUserIdLbl);
             this.userMaintGrp.Controls.Add(this.userIdTxt);
             this.userMaintGrp.Controls.Add(this.clearUserBtn);
+            this.userMaintGrp.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userMaintGrp.Location = new System.Drawing.Point(12, 67);
             this.userMaintGrp.Name = "userMaintGrp";
             this.userMaintGrp.Size = new System.Drawing.Size(715, 622);
@@ -269,36 +271,36 @@
             // selectUserLbl
             // 
             this.selectUserLbl.AutoSize = true;
-            this.selectUserLbl.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectUserLbl.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.selectUserLbl.Location = new System.Drawing.Point(34, 123);
             this.selectUserLbl.Name = "selectUserLbl";
-            this.selectUserLbl.Size = new System.Drawing.Size(307, 23);
+            this.selectUserLbl.Size = new System.Drawing.Size(131, 19);
             this.selectUserLbl.TabIndex = 0;
             this.selectUserLbl.Text = "Select User Type";
             // 
             // setUserLbl
             // 
             this.setUserLbl.AutoSize = true;
-            this.setUserLbl.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.setUserLbl.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.setUserLbl.Location = new System.Drawing.Point(34, 313);
             this.setUserLbl.Name = "setUserLbl";
-            this.setUserLbl.Size = new System.Drawing.Size(265, 23);
+            this.setUserLbl.Size = new System.Drawing.Size(121, 19);
             this.setUserLbl.TabIndex = 0;
             this.setUserLbl.Text = "Set User Name:";
             // 
             // setPasswordLbl
             // 
             this.setPasswordLbl.AutoSize = true;
-            this.setPasswordLbl.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.setPasswordLbl.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.setPasswordLbl.Location = new System.Drawing.Point(34, 372);
             this.setPasswordLbl.Name = "setPasswordLbl";
-            this.setPasswordLbl.Size = new System.Drawing.Size(249, 23);
+            this.setPasswordLbl.Size = new System.Drawing.Size(110, 19);
             this.setPasswordLbl.TabIndex = 0;
             this.setPasswordLbl.Text = "Set Password:";
             // 
             // userNameTxt
             // 
-            this.userNameTxt.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userNameTxt.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNameTxt.Location = new System.Drawing.Point(312, 310);
             this.userNameTxt.Name = "userNameTxt";
             this.userNameTxt.Size = new System.Drawing.Size(385, 27);
@@ -306,7 +308,7 @@
             // 
             // passwordTxt
             // 
-            this.passwordTxt.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordTxt.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordTxt.Location = new System.Drawing.Point(312, 369);
             this.passwordTxt.Name = "passwordTxt";
             this.passwordTxt.Size = new System.Drawing.Size(385, 27);
@@ -316,7 +318,7 @@
             // 
             this.addUserBtn.BackColor = System.Drawing.Color.Coral;
             this.addUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.addUserBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addUserBtn.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addUserBtn.Location = new System.Drawing.Point(38, 446);
             this.addUserBtn.Name = "addUserBtn";
             this.addUserBtn.Size = new System.Drawing.Size(147, 91);
@@ -330,7 +332,7 @@
             this.deleteUserBtn.AllowDrop = true;
             this.deleteUserBtn.BackColor = System.Drawing.Color.Coral;
             this.deleteUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.deleteUserBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteUserBtn.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteUserBtn.Location = new System.Drawing.Point(210, 446);
             this.deleteUserBtn.Name = "deleteUserBtn";
             this.deleteUserBtn.Size = new System.Drawing.Size(147, 91);
@@ -347,23 +349,23 @@
             "Administrator"});
             this.userSelectComboBox.BackColor = System.Drawing.Color.Coral;
             this.userSelectComboBox.DisplayMember = "(none)";
-            this.userSelectComboBox.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userSelectComboBox.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userSelectComboBox.FormattingEnabled = true;
             this.userSelectComboBox.Items.AddRange(new object[] {
             "Cashier",
             "Manager",
             "Administrator"});
-            this.userSelectComboBox.Location = new System.Drawing.Point(38, 181);
+            this.userSelectComboBox.Location = new System.Drawing.Point(113, 163);
             this.userSelectComboBox.MaxDropDownItems = 3;
             this.userSelectComboBox.Name = "userSelectComboBox";
-            this.userSelectComboBox.Size = new System.Drawing.Size(319, 31);
+            this.userSelectComboBox.Size = new System.Drawing.Size(319, 27);
             this.userSelectComboBox.TabIndex = 1;
             // 
             // modifyUserBtn
             // 
             this.modifyUserBtn.BackColor = System.Drawing.Color.Coral;
             this.modifyUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.modifyUserBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifyUserBtn.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modifyUserBtn.Location = new System.Drawing.Point(379, 446);
             this.modifyUserBtn.Name = "modifyUserBtn";
             this.modifyUserBtn.Size = new System.Drawing.Size(147, 91);
@@ -375,16 +377,16 @@
             // setUserIdLbl
             // 
             this.setUserIdLbl.AutoSize = true;
-            this.setUserIdLbl.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.setUserIdLbl.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.setUserIdLbl.Location = new System.Drawing.Point(34, 248);
             this.setUserIdLbl.Name = "setUserIdLbl";
-            this.setUserIdLbl.Size = new System.Drawing.Size(210, 23);
+            this.setUserIdLbl.Size = new System.Drawing.Size(95, 19);
             this.setUserIdLbl.TabIndex = 0;
             this.setUserIdLbl.Text = "Set User ID:";
             // 
             // userIdTxt
             // 
-            this.userIdTxt.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userIdTxt.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userIdTxt.Location = new System.Drawing.Point(312, 245);
             this.userIdTxt.Name = "userIdTxt";
             this.userIdTxt.Size = new System.Drawing.Size(385, 27);
@@ -394,7 +396,7 @@
             // 
             this.clearUserBtn.BackColor = System.Drawing.Color.Coral;
             this.clearUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.clearUserBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearUserBtn.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearUserBtn.Location = new System.Drawing.Point(550, 446);
             this.clearUserBtn.Name = "clearUserBtn";
             this.clearUserBtn.Size = new System.Drawing.Size(147, 91);
@@ -408,7 +410,7 @@
             this.backBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.backBtn.BackColor = System.Drawing.Color.Red;
             this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.backBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backBtn.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backBtn.Location = new System.Drawing.Point(99, 695);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(147, 91);
@@ -422,7 +424,7 @@
             this.signOutBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.signOutBtn.BackColor = System.Drawing.Color.Snow;
             this.signOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.signOutBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signOutBtn.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signOutBtn.Location = new System.Drawing.Point(271, 695);
             this.signOutBtn.Name = "signOutBtn";
             this.signOutBtn.Size = new System.Drawing.Size(147, 91);
@@ -436,7 +438,7 @@
             this.loginHistBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.loginHistBtn.BackColor = System.Drawing.Color.Snow;
             this.loginHistBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.loginHistBtn.Font = new System.Drawing.Font("Goudy Stout", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginHistBtn.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginHistBtn.Location = new System.Drawing.Point(444, 695);
             this.loginHistBtn.Name = "loginHistBtn";
             this.loginHistBtn.Size = new System.Drawing.Size(210, 91);
@@ -447,7 +449,7 @@
             // 
             // AdminScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Coral;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;

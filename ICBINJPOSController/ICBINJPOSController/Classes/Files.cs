@@ -50,12 +50,22 @@ namespace ICBINJPOSController
                 string emp = "";
 
                 //read line emp, split each whitespace separated entry to an array & add to list
-                while ((emp = streamEmployee.ReadLine()) != null)
+
+                while (!streamEmployee.EndOfStream && (emp = streamEmployee.ReadLine()) != null)
+
                 {
-                    string[] entries = emp.Split(" ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-                    EmpID.Add(entries[0]);
-                    EmpUserName.Add(entries[1]);
-                    EmpPassWord.Add(entries[2]);
+                    // Check for blank lines.
+                    if (emp != null && emp != "")
+                    {
+                        string[] entries = emp.Split(" ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                        EmpID.Add(entries[0]);
+                        EmpUserName.Add(entries[1]);
+                        EmpPassWord.Add(entries[2]);
+                    }
+                    else
+                    {
+                        emp.Skip(emp.Length);
+                    }
                 }
 
                 //write private list to a static list
@@ -83,12 +93,20 @@ namespace ICBINJPOSController
                 string mgt = "";
 
                 //read line mgt, split each whitespace separated entry to an array & add to list
-                while ((mgt = streamManagement.ReadLine()) != null)
+                while (!streamManagement.EndOfStream && (mgt = streamManagement.ReadLine()) != null)
                 {
-                    string[] entries = mgt.Split(" ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-                    MgtID.Add(entries[0]);
-                    MgtUserName.Add(entries[1]);
-                    MgtPassWord.Add(entries[2]);
+                    // Check for blank lines.
+                    if (mgt != null && mgt != "")
+                    {
+                        string[] entries = mgt.Split(" ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                        MgtID.Add(entries[0]);
+                        MgtUserName.Add(entries[1]);
+                        MgtPassWord.Add(entries[2]);
+                    }
+                    else
+                    {
+                        mgt.Skip(mgt.Length);
+                    }
                 }
 
                 //write private list to a static list
@@ -115,12 +133,20 @@ namespace ICBINJPOSController
                 string admin = "";
 
                 //read line admin, split each whitespace separated entry to an array & add to list
-                while ((admin = streamAdministrator.ReadLine()) != null)
+                while (!streamAdministrator.EndOfStream && (admin = streamAdministrator.ReadLine()) != null)
                 {
-                    string[] entries = admin.Split(" ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-                    AdminID.Add(entries[0]);
-                    AdminUserName.Add(entries[1]);
-                    AdminPassWord.Add(entries[2]);
+                    // Check for blank lines.
+                    if (admin != null && admin != "")
+                    {
+                        string[] entries = admin.Split(" ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                        AdminID.Add(entries[0]);
+                        AdminUserName.Add(entries[1]);
+                        AdminPassWord.Add(entries[2]);
+                    }
+                    else
+                    {
+                        admin.Skip(admin.Length);
+                    }
                 }
 
                 //write private list to a static list

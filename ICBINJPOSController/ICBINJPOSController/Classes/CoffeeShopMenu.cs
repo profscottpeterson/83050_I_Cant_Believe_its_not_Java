@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ICBINJPOSController
 {
@@ -48,9 +46,12 @@ namespace ICBINJPOSController
 
                     // Holds the parsed from string price.
                     double parsedPrice;
-                   
-                    // Read a line of text from file if not empty and not end of stream.
-                    while ((line = openFile.ReadLine()) != null) 
+
+                    // Read a line of text not end of stream and line not empty. 
+                    while (!openFile.EndOfStream && (line = openFile.ReadLine()) != null)
+                    {
+                        // Check for blank lines.
+                        if (line != null && line != "")
                         {
                             // Split the line into an array. Uses a delimeter (,) char to split.
                             lineSegment = line.Split(',');
@@ -80,7 +81,11 @@ namespace ICBINJPOSController
 
                             // Add item to temp list.
                             tempList.Add(tempItem);
-                       
+                        }
+                        else
+                        {
+                            line.Skip(line.Length);
+                        }
                     }
                     // Initialize Coffee Shop Menu list, with temp list.
                     this.IcbinjMenu = tempList;

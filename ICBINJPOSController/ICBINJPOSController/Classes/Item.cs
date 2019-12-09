@@ -53,17 +53,13 @@ namespace ICBINJPOSController
             this.description = itemDesc;
             this.size = size;
             this.quantity = quantity;
-            
             this.price = price;
         }
 
         public Item(string itemDesc, double[] prices)
         {
             this.description = itemDesc;
-            
             this.priceOptions = prices.ToArray();
         }
-
-        
     }
 }

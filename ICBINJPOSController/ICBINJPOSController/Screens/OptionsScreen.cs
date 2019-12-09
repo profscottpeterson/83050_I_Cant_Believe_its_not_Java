@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ICBINJPOSController
@@ -61,7 +55,7 @@ namespace ICBINJPOSController
             //enable/disable function validation for mananger
             else if (User.managerLoggedIn == true)
             {
-                registerBtn.Enabled = true;
+                registerBtn.Enabled = false;
                 registerBtn.BackColor = Color.Coral;
                 reportingBtn.Enabled = true;
                 reportingBtn.BackColor = Color.Coral;

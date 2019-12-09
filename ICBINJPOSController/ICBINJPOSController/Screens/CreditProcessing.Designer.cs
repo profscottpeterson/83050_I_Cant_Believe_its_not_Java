@@ -395,7 +395,7 @@
             this.Controls.Add(this.tbxYear);
             this.Controls.Add(this.tbxMonth);
             this.Controls.Add(this.textBox3);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "CreditProcessing";
             this.Padding = new System.Windows.Forms.Padding(2);
             this.Text = "Credit Card Processing";
