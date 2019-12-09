@@ -85,7 +85,7 @@ namespace ICBINJPOSController
             // Check that credit card number and expiration date are valid.
         }
 
-        public void OpenDrawer()
+        public static void OpenDrawer()
         {
             // Open the register drawer.
             System.Windows.Forms.MessageBox.Show("Drawer Opened.");

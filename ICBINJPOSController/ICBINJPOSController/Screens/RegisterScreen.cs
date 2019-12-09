@@ -273,7 +273,113 @@ namespace ICBINJPOSController
             // Calculate Grand Total and display in label.
             totalPriceLbl.Text = this.currentTransaction.CalcTotal();
         }
+        private void payBtn_Click(object sender, EventArgs e)
+        {
+            // If there isn't an order, payment shouldn't be selected.
+            if (OrderLbx.Items.Count > 0)
+            {
+                //TODO payment screen and processing
+                PaymentScreen paymentScreen = new PaymentScreen();
+                paymentScreen.ShowDialog();
 
+                if (Payment.PaymentComplete)
+                {
+                    // Sends Receipt to Text file
+                    PrintReceipt();
+
+                    // If payment is successfull close transaction.
+                    this.CloseAndOpenNewTransaction();
+                }
+            }
+            else
+            {
+                MessageBox.Show("A payment is not due, there isn't an order.");
+            }
+        }
+
+        private void voidBtn_Click(object sender, EventArgs e)
+        {
+            if (OrderLbx.SelectedIndex != -1)
+            {
+                // Variable to hold item selected, must store in var, because listbox order changes on removal.
+                int currentSelection = OrderLbx.SelectedIndex;
+
+                // Find the line item selected and remove it.
+                OrderLbx.Items.RemoveAt(currentSelection);
+
+                // Remove line item selected from current order.
+                currentTransaction.Order.RemoveAt(currentSelection);
+
+                // Subtract line item price to transaction subtotal.
+                this.Totals();
+            }
+            else
+            {
+                MessageBox.Show("Please select an item to void.");
+            }
+        }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            // Open a new transaction, reset fields and controls.
+            // Open transaction does not increase transaction number.
+            this.OpenTransaction();
+            this.ResetFields();
+            this.ResetControls();
+        }
+
+        public void ResetFields()
+        {
+            // Reset field values.
+            this.quantitySelected = 1;
+            this.strQuantity = "";
+            this.sizeSelected = "";
+        }
+
+        public void ResetRadioButtons()
+        {
+            this.largeRadioBtn.Checked = false;
+            this.mediumRadioBtn.Checked = false;
+            this.smallRadioBtn.Checked = false;
+        }
+
+        public void ResetControls()
+        {
+            //Reset RadioButtons
+            this.ResetRadioButtons();
+
+            // Reset Controls
+            this.subtotalPriceLbl.Text = "";
+            this.taxPriceLbl.Text = "";
+            this.totalPriceLbl.Text = "";
+            this.OrderLbx.Items.Clear();
+            this.quantityLbl.Text = "";
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            //Go back to options screen
+            this.Hide();
+            Users.GoBack();
+        }
+
+        private void signOutBtn_Click(object sender, EventArgs e)
+        {
+            //sign out & go back to login screen
+            this.Hide();
+            Users.SignOut();
+        }
+
+        private void RegisterScreen_Load(object sender, EventArgs e)
+        {
+            // Start a new Transaction
+            this.OpenTransaction();
+        }
+
+        private void openDrawerBtn_Click(object sender, EventArgs e)
+        {
+            Payment.OpenDrawer();
+        }
 
         private void qty1Btn_Click(object sender, EventArgs e)
         {
@@ -414,85 +520,6 @@ namespace ICBINJPOSController
             AddItemToOrder(orangeJuiceBtn.Text);
         }
 
-        private void payBtn_Click(object sender, EventArgs e)
-        {
-            //TODO payment screen and processing
-            PaymentScreen paymentScreen = new PaymentScreen();
-            paymentScreen.ShowDialog();
-
-            if (Payment.PaymentComplete)
-            {
-                // Sends Receipt to Text file
-                PrintReceipt();
-
-                // If payment is successfull close transaction.
-                this.CloseAndOpenNewTransaction();
-            }
-            
-            
-        }
-
-        private void voidBtn_Click(object sender, EventArgs e)
-        {
-            if (OrderLbx.SelectedIndex != -1)
-            {
-                // Variable to hold item selected, must store in var, because listbox order changes on removal.
-                int currentSelection = OrderLbx.SelectedIndex;
-
-                // Find the line item selected and remove it.
-                OrderLbx.Items.RemoveAt(currentSelection);
-
-                // Remove line item selected from current order.
-                currentTransaction.Order.RemoveAt(currentSelection);
-
-                // Subtract line item price to transaction subtotal.
-                this.Totals();
-            }
-            else
-            {
-                MessageBox.Show("Please select an item to void.");
-            }
-        }
-
-        private void cancelBtn_Click(object sender, EventArgs e)
-        {
-            // Open a new transaction, reset fields and controls.
-            // Open transaction does not increase transaction number.
-            this.OpenTransaction();
-            this.ResetFields();
-            this.ResetControls();
-        }
-
-        public void ResetFields()
-        {
-            // Reset field values.
-            this.quantitySelected = 1;
-            this.strQuantity = "";
-            this.sizeSelected = "";
-        }
-
-        public void ResetRadioButtons()
-        {
-            this.largeRadioBtn.Checked = false;
-            this.mediumRadioBtn.Checked = false;
-            this.smallRadioBtn.Checked = false;
-        }
-
-        public void ResetControls()
-        {
-            //Reset RadioButtons
-            this.ResetRadioButtons();
-
-            // Reset Controls
-            this.subtotalPriceLbl.Text = "";
-            this.taxPriceLbl.Text = "";
-            this.totalPriceLbl.Text = "";
-            this.OrderLbx.Items.Clear();
-            this.quantityLbl.Text = "";
-        }
-
-
-
         private void vanillaBtn_Click(object sender, EventArgs e)
         {
             AddItemToOrder("Vanilla Flavor");
@@ -507,7 +534,6 @@ namespace ICBINJPOSController
         {
             AddItemToOrder("Caramel Flavor");
         }
-        
 
         private void hazelnutBtn_Click(object sender, EventArgs e)
         {
@@ -517,30 +543,6 @@ namespace ICBINJPOSController
         private void strawberryBtn_Click(object sender, EventArgs e)
         {
             AddItemToOrder("Strawberry Flavor");
-        }
-
-        
-
-        private void backButton_Click(object sender, EventArgs e)
-        {
-            //Go back to options screen
-            this.Hide();
-            Users.GoBack();
-            
-        }
-
-        private void signOutBtn_Click(object sender, EventArgs e)
-        {
-            //sign out & go back to login screen
-            this.Hide();
-            Users.SignOut();
-            
-        }
-
-        private void RegisterScreen_Load(object sender, EventArgs e)
-        {
-            // Start a new Transaction
-            this.OpenTransaction();
         }
     }
 }

@@ -64,7 +64,7 @@
             this.qty7Btn = new System.Windows.Forms.Button();
             this.qty0Btn = new System.Windows.Forms.Button();
             this.dateLbl = new System.Windows.Forms.Label();
-            this.refundBtn = new System.Windows.Forms.Button();
+            this.openDrawerBtn = new System.Windows.Forms.Button();
             this.OrderLbx = new System.Windows.Forms.ListBox();
             this.UsersNameLbl = new System.Windows.Forms.Label();
             this.currentUserLabel = new System.Windows.Forms.Label();
@@ -137,10 +137,10 @@
             // 
             this.backButton.BackColor = System.Drawing.Color.Red;
             this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backButton.Location = new System.Drawing.Point(209, 741);
+            this.backButton.Location = new System.Drawing.Point(222, 742);
             this.backButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(153, 52);
+            this.backButton.Size = new System.Drawing.Size(153, 46);
             this.backButton.TabIndex = 13;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = false;
@@ -604,17 +604,18 @@
             this.dateLbl.TabIndex = 101;
             this.dateLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // refundBtn
+            // openDrawerBtn
             // 
-            this.refundBtn.BackColor = System.Drawing.Color.Salmon;
-            this.refundBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refundBtn.Location = new System.Drawing.Point(658, 623);
-            this.refundBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.refundBtn.Name = "refundBtn";
-            this.refundBtn.Size = new System.Drawing.Size(286, 69);
-            this.refundBtn.TabIndex = 100;
-            this.refundBtn.Text = "Refund";
-            this.refundBtn.UseVisualStyleBackColor = false;
+            this.openDrawerBtn.BackColor = System.Drawing.Color.Salmon;
+            this.openDrawerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.openDrawerBtn.Location = new System.Drawing.Point(404, 742);
+            this.openDrawerBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.openDrawerBtn.Name = "openDrawerBtn";
+            this.openDrawerBtn.Size = new System.Drawing.Size(153, 46);
+            this.openDrawerBtn.TabIndex = 100;
+            this.openDrawerBtn.Text = "Open Drawer";
+            this.openDrawerBtn.UseVisualStyleBackColor = false;
+            this.openDrawerBtn.Click += new System.EventHandler(this.openDrawerBtn_Click);
             // 
             // OrderLbx
             // 
@@ -753,10 +754,10 @@
             // 
             this.cancelBtn.BackColor = System.Drawing.Color.Salmon;
             this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelBtn.Location = new System.Drawing.Point(658, 710);
+            this.cancelBtn.Location = new System.Drawing.Point(667, 646);
             this.cancelBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(286, 69);
+            this.cancelBtn.Size = new System.Drawing.Size(153, 46);
             this.cancelBtn.TabIndex = 11;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = false;
@@ -766,10 +767,10 @@
             // 
             this.voidBtn.BackColor = System.Drawing.Color.Salmon;
             this.voidBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.voidBtn.Location = new System.Drawing.Point(658, 530);
+            this.voidBtn.Location = new System.Drawing.Point(667, 553);
             this.voidBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.voidBtn.Name = "voidBtn";
-            this.voidBtn.Size = new System.Drawing.Size(286, 69);
+            this.voidBtn.Size = new System.Drawing.Size(153, 46);
             this.voidBtn.TabIndex = 10;
             this.voidBtn.Text = "Void";
             this.voidBtn.UseVisualStyleBackColor = false;
@@ -779,10 +780,10 @@
             // 
             this.payBtn.BackColor = System.Drawing.Color.Salmon;
             this.payBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.payBtn.Location = new System.Drawing.Point(658, 439);
+            this.payBtn.Location = new System.Drawing.Point(667, 462);
             this.payBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.payBtn.Name = "payBtn";
-            this.payBtn.Size = new System.Drawing.Size(286, 69);
+            this.payBtn.Size = new System.Drawing.Size(153, 46);
             this.payBtn.TabIndex = 9;
             this.payBtn.Text = "Pay";
             this.payBtn.UseVisualStyleBackColor = false;
@@ -877,7 +878,7 @@
             this.signOutBtn.Location = new System.Drawing.Point(40, 741);
             this.signOutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.signOutBtn.Name = "signOutBtn";
-            this.signOutBtn.Size = new System.Drawing.Size(153, 53);
+            this.signOutBtn.Size = new System.Drawing.Size(153, 46);
             this.signOutBtn.TabIndex = 12;
             this.signOutBtn.Text = "Sign Out";
             this.signOutBtn.UseVisualStyleBackColor = false;
@@ -928,7 +929,7 @@
             this.Controls.Add(this.qty7Btn);
             this.Controls.Add(this.qty0Btn);
             this.Controls.Add(this.dateLbl);
-            this.Controls.Add(this.refundBtn);
+            this.Controls.Add(this.openDrawerBtn);
             this.Controls.Add(this.OrderLbx);
             this.Controls.Add(this.UsersNameLbl);
             this.Controls.Add(this.currentUserLabel);
@@ -1002,7 +1003,7 @@
         private System.Windows.Forms.Button qty7Btn;
         private System.Windows.Forms.Button qty0Btn;
         private System.Windows.Forms.Label dateLbl;
-        private System.Windows.Forms.Button refundBtn;
+        private System.Windows.Forms.Button openDrawerBtn;
         private System.Windows.Forms.ListBox OrderLbx;
         private System.Windows.Forms.Label UsersNameLbl;
         private System.Windows.Forms.Label currentUserLabel;

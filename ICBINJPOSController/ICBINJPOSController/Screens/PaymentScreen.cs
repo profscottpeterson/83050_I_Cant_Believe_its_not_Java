@@ -36,7 +36,7 @@ namespace ICBINJPOSController
                     pay.TotalCashCollected += beginningBal;
                     if (Payment.CurrentBalance <= 0)
                     {
-                        pay.OpenDrawer();
+                        Payment.OpenDrawer();
                     }
                 }
                 else
