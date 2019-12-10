@@ -56,7 +56,7 @@ namespace ICBINJPOSController
             else if (User.managerLoggedIn == true)
             {
                 registerBtn.Enabled = false;
-                registerBtn.BackColor = Color.Coral;
+                registerBtn.BackColor = Color.RosyBrown;
                 reportingBtn.Enabled = true;
                 reportingBtn.BackColor = Color.Coral;
                 adminBtn.Enabled = false;

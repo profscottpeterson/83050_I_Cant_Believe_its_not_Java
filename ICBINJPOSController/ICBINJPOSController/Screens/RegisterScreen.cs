@@ -228,6 +228,7 @@ namespace ICBINJPOSController
                     writer.WriteLine("Subtotal: " + subtotalPriceLbl.Text + "  ||  " +
                                      "Taxes: " + taxPriceLbl.Text + "  ||  " +
                                      "Total: " + totalPriceLbl.Text);
+                    writer.WriteLine(" ");
                 }
 
             }

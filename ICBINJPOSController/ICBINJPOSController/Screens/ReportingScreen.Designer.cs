@@ -345,9 +345,9 @@
             // backBtn
             // 
             this.backBtn.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backBtn.Location = new System.Drawing.Point(66, 820);
+            this.backBtn.Location = new System.Drawing.Point(275, 739);
             this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(150, 56);
+            this.backBtn.Size = new System.Drawing.Size(150, 43);
             this.backBtn.TabIndex = 7;
             this.backBtn.Text = "Back";
             this.backBtn.UseVisualStyleBackColor = true;
@@ -420,7 +420,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1500, 900);
+            this.ClientSize = new System.Drawing.Size(1500, 845);
             this.Controls.Add(this.clearUserBtn);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
